@@ -2,11 +2,6 @@ language: r
 sudo: false
 cache: packages
 
-r:
-  - oldrel
-  - release
-  - devel
-
 after_success:
   - Rscript -e 'covr::codecov()'
 
@@ -17,7 +12,3 @@ notifications:
   slack:
     secure: YOxbPBFVAMbDbNc/6tDn5749/qOfJkM+hfTraG9LGstCZC2C4I7rxb3BRkUHphIbFuQiH8BW/L+BKPXkLBL8Hrz4uMMyD3RtMX1A9fZ9WizkHMT4GLCHE011TITiYIeJvv41R7RBuy6rn3RLpID5KeMTTDphIz1TOZdl1zsxqds=
 
-env:
-  global:
-    - R_CHECK_ARGS="--no-build-vignettes --no-manual --timings --as-cran --run-donttest"
-    - _R_CHECK_TIMINGS_="0"
