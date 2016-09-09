@@ -1,0 +1,61 @@
+natserv
+=======
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`natserv` NatureServe R client
+
+## Installation
+
+### Stable version from CRAN
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("ropenscilabs/natserv")
+```
+
+```{r}
+library('natserv')
+```
+
+## search
+
+```{r}
+ns_search(x = "Helianthus annuus")
+```
+
+## data
+
+```{r}
+res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
+names(res$ELEMENT_GLOBAL.2.100925)
+```
+
+dig into distribution in various watersheds
+
+```{r}
+res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
+```
+
+## image metadata
+
+```{r}
+res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
+res$images[[1]][1:5]
+```
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropenscilabs/natserv/issues).
+* License: MIT
+* Get citation information for `natserv` in R doing `citation(package = 'natserv')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[![ropensci](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
