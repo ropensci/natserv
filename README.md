@@ -1,7 +1,7 @@
 natserv
 =======
 
-
+[![Build Status](https://travis-ci.org/ropenscilabs/natserv.svg?branch=master)](https://travis-ci.org/ropenscilabs/natserv)
 
 `natserv` NatureServe R client
 
