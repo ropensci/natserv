@@ -1,9 +1,28 @@
 natserv
 =======
 
+
+
 [![Build Status](https://travis-ci.org/ropenscilabs/natserv.svg?branch=master)](https://travis-ci.org/ropenscilabs/natserv)
 
 `natserv` NatureServe R client
+
+NatureServe is a non-profit organization that provides wildlife conservation related data to various groups including the public.
+
+* [NatureServe site](https://services.natureserve.org)
+* [NatureServe API docs](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp)
+
+All functions in this package are prefixed with `ns_` to prevent 
+collision with other pkgs.
+
+Three NatureServe web services are available in this package: 
+
+* Name lookup (`ns_search`) lookup species Unique IDs (UID) by name. These UIDs are required for access to the more detailed services.
+* Image lookup (`ns_images`) search for metadata for NatureServe images, including the URL's for the image files themselves.
+* Fetch data (`ns_data`) on over 70,000 of the plant and animal species of the United States and Canada.
+
+You'll need an API key to use this package. Get one by signing up at 
+<https://services.natureserve.org/developer/index.jsp>
 
 ## Installation
 
