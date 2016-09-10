@@ -1,3 +1,2 @@
 library("testthat")
-library("natserve")
-test_check("natserve")
+test_check("natserv")

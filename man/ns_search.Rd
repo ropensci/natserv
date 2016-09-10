@@ -18,7 +18,7 @@ for more.}
 \item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-A data.frame, with columns:
+A tibble (data.frame), with columns:
 \itemize{
  \item jurisdictionScientificName - Scientfic name
  \item commonName - Common name

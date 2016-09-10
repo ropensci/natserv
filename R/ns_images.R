@@ -71,13 +71,13 @@ ns_images <- function(uid = NULL, scientificName = NULL, commonName = NULL,
       d1 <- xml_find_all(w, "d1:*")
       d1 <- d1[which(xml_name(d1) != "imagePermission")]
       c(
-        sapply(d1, function(y) as.list(setNames(xml_text(y), xml_name(y)))),
+        sapply(d1, function(y) as.list(stats::setNames(xml_text(y), xml_name(y)))),
         list(
           imagePermission =
             sapply(
               xml_children((xml_find_all(w, "d1:imagePermission"))),
-              function(y) as.list(setNames(xml_text(y), xml_name(y))))),
-        sapply(xml_find_all(w, "dc:*"), function(y) as.list(setNames(xml_text(y), xml_name(y))))
+              function(y) as.list(stats::setNames(xml_text(y), xml_name(y))))),
+        sapply(xml_find_all(w, "dc:*"), function(y) as.list(stats::setNames(xml_text(y), xml_name(y))))
       )
     })
   )

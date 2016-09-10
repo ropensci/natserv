@@ -7,7 +7,7 @@
 #' are matched. Required.
 #' @template ns
 #'
-#' @return A data.frame, with columns:
+#' @return A tibble (data.frame), with columns:
 #' \itemize{
 #'  \item jurisdictionScientificName - Scientfic name
 #'  \item commonName - Common name
@@ -28,10 +28,10 @@ ns_search <- function(x, key = NULL, ...) {
   kids <- xml2::xml_children(xml2::xml_children(xml)[[2]])
   dat <- lapply(kids, function(z) {
     data.frame(sapply(xml_children(z), function(x) {
-      as.list(setNames(xml_text(x), xml_name(x)))
+      as.list(stats::setNames(xml_text(x), xml_name(x)))
     }), stringsAsFactors = FALSE)
   })
-  df <- plyr::rbind.fill(dat)
+  df <- data.table::setDF(data.table::rbindlist(dat, use.names = TRUE, fill = TRUE))
   df <- move_col2(df, "natureServeExplorerURI")
   tibble::as_data_frame(df)
 }

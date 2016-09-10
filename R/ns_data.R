@@ -42,7 +42,7 @@ ns_data <- function(uid, key = NULL, ...) {
     constat <- xml_find_first(m, ".//d1:conservationStatus")
     constat_c <- xml_children(xml_find_first(constat, './/d1:otherStatuses'))
     constat_other <- stats::setNames(lapply(constat_c, function(z) {
-      sapply(xml_children(z), function(x) as.list(setNames(xml_text(x), xml_name(x))))
+      sapply(xml_children(z), function(x) as.list(stats::setNames(xml_text(x), xml_name(x))))
     }), xml_attr(constat_c, "name"))
     constat_ns <- parse_nss(xml_find_first(constat, './/d1:natureServeStatus'))
     ms <- as_list_(xml_find_first(m, ".//d1:managementSummary"))

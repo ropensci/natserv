@@ -13,7 +13,8 @@ Depends:
 Imports:
     httr (>= 1.2.1),
     xml2 (>= 1.0.0),
-    tibble (>= 1.2)
+    tibble (>= 1.2),
+    data.table (>= 1.9.7)
 Suggests:
     roxygen2 (>= 5.0.1),
     testthat,
