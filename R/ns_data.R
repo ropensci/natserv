@@ -31,7 +31,6 @@ ns_data <- function(uid, key = NULL, ...) {
                    NSAccessKeyId = check_key(key)), ...)
   httr::stop_for_status(x)
   xml <- read_xml(con_utf8(x), encoding = "UTF-8")
-
   xml <- xml_children(xml)
   stats::setNames(lapply(xml, function(m) {
     nsuri <- xml_text(xml_find_first(m, ".//d1:natureServeExplorerURI"))
@@ -65,9 +64,9 @@ parse_dist <- function(x) {
   tmp <- xml_children(x)
   list(
     conservationStatusMap = xml_text(which_name(tmp, "conservationStatusMap")),
-    globalRange = as_list_(which_name(tmp, "globalRange")[[1]]),
+    globalRange = parse_if_1(tmp, "globalRange"),
     rangeMap = xml_text(which_name(tmp, "rangeMap")),
-    endemism = as_list_(which_name(tmp, "endemism")[[1]]),
+    endemism = parse_if_1(tmp, "endemism"),
     nations = {
       ch <- xml_children(which_name(tmp, "nations"))
       stats::setNames(lapply(ch, function(z) {
@@ -128,14 +127,18 @@ parse_nss <- function(x) {
     reasons = xml_text(which_name(tmp, "reasons")),
     conservationStatusFactors = {
       ch <- xml_children(which_name(tmp, "conservationStatusFactors"))
-      list(
-        globalAbundance = as_list_(which_name(ch, "globalAbundance")[[1]]),
-        estimatedNumberOfOccurrences = as_list_(which_name(ch, "estimatedNumberOfOccurrences")[[1]]),
-        globalShortTermTrend = xml_text(which_name(ch, "globalShortTermTrend")),
-        globalLongTermTrend = xml_text(which_name(ch, "globalLongTermTrend")),
-        globalProtection = as_list_(which_name(ch, "globalProtection")[[1]]),
-        threat = xml_text(which_name(ch, "threat"))
-      )
+      if (length(ch) == 0) {
+        list()
+      } else {
+        list(
+          globalAbundance = parse_if_1(ch, "globalAbundance"),
+          estimatedNumberOfOccurrences = parse_if_1(ch, "estimatedNumberOfOccurrences"),
+          globalShortTermTrend = xml_text(which_name(ch, "globalShortTermTrend")),
+          globalLongTermTrend = xml_text(which_name(ch, "globalLongTermTrend")),
+          globalProtection = parse_if_1(ch, "globalProtection"),
+          threat = xml_text(which_name(ch, "threat"))
+        )
+      }
     },
     nationalStatuses = {
       ch <- xml_children(which_name(tmp, "nationalStatuses")[[1]])
@@ -160,3 +163,4 @@ parse_nss <- function(x) {
     }
   )
 }
+

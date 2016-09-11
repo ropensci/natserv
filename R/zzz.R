@@ -26,6 +26,16 @@ which_name <- function(x, var) {
   x[which(xml_name(x) == var)]
 }
 
+parse_if <- function(x, y) {
+  z <- which_name(x, y)
+  if (length(z) == 0) list() else as_list_(z)
+}
+
+parse_if_1 <- function(x, y) {
+  z <- which_name(x, y)
+  if (length(z) == 0) list() else as_list_(z[[1]])
+}
+
 as_list_ <- function(x, y) {
   unlist(as_list(x), recursive = FALSE)
 }
