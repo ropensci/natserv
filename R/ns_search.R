@@ -19,6 +19,7 @@
 #' @examples \dontrun{
 #' ns_search(x = "Ruby*")
 #' ns_search(x = "Helianthus annuus")
+#' ns_search(x = "Ursus americanus")
 #' }
 ns_search <- function(x, key = NULL, ...) {
   x <- httr::GET(paste0(ns_base(), '/v1/globalSpecies/list/nameSearch'),

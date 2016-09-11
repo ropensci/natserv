@@ -50,6 +50,7 @@ See \code{\link{Startup}} for information on how to create/find your
 \dontrun{
 ns_search(x = "Ruby*")
 ns_search(x = "Helianthus annuus")
+ns_search(x = "Ursus americanus")
 }
 }
 \references{

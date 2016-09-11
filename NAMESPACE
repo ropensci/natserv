@@ -2,6 +2,9 @@
 
 export(ns_data)
 export(ns_images)
+export(ns_map_cons)
+export(ns_map_county)
+export(ns_map_stpr)
 export(ns_search)
 importFrom(xml2,as_list)
 importFrom(xml2,read_xml)

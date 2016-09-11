@@ -3,6 +3,7 @@
 #' @export
 #' @template ns
 #' @param uid (character) a species UID, e.g., ELEMENT_GLOBAL.2.100925
+#' @template status
 #'
 #' @return a named list, with possible slots:
 #' \itemize{
