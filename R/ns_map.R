@@ -46,23 +46,30 @@ ns_map_county <- function(x, ...) {
   dat$maximumLastObservedYear <- as.numeric(dat$maximumLastObservedYear)
   dat$speciesOccurrenceCount <- as.numeric(dat$speciesOccurrenceCount)
 
+  dat <- merge(dat, nat_states, by = "state")
+
   counties <- ggplot2::map_data("county")
-  counties_plus <- merge(counties, dat, by.x = 'subregion', by.y = 'countyName', all.x = TRUE)
+  counties_plus <- merge(
+    counties,
+    dat,
+    by.x = c('region', 'subregion'),
+    by.y = c('state_name', 'countyName'),
+    all = TRUE)
   counties_plus <- counties_plus[order(counties_plus$order),]
   states <- ggplot2::map_data("state")
   ggplot2::ggplot(counties_plus, ggplot2::aes(long, lat, group = group)) +
     ggplot2::geom_polygon(ggplot2::aes(fill = speciesOccurrenceCount)) +
     ggplot2::coord_map(projection = "azequalarea") +
-    ggplot2::scale_fill_gradient2("", na.value = "white", low = "white", high = "steelblue") +
+    ggplot2::scale_fill_gradient2("", na.value = "lightgrey", low = "white", high = "steelblue") +
     ggplot2::geom_path(data = counties, colour = "grey", size = .3, alpha = .4) +
     ggplot2::geom_path(data = states, colour = "grey", size = .4) +
     ggplot2::theme_bw(base_size = 14) +
     ggplot2::labs(x = "", y = "") +
     map_blanktheme() +
     ggplot2::scale_x_continuous(expand = c(0,0)) +
-    ggplot2::scale_y_continuous(expand = c(0,0)) +
-    ggplot2::theme(legend.position = "top") +
-    ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
+    ggplot2::scale_y_continuous(expand = c(0,0))
+    # ggplot2::theme(legend.position = "top") +
+    # ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
 }
 
 #' @export
@@ -94,9 +101,9 @@ ns_map_cons <- function(x, ...) {
     ggplot2::labs(x = "", y = "") +
     map_blanktheme() +
     ggplot2::scale_x_continuous(expand = c(0,0)) +
-    ggplot2::scale_y_continuous(expand = c(0,0)) +
-    ggplot2::theme(legend.position = "top") +
-    ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
+    ggplot2::scale_y_continuous(expand = c(0,0))
+    # ggplot2::theme(legend.position = "top") +
+    # ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
 }
 
 #' @export
@@ -129,9 +136,9 @@ ns_map_stpr <- function(x, ...) {
     ggplot2::labs(x = "", y = "") +
     map_blanktheme() +
     ggplot2::scale_x_continuous(expand = c(0,0)) +
-    ggplot2::scale_y_continuous(expand = c(0,0)) +
-    ggplot2::theme(legend.position = "top") +
-    ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
+    ggplot2::scale_y_continuous(expand = c(0,0))
+    # ggplot2::theme(legend.position = "top") +
+    # ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
 }
 
 status_pick <- function(w) {
