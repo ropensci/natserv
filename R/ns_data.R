@@ -48,6 +48,8 @@ ns_data <- function(uid, key = NULL, ...) {
     ms <- as_list_(xml_find_first(m, ".//d1:managementSummary"))
     dist <- parse_dist(xml_find_first(m, ".//d1:distribution"))
     list(
+      uid = xml_attr(m, "uid"),
+      speciesCode = xml_attr(m, "speciesCode"),
       natureserve_uri = nsuri,
       classification = class,
       economicAttributes = ecostat,
