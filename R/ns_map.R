@@ -18,6 +18,7 @@
 #' ns_map_stpr(x)
 #' }
 ns_map_county <- function(x, ...) {
+  chek_pk("mapproj")
   chek_pk("ggplot2")
   chek_pk("maps")
   co <- x[[1]]$distribution$countyDistribution
@@ -61,6 +62,7 @@ ns_map_county <- function(x, ...) {
 #' @export
 #' @rdname ns_map
 ns_map_cons <- function(x, ...) {
+  chek_pk("mapproj")
   chek_pk("ggplot2")
   chek_pk("maps")
   nst <- x[[1]]$conservationStatus$natureserve$nationalStatuses
@@ -93,6 +95,7 @@ ns_map_cons <- function(x, ...) {
 #' @export
 #' @rdname ns_map
 ns_map_stpr <- function(x, ...) {
+  chek_pk("mapproj")
   chek_pk("ggplot2")
   chek_pk("maps")
   na <- x[[1]]$distribution$nations
