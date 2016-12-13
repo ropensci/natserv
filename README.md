@@ -3,8 +3,8 @@ natserv
 
 
 
-[![Build Status](https://travis-ci.org/ropenscilabs/natserv.svg?branch=master)](https://travis-ci.org/ropenscilabs/natserv)
-[![codecov](https://codecov.io/gh/ropenscilabs/natserv/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/natserv)
+[![Build Status](https://travis-ci.org/ropensci/natserv.svg?branch=master)](https://travis-ci.org/ropensci/natserv)
+[![codecov](https://codecov.io/gh/ropensci/natserv/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/natserv)
 
 
 `natserv` NatureServe R client
@@ -14,26 +14,33 @@ NatureServe is a non-profit organization that provides wildlife conservation rel
 * [NatureServe site](https://services.natureserve.org)
 * [NatureServe API docs](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp)
 
-All functions in this package are prefixed with `ns_` to prevent 
+All functions in this package are prefixed with `ns_` to prevent
 collision with other pkgs.
 
-Three NatureServe web services are available in this package: 
+Three NatureServe web services are available in this package:
 
 * Name lookup (`ns_search`) lookup species Unique IDs (UID) by name. These UIDs are required for access to the more detailed services.
 * Image lookup (`ns_images`) search for metadata for NatureServe images, including the URL's for the image files themselves.
 * Fetch data (`ns_data`) on over 70,000 of the plant and animal species of the United States and Canada.
 
-You'll need an API key to use this package. Get one by signing up at 
+You'll need an API key to use this package. Get one by signing up at
 <https://services.natureserve.org/developer/index.jsp>
 
 ## Installation
 
-### Stable version from CRAN
+Stable version from CRAN
+
+
+```r
+install.packages("natserv")
+```
+
+Development version
 
 
 ```r
 install.packages("devtools")
-devtools::install_github("ropenscilabs/natserv")
+devtools::install_github("ropensci/natserv")
 ```
 
 
@@ -59,9 +66,10 @@ ns_search(x = "Helianthus annuus")
 ```r
 res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
 names(res$ELEMENT_GLOBAL.2.100925)
-#> [1] "natureserve_uri"    "classification"     "economicAttributes"
-#> [4] "license"            "references"         "conservationStatus"
-#> [7] "managementSummary"  "distribution"
+#>  [1] "uid"                "speciesCode"        "natureserve_uri"   
+#>  [4] "classification"     "economicAttributes" "license"           
+#>  [7] "references"         "conservationStatus" "managementSummary" 
+#> [10] "distribution"
 ```
 
 dig into distribution in various watersheds
@@ -109,9 +117,9 @@ res$images[[1]][1:5]
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/natserv/issues).
+* Please [report any issues or bugs](https://github.com/ropensci/natserv/issues).
 * License: MIT
 * Get citation information for `natserv` in R doing `citation(package = 'natserv')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-[![ropensci](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ropensci](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

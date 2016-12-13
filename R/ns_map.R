@@ -11,18 +11,6 @@
 #' ns_map_cons(x)
 #' ns_map_stpr(x)
 #'
-#' # Haliaeetus leucocephalus
-#' x <- ns_data('ELEMENT_GLOBAL.2.104470')
-#' ns_map_county(x)
-#' ns_map_cons(x)
-#' ns_map_stpr(x)
-#'
-#' # Helianthus annuus
-#' x <- ns_data('ELEMENT_GLOBAL.2.134717')
-#' # ns_map_county(x)
-#' ns_map_cons(x)
-#' ns_map_stpr(x)
-#'
 #' # Ursus americanus
 #' x <- ns_data('ELEMENT_GLOBAL.2.100661')
 #' ns_map_county(x)
@@ -33,7 +21,7 @@ ns_map_county <- function(x, ...) {
   chek_pk("ggplot2")
   chek_pk("maps")
   co <- x[[1]]$distribution$countyDistribution
-  if (length(co) == 0) stop("no country distribution data", call. = FALSE)
+  if (length(co) == 0) stop("no county distribution data", call. = FALSE)
   co <- co[[1]]
   co <- Map(function(x, y) {
     x$state <- y
@@ -68,8 +56,6 @@ ns_map_county <- function(x, ...) {
     map_blanktheme() +
     ggplot2::scale_x_continuous(expand = c(0,0)) +
     ggplot2::scale_y_continuous(expand = c(0,0))
-    # ggplot2::theme(legend.position = "top") +
-    # ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
 }
 
 #' @export
@@ -102,8 +88,6 @@ ns_map_cons <- function(x, ...) {
     map_blanktheme() +
     ggplot2::scale_x_continuous(expand = c(0,0)) +
     ggplot2::scale_y_continuous(expand = c(0,0))
-    # ggplot2::theme(legend.position = "top") +
-    # ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
 }
 
 #' @export
@@ -137,8 +121,6 @@ ns_map_stpr <- function(x, ...) {
     map_blanktheme() +
     ggplot2::scale_x_continuous(expand = c(0,0)) +
     ggplot2::scale_y_continuous(expand = c(0,0))
-    # ggplot2::theme(legend.position = "top") +
-    # ggplot2::guides(ggplot2::guide_legend(direction = "horizontal"))
 }
 
 status_pick <- function(w) {

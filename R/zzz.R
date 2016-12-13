@@ -1,5 +1,3 @@
-con_utf8 <- function(x) httr::content(x, "text", encoding = "UTF-8")
-
 mssg <- function(v, ...) if (v) message(...)
 tc <- function(l) Filter(Negate(is.null), l)
 tcnull <- function(x) if (all(sapply(x, is.null))) NULL else x
@@ -23,7 +21,7 @@ move_col <- function(tt, y){
 move_col2 <- function(x, y) x[ c(names(x)[-grep(y, names(x))], y) ]
 
 which_name <- function(x, var) {
-  x[which(xml_name(x) == var)]
+  x[which(xml2::xml_name(x) == var)]
 }
 
 parse_if <- function(x, y) {
@@ -37,7 +35,7 @@ parse_if_1 <- function(x, y) {
 }
 
 as_list_ <- function(x, y) {
-  unlist(as_list(x), recursive = FALSE)
+  unlist(xml2::as_list(x), recursive = FALSE)
 }
 
 ns_base <- function() 'https://services.natureserve.org/idd/rest/ns'

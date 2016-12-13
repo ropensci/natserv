@@ -1,10 +1,20 @@
 #' natserv
 #'
-#' @importFrom xml2 xml_text xml_find_first xml_find_all xml_children read_xml
-#' xml_name xml_ns as_list xml_attr xml_attrs xml_child xml_length
 #' @name natserv-package
 #' @aliases natserv
 #' @docType package
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @keywords package
+NULL
+
+#' A data.frame with 49 rows and 2 columns
+#'
+#' \itemize{
+#'   \item state (character) state 2 letter abbreviation
+#'   \item state_name (character) state full name
+#' }
+#'
+#' @name nat_states
+#' @docType data
+#' @keywords data
 NULL

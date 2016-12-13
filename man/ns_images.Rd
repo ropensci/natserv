@@ -87,12 +87,12 @@ See \code{\link{Startup}} for information on how to create/find your
 ns_images(uid = 'ELEMENT_GLOBAL.2.100925')
 
 # search by common name and resolutio thumbnail
-res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
+(res <- ns_images(commonName = "*eagle", resolution = 'thumbnail'))
 
 # search "Ruby*", all common names [in any language], and highest
 # resolution only:
-res <- ns_images(commonName = "Ruby*", includeSynonyms = 'y',
-  resolution = 'highest')
+(res <- ns_images(commonName = "Ruby*", includeSynonyms = 'y',
+  resolution = 'highest'))
 }
 }
 \references{

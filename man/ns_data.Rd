@@ -107,7 +107,7 @@ See \code{\link{Startup}} for information on how to create/find your
 \examples{
 \dontrun{
 ## single id
-res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
+(res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925'))
 ## many ids at once
 res <- ns_data(uid = c('ELEMENT_GLOBAL.2.100925', 'ELEMENT_GLOBAL.2.104470'))
 res$ELEMENT_GLOBAL.2.100925

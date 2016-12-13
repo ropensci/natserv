@@ -29,18 +29,6 @@ ns_map_county(x)
 ns_map_cons(x)
 ns_map_stpr(x)
 
-# Haliaeetus leucocephalus
-x <- ns_data('ELEMENT_GLOBAL.2.104470')
-ns_map_county(x)
-ns_map_cons(x)
-ns_map_stpr(x)
-
-# Helianthus annuus
-x <- ns_data('ELEMENT_GLOBAL.2.134717')
-# ns_map_county(x)
-ns_map_cons(x)
-ns_map_stpr(x)
-
 # Ursus americanus
 x <- ns_data('ELEMENT_GLOBAL.2.100661')
 ns_map_county(x)

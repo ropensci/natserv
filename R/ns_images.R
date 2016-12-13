@@ -48,36 +48,41 @@
 #' ns_images(uid = 'ELEMENT_GLOBAL.2.100925')
 #'
 #' # search by common name and resolutio thumbnail
-#' res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
+#' (res <- ns_images(commonName = "*eagle", resolution = 'thumbnail'))
 #'
 #' # search "Ruby*", all common names [in any language], and highest
 #' # resolution only:
-#' res <- ns_images(commonName = "Ruby*", includeSynonyms = 'y',
-#'   resolution = 'highest')
+#' (res <- ns_images(commonName = "Ruby*", includeSynonyms = 'y',
+#'   resolution = 'highest'))
 #' }
 ns_images <- function(uid = NULL, scientificName = NULL, commonName = NULL,
                       includeSynonyms = NULL, resolution = NULL,
                       ITISNames = NULL, key = NULL, ...) {
 
-  args <- tc(list(uid = uid, scientificName = scientificName, commonName = commonName,
-                  includeSynonyms = includeSynonyms, resolution = resolution,
+  args <- tc(list(uid = uid, scientificName = scientificName,
+                  commonName = commonName, includeSynonyms = includeSynonyms,
+                  resolution = resolution,
                   ITISNames = ITISNames, NSAccessKeyId = check_key(key)))
-  x <- httr::GET(paste0(ns_base(), '/v1/globalSpecies/images'), query = args, ...)
-  httr::stop_for_status(x)
-  xml <- xml2::read_xml(con_utf8(x))
+  res <- ns_GET(url = paste0(ns_base(), '/v1/globalSpecies/images'),
+                query = args, ...)
+  xml <- xml2::read_xml(res)
   list(
-    terms = strtrim(xml_text(xml_find_first(xml, "d1:termsAndConditions"))),
-    images = lapply(xml_find_all(xml, "d1:image"), function(w) {
-      d1 <- xml_find_all(w, "d1:*")
-      d1 <- d1[which(xml_name(d1) != "imagePermission")]
+    terms = strtrim(xml2::xml_text(
+      xml2::xml_find_first(xml, "d1:termsAndConditions"))),
+    images = lapply(xml2::xml_find_all(xml, "d1:image"), function(w) {
+      d1 <- xml2::xml_find_all(w, "d1:*")
+      d1 <- d1[which(xml2::xml_name(d1) != "imagePermission")]
       c(
-        sapply(d1, function(y) as.list(stats::setNames(xml_text(y), xml_name(y)))),
+        sapply(d1, function(y) as.list(stats::setNames(xml2::xml_text(y),
+                                                       xml2::xml_name(y)))),
         list(
           imagePermission =
             sapply(
-              xml_children((xml_find_all(w, "d1:imagePermission"))),
-              function(y) as.list(stats::setNames(xml_text(y), xml_name(y))))),
-        sapply(xml_find_all(w, "dc:*"), function(y) as.list(stats::setNames(xml_text(y), xml_name(y))))
+              xml2::xml_children((xml2::xml_find_all(w, "d1:imagePermission"))),
+              function(y) as.list(stats::setNames(xml2::xml_text(y),
+                                                  xml2::xml_name(y))))),
+        sapply(xml2::xml_find_all(w, "dc:*"), function(y)
+          as.list(stats::setNames(xml2::xml_text(y), xml2::xml_name(y))))
       )
     })
   )

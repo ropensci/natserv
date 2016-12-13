@@ -22,14 +22,16 @@
 #' ns_search(x = "Ursus americanus")
 #' }
 ns_search <- function(x, key = NULL, ...) {
-  x <- httr::GET(paste0(ns_base(), '/v1/globalSpecies/list/nameSearch'),
-           query = list(name = x, NSAccessKeyId = check_key(key)), ...)
-  httr::stop_for_status(x)
-  xml <- xml2::read_xml(con_utf8(x))
+  res <- ns_GET(
+    url = paste0(ns_base(), '/v1/globalSpecies/list/nameSearch'),
+    query = list(name = gsub("\\s", "%20", x), NSAccessKeyId = check_key(key)),
+    ...
+  )
+  xml <- xml2::read_xml(res)
   kids <- xml2::xml_children(xml2::xml_children(xml)[[2]])
   dat <- lapply(kids, function(z) {
-    data.frame(sapply(xml_children(z), function(x) {
-      as.list(stats::setNames(xml_text(x), xml_name(x)))
+    data.frame(sapply(xml2::xml_children(z), function(x) {
+      as.list(stats::setNames(xml2::xml_text(x), xml2::xml_name(x)))
     }), stringsAsFactors = FALSE)
   })
   df <- data.table::setDF(data.table::rbindlist(dat, use.names = TRUE, fill = TRUE))
