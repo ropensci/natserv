@@ -2,6 +2,10 @@ language: r
 sudo: false
 cache: packages
 
+r_binary_packages:
+  - ggplot2
+  - maps
+
 after_success:
   - Rscript -e 'covr::codecov()'
 
