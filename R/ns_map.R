@@ -21,6 +21,7 @@ ns_map_county <- function(x, ...) {
   chek_pk("mapproj")
   chek_pk("ggplot2")
   chek_pk("maps")
+  stopifnot(inherits(x, "list"))
   co <- x[[1]]$distribution$countyDistribution
   if (length(co) == 0) stop("no county distribution data", call. = FALSE)
   co <- co[[1]]
