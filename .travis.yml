@@ -3,8 +3,8 @@ sudo: false
 cache: packages
 
 r_binary_packages:
-  - ggplot2
   - mapproj
+  - ggplot2
   - maps
 
 after_success:
