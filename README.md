@@ -5,6 +5,7 @@ natserv
 
 [![Build Status](https://travis-ci.org/ropensci/natserv.svg?branch=master)](https://travis-ci.org/ropensci/natserv)
 [![codecov](https://codecov.io/gh/ropensci/natserv/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/natserv)
+[![cran version](http://www.r-pkg.org/badges/version/natserv)](https://cran.r-project.org/package=natserv)
 
 
 `natserv` NatureServe R client
@@ -66,9 +67,9 @@ ns_search(x = "Helianthus annuus")
 ```r
 res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
 names(res$ELEMENT_GLOBAL.2.100925)
-#>  [1] "uid"                "speciesCode"        "natureserve_uri"   
-#>  [4] "classification"     "economicAttributes" "license"           
-#>  [7] "references"         "conservationStatus" "managementSummary" 
+#>  [1] "uid"                "speciesCode"        "natureserve_uri"
+#>  [4] "classification"     "economicAttributes" "license"
+#>  [7] "references"         "conservationStatus" "managementSummary"
 #> [10] "distribution"
 ```
 
@@ -101,16 +102,16 @@ res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
 res$images[[1]][1:5]
 #> $id
 #> [1] "16968"
-#> 
+#>
 #> $scientificName
 #> [1] "Haliaeetus leucocephalus"
-#> 
+#>
 #> $commonName
 #> [1] "Bald Eagle"
-#> 
+#>
 #> $otherCommonName
 #> [1] "pygargue à tête blanche"
-#> 
+#>
 #> $otherCommonName
 #> [1] "Águila Cabeza Blanca"
 ```
