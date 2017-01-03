@@ -11,17 +11,16 @@
    License components with restrictions and base license permitting such:
      MIT + file LICENSE
    File 'LICENSE':
-     YEAR: 2016
+     YEAR: 2017
      COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
+There are no reverse dependencies.
 
 ---
 
-* This is a new release. I have read and agree to the the CRAN policies at
-http://cran.r-project.org/web/packages/policies.html
+This version requires newer version of the HTTP library.
 
 Thanks!
 Scott Chamberlain
