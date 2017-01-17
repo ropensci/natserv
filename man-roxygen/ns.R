@@ -1,6 +1,6 @@
 #' @param key (character) API key. Required. See \strong{Authentication} below
 #' for more.
-#' @param ... Curl options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to \code{\link[crul]{HttpClient}}
 #'
 #' @references \url{https://services.natureserve.org/index.jsp}
 #'

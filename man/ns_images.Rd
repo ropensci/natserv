@@ -52,7 +52,7 @@ At present, searching by ITIS names is not possible.}
 \item{key}{(character) API key. Required. See \strong{Authentication} below
 for more.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 a list with terms and images

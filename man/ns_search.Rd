@@ -15,7 +15,7 @@ are matched. Required.}
 \item{key}{(character) API key. Required. See \strong{Authentication} below
 for more.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A tibble (data.frame), with columns:
