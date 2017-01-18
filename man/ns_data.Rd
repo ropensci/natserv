@@ -112,6 +112,8 @@ See \code{\link{Startup}} for information on how to create/find your
 res <- ns_data(uid = c('ELEMENT_GLOBAL.2.100925', 'ELEMENT_GLOBAL.2.104470'))
 res$ELEMENT_GLOBAL.2.100925
 res$ELEMENT_GLOBAL.2.104470
+
+ns_data(uid = 'ELEMENT_GLOBAL.2.101998')
 }
 }
 \references{

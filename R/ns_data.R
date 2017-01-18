@@ -28,6 +28,10 @@
 #' ns_data(uid = 'ELEMENT_GLOBAL.2.101998')
 #' }
 ns_data <- function(uid, key = NULL, ...) {
+  assert(uid, "character")
+  uid <- toupper(uid)
+  check_uid(uid)
+
   res <- ns_GET(
     url = paste0(ns_base(), '/v1.1/globalSpecies/comprehensive'),
     query = list(

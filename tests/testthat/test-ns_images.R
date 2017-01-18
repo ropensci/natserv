@@ -17,9 +17,19 @@ test_that("ns_images fails well", {
   skip_on_cran()
 
   expect_error(ns_images("adfdf"),
-               'no results found')
+               "'uid' doesn't appear to be a NatureServe ID")
   expect_error(ns_images(scientificName = "asdfasf"),
                'no results found')
   expect_error(ns_images(commonName = "asdfasf"),
                'no results found')
+
+  # fails well when input not character
+  expect_error(ns_images(5), 'uid must be of class character')
+  expect_error(ns_images(TRUE), 'uid must be of class character')
+
+  expect_error(ns_images(scientificName = 5), 'scientificName must be of class character')
+  expect_error(ns_images(commonName = 5), 'commonName must be of class character')
+  expect_error(ns_images(includeSynonyms = 5), 'includeSynonyms must be of class character')
+  expect_error(ns_images(resolution = 5), 'resolution must be of class character')
+  expect_error(ns_images(ITISNames = 5), 'ITISNames must be of class character')
 })

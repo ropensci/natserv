@@ -59,6 +59,13 @@ ns_images <- function(uid = NULL, scientificName = NULL, commonName = NULL,
                       includeSynonyms = NULL, resolution = NULL,
                       ITISNames = NULL, key = NULL, ...) {
 
+  assert(uid, "character")
+  check_uid(uid)
+  assert(scientificName, "character")
+  assert(commonName, "character")
+  assert(includeSynonyms, "character")
+  assert(resolution, "character")
+  assert(ITISNames, "character")
   args <- tc(list(uid = uid, scientificName = scientificName,
                   commonName = commonName, includeSynonyms = includeSynonyms,
                   resolution = resolution,

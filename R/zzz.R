@@ -69,3 +69,21 @@ chek_pk <- function(x) {
 }
 
 str_extrct <- function(string, pattern) regmatches(string, regexpr(pattern, string))
+
+assert <- function(x, y) {
+  if (!is.null(x)) {
+    if (!class(x) %in% y) {
+      stop(deparse(substitute(x)), " must be of class ",
+           paste0(y, collapse = ", "), call. = FALSE)
+    }
+  }
+}
+
+check_uid <- function(x) {
+  if (!is.null(x)) {
+    if (!grepl("ELEMENT_GLOBAL", x)) {
+      stop("'uid' doesn't appear to be a NatureServe ID", call. = FALSE)
+    }
+  }
+}
+

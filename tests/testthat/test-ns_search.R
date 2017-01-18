@@ -21,4 +21,8 @@ test_that("ns_search fails well", {
                'argument "x" is missing')
   expect_error(ns_search("asdfasf"),
                'no results found')
+
+  # fails well when input not character
+  expect_error(ns_search(5), 'x must be of class character')
+  expect_error(ns_search(TRUE), 'x must be of class character')
 })
