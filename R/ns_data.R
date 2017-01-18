@@ -31,6 +31,7 @@ ns_data <- function(uid, key = NULL, ...) {
     query = list(
       uid = paste0(uid, collapse = ","),
       NSAccessKeyId = check_key(key)),
+    err_fxn = err_catch_data,
     ...
   )
   xml <- xml2::read_xml(res, encoding = "UTF-8")

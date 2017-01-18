@@ -63,8 +63,12 @@ ns_images <- function(uid = NULL, scientificName = NULL, commonName = NULL,
                   commonName = commonName, includeSynonyms = includeSynonyms,
                   resolution = resolution,
                   ITISNames = ITISNames, NSAccessKeyId = check_key(key)))
-  res <- ns_GET(url = paste0(ns_base(), '/v1/globalSpecies/images'),
-                query = args, ...)
+  res <- ns_GET(
+    url = paste0(ns_base(), '/v1/globalSpecies/images'),
+    query = args,
+    err_fxn = err_catch_images,
+    ...
+  )
   xml <- xml2::read_xml(res)
   list(
     terms = strtrim(xml2::xml_text(

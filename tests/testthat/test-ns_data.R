@@ -12,3 +12,12 @@ test_that("ns_data works as expected", {
 
   expect_match(aa[[1]]$natureserve_uri, 'explorer.natureserve.org')
 })
+
+test_that("ns_data fails well", {
+  skip_on_cran()
+
+  expect_error(ns_data(),
+               'argument "uid" is missing')
+  expect_error(ns_data("asdfasf"),
+               'no results found')
+})

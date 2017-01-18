@@ -13,3 +13,12 @@ test_that("ns_search works as expected", {
 
   expect_equal(aa$jurisdictionScientificName, 'Helianthus annuus')
 })
+
+test_that("ns_search fails well", {
+  skip_on_cran()
+
+  expect_error(ns_search(),
+               'argument "x" is missing')
+  expect_error(ns_search("asdfasf"),
+               'no results found')
+})
