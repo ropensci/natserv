@@ -24,6 +24,8 @@
 #' res <- ns_data(uid = c('ELEMENT_GLOBAL.2.100925', 'ELEMENT_GLOBAL.2.104470'))
 #' res$ELEMENT_GLOBAL.2.100925
 #' res$ELEMENT_GLOBAL.2.104470
+#'
+#' ns_data(uid = 'ELEMENT_GLOBAL.2.101998')
 #' }
 ns_data <- function(uid, key = NULL, ...) {
   res <- ns_GET(
@@ -85,7 +87,9 @@ parse_dist <- function(x) {
               as_list_(xml2::xml_child(which_name(xml2::xml_children(z), "nationalDistributions")[[1]]))
             },
             subnations = {
-              kids <- xml2::xml_children(which_name(xml2::xml_children(z), "subnations")[[1]])
+              sbn <- which_name(xml2::xml_children(z), "subnations")
+              if (length(sbn) == 0) return(list())
+              kids <- xml2::xml_children(sbn[[1]])
               lapply(kids, function(z) {
                 c(
                   as.list(xml2::xml_attrs(z)),
