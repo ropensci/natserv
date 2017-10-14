@@ -50,7 +50,7 @@ devtools::install_github("ropensci/natserv")
 library('natserv')
 ```
 
-## search
+## Search
 
 
 ```r
@@ -62,7 +62,7 @@ ns_search(x = "Helianthus annuus")
 #> # ... with 1 more variables: natureServeExplorerURI <chr>
 ```
 
-## data
+## Data
 
 
 ```r
@@ -74,7 +74,7 @@ names(res$ELEMENT_GLOBAL.2.100925)
 #> [10] "distribution"
 ```
 
-dig into distribution in various watersheds
+Dig into distribution in various watersheds:
 
 
 ```r
@@ -95,7 +95,7 @@ res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
 #> # ... with 448 more rows
 ```
 
-## image metadata
+## Image Metadata
 
 
 ```r
