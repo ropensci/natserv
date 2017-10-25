@@ -47,7 +47,7 @@ ns_data <- function(uid, key = NULL, ...) {
     nsuri <- xml2::xml_text(xml2::xml_find_first(m, ".//d1:natureServeExplorerURI"))
     class <- xml2::as_list(xml2::xml_find_first(m, ".//d1:classification"))
     ecostat <- xml2::xml_text(xml2::xml_find_first(m, ".//d1:economicAttributes"))
-    ecology <- xml2::as_list(xml_find_first(m, ".//d1:ecologyAndLifeHistory"))
+    ecology <- xml2::as_list(xml2::xml_find_first(m, ".//d1:ecologyAndLifeHistory"))
     license <- strtrim(xml2::xml_text(xml2::xml_find_first(m, ".//d1:license")))
     refs <- xml2::xml_text(xml2::xml_children(xml2::xml_find_first(m, "//d1:references")))
     constat <- xml2::xml_find_first(m, ".//d1:conservationStatus")
