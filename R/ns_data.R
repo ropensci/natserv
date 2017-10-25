@@ -15,6 +15,7 @@
 #'  \item conservationStatus
 #'  \item managementSummary
 #'  \item distribution
+#'  \item ecologyAndLifeHistory
 #' }
 #'
 #' @examples \dontrun{
@@ -46,6 +47,7 @@ ns_data <- function(uid, key = NULL, ...) {
     nsuri <- xml2::xml_text(xml2::xml_find_first(m, ".//d1:natureServeExplorerURI"))
     class <- xml2::as_list(xml2::xml_find_first(m, ".//d1:classification"))
     ecostat <- xml2::xml_text(xml2::xml_find_first(m, ".//d1:economicAttributes"))
+    ecology <- xml2::as_list(xml2::xml_find_first(m, ".//d1:ecologyAndLifeHistory"))
     license <- strtrim(xml2::xml_text(xml2::xml_find_first(m, ".//d1:license")))
     refs <- xml2::xml_text(xml2::xml_children(xml2::xml_find_first(m, "//d1:references")))
     constat <- xml2::xml_find_first(m, ".//d1:conservationStatus")
@@ -63,6 +65,7 @@ ns_data <- function(uid, key = NULL, ...) {
       natureserve_uri = nsuri,
       classification = class,
       economicAttributes = ecostat,
+      ecologyAndLifeHistory = ecology,
       license = license,
       references = refs,
       conservationStatus = list(other = constat_other, natureserve = constat_ns),
