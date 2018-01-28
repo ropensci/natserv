@@ -9,3 +9,4 @@ README.Rmd
 ^CONDUCT\.md$
 ^cran-comments\.md$
 ^revdep$
+^codemeta\.json$
