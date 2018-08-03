@@ -10,3 +10,4 @@ README.Rmd
 ^cran-comments\.md$
 ^revdep$
 ^codemeta\.json$
+^Makefile$

@@ -1,17 +1,12 @@
-all: move rmd2md
+all: vign move rmd2md
 
-vignettes:
+vign:
 		cd inst/vign;\
-		Rscript -e 'library(knitr); knit("taxize_infotable.Rmd"); knit("taxize_vignette.Rmd")'
+		Rscript -e 'library(knitr); knit("natserv_vignette.Rmd")'
 
 move:
-		cp inst/vign/taxize_vignette.md vignettes
-		cp inst/vign/taxize_infotable.md vignettes
-		cp inst/vign/name_cleaning.md vignettes
+		cp inst/vign/natserv_vignette.md vignettes
 
 rmd2md:
 		cd vignettes;\
-		mv taxize_vignette.md taxize_vignette.Rmd;\
-		mv taxize_infotable.md taxize_infotable.Rmd;\
-		mv name_cleaning.md name_cleaning.Rmd
-
+		mv natserv_vignette.md natserv_vignette.Rmd

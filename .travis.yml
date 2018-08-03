@@ -7,6 +7,7 @@ r_binary_packages:
   - mapproj
   - ggplot2
   - maps
+  - covr
 
 after_success:
   - Rscript -e 'covr::codecov()'
