@@ -2,8 +2,8 @@
 % Please edit documentation in R/ns_map.R
 \name{ns_map}
 \alias{ns_map}
-\alias{ns_map_cons}
 \alias{ns_map_county}
+\alias{ns_map_cons}
 \alias{ns_map_stpr}
 \title{Map NatureServe data}
 \usage{
@@ -36,4 +36,3 @@ ns_map_cons(x)
 ns_map_stpr(x)
 }
 }
-

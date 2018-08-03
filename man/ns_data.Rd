@@ -25,6 +25,7 @@ a named list, with possible slots:
  \item conservationStatus
  \item managementSummary
  \item distribution
+ \item ecologyAndLifeHistory
 }
 }
 \description{
@@ -104,6 +105,7 @@ See \code{\link{Startup}} for information on how to create/find your
  state/province.
 }
 }
+
 \examples{
 \dontrun{
 ## single id
@@ -119,4 +121,3 @@ ns_data(uid = 'ELEMENT_GLOBAL.2.101998')
 \references{
 \url{https://services.natureserve.org/index.jsp}
 }
-

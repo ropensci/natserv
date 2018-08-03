@@ -81,6 +81,7 @@ You can pass your token in as an argument or store it one of two places:
 See \code{\link{Startup}} for information on how to create/find your
 .Rrofile and .Renviron files
 }
+
 \examples{
 \dontrun{
 # search by uid
@@ -98,4 +99,3 @@ ns_images(uid = 'ELEMENT_GLOBAL.2.100925')
 \references{
 \url{https://services.natureserve.org/index.jsp}
 }
-

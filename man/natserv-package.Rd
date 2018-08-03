@@ -2,8 +2,8 @@
 % Please edit documentation in R/natserv-package.R
 \docType{package}
 \name{natserv-package}
-\alias{natserv}
 \alias{natserv-package}
+\alias{natserv}
 \title{natserv}
 \description{
 natserv
@@ -12,4 +12,3 @@ natserv
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{package}
-
