@@ -1,60 +1,64 @@
 ---
-title: "Introduction to `natserve` - An R package to wrap NatureServe's database API"
+title: "Introduction to `natserve` - An R package to wrap NatureServe's database API from rOpenSci"
 author: Mairin Deith
-output: html_document
+output: 
+   html_document:
+     toc: true
+     toc_depth: 3
 ---
 <!--
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{natserv vignette}
 %\VignetteEncoding{UTF-8}
 -->
+
 =====
 
-`natserv` is an R package that interacts with the API services of the non-profit organization [NatureServe](https://services.natureserve.org/). If you want to read their full API documentation, you can find them on [NatureServe's web services webpage](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp).
+`natserv` is an R package that interacts with the API services of the non-profit organization [NatureServe](https://services.natureserve.org/). If you want to read the full API documentation, you can find it on [NatureServe's web services webpage](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp).
 
 This tutorial will walk you through installing `natserv` and using its handy functions. To help show you what `natserv` can do, this will also teach you how to:
+
 * Find a species' unique identifier used by NatureServe 
 * Use that identifier to pull data from NatureServe's API
 * Search NatureServe for multiple species
 * Create a dataframe of the conservation status of an example species, the gray wolf (*Canis lupus*)
-* And, just for fun, we're going to make a map of the gray wolf's status in each state of the US using ggmaps
+* And, just for fun, we're going to make a map of the gray wolf's status in each state of the US with `ggplot`
+
 
 ## A quick introduction to NatureServe
 NatureServe is a non-profit organization that provides biodiversity data freely online. 
-They maintain a database comprised of data from natural heritage programs and conservation data centres - this database includes information about the conservation status, taxonomy, geographic distribution, and life history information for over 70,000 species of plants, animals, and fungi in Canada and the United States.
+They maintain a database comprised of data from natural heritage programs and conservation data centers - this database includes information about the conservation status, taxonomy, geographic distribution, and life history information for over 70,000 species of plants, animals, and fungi in Canada and the United States.
 You can find information about their [data coverage](http://explorer.natureserve.org/summary.htm), [data types](http://explorer.natureserve.org/methods.htm), and [data sources](http://explorer.natureserve.org/sources.htm) on their website.
 NatureServe also hosts data on ecological communities/systems and their conservation status.  
 
 While small amounts of data can be easily collected using their online [NatureServe explorer site](http://explorer.natureserve.org/), downloading species data this way would be incredibly slow. 
 Thus `natserv` was born. 
-This R package can access NatureServe's online API for rapid downloading of conservation data, allows for easy access to multiple species' datasets, and  loads the data directly into your R session. 
+This R package can access NatureServe's online API for rapid downloading of conservation data, allows for easy access to multiple species' data sets, and  loads the data directly into your R session. 
 
-### Install package from CRAN or GitHub
-The stable version of `natserv` is available on the CRAN reposity [located here](https://cran.r-project.org/web/packages/natserv/).
+## Installing `natserv` from CRAN or GitHub
+The stable version of `natserv` is available on the CRAN repository [located here](https://cran.r-project.org/web/packages/natserv/).
 You can install it with:
 
-```{r install.natserv, eval=F}
+```{r install.natserv, eval=F, error=F, message=F}
 install.packages("natserv")
 ```
 
 If you want the latest development version of `natserv`, you can install the package from the ropensci GitHub repository. Do this by first installing the `devtools` library, then installing directly from GitHub:
 
-```{r install.natserv.github, echo=F, eval=F}
+```{r install.natserv.github, message=F, error=F}
 install.packages("devtools")
 devtools::install_github("ropensci/natserv")
 ```
 
 After successful installation, load the package into the environment:
-```{r library.natserv}
+```{r library.natserv, message=F, error=F}
 library(natserv)
 ```
 
-## NatureServe API Keys
-
-### Obtaining a NatureServe API key
+## Obtaining a NatureServe API key
 
 Before starting to use the NatureServe API, you need to have an API key.
-NatureServe requires the use of an API key to track and control any malicious usage, and the `natserv` package needs it to communicate with the API.
+NatureServe uses this key to track and prevent any malicious usage and the `natserv` package needs it in order to access their database.
 
 Fortunately, API keys are available for free to users who register with NatureServe as Developers.
 To register and obtain an API key, go to this link: [https://services.natureserve.org/developer/index.jsp](https://services.natureserve.org/developer/index.jsp).
@@ -62,39 +66,37 @@ To register and obtain an API key, go to this link: [https://services.natureserv
 After registering, NatureServe will send you an email at the registered address that contains an Access Key ID.
 
 ###  Linking R to your API key
-There are three ways to do this, depending on how often you plan on using `natserv`. 
+There are two ways to do this - the one that works best for you likely depends on how often you plan on using `natserv`. 
 
-#### Define the API key just for this R session
+#### 1. Define the API key just for this R session
 The quick way is to load the API key directly in the R session:
-```{r, my.api.key, include=F}
+```{r my.api.key, include=F}
 options(NatureServeKey = "4c9cb1d7-c017-497c-8fe4-961f153cfc36")
 ```
 
-```{r nat.serv.key, eval=FALSE}
+```{r nat.serv.key, eval=F}
 options(NatureServeKey = "YOUR-ACCESS-KEY-ID")
 ```
 Every time you start a new R session and want to use `natserv`, you'll have to run this line.
 
-#### Define the API key for all scripts in your RProject
+
+#### 2. Define the API key for all scripts in your RProject
 
 If you don't want to run `options(NatureServeKey = "YOUR-ACCESS-KEY-ID")` every time you use `natserv`, you can modify the `.Rprofile` or `.Renviron` files to link the API key for all R scripts in your Rproject.
-R reads the `.Rprofile` and `.Renviron` files, looking for any commands to run when R launches. 
+When R starts up, it reads the `.Rprofile` and `.Renviron` and runs any commands in these files as it launches. 
 
+To set the API key for all scripts in the project, open your project-specific files with `file.edit(".Rprofile")` or `file.edit(".Renviron")`, then add this line:
 
-To set the API key for all scripts in the project, open your project-specific files with `file.edit(".Rprofile")` or `file.edit(".Renviron")`. 
-
-Add this line:
 ```
 options(NatureServeKey = "YOUR-ACCESS-KEY-ID")
 ```
 
-You can Now you can use the `natserv` package!
+After saving this file, every time you open an R session in that project your API key is automatically loaded into the session. 
 
 ## `natserv` functions
 
-All of `natserv`'s functions are prefixed with `ns_` to avoid confusion with other packages.
-
-Three functions are available with this package, and they will be described in more detail below.
+Now that R knows our NatureServe API key, we can use `natserv` to access their database.
+All of `natserv`'s functions are prefixed with `ns_` to avoid confusion with other packages - here are the functions provided by `natserv`:
 
 1. `ns_search` - a function to look up the ID code for the species you are querying
 2. `ns_data` - a function that uses the ID code from `ns_search` to pull data off of NatureServe and into your R session
@@ -102,95 +104,66 @@ Three functions are available with this package, and they will be described in m
 
 ### `ns_search` - finding the UID
 NatureServe uses a unique ID (UID) for each species in their database. 
-The `ns_data` function requires you to supply the UID for the species you are looking to download data for, and unless you already know the species' UID you will need to use the `ns_search` function to search for the UID of the species.  
+The `ns_data` function requires you to supply the UID for the species you are looking to download data for, and unless you already know the species' UID you will need to use `ns_search` to find it. 
 
-Here's how to use a species' binomial name, using the Gray wolf (*Canis lupus*) as an example:
+Here's how to use a species' binomial name to find its UID, using the gray wolf (*Canis lupus*) as an example:
 
 ```{r ns.search.sciname}
 gray.wolf.search <- ns_search(x="Canis lupus")
 gray.wolf.search
 ```
-Which, after a moment of searching, returns a tibble containing the UID, common name, scientific name, taxonomic comments, and the URI for the entry in the NatureServe database.
+After a moment of searching, `ns_search` returns a tibble containing the UID, common name, scientific name, taxonomic comments, and the URI for the entry in the NatureServe database.
+
+```{r uid.return}
+gray.wolf.search$globalSpeciesUid
+```
 
 The UID for *Canis lupus* is `ELEMENT_GLOBAL.2.105212`, and this ID can be used to access the NatureServe database through their API. 
 
-### A quick aside: Searching for multiple species
-#### Using wildcards for genus-wide searches
-If we are interested in multiple species (all members of the *Canis* genus, for example), we can use `*` as a wild card to pull out all available UIDs that have the same genus:
+#### A quick aside: Searching for multiple species
+
+**Searching for all species within a genus**
+If we are interested in multiple species (all members of the genus *Canis* for example), we can use `*` as a wild card to pull out all available UIDs for a genus:
 
 ```{r ns.search.wildcard}
 canis.search <- ns_search(x="Canis *")
 ```
 
-This returns a tibble with 14 rows, one for each entry that matches the *Canus* search term. 
-```
-# A tibble: 14 x 5
-   globalSpeciesUid    jurisdictionScient… commonName    
-   <chr>               <chr>               <chr>         
- 1 ELEMENT_GLOBAL.2.1… Canis rufus         Red Wolf      
- 2 ELEMENT_GLOBAL.2.1… Canis lupus         Gray Wolf     
- 3 ELEMENT_GLOBAL.2.1… Canis latrans       Coyote        
- 4 ELEMENT_GLOBAL.2.1… Canis lupus baileyi Mexican Wolf  
- 5 ELEMENT_GLOBAL.2.7… Canis lupus occide… Northern Gray…
- 6 ELEMENT_GLOBAL.2.7… Canis lupus nubilus Southern Gray…
- 7 ELEMENT_GLOBAL.2.7… Canis lupus lycaon  Eastern Wolf  
- 8 ELEMENT_GLOBAL.2.7… Canis lupus arctos  Arctic Grey W…
- 9 ELEMENT_GLOBAL.2.1… Canis lupus ligoni  Alexander Arc…
-10 ELEMENT_GLOBAL.2.9… Canis sp. cf. lyca… Eastern Wolf  
-11 ELEMENT_GLOBAL.2.1… Canis rufus         Red Wolf      
-12 ELEMENT_GLOBAL.2.1… Canis lupus baileyi Mexican Wolf  
-13 ELEMENT_GLOBAL.2.1… Canis rufus         Red Wolf      
-14 ELEMENT_GLOBAL.2.7… Canis lupus lycaon  Eastern Wolf  
-# ... with 2 more variables: taxonomicComments <chr>,
-#   natureServeExplorerURI <chr>
-```
-#### Searching for multiple species when the wildcard won't do
+This returns a tibble with 14 rows, one for each entry in *Canis*: 
 
-But let's say you're interested in not only all members of the same genus, but a bunch of species that can't be searched for using just wild cards.
-To search for multiple taxa, you can first make a vector of search terms containing the scientific names of the species you're interested in, then search each one using a loop or the `lapply` function:
+```{r, echo=F}
+canis.search
+```
+
+**Searching for multiple species if the wildcard won't do**
+
+But let's say you're interested in not only all members of the same genus, but a variety of species that can't be searched using a simple wild card.
+To search for multiple taxa, you can make a vector of search terms containing the scientific names of the species you're interested in, then search each one in a loop or use the `lapply` function:
 ```{r ns.search.multisp}
 species.search.list <- c('Canis lupus', 'Lynx rufus', 'Puma concolor')
 multispecies.search <- lapply(species.search.list, FUN = ns_search)
 ```
-This returns a 3-element list, where each list item is the tribble returned by `ns_search`.
-```
-[[1]]
-# A tibble: 1 x 5
-  globalSpeciesUid      jurisdictionScientifi… commonName
-  <chr>                 <chr>                  <chr>     
-1 ELEMENT_GLOBAL.2.105… Canis lupus            Gray Wolf 
-# ... with 2 more variables: taxonomicComments <chr>,
-#   natureServeExplorerURI <chr>
 
-[[2]]
-# A tibble: 1 x 5
-  globalSpeciesUid      jurisdictionScientifi… commonName
-  <chr>                 <chr>                  <chr>     
-1 ELEMENT_GLOBAL.2.106… Lynx rufus             Bobcat    
-# ... with 2 more variables: taxonomicComments <chr>,
-#   natureServeExplorerURI <chr>
+This returns a 3-element list, where each list item is the tribble returned by `ns_search`:
 
-[[3]]
-# A tibble: 1 x 5
-  globalSpeciesUid      jurisdictionScientifi… commonName
-  <chr>                 <chr>                  <chr>     
-1 ELEMENT_GLOBAL.2.101… Puma concolor          Cougar    
-# ... with 2 more variables: taxonomicComments <chr>,
-#   natureServeExplorerURI <chr>
+```{r multi.sp.search, echo=F}
+multispecies.search
 ```
 
 ### `ns_data` - searching for records with the UID
-Now that we have our species' UID, we can search NatureServe's API for species information. 
 
-Sticking to the gray wolf example, let's pull up what data are available for *Canis lupus* using the UID from `ns_search`
+Now that we have our species' UID, we can search NatureServe's API for more data about that species' conservation status, taxonomy, and other information. 
+
+Sticking to the gray wolf example, let's pull up what data are available for *Canis lupus* using the UID from `ns_search`. Note that you can use a call
+
 ```{r ns.data}
 gray.wolf.data <- ns_data(gray.wolf.search$globalSpeciesUid)
 ```
 
-#### Data returned by NatureServe
+#### Data returned by `ns_data`
 
-The `ns_data` command returns NatureServe data in a nested list with an outer length of 1. 
-There are several possible slots that can be returned by querying the API:
+The `ns_data` command returns NatureServe data as a list of lists. 
+The outer 'list' has a length of 1 and is named after the species' UID. Within this top-level list are more nested sublists with the following information (*note: this is not exhaustive; more data are available if you dig through the list structure*):
 
 * `natureserve_uri` - the URI for the species' web page
 * `classification` - a list containing taxonomic information for the species
@@ -207,26 +180,82 @@ There are several possible slots that can be returned by querying the API:
   * `conservationStatus$other$IUCN Status` - International Union for the Conservation of Nature status
   * `conservationStatus$other$CITES Protection Status` - Convention on International Trade of Endangered Species status
   * `conservationStatus$natureserve` - a list of species ranks as designated by NatureServe, as well as descriptions, rationale, population estimates, current threats, comments, and information on when the status was last reviewed. This list also contains state- and province-wide status for the species where it is found
-* `managementSummary` - a list containing `$restorationPotential` (a description of whether restoration is feasible for the species) and `$managementRequirements` (factors which are necessary to promote restoration of the species)
+* `managementSummary` - a list containing subslists `$restorationPotential` (a description of whether restoration is feasible for the species) and `$managementRequirements` (factors which are necessary to promote restoration of the species)
 * `distribution` - information on the species' distribution globally and within Canada and the United States
   * `distribution$conservationStatusMap` - a URI to an online conservation status map hosted on NatureServe
   * `distribution$globalRange`- information on the total area inhabited by the species, as well as a description of this global distribution and how it may have changed over time
   * `distribution$rangeMap` - a URI to an online range map hosted on NatureServe
   * `distribution$endemism` - a description of the species' endemism
-  * `distribution$nations` - a list of where the species can be found during what times of year (i.e. year-round, regularly occuring, etc.) as well as information on sub-national scales like state and provincial presense of the species
+  * `distribution$nations` - a list of where the species can be found during what times of year (i.e. year-round, regularly occurring, etc.) as well as information on sub-national scales like state and provincial presence of the species
   * `distribution$watersheds` - a tibble of watersheds where the species has been found and when
   * `distribution$countyDistribution` - a tibble containing county-wide information about where and when the species has been observed in the United States
   
-To pull out a specific piece of data, it is first necessary to dig through the layers of the nested list to get at what you want. 
-For example, if I would like to know which Phylum the gray wolf belongs to, I burrow into the `classification` list that is within the UID (`ELEMENT_GLOBAL.2.105212`) list using `$` notation:
+Fortunately, even though the list structure is rather complex, you can view the entire list hierarchy with `str()`, short for `structure`:
+
+```{r list.str, eval=F}
+str(gray.wolf.data)
+```
+```
+## List of 1
+##  $ ELEMENT_GLOBAL.2.105212:List of 11
+##   ..$ uid                  : chr "ELEMENT_GLOBAL.2.105212"
+##   ..$ speciesCode          : chr "AMAJA01030"
+##   ..$ natureserve_uri      : chr "http://explorer.natureserve.org/servlet/NatureServe?searchName=Canis+lupus"
+##   ..$ classification       :List of 2
+##   .. ..$ names   :List of 3
+##   .. .. ..$ scientificName                    :List of 4
+##   .. .. .. ..$ unformattedName    :List of 1
+##   .. .. .. .. ..$ : chr "Canis lupus"
+##   .. .. .. ..$ formattedName      :List of 1
+##   .. .. .. .. ..$ : chr "<i>Canis lupus</i>"
+##   .. .. .. ..$ nomenclaturalAuthor:List of 1
+##   .. .. .. .. ..$ : chr "Linnaeus, 1758"
+##   .. .. .. ..$ conceptReference   :List of 3
+##   .. .. .. .. ..$ formattedFullCitation     :List of 1
+##   .. .. .. .. .. ..$ : chr "Wilson, D. E., and D. M. Reeder (editors). 1993. Mammal species of the world: a taxonomic and geographic refere"| __truncated__
+##   .. .. .. .. ..$ nameUsedInConceptReference:List of 2
+##   .. .. .. .. .. ..$ unformattedName:List of 1
+##   .. .. .. .. .. .. ..$ : chr "Canis lupus"
+##   .. .. .. .. .. ..$ formattedName  :List of 1
+##   .. .. .. .. .. .. ..$ : chr "<i>Canis lupus</i>"
+##   .. .. .. .. ..$ classificationStatus      :List of 1
+##   .. .. .. .. .. ..$ : chr "Standard"
+##   .. .. .. .. ..- attr(*, "code")= chr "B93WIL01NAUS"
+##   .. .. ..$ natureServePrimaryGlobalCommonName:List of 1
+##   .. .. .. ..$ : chr "Gray Wolf"
+##   .. .. ..$ otherGlobalCommonNames            :List of 4
+##   .. .. .. ..$ commonName:List of 1
+##   .. .. .. .. ..$ : chr "Grey Wolf"
+##   .. .. .. .. ..- attr(*, "language")= chr "EN"
+##   .. .. .. ..$ commonName:List of 1
+##   .. .. .. .. ..$ : chr "Lobo Gris"
+##   .. .. .. .. ..- attr(*, "language")= chr "ES"
+##   .. .. .. ..$ commonName:List of 1
+##   .. .. .. .. ..$ : chr "Wolf"
+##   .. .. .. .. ..- attr(*, "language")= chr "EN"
+##   .. .. .. ..$ commonName:List of 1
+##   .. .. .. .. ..$ : chr "loup gris"
+##   .. .. .. .. ..- attr(*, "language")= chr "FR"
+##   .. ..$ taxonomy:List of 2
+##   .. .. ..$ formalTaxonomy  :List of 8
+##   .. .. .. ..$ kingdom          :List of 1
+##   .. .. .. .. ..$ : chr "Animalia"
+##   .. .. .. ..$ phylum           :List of 1
+##   .. .. .. .. ..$ : chr "Craniata"
+
+... truncated to save space
+```
+
+To pull out a specific piece or type of information, it is necessary to dig through the lists of lists to get at what you want. 
+For example, if I would like to know which Phylum the gray wolf belongs to, I first go into the top-level `ELEMENT_GLOBAL.2.105212` list, then into the `classification` list, then the `taxonomy` list, then `formalTaxonomy`, then `phylum` within  using `$` notation:
+
 ```{r ns.wolf.phylum}
 gray.wolf.phylum <- gray.wolf.data$ELEMENT_GLOBAL.2.105212$classification$taxonomy$formalTaxonomy$phylum
+gray.wolf.phylum
 ```
-```
-> gray.wolf.phylum
-[[1]]
-[1] "Craniata"
-```
+
+A lot of information is returned by `ns_data` - it might take some time to pull it out of the nested list structure. 
+You can view all of the data available to you by using the `str()` command:
 
 ### `ns_images` - searching NatureServe's image repository
 
@@ -243,32 +272,33 @@ gray.wolf.imageInfo <- ns_images(scientificName = 'Canis lupus')
 # Or search using the common name:
 gray.wolf.imageInfo <- ns_images(commonName = 'Gray wolf')
 ```
+
 This returns metadata for images of the gray wolf hosted by NatureServe, including the creator, the publisher, the description, and usage rights. When no other arguments are given, `ns_images` returns metadata for all available images in their database. Later in the vignette, we'll look at how to return specific image resolutions according to your needs.
 
 When we provide `ns_images` with only `scientificName` or `commonName` search names, it will only search for those terms in NatureServe's Primary Names field. 
 But you can also search using synonymous common and scientific names for the species.
 By including `includesSynonyms = 'Y'` in the `ns_images` command, the provided search term will be looked for in the Primary names of each species, as well as the synonymous Scientific and Common Names fields.
-Of course, if you search using the UID (i.e. with `uid`), there are no synonyms and the argument is invalid. 
+Of course, if you search using the UID (i.e. with `uid`), there are no synonyms. 
 
-Although it is not yet functional, in the future it may also be possible to search using ITIS names using the `ITISNames` argument. 
-As of August 2018, searching with ITIS names is not possible.
+In the future it may also be possible to search using ITIS names using the `ITISNames` argument, but as of August 2018 searching with ITIS names is not possible.
 
 An additional argument, `resolution`, can be used to indicate the desired resolution for the image. 
-When `resolution` is not specified, `ns_images` returns metadata for all available image resolutions. 
+If `resolution` is not specified, `ns_images` returns metadata for all available image resolutions. 
 
-`resolution` can take on one of the following values:
+To only return metadata for a certain `resolution`, you can supply one of the following values to the `resolution` argument:
 
-* `resolution = 'lowest'` - returns metadata only for the lowest available resolution
-* `resolution = 'highest'` - returns metadata for the highest available resolution
-* `resolution = 'thumbnail'` - returns NatureServe's thumbnail version of the image
-* `resolution = 'web'` - returns NatureServe's designated web image
+* `resolution = 'lowest'` 
+* `resolution = 'highest'` 
+* `resolution = 'thumbnail'`
+* `resolution = 'web'` (return metadata for the image used on NatureServe's web page for the species)
 
-## Mapping wolf conservation status across the US
+## Tutorial: Using `natserv` data to map wolf conservation status across the US
 
 Now, using NatureServe data, let's see an example of what we can do with it. 
-As a starting example, let's build a map of conservation status of the gray wolf in each state of the United States. 
+As an example to familiarize yourself with `natserv`, let's build a map of conservation status of the gray wolf in each state of the United States. 
 We'll need to load a few libraries first (if you don't have them loaded already)
-```{r plotting.libraries, echo=F}
+
+```{r plotting.libraries, message=F, warning=F, error=F}
 library(natserv)
 library(ggplot2)
 library(dplyr)
@@ -282,8 +312,8 @@ gray.wolf.alldata <- ns_data(ns_search('Canis lupus')$globalSpeciesUid)
 # Now let's just pull out the sub-national conservation data
 wolf.conservation.status <- gray.wolf.alldata$ELEMENT_GLOBAL.2.105212$conservationStatus$natureserve$nationalStatuses$US$subnationalStatuses
 
-# This returns a list of lists
-wolf.conservation.status[[1:3]]
+# This returns a list of lists, with each entry the species' conservation status in a given state (listed alphabetically)
+wolf.conservation.status[[1]]
 ```
 ```{r wolf.conservation.df.2}
 # The outer list contains one entry for each state
@@ -296,7 +326,7 @@ head(wolf.conservation.df)
 
 NatureServe defines conservation status at the sub-national level (indicated with an `S` prefix - `N` indicates national-level status). Sub-national status is defined below (from the [NatureServe website](http://explorer.natureserve.org/nsranks.htm)):
 
-```{r, my.api.key, include=F}
+```{r status.table, include=F}
 library(knitr)
 library(kableExtra)
 
@@ -315,7 +345,7 @@ unique(wolf.conservation.df$NatServ.Rank)
 # Check the order of levels in the NatServ.Rank factor column:
 levels(wolf.conservation.df$NatServ.Rank)
 ```
-At the moment, the levels of `NatServ.Rank` and `NatServe.Rounded.Rank` aren't in the right order. 
+At the moment, the levels of `NatServ.Rank` and `NatServe.Rounded.Rank` aren't ordered intuitively. 
 Let's reorder them from most to least conservation concern. 
 ```{r relevel.status.factors}
 wolf.conservation.df$NatServ.Rank <- factor(wolf.conservation.df$NatServ.Rank, 
@@ -324,7 +354,7 @@ levels(wolf.conservation.df$NatServ.Rank)[c(6,5,1,2,3,4)])
 levels(wolf.conservation.df$NatServ.Rank)
 ```
 
-Much better! Now let's use our dataset to make a map. 
+Much better! Now let's use our data set to make a map. 
 
 ```{r plot.states}
 # Using the ggplot2 library, we can automatically load map data for the US
@@ -333,20 +363,18 @@ states <- map_data('state')
 
 # Let's plot an example map
 ggplot(data = states) + 
-  geom_polygon(aes(x = long, y = lat, group = group), color = "white", fill="grey") + 
+  geom_polygon(aes(x = long, y = lat, group = group), color = "black", fill="white") + 
   coord_fixed(1.3) +
-  guides(fill=FALSE)  # do this to leave off the color legend 
+  guides(fill=FALSE)  # this removes the legend from the map 
 ```
 
-We now have to merge the two datasets - the `states` dataframe from `ggplot` and the NatureServe conservation status data. 
+We now have to merge the two data sets - the `states` dataframe from `ggplot` and the NatureServe conservation status data. 
 To do this, we can use the `inner_join` function from the `dplyr` package
 
 ```{r inner.join}
-# Change wolf.conservation.df region to character, lowercase to match region in the states df
+# Change wolf.conservation.df region to character, and coerce it to lowercase so that it matches the region name in the states dataframe
 wolf.conservation.df$region <- tolower(as.character(wolf.conservation.df$region))
-
 wolf.conservation.join <- full_join(states, wolf.conservation.df, by = 'region')
-
 
 head(wolf.conservation.join)
 ```
@@ -355,10 +383,9 @@ And map it!
 ```{r status.map}
 # Let's use the data to make a map
 ggplot(data = wolf.conservation.join, aes(fill=NatServ.Rank)) + 
-    # Fill in states that are NaN with grey
-  geom_polygon(data=states, aes(x = long, y = lat, group = group), color = "white", fill='grey') + 
-  geom_polygon(aes(x = long, y = lat, group = group), color = "white") + 
-
-  scale_fill_brewer(palette = 'Spectral') + # Use the spectral palette
+    # Fill in states that are NaN with white
+  geom_polygon(data=states, aes(x = long, y = lat, group = group), color = 'black', fill='white') + 
+  geom_polygon(aes(x = long, y = lat, group = group), color = "black") + 
+  scale_fill_brewer(name='NatureServe Rank', palette = 'Spectral') + # Use the spectral palette
   coord_fixed(1.3)
 ```
