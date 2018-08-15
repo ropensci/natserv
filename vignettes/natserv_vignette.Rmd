@@ -1,6 +1,6 @@
 ---
 title: "Introduction to `natserve` - An R package to wrap NatureServe's database API from rOpenSci"
-author: Mairin Deith
+author: Vignette written by Mairin Deith for the package by Scott Chamberlain
 output: 
    html_document:
      toc: true
@@ -80,7 +80,7 @@ options(NatureServeKey = "YOUR-ACCESS-KEY-ID")
 Every time you start a new R session and want to use `natserv`, you'll have to run this line.
 
 
-#### 2. Define the API key for all scripts in your RProject
+#### 2. Define the API key for all scripts in your project
 
 If you don't want to run `options(NatureServeKey = "YOUR-ACCESS-KEY-ID")` every time you use `natserv`, you can modify the `.Rprofile` or `.Renviron` files to link the API key for all R scripts in your Rproject.
 When R starts up, it reads the `.Rprofile` and `.Renviron` and runs any commands in these files as it launches. 
@@ -123,6 +123,7 @@ The UID for *Canis lupus* is `ELEMENT_GLOBAL.2.105212`, and this ID can be used 
 #### A quick aside: Searching for multiple species
 
 **Searching for all species within a genus**
+
 If we are interested in multiple species (all members of the genus *Canis* for example), we can use `*` as a wild card to pull out all available UIDs for a genus:
 
 ```{r ns.search.wildcard}
@@ -137,8 +138,9 @@ canis.search
 
 **Searching for multiple species if the wildcard won't do**
 
-But let's say you're interested in not only all members of the same genus, but a variety of species that can't be searched using a simple wild card.
-To search for multiple taxa, you can make a vector of search terms containing the scientific names of the species you're interested in, then search each one in a loop or use the `lapply` function:
+If the species you want data about aren't members of the same genus, the wild card method won't work. 
+Instead, to search for multiple taxa you can make a vector of search terms containing the scientific names of each species you're interested in, then search each one in a loop or with the `lapply` function:
+
 ```{r ns.search.multisp}
 species.search.list <- c('Canis lupus', 'Lynx rufus', 'Puma concolor')
 multispecies.search <- lapply(species.search.list, FUN = ns_search)
@@ -154,7 +156,7 @@ multispecies.search
 
 Now that we have our species' UID, we can search NatureServe's API for more data about that species' conservation status, taxonomy, and other information. 
 
-Sticking to the gray wolf example, let's pull up what data are available for *Canis lupus* using the UID from `ns_search`. Note that you can use a call
+Sticking to the gray wolf example, let's pull up what data are available for *Canis lupus* using the UID from `ns_search`:
 
 ```{r ns.data}
 gray.wolf.data <- ns_data(gray.wolf.search$globalSpeciesUid)
@@ -254,13 +256,10 @@ gray.wolf.phylum <- gray.wolf.data$ELEMENT_GLOBAL.2.105212$classification$taxono
 gray.wolf.phylum
 ```
 
-A lot of information is returned by `ns_data` - it might take some time to pull it out of the nested list structure. 
-You can view all of the data available to you by using the `str()` command:
-
 ### `ns_images` - searching NatureServe's image repository
 
 Unlike `ns_data`, the `ns_images` function can search for images of your species of interest using either the scientific name, UID, or common name of the species. 
-`ns_images` can take one of three types of search information: `uid`, the UID of the species (returned by `ns_search`),  `scientificName`, or `commonName`. 
+`ns_images` can take one of three types of search information: `uid`, the UID of the species (returned by `ns_search`),  `scientificName`, or `commonName`: 
 
 ```{r ns.images}
 # Search with the UID (ELEMENT_GLOBAL.2.105212)
@@ -296,7 +295,7 @@ To only return metadata for a certain `resolution`, you can supply one of the fo
 
 Now, using NatureServe data, let's see an example of what we can do with it. 
 As an example to familiarize yourself with `natserv`, let's build a map of conservation status of the gray wolf in each state of the United States. 
-We'll need to load a few libraries first (if you don't have them loaded already)
+We'll need to load a few libraries first (if you don't have them loaded already):
 
 ```{r plotting.libraries, message=F, warning=F, error=F}
 library(natserv)
@@ -312,7 +311,7 @@ gray.wolf.alldata <- ns_data(ns_search('Canis lupus')$globalSpeciesUid)
 # Now let's just pull out the sub-national conservation data
 wolf.conservation.status <- gray.wolf.alldata$ELEMENT_GLOBAL.2.105212$conservationStatus$natureserve$nationalStatuses$US$subnationalStatuses
 
-# This returns a list of lists, with each entry the species' conservation status in a given state (listed alphabetically)
+# This returns a list of lists containing the conservation status in each state
 wolf.conservation.status[[1]]
 ```
 ```{r wolf.conservation.df.2}
@@ -360,8 +359,7 @@ Much better! Now let's use our data set to make a map.
 # Using the ggplot2 library, we can automatically load map data for the US
 states <- map_data('state')
 
-
-# Let's plot an example map
+# Let's first plot the empty map:
 ggplot(data = states) + 
   geom_polygon(aes(x = long, y = lat, group = group), color = "black", fill="white") + 
   coord_fixed(1.3) +
