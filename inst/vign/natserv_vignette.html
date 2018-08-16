@@ -395,15 +395,15 @@ devtools::install_github(&quot;ropensci/natserv&quot;)</code></pre>
 <p>NatureServe uses a unique ID (UID) for each species in their database. The <code>ns_data</code> function requires you to supply the UID for the species you are looking to download data for, and unless you already know the species’ UID you will need to use <code>ns_search</code> to find it.</p>
 <p>Here’s how to use a species’ binomial name to find its UID, using the gray wolf (<em>Canis lupus</em>) as an example:</p>
 <pre class="r"><code>gray.wolf.search &lt;- ns_search(x=&quot;Canis lupus&quot;)
-gray.wolf.search</code></pre>
-<pre><code>## # A tibble: 1 x 5
-##   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-##   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
-## 1 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic s…
-## # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;</code></pre>
+gray.wolf.search
+#&gt; # A tibble: 1 x 5
+#&gt;   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
+#&gt;   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
+#&gt; 1 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic s…
+#&gt; # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;</code></pre>
 <p>After a moment of searching, <code>ns_search</code> returns a tibble containing the UID, common name, scientific name, taxonomic comments, and the URI for the entry in the NatureServe database.</p>
-<pre class="r"><code>gray.wolf.search$globalSpeciesUid</code></pre>
-<pre><code>## [1] &quot;ELEMENT_GLOBAL.2.105212&quot;</code></pre>
+<pre class="r"><code>gray.wolf.search$globalSpeciesUid
+#&gt; [1] &quot;ELEMENT_GLOBAL.2.105212&quot;</code></pre>
 <p>The UID for <em>Canis lupus</em> is <code>ELEMENT_GLOBAL.2.105212</code>, and this ID can be used to access the NatureServe database through their API.</p>
 <div id="a-quick-aside-searching-for-multiple-species" class="section level4">
 <h4>A quick aside: Searching for multiple species</h4>
@@ -411,49 +411,49 @@ gray.wolf.search</code></pre>
 <p>If we are interested in multiple species (all members of the genus <em>Canis</em> for example), we can use <code>*</code> as a wild card to pull out all available UIDs for a genus:</p>
 <pre class="r"><code>canis.search &lt;- ns_search(x=&quot;Canis *&quot;)</code></pre>
 <p>This returns a tibble with 14 rows, one for each entry in <em>Canis</em>:</p>
-<pre><code>## # A tibble: 14 x 5
-##    globalSpeciesUid  jurisdictionSci… commonName taxonomicComments        
-##    &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                    
-##  1 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
-##  2 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic …
-##  3 ELEMENT_GLOBAL.2… Canis latrans    Coyote     Recent genetic studies d…
-##  4 ELEMENT_GLOBAL.2… Canis lupus bai… Mexican W… &lt;NA&gt;                     
-##  5 ELEMENT_GLOBAL.2… Canis lupus occ… Northern … &lt;NA&gt;                     
-##  6 ELEMENT_GLOBAL.2… Canis lupus nub… Southern … &lt;NA&gt;                     
-##  7 ELEMENT_GLOBAL.2… Canis lupus lyc… Eastern W… See taxonomy comments fo…
-##  8 ELEMENT_GLOBAL.2… Canis lupus arc… Arctic Gr… &lt;NA&gt;                     
-##  9 ELEMENT_GLOBAL.2… Canis lupus lig… Alexander… Molecular studies based …
-## 10 ELEMENT_GLOBAL.2… Canis sp. cf. l… Eastern W… New genetic analyses ind…
-## 11 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
-## 12 ELEMENT_GLOBAL.2… Canis lupus bai… Mexican W… &lt;NA&gt;                     
-## 13 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
-## 14 ELEMENT_GLOBAL.2… Canis lupus lyc… Eastern W… See taxonomy comments fo…
-## # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;</code></pre>
+<pre><code>#&gt; # A tibble: 14 x 5
+#&gt;    globalSpeciesUid  jurisdictionSci… commonName taxonomicComments        
+#&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                    
+#&gt;  1 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
+#&gt;  2 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic …
+#&gt;  3 ELEMENT_GLOBAL.2… Canis latrans    Coyote     Recent genetic studies d…
+#&gt;  4 ELEMENT_GLOBAL.2… Canis lupus bai… Mexican W… &lt;NA&gt;                     
+#&gt;  5 ELEMENT_GLOBAL.2… Canis lupus occ… Northern … &lt;NA&gt;                     
+#&gt;  6 ELEMENT_GLOBAL.2… Canis lupus nub… Southern … &lt;NA&gt;                     
+#&gt;  7 ELEMENT_GLOBAL.2… Canis lupus lyc… Eastern W… See taxonomy comments fo…
+#&gt;  8 ELEMENT_GLOBAL.2… Canis lupus arc… Arctic Gr… &lt;NA&gt;                     
+#&gt;  9 ELEMENT_GLOBAL.2… Canis lupus lig… Alexander… Molecular studies based …
+#&gt; 10 ELEMENT_GLOBAL.2… Canis sp. cf. l… Eastern W… New genetic analyses ind…
+#&gt; 11 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
+#&gt; 12 ELEMENT_GLOBAL.2… Canis lupus bai… Mexican W… &lt;NA&gt;                     
+#&gt; 13 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
+#&gt; 14 ELEMENT_GLOBAL.2… Canis lupus lyc… Eastern W… See taxonomy comments fo…
+#&gt; # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;</code></pre>
 <p><strong>Searching for multiple species if the wildcard won’t do</strong></p>
 <p>If the species you want data about aren’t members of the same genus, the wild card method won’t work. Instead, to search for multiple taxa you can make a vector of search terms containing the scientific names of each species you’re interested in, then search each one in a loop or with the <code>lapply</code> function:</p>
 <pre class="r"><code>species.search.list &lt;- c('Canis lupus', 'Lynx rufus', 'Puma concolor')
 multispecies.search &lt;- lapply(species.search.list, FUN = ns_search)</code></pre>
 <p>This returns a 3-element list, where each list item is the tribble returned by <code>ns_search</code>:</p>
-<pre><code>## [[1]]
-## # A tibble: 1 x 5
-##   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-##   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
-## 1 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic s…
-## # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;
-## 
-## [[2]]
-## # A tibble: 1 x 5
-##   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-##   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
-## 1 ELEMENT_GLOBAL.2… Lynx rufus       Bobcat     Placed in genus &lt;i&gt;Felis …
-## # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;
-## 
-## [[3]]
-## # A tibble: 1 x 5
-##   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-##   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
-## 1 ELEMENT_GLOBAL.2… Puma concolor    Cougar     Formerly included in the …
-## # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; # A tibble: 1 x 5
+#&gt;   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
+#&gt;   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
+#&gt; 1 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic s…
+#&gt; # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;
+#&gt; 
+#&gt; [[2]]
+#&gt; # A tibble: 1 x 5
+#&gt;   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
+#&gt;   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
+#&gt; 1 ELEMENT_GLOBAL.2… Lynx rufus       Bobcat     Placed in genus &lt;i&gt;Felis …
+#&gt; # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;
+#&gt; 
+#&gt; [[3]]
+#&gt; # A tibble: 1 x 5
+#&gt;   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
+#&gt;   &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;                     
+#&gt; 1 ELEMENT_GLOBAL.2… Puma concolor    Cougar     Formerly included in the …
+#&gt; # ... with 1 more variable: natureServeExplorerURI &lt;chr&gt;</code></pre>
 </div>
 </div>
 <div id="ns_data---searching-for-records-with-the-uid" class="section level3">
@@ -548,9 +548,9 @@ multispecies.search &lt;- lapply(species.search.list, FUN = ns_search)</code></p
 ... truncated to save space</code></pre>
 <p>To pull out a specific piece or type of information, it is necessary to dig through the lists of lists to get at what you want. For example, if I would like to know which Phylum the gray wolf belongs to, I first go into the top-level <code>ELEMENT_GLOBAL.2.105212</code> list, then into the <code>classification</code> list, then the <code>taxonomy</code> list, then <code>formalTaxonomy</code>, then <code>phylum</code> within using <code>$</code> notation:</p>
 <pre class="r"><code>gray.wolf.phylum &lt;- gray.wolf.data$ELEMENT_GLOBAL.2.105212$classification$taxonomy$formalTaxonomy$phylum
-gray.wolf.phylum</code></pre>
-<pre><code>## [[1]]
-## [1] &quot;Craniata&quot;</code></pre>
+gray.wolf.phylum
+#&gt; [[1]]
+#&gt; [1] &quot;Craniata&quot;</code></pre>
 </div>
 </div>
 <div id="ns_images---searching-natureserves-image-repository" class="section level3">
@@ -590,45 +590,46 @@ library(dplyr)</code></pre>
 wolf.conservation.status &lt;- gray.wolf.alldata$ELEMENT_GLOBAL.2.105212$conservationStatus$natureserve$nationalStatuses$US$subnationalStatuses
 
 # This returns a list of lists containing the conservation status in each state
-wolf.conservation.status[[1]]</code></pre>
-<pre><code>## $subnationName
-## [1] &quot;Alabama&quot;
-## 
-## $subnationCode
-## [1] &quot;AL&quot;
-## 
-## $rank
-## [1] &quot;SX&quot;
-## 
-## $roundedRank
-## [1] &quot;SX&quot;</code></pre>
+wolf.conservation.status[[1]]
+#&gt; $subnationName
+#&gt; [1] &quot;Alabama&quot;
+#&gt; 
+#&gt; $subnationCode
+#&gt; [1] &quot;AL&quot;
+#&gt; 
+#&gt; $rank
+#&gt; [1] &quot;SX&quot;
+#&gt; 
+#&gt; $roundedRank
+#&gt; [1] &quot;SX&quot;</code></pre>
 <pre class="r"><code># The outer list contains one entry for each state
 # Let's convert it into a data.frame for mapping
 wolf.conservation.df &lt;- as.data.frame(matrix(unlist(wolf.conservation.status), nrow=length(wolf.conservation.status), byrow=T))
 colnames(wolf.conservation.df) &lt;- c('region','abbreviation','NatServ.Rank','NatServe.Rounded.Rank')
 
-head(wolf.conservation.df)</code></pre>
-<pre><code>##       region abbreviation NatServ.Rank NatServe.Rounded.Rank
-## 1    Alabama           AL           SX                    SX
-## 2     Alaska           AK           S4                    S4
-## 3    Arizona           AZ           S1                    S1
-## 4   Arkansas           AR           SX                    SX
-## 5 California           CA           S1                    S1
-## 6   Colorado           CO           SX                    SX</code></pre>
+head(wolf.conservation.df)
+#&gt;       region abbreviation NatServ.Rank NatServe.Rounded.Rank
+#&gt; 1    Alabama           AL           SX                    SX
+#&gt; 2     Alaska           AK           S4                    S4
+#&gt; 3    Arizona           AZ           S1                    S1
+#&gt; 4   Arkansas           AR           SX                    SX
+#&gt; 5 California           CA           S1                    S1
+#&gt; 6   Colorado           CO           SX                    SX</code></pre>
 <p>NatureServe defines conservation status at the sub-national level (indicated with an <code>S</code> prefix - <code>N</code> indicates national-level status). Sub-national status is defined below (from the <a href="http://explorer.natureserve.org/nsranks.htm">NatureServe website</a>):</p>
 <p>The other status definitions aren’t included in the gray wolf dataset, and aren’t described here.</p>
-<pre class="r"><code>unique(wolf.conservation.df$NatServ.Rank)</code></pre>
-<pre><code>## [1] SX   S4   S1   SH   S3   S1S2
-## Levels: S1 S1S2 S3 S4 SH SX</code></pre>
-<pre class="r"><code># Check the order of levels in the NatServ.Rank factor column:
-levels(wolf.conservation.df$NatServ.Rank)</code></pre>
-<pre><code>## [1] &quot;S1&quot;   &quot;S1S2&quot; &quot;S3&quot;   &quot;S4&quot;   &quot;SH&quot;   &quot;SX&quot;</code></pre>
+<pre class="r"><code>unique(wolf.conservation.df$NatServ.Rank)
+#&gt; [1] SX   S4   S1   SH   S3   S1S2
+#&gt; Levels: S1 S1S2 S3 S4 SH SX
+
+# Check the order of levels in the NatServ.Rank factor column:
+levels(wolf.conservation.df$NatServ.Rank)
+#&gt; [1] &quot;S1&quot;   &quot;S1S2&quot; &quot;S3&quot;   &quot;S4&quot;   &quot;SH&quot;   &quot;SX&quot;</code></pre>
 <p>At the moment, the levels of <code>NatServ.Rank</code> and <code>NatServe.Rounded.Rank</code> aren’t ordered intuitively. Let’s reorder them from most to least conservation concern.</p>
 <pre class="r"><code>wolf.conservation.df$NatServ.Rank &lt;- factor(wolf.conservation.df$NatServ.Rank, 
 levels(wolf.conservation.df$NatServ.Rank)[c(6,5,1,2,3,4)])
 
-levels(wolf.conservation.df$NatServ.Rank)</code></pre>
-<pre><code>## [1] &quot;SX&quot;   &quot;SH&quot;   &quot;S1&quot;   &quot;S1S2&quot; &quot;S3&quot;   &quot;S4&quot;</code></pre>
+levels(wolf.conservation.df$NatServ.Rank)
+#&gt; [1] &quot;SX&quot;   &quot;SH&quot;   &quot;S1&quot;   &quot;S1S2&quot; &quot;S3&quot;   &quot;S4&quot;</code></pre>
 <p>Much better! Now let’s use our data set to make a map.</p>
 <pre class="r"><code># Using the ggplot2 library, we can automatically load map data for the US
 states &lt;- map_data('state')
@@ -644,21 +645,21 @@ ggplot(data = states) +
 wolf.conservation.df$region &lt;- tolower(as.character(wolf.conservation.df$region))
 wolf.conservation.join &lt;- full_join(states, wolf.conservation.df, by = 'region')
 
-head(wolf.conservation.join)</code></pre>
-<pre><code>##        long      lat group order  region subregion abbreviation
-## 1 -87.46201 30.38968     1     1 alabama      &lt;NA&gt;           AL
-## 2 -87.48493 30.37249     1     2 alabama      &lt;NA&gt;           AL
-## 3 -87.52503 30.37249     1     3 alabama      &lt;NA&gt;           AL
-## 4 -87.53076 30.33239     1     4 alabama      &lt;NA&gt;           AL
-## 5 -87.57087 30.32665     1     5 alabama      &lt;NA&gt;           AL
-## 6 -87.58806 30.32665     1     6 alabama      &lt;NA&gt;           AL
-##   NatServ.Rank NatServe.Rounded.Rank
-## 1           SX                    SX
-## 2           SX                    SX
-## 3           SX                    SX
-## 4           SX                    SX
-## 5           SX                    SX
-## 6           SX                    SX</code></pre>
+head(wolf.conservation.join)
+#&gt;        long      lat group order  region subregion abbreviation
+#&gt; 1 -87.46201 30.38968     1     1 alabama      &lt;NA&gt;           AL
+#&gt; 2 -87.48493 30.37249     1     2 alabama      &lt;NA&gt;           AL
+#&gt; 3 -87.52503 30.37249     1     3 alabama      &lt;NA&gt;           AL
+#&gt; 4 -87.53076 30.33239     1     4 alabama      &lt;NA&gt;           AL
+#&gt; 5 -87.57087 30.32665     1     5 alabama      &lt;NA&gt;           AL
+#&gt; 6 -87.58806 30.32665     1     6 alabama      &lt;NA&gt;           AL
+#&gt;   NatServ.Rank NatServe.Rounded.Rank
+#&gt; 1           SX                    SX
+#&gt; 2           SX                    SX
+#&gt; 3           SX                    SX
+#&gt; 4           SX                    SX
+#&gt; 5           SX                    SX
+#&gt; 6           SX                    SX</code></pre>
 <p>And map it!</p>
 <pre class="r"><code># Let's use the data to make a map
 ggplot(data = wolf.conservation.join, aes(fill=NatServ.Rank)) + 
