@@ -1,18 +1,6 @@
----
-title: "Introduction to `natserve` - An R package to wrap NatureServe's database API from rOpenSci"
-author: Vignette written by Mairin Deith for the package by Scott Chamberlain
-output: 
-   html_document:
-     toc: true
-     toc_depth: 3
-vignette: >
-  %\VignetteIndexEntry{Introduction to `natserv`}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
----
 <!--
 %\VignetteEngine{knitr::knitr}
-%\VignetteIndexEntry{natserv vignette}
+%\VignetteIndexEntry{Introduction to `natserve` - An R package to wrap NatureServe's database API from rOpenSci}
 %\VignetteEncoding{UTF-8}
 -->
 
@@ -55,6 +43,7 @@ If you want the latest development version of `natserv`, you can install the pac
 
 ```r
 install.packages("devtools")
+#> Error in install.packages : Updating loaded packages
 devtools::install_github("ropensci/natserv")
 ```
 

@@ -11,3 +11,4 @@ README.Rmd
 ^revdep$
 ^codemeta\.json$
 ^Makefile$
+vignettes/figure
