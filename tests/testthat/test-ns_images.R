@@ -3,7 +3,9 @@ context("ns_images")
 test_that("ns_images works as expected", {
   skip_on_cran()
 
-  aa <- ns_images(uid = 'ELEMENT_GLOBAL.2.100925')
+  vcr::use_cassette("ns_images", {
+    aa <- ns_images(uid = 'ELEMENT_GLOBAL.2.100925')
+  })
 
   expect_is(aa, 'list')
   expect_named(aa, c('terms', 'images'))
@@ -14,14 +16,16 @@ test_that("ns_images works as expected", {
 })
 
 test_that("ns_images fails well", {
-  skip_on_cran()
+  vcr::use_cassette("ns_images_error", {
+    expect_error(ns_images(scientificName = "asdfasf"),
+                 'no results found')
+    expect_error(ns_images(commonName = "asdfasf"),
+                 'no results found')
+  })
 
+  skip_on_cran()
   expect_error(ns_images("adfdf"),
                "'uid' doesn't appear to be a NatureServe ID")
-  expect_error(ns_images(scientificName = "asdfasf"),
-               'no results found')
-  expect_error(ns_images(commonName = "asdfasf"),
-               'no results found')
 
   # fails well when input not character
   expect_error(ns_images(5), 'uid must be of class character')

@@ -27,5 +27,6 @@ Suggests:
     knitr,
     ggplot2,
     maps,
-    mapproj
+    mapproj,
+    vcr
 RoxygenNote: 6.1.1

@@ -1,0 +1,166 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://services.natureserve.org/idd/rest/ns/v1.1/globalSpecies/comprehensive?uid=ELEMENT_GLOBAL.2.101998&NSAccessKeyId=<<natserv_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.3 crul/0.7.0.9100
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Wed, 23 Jan 2019 01:00:59 GMT
+      server: Apache-Coyote/1.1
+      content-type: text/xml
+      transfer-encoding: chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\r\n<globalSpeciesList\r\n
+        \   xsi:schemaLocation=\"http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1
+        http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1/\"\r\n
+        \   xmlns=\"http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1\"\r\n
+        \   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n    schemaVersion=\"1.1\">\r\n
+        \ <globalSpecies uid=\"ELEMENT_GLOBAL.2.101998\"\r\n              speciesCode=\"AFCQS01010\"\r\n
+        \      >\r\n    <natureServeExplorerURI>http://explorer.natureserve.org/servlet/NatureServe?searchName=Pomatomus+saltatrix</natureServeExplorerURI>\r\n<classification>\r\n
+        \ <names>\r\n        <scientificName>\r\n          <unformattedName>Pomatomus
+        saltatrix</unformattedName>\r\n              <formattedName>&lt;i&gt;Pomatomus
+        saltatrix&lt;/i&gt;</formattedName>\r\n              <nomenclaturalAuthor>(Linnaeus,
+        1766)</nomenclaturalAuthor>\r\n              <conceptReference\r\n                  code=\"B91ROB01NAUS\"\r\n
+        \        >\r\n                    <formattedFullCitation>Robins, C.R., R.M.
+        Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott. 1991.
+        Common and scientific names of fishes from the United States and Canada. American
+        Fisheries Society, Special Publication 20. 183 pp.</formattedFullCitation>\r\n
+        \                   <nameUsedInConceptReference>\r\n                  <unformattedName>Pomatomus
+        saltatrix</unformattedName>\r\n                          <formattedName>&lt;i&gt;Pomatomus
+        saltatrix&lt;/i&gt;</formattedName>\r\n                </nameUsedInConceptReference>\r\n
+        \             <classificationStatus>Standard</classificationStatus>\r\n      </conceptReference>\r\n
+        \           </scientificName>\r\n        <natureServePrimaryGlobalCommonName>Bluefish</natureServePrimaryGlobalCommonName>\r\n
+        \       </names>\r\n  <taxonomy>\r\n    <formalTaxonomy>\r\n      <kingdom>Animalia</kingdom>\r\n
+        \     <phylum>Craniata</phylum>\r\n      <class>Actinopterygii</class>\r\n
+        \     <order>Perciformes</order>\r\n      <family>Pomatomidae</family>\r\n
+        \     <genus>Pomatomus</genus>\r\n\t          </formalTaxonomy>\r\n    <informalTaxonomy>\r\n
+        \         <informalTaxonomyLevel1Name>Animals, Vertebrates</informalTaxonomyLevel1Name>\r\n
+        \             <informalTaxonomyLevel2Name>Fishes</informalTaxonomyLevel2Name>\r\n
+        \             <informalTaxonomyLevel3Name>Bony Fishes</informalTaxonomyLevel3Name>\r\n
+        \             <informalTaxonomyLevel4Name>Other Bony Fishes</informalTaxonomyLevel4Name>\r\n
+        \       </informalTaxonomy>\r\n  </taxonomy>\r\n</classification>\r\n  <conservationStatus>\r\n
+        \   <natureServeStatus>\r\n      <globalStatus>\r\n              <rank><code>G5</code></rank>\r\n
+        \                   <roundedRank>\r\n          <code>G5</code>\r\n                  <description>Secure</description>\r\n
+        \               </roundedRank>\r\n                    <statusLastReviewed>1997-01-01</statusLastReviewed>\r\n
+        \                   <statusLastChanged>1997-01-01</statusLastChanged>\r\n
+        \             <conservationStatusFactors>\r\n                                                  <statusFactorsEditionDate>2010-01-21</statusFactorsEditionDate>\r\n
+        \             <conservationStatusAuthors displayValue=\"Hammerson, G.\"></conservationStatusAuthors>\r\n
+        \       </conservationStatusFactors>\r\n                <nationalStatuses>\r\n
+        \                 <nationalStatus nationName=\"United States\" nationCode=\"US\">\r\n
+        \                     <rank><code>N5</code></rank>\r\n                                <roundedRank><code>N5</code></roundedRank>\r\n
+        \                               <statusLastReviewed>1996-09-05</statusLastReviewed>\r\n
+        \                               <subnationalStatuses>\r\n                          <subnationalStatus\r\n
+        \               subnationName=\"Louisiana\"\r\n                subnationCode=\"LA\">\r\n
+        \                             <rank><code>S4</code></rank>\r\n                                            <roundedRank><code>S4</code></roundedRank>\r\n
+        \                           </subnationalStatus>\r\n                          <subnationalStatus\r\n
+        \               subnationName=\"New York\"\r\n                subnationCode=\"NY\">\r\n
+        \                             <rank><code>SNRN</code></rank>\r\n                                            <roundedRank><code>SNRN</code></roundedRank>\r\n
+        \                           </subnationalStatus>\r\n                          <subnationalStatus\r\n
+        \               subnationName=\"Rhode Island\"\r\n                subnationCode=\"RI\">\r\n
+        \                             <rank><code>SNR</code></rank>\r\n                                            <roundedRank><code>SNR</code></roundedRank>\r\n
+        \                           </subnationalStatus>\r\n                        </subnationalStatuses>\r\n
+        \                   </nationalStatus>\r\n                </nationalStatuses>\r\n
+        \           </globalStatus>\r\n    </natureServeStatus>\r\n          </conservationStatus>\r\n\r\n
+        \     <distribution USAndCanadianDistributionComplete=\"false\">\r\n    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+        \       <conservationStatusMap>http://explorer.natureserve.org/servlet/GetMapGif?US.LA=S4&amp;US.NY=__&amp;US.RI=SNR</conservationStatusMap>\r\n
+        \       <globalRange>\r\n                      <comments>This species ranges
+        in the western North Atlantic from Nova Scotia and Bermuda to Argentina (including
+        the Gulf of Mexico), but it is rare between southern Florida and northern
+        South America (Shepherd and Packer 2006). It also occurs in other warm seas
+        worldwide but not in the eastern Pacific Ocean.</comments>\r\n        </globalRange>\r\n
+        \           <nations>\r\n                            <nation nationName=\"United
+        States\"\r\n                nationCode=\"US\">\r\n                    <nationalDistributions>\r\n
+        \                                            <nationalDistribution>\r\n            <origin>Native</origin>
+        \           <regularity>Regularly occurring</regularity>            <currentPresenceAbsence>Present</currentPresenceAbsence>
+        \           <distributionConfidence>Confident</distributionConfidence>            <population>Year-round</population>
+        \                       </nationalDistribution>\r\n                                </nationalDistributions>\r\n
+        \                             <subnations>\r\n                          <subnation\r\n
+        \                   subnationName=\"Louisiana\"\r\n                    subnationCode=\"LA\"
+        \r\n                              >\r\n                    <subnationalDistributions>\r\n
+        \                                      <subnationalDistribution>\r\n            <origin>Native</origin>
+        \           <regularity>Regularly occurring</regularity>            <currentPresenceAbsence>Present</currentPresenceAbsence>
+        \           <distributionConfidence>Confident</distributionConfidence>            <population>Year-round</population>
+        \                       </subnationalDistribution>\r\n                                   </subnationalDistributions>\r\n
+        \              </subnation>\r\n                                       <subnation\r\n
+        \                   subnationName=\"New York\"\r\n                    subnationCode=\"NY\"
+        \r\n                              >\r\n                    <subnationalDistributions>\r\n
+        \                                      <subnationalDistribution>\r\n            <origin>Native</origin>
+        \           <regularity>Regularly occurring</regularity>            <currentPresenceAbsence>Present</currentPresenceAbsence>
+        \           <distributionConfidence>Confident</distributionConfidence>            <population>Non-breeding</population>
+        \                       </subnationalDistribution>\r\n                                   </subnationalDistributions>\r\n
+        \              </subnation>\r\n                                       <subnation\r\n
+        \                   subnationName=\"Rhode Island\"\r\n                    subnationCode=\"RI\"
+        \r\n                              >\r\n                    <subnationalDistributions>\r\n
+        \                                      <subnationalDistribution>\r\n            <origin>Native</origin>
+        \           <regularity>Regularly occurring</regularity>            <currentPresenceAbsence>Present</currentPresenceAbsence>
+        \           <distributionConfidence>Confident</distributionConfidence>            <population>Year-round</population>
+        \                       </subnationalDistribution>\r\n                                   </subnationalDistributions>\r\n
+        \              </subnation>\r\n                                     </subnations>\r\n
+        \                         </nation>\r\n                  </nations>\r\n          </distribution>\r\n
+        \ <ecologyAndLifeHistory>\r\n      <ecologyAndLifeHistoryDescription>\r\n
+        \                 <generalDescription>Bluefish have a sea green or bluish
+        green back and silvery belly. The pectoral fins have a black blotch at the
+        base. There are two dorsal fins and one anal fin. The ventral fins are well
+        forward of the dorsals and are located underneath the pectorals. The tail
+        fin is broad and forked. The lower jaw protrudes slightly beyond the upper
+        jaw of the large mouth. The upper and lower jaws are lined with a series of
+        stout, conical caninelike teeth. Maximum length is about 3.5 feet (a little
+        more than 1 meter).</generalDescription>\r\n            </ecologyAndLifeHistoryDescription>\r\n
+        \                     <reproductionComments>Eggs hatch in about 2 days at
+        18-22°C.</reproductionComments>\r\n                      <habitatType>\r\n
+        \             <code>M</code>\r\n              <description>Marine</description>\r\n
+        \     </habitatType>\r\n              <migration>\r\n              <nonMigrant>false</nonMigrant>\r\n
+        \                   <locallyMigrant>false</locallyMigrant>\r\n                    <longDistanceMigrant>false</longDistanceMigrant>\r\n
+        \                   <mobilityAndMigrationComments>Bluefish travel in schools
+        of like-sized individuals and undertake seasonal migrations. Along the U.S.
+        Atlantic coast they generally move north in spring-summer to centers of abundance
+        in the New York Bight and southern New England and south in autumn-winter
+        to the waters as far as southeastern Florida.</mobilityAndMigrationComments>\r\n
+        \           </migration>\r\n               <habitats>\r\n                                                               <habitatComments>Within
+        the Middle Atlantic Bight (MAB) they occur in large bays and estuaries as
+        well as across the entire continental shelf. Adults occur in bays and estuaries
+        primarily in the warmest summer months. Juvenile stages have been recorded
+        from all estuaries surveyed within the MAB, but eggs and larvae occur in oceanic
+        waters. Spawning occurs offshore in spring-summer (possibly in fall off Florida).
+        Juveniles move into estuaries in spring or summer (earlier in the south than
+        in the north) and move out to sea in fall as temperatures decline. [Source:
+        Shepherd and Packard 2006]</habitatComments>\r\n            </habitats>\r\n
+        \                                 <ecologyAndLifeHistoryEditionDate>2010-01-21</ecologyAndLifeHistoryEditionDate>\r\n
+        \             <ecologyAndLifeHistoryAuthors displayValue=\"Hammerson, G.\"/>\r\n
+        \       </ecologyAndLifeHistory>\r\n      <references>\r\n          <citation>Gusey,
+        W.F. 1976. The fish and wildlife resources of the Middle Atlantic Bight. Shell
+        Oil Co., Houston, TX. 2nd printing. 582 pp.</citation>\r\n          <citation>Nelson,
+        J. S., E. J. Crossman, H. Espinosa-Perez, L. T. Findley, C. R. Gilbert, R.
+        N. Lea, and J. D. Williams. 2004. Common and scientific names of fishes from
+        the United States, Canada, and Mexico. American Fisheries Society, Special
+        Publication 29, Bethesda, Maryland. 386 pp.</citation>\r\n          <citation>Page,
+        L. M., H. Espinosa-Pérez, L. T. Findley, C. R. Gilbert, R. N. Lea, N. E. Mandrak,
+        R. L. Mayden, and J. S. Nelson. 2013. Common and scientific names of fishes
+        from the United States, Canada, and Mexico. Seventh edition. American Fisheries
+        Society, Special Publication 34, Bethesda, Maryland.</citation>\r\n          <citation>Robins,
+        C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B.
+        Scott. 1991. Common and scientific names of fishes from the United States
+        and Canada. American Fisheries Society, Special Publication 20. 183 pp.</citation>\r\n
+        \         <citation>Shepherd, G. R., and D. B. Packer. 2006. Essential fish
+        habitat source document: bluefish, &lt;i&gt;Pomatomus saltatrix&lt;/i&gt;,
+        life history and habitat characteristics. Second edition. NOAA Technical Memorandum
+        NMFS-NE-198.</citation>\r\n          <citation>Smith, C.L. 1985. The Inland
+        Fishes of New York State. New York State Department of Environmental Conservation.
+        Albany, NY. 522pp.</citation>\r\n        </references>\r\n      <license>\r\n
+        \       All usage of this data must abide by NatureServes data usage license
+        which can be found at: http://services.natureserve.org/about/license.jsp.\r\n
+        \   </license>\r\n  </globalSpecies>\r\n</globalSpeciesList>\r\n"
+  recorded_at: 2019-01-23 01:01:00 GMT
+  recorded_with: vcr/0.2.2, webmockr/0.3.0

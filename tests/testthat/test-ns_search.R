@@ -1,9 +1,9 @@
 context("ns_search")
 
 test_that("ns_search works as expected", {
-  skip_on_cran()
-
-  aa <- ns_search(x = "Helianthus annuus")
+  vcr::use_cassette("ns_search", {
+    aa <- ns_search(x = "Helianthus annuus")
+  })
 
   expect_is(aa, 'tbl_df')
   expect_is(aa$globalSpeciesUid, 'character')
@@ -15,12 +15,13 @@ test_that("ns_search works as expected", {
 })
 
 test_that("ns_search fails well", {
-  skip_on_cran()
+  vcr::use_cassette("ns_search_error", {
+    expect_error(ns_search("asdfasf"), 'no results found')
+  })
 
+  skip_on_cran()
   expect_error(ns_search(),
                'argument "x" is missing')
-  expect_error(ns_search("asdfasf"),
-               'no results found')
 
   # fails well when input not character
   expect_error(ns_search(5), 'x must be of class character')

@@ -3,7 +3,9 @@ context("ns_data")
 test_that("ns_data works as expected", {
   skip_on_cran()
 
-  aa <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
+  vcr::use_cassette("ns_data", {
+    aa <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
+  })
 
   expect_is(aa, 'list')
   expect_is(aa[[1]], 'list')
@@ -18,7 +20,9 @@ test_that("ns_data eg works that didn't used to work", {
 
   # this didn't work cause Canada didn't have subnation data,
   # but should be fixed now
-  aa <- ns_data(uid = 'ELEMENT_GLOBAL.2.101998')
+  vcr::use_cassette("ns_data_fixed", {
+    aa <- ns_data(uid = 'ELEMENT_GLOBAL.2.101998')
+  })
 
   expect_is(aa, 'list')
   expect_is(aa[[1]], 'list')

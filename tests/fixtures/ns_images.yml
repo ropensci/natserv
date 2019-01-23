@@ -1,0 +1,73 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://services.natureserve.org/idd/rest/ns/v1/globalSpecies/images?uid=ELEMENT_GLOBAL.2.100925&NSAccessKeyId=<<natserv_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.3 crul/0.7.0.9100
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Wed, 23 Jan 2019 01:01:00 GMT
+      server: Apache-Coyote/1.1
+      content-type: text/xml
+      transfer-encoding: chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<images xmlns=\"http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1\"\r\n\t\txmlns:dc=\"http://purl.org/dc/terms/\"\r\n\t\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\t\txsi:schemaLocation=\"http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1
+        http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1/ http://purl.org/dc/terms/
+        http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd\">\r\n    \t<termsAndConditions>\r\n
+        \ \t\tWhen using the NatureServe web service for species image access or the
+        species images obtained via the web service, the user has the following responsibilities:\r\n\t\t1.
+        Ensuring that the copyright and permissions metadata associated with the species
+        images obtained from NatureServe&apos;s web service for species image access
+        are displayed with the species images.\r\n\t\t2. Adhering to any terms and
+        conditions associated with a copyrighted species image (e.g., acknowledging
+        the photographer/creator).\r\n\t\t3. Performing a refresh of species image
+        metadata every six (6) months. Refreshes are to be performed since the species
+        images and their\r\n\t\tassociated metadata can change over time (e.g., images
+        may be added, replaced, or deleted, permission\r\n\t\tinformation may change,
+        etc.). Note that refreshing the species images includes updating any systems,
+        tools, databases, libraries,\r\n\t\tor other places where the species images
+        have been used.\r\n\t</termsAndConditions>\r\n\t\t<image>\r\n\t\t<id>8278</id>\r\n\t\t\t\t<dc:title>Golden
+        Eagle (Aquila chrysaetos)</dc:title>\r\n\t\t\t\t\t\t<dc:creator>Larry Master</dc:creator>\r\n\t\t\t\t<dc:publisher>NatureServe</dc:publisher>\r\n\t\t<dc:subject>Birds</dc:subject>\r\n\t\t<dc:description>\r\n\t\t\t\t\t\t\t\tGolden
+        Eagle\r\n\t\t\t\t\t\t\t</dc:description>\r\n\t\t\t\t<dc:identifier>http://explorer.natureserve.org/imagerepository/GetImage?SRC=2&amp;BATCH=10&amp;FMT=jpg&amp;RES=192X128&amp;NAME=goldeneagle4</dc:identifier>\r\n\t\t<dc:type>Image</dc:type>\r\n\t\t<dc:format>image/jpeg</dc:format>\r\n\t\t<dc:format>192X128</dc:format>\r\n\t\t\t\t\t\t\t<dc:rights>This
+        photo may be downloaded at moderate resolution (not to exceed 768 x 512 pixels)
+        but only for non-commercial, educational purposes.  All such uses must include
+        the copyright line and the photographer credit listed with the image.  This
+        permission does not include publishing the image or posting it to another
+        web site.  To request permission for these or other uses, see permission information.</dc:rights>\r\n\t\t\t\t\t\t\t\t\t<dc:rightsHolder>Larry
+        Master</dc:rightsHolder>\r\n\t\t\t\t\t<dc:rightsHolder>Copyright held by Creator</dc:rightsHolder>\r\n\t\t\t\t\t\t\t\t\t<dc:issued>August</dc:issued>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<dc:isVersionOf>http://explorer.natureserve.org/imagerepository/GetImage?SRC=2&amp;BATCH=10&amp;FMT=jpg&amp;RES=768X512&amp;NAME=goldeneagle4</dc:isVersionOf>\r\n\t\t\t\t\t\t\t\t\t<dc:coverage>captive</dc:coverage>\r\n\t\t\t\t\t\t\t\t\t\t<scientificName>Aquila
+        chrysaetos</scientificName>\r\n\t\t\t\t<commonName>Golden Eagle</commonName>\r\n\t\t\t\t\t\t\t\t\t<otherCommonName
+        \ lang=\"FR\"  >aigle royal</otherCommonName>\r\n\t\t\t\t\t\t\t<otherCommonName
+        \ >golden eagle</otherCommonName>\r\n\t\t\t\t\t\t\t<otherCommonName  lang=\"ES\"
+        \ >Águila Real</otherCommonName>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<globalSpeciesUID>ELEMENT_GLOBAL.2.100925</globalSpeciesUID>\r\n\t\t<natureServeExplorerURI>http://explorer.natureserve.org/servlet/NatureServe?searchName=Aquila+chrysaetos</natureServeExplorerURI>\r\n\t\t<imagePermission>\r\n\t\t\t\t\t\t\t<name>Larry
+        Master</name>\r\n\t\t\t\t\t\t\t<organization>NatureServe</organization>\r\n\t\t\t\t\t\t\t<address>11
+        Avenue de Lafayette, 5th Floor</address>\r\n\t\t\t\t\t\t\t\t\t<city>Boston</city>\r\n\t\t\t\t\t\t\t<state>MA</state>\r\n\t\t\t\t\t\t\t<postalCode>02111</postalCode>\r\n\t\t\t\t\t\t\t<phone>617-542-1908
+        x230</phone>\r\n\t\t\t\t\t\t\t<email>larry_master@natureserve.org</email>\r\n\t\t\t\t\t\t\t<website>http://www.masterimages.us/</website>\r\n\t\t\t\t</imagePermission>\r\n\t</image>\r\n\r\n\t\t<image>\r\n\t\t<id>8845</id>\r\n\t\t\t\t<dc:title>Golden
+        Eagle (Aquila chrysaetos)</dc:title>\r\n\t\t\t\t\t\t<dc:creator>Larry Master</dc:creator>\r\n\t\t\t\t<dc:publisher>NatureServe</dc:publisher>\r\n\t\t<dc:subject>Birds</dc:subject>\r\n\t\t<dc:description>\r\n\t\t\t\t\t\t\t\tGolden
+        Eagle\r\n\t\t\t\t\t\t\t</dc:description>\r\n\t\t\t\t<dc:identifier>http://explorer.natureserve.org/imagerepository/GetImage?SRC=2&amp;BATCH=10&amp;FMT=jpg&amp;RES=768X512&amp;NAME=goldeneagle4</dc:identifier>\r\n\t\t<dc:type>Image</dc:type>\r\n\t\t<dc:format>image/jpeg</dc:format>\r\n\t\t<dc:format>768X512</dc:format>\r\n\t\t\t\t\t\t\t<dc:rights>This
+        photo may be downloaded at moderate resolution (not to exceed 768 x 512 pixels)
+        but only for non-commercial, educational purposes.  All such uses must include
+        the copyright line and the photographer credit listed with the image.  This
+        permission does not include publishing the image or posting it to another
+        web site.  To request permission for these or other uses, see permission information.</dc:rights>\r\n\t\t\t\t\t\t\t\t\t<dc:rightsHolder>Larry
+        Master</dc:rightsHolder>\r\n\t\t\t\t\t<dc:rightsHolder>Copyright held by Creator</dc:rightsHolder>\r\n\t\t\t\t\t\t\t\t\t<dc:issued>August</dc:issued>\r\n\t\t\t\t\t\t\t\t\t<dc:isVersionOf>http://explorer.natureserve.org/imagerepository/GetImage?SRC=2&amp;BATCH=10&amp;FMT=jpg&amp;RES=192X128&amp;NAME=goldeneagle4</dc:isVersionOf>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<dc:coverage>captive</dc:coverage>\r\n\t\t\t\t\t\t\t\t\t\t<scientificName>Aquila
+        chrysaetos</scientificName>\r\n\t\t\t\t<commonName>Golden Eagle</commonName>\r\n\t\t\t\t\t\t\t\t\t<otherCommonName
+        \ lang=\"FR\"  >aigle royal</otherCommonName>\r\n\t\t\t\t\t\t\t<otherCommonName
+        \ >golden eagle</otherCommonName>\r\n\t\t\t\t\t\t\t<otherCommonName  lang=\"ES\"
+        \ >Águila Real</otherCommonName>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<globalSpeciesUID>ELEMENT_GLOBAL.2.100925</globalSpeciesUID>\r\n\t\t<natureServeExplorerURI>http://explorer.natureserve.org/servlet/NatureServe?searchName=Aquila+chrysaetos</natureServeExplorerURI>\r\n\t\t<imagePermission>\r\n\t\t\t\t\t\t\t<name>Larry
+        Master</name>\r\n\t\t\t\t\t\t\t<organization>NatureServe</organization>\r\n\t\t\t\t\t\t\t<address>11
+        Avenue de Lafayette, 5th Floor</address>\r\n\t\t\t\t\t\t\t\t\t<city>Boston</city>\r\n\t\t\t\t\t\t\t<state>MA</state>\r\n\t\t\t\t\t\t\t<postalCode>02111</postalCode>\r\n\t\t\t\t\t\t\t<phone>617-542-1908
+        x230</phone>\r\n\t\t\t\t\t\t\t<email>larry_master@natureserve.org</email>\r\n\t\t\t\t\t\t\t<website>http://www.masterimages.us/</website>\r\n\t\t\t\t</imagePermission>\r\n\t</image>\r\n\r\n\t\r\n
+        \ </images>\r\n"
+  recorded_at: 2019-01-23 01:01:00 GMT
+  recorded_with: vcr/0.2.2, webmockr/0.3.0
