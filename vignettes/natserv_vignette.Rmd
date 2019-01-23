@@ -33,8 +33,7 @@ Thus `natserv` was born.
 This R package can access NatureServe's online API for rapid downloading of conservation data, allows for easy access to multiple species' data sets, and  loads the data directly into your R session. 
 
 ## Installing `natserv` from CRAN or GitHub
-The stable version of `natserv` is available on the CRAN repository [located here](https://cran.r-project.org/web/packages/natserv/).
-You can install it with:
+The stable version of `natserv` is available on the [CRAN repository](https://CRAN.R-project.org/package=natserv). You can install it with:
 
 
 ```r

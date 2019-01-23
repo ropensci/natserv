@@ -16,6 +16,8 @@ test_that("ns_images works as expected", {
 })
 
 test_that("ns_images fails well", {
+  skip_on_cran()
+
   vcr::use_cassette("ns_images_error", {
     expect_error(ns_images(scientificName = "asdfasf"),
                  'no results found')
@@ -23,7 +25,6 @@ test_that("ns_images fails well", {
                  'no results found')
   })
 
-  skip_on_cran()
   expect_error(ns_images("adfdf"),
                "one or more 'uid's")
 
