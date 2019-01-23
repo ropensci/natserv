@@ -30,3 +30,6 @@ Suggests:
     mapproj,
     vcr
 RoxygenNote: 6.1.1
+X-schema.org-applicationCategory: Taxonomy
+X-schema.org-keywords: taxonomy, species, API, web-services, NatureServe, metadata, maps
+X-schema.org-isPartOf: https://ropensci.org
