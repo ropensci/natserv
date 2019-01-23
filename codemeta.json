@@ -179,7 +179,7 @@
   "contIntegration": "https://travis-ci.org/ropensci/natserv",
   "releaseNotes": "https://github.com/ropensci/natserv/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/natserv/blob/master/README.md",
-  "fileSize": "91.716KB",
+  "fileSize": "92.163KB",
   "applicationCategory": "Taxonomy",
   "isPartOf": "https://ropensci.org",
   "keywords": ["taxonomy", "species", "API", "web-services", "NatureServe", "metadata", "maps", "r", "rstats", "r-package", "taxize"]
