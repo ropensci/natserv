@@ -16,7 +16,7 @@
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 1 reverse dependency. (Summary at <https://github.com/ropensci/wikitaxa/blob/master/revdep/README.md>). No problems were found.
+* I have run R CMD check on the 1 reverse dependency. (Summary at <https://github.com/ropensci/natserv/blob/master/revdep/README.md>). No problems were found.
 
 ---
 

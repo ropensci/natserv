@@ -17,3 +17,6 @@ inst/vign/taxize_vignette_cache
 tests/testthat/Rplots.pdf
 inst/vign/figure/
 inst/vign/natserv_vignette.md
+revdep/checks.noindex
+revdep/data.sqlite
+revdep/library.noindex

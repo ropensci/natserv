@@ -16,3 +16,4 @@ inst/vign/figure/
 inst/vign/natserv_vignette.md
 .github
 appveyor.yml
+^revdep$
