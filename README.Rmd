@@ -47,8 +47,7 @@ install.packages("natserv")
 Development version
 
 ```{r eval=FALSE}
-install.packages("devtools")
-devtools::install_github("ropensci/natserv")
+remotes::install_github("ropensci/natserv")
 ```
 
 ```{r}
@@ -86,6 +85,6 @@ res$images[[1]][1:5]
 * Please [report any issues or bugs](https://github.com/ropensci/natserv/issues).
 * License: MIT
 * Get citation information for `natserv` in R doing `citation(package = 'natserv')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUNCT.md). By participating in this project you agree to abide by its terms.
 
 [![ropensci](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

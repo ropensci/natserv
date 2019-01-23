@@ -6,7 +6,7 @@ man-roxygen
 ^\.Rproj\.user$
 CONTRIBUTING.md
 README.Rmd
-^CONDUCT\.md$
+^CODE_OF_CONDUNCT\.md$
 ^cran-comments\.md$
 ^revdep$
 ^codemeta\.json$
