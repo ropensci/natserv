@@ -37,7 +37,7 @@ test_that("ns_data fails well", {
   expect_error(ns_data(),
                'argument "uid" is missing')
   expect_error(ns_data("asdfasf"),
-               "'uid' doesn't appear to be a NatureServe ID")
+               "one or more 'uid's")
 
   # fails well when input not character
   expect_error(ns_data(5), 'uid must be of class character')

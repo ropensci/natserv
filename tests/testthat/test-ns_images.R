@@ -25,7 +25,7 @@ test_that("ns_images fails well", {
 
   skip_on_cran()
   expect_error(ns_images("adfdf"),
-               "'uid' doesn't appear to be a NatureServe ID")
+               "one or more 'uid's")
 
   # fails well when input not character
   expect_error(ns_images(5), 'uid must be of class character')

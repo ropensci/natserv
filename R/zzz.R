@@ -42,7 +42,10 @@ ns_base <- function() 'https://services.natureserve.org/idd/rest/ns'
 
 check_key <- function(x) {
   tmp <- if (is.null(x)) Sys.getenv("NATURE_SERVE_KEY", "") else x
-  if (tmp == "") getOption("NatureServeKey", stop("You need an API key for NatureServe")) else tmp
+  if (tmp == "") 
+    getOption("NatureServeKey", stop("You need an API key for NatureServe")) 
+  else 
+    tmp
 }
 
 map_blanktheme <- function(){
@@ -68,7 +71,9 @@ chek_pk <- function(x) {
   }
 }
 
-str_extrct <- function(string, pattern) regmatches(string, regexpr(pattern, string))
+str_extrct <- function(string, pattern) {
+  regmatches(string, regexpr(pattern, string))
+}
 
 assert <- function(x, y) {
   if (!is.null(x)) {
@@ -81,8 +86,11 @@ assert <- function(x, y) {
 
 check_uid <- function(x) {
   if (!is.null(x)) {
-    if (!grepl("ELEMENT_GLOBAL", x)) {
-      stop("'uid' doesn't appear to be a NatureServe ID", call. = FALSE)
+    greps <- grepl("ELEMENT_GLOBAL", x)
+    if (any(!greps)) {
+      stop("one or more 'uid's appear not to be NatureServe ID's:\n",
+        paste0(x[!greps], collapse=", "),
+        call. = FALSE)
     }
   }
 }
