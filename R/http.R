@@ -1,6 +1,5 @@
 ns_GET <- function(url, query, err_fxn, ...){
   cli <- crul::HttpClient$new(url = url, opts = list(...))
-  # cli <- crul::HttpClient$new(url = url)
   temp <- cli$get(query = query)
   temp$raise_for_status()
   x <- temp$parse("UTF-8")
