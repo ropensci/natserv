@@ -2,6 +2,7 @@ natserv
 =======
 
 
+
 [![cran checks](https://cranchecks.info/badges/worst/natserv)](https://cranchecks.info/pkgs/natserv)
 [![Build Status](https://travis-ci.org/ropensci/natserv.svg?branch=master)](https://travis-ci.org/ropensci/natserv)
 [![codecov](https://codecov.io/gh/ropensci/natserv/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/natserv)
@@ -28,6 +29,9 @@ Three NatureServe web services are available in this package:
 You'll need an API key to use this package. Get one by signing up at
 <https://services.natureserve.org/developer/index.jsp>
 
+See also the [taxize book](https://ropensci.github.io/taxize-book/) for 
+a manual on working with taxonomic data in R, including with NatureServe data.
+
 ## Installation
 
 Stable version from CRAN
@@ -41,8 +45,7 @@ Development version
 
 
 ```r
-install.packages("devtools")
-devtools::install_github("ropensci/natserv")
+remotes::install_github("ropensci/natserv")
 ```
 
 
@@ -55,11 +58,10 @@ library('natserv')
 
 ```r
 ns_search(x = "Helianthus annuus")
-#> # A tibble: 1 × 4
-#>          globalSpeciesUid jurisdictionScientificName       commonName
-#>                     <chr>                      <chr>            <chr>
-#> 1 ELEMENT_GLOBAL.2.134717          Helianthus annuus Common Sunflower
-#> # ... with 1 more variables: natureServeExplorerURI <chr>
+#> # A tibble: 1 x 4
+#>   globalSpeciesUid   jurisdictionScien… commonName natureServeExplorerURI  
+#>   <chr>              <chr>              <chr>      <chr>                   
+#> 1 ELEMENT_GLOBAL.2.… Helianthus annuus  Common Su… http://explorer.natures…
 ```
 
 ## data
@@ -68,10 +70,12 @@ ns_search(x = "Helianthus annuus")
 ```r
 res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
 names(res$ELEMENT_GLOBAL.2.100925)
-#>  [1] "uid"                "speciesCode"        "natureserve_uri"   
-#>  [4] "classification"     "economicAttributes" "license"           
-#>  [7] "references"         "conservationStatus" "managementSummary" 
-#> [10] "distribution"
+#>  [1] "uid"                   "speciesCode"          
+#>  [3] "natureserve_uri"       "classification"       
+#>  [5] "economicAttributes"    "ecologyAndLifeHistory"
+#>  [7] "license"               "references"           
+#>  [9] "conservationStatus"    "managementSummary"    
+#> [11] "distribution"
 ```
 
 dig into distribution in various watersheds
@@ -79,20 +83,20 @@ dig into distribution in various watersheds
 
 ```r
 res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
-#> # A tibble: 458 × 4
-#>     type         watershedName watershedCode speciesOccurrenceCount
-#>    <chr>                 <chr>         <chr>                  <chr>
-#> 1  HUC-8              Allagash      01010002                      1
-#> 2  HUC-8 East Branch Penobscot      01020002                      1
-#> 3  HUC-8        Upper Kennebec      01030001                      1
-#> 4  HUC-8                  Dead      01030002                      7
-#> 5  HUC-8        Lower Kennebec      01030003                      1
-#> 6  HUC-8    Upper Androscoggin      01040001                      2
-#> 7  HUC-8    Lower Androscoggin      01040002                      2
-#> 8  HUC-8                  Saco      01060002                      4
-#> 9  HUC-8          Upper Hudson      02020001                      3
-#> 10 HUC-8      Hudson-Wappinger      02020008                      2
-#> # ... with 448 more rows
+#> # A tibble: 527 x 4
+#>    type  watershedName    watershedCode speciesOccurrenceCount
+#>    <chr> <chr>            <chr>         <chr>                 
+#>  1 HUC-8 Housatonic       01100005      1                     
+#>  2 HUC-8 Upper Hudson     02020001      3                     
+#>  3 HUC-8 Middle Hudson    02020006      1                     
+#>  4 HUC-8 Hudson-Wappinger 02020008      2                     
+#>  5 HUC-8 Noxubee          03160108      1                     
+#>  6 HUC-8 Lower Leaf       03170005      1                     
+#>  7 HUC-8 Pascagoula       03170006      2                     
+#>  8 HUC-8 Black            03170007      1                     
+#>  9 HUC-8 Escatawpa        03170008      1                     
+#> 10 HUC-8 Black            04150101      1                     
+#> # … with 517 more rows
 ```
 
 ## image metadata
@@ -102,7 +106,7 @@ res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
 res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
 res$images[[1]][1:5]
 #> $id
-#> [1] "16968"
+#> [1] "15512"
 #> 
 #> $scientificName
 #> [1] "Haliaeetus leucocephalus"
@@ -111,10 +115,10 @@ res$images[[1]][1:5]
 #> [1] "Bald Eagle"
 #> 
 #> $otherCommonName
-#> [1] "pygargue à tête blanche"
+#> [1] "bald eagle"
 #> 
 #> $otherCommonName
-#> [1] "Águila Cabeza Blanca"
+#> [1] "pygargue à tête blanche"
 ```
 
 ## Meta
@@ -122,6 +126,6 @@ res$images[[1]][1:5]
 * Please [report any issues or bugs](https://github.com/ropensci/natserv/issues).
 * License: MIT
 * Get citation information for `natserv` in R doing `citation(package = 'natserv')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUNCT.md). By participating in this project you agree to abide by its terms.
 
 [![ropensci](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

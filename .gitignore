@@ -15,4 +15,5 @@ inst/doc/.texpadtmp/taxize_ms.synctex.gz
 .httr-oauth
 inst/vign/taxize_vignette_cache
 tests/testthat/Rplots.pdf
-
+inst/vign/figure/
+inst/vign/natserv_vignette.md

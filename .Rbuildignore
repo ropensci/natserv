@@ -12,3 +12,5 @@ README.Rmd
 ^codemeta\.json$
 ^Makefile$
 vignettes/figure
+inst/vign/figure/
+inst/vign/natserv_vignette.md

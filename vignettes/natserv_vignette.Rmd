@@ -10,6 +10,9 @@
 
 `natserv` is an R package that interacts with the API services of the non-profit organization [NatureServe](https://services.natureserve.org/). If you want to read the full API documentation, you can find it on [NatureServe's web services webpage](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp).
 
+See also the [taxize book](https://ropensci.github.io/taxize-book/) for 
+a manual on working with taxonomic data in R, including with NatureServe data.
+
 This tutorial will walk you through installing `natserv` and using its handy functions. To help show you what `natserv` can do, this will also teach you how to:
 
 * Find a species' unique identifier used by NatureServe 
@@ -43,7 +46,11 @@ If you want the latest development version of `natserv`, you can install the pac
 
 ```r
 install.packages("devtools")
-#> Error in install.packages : Updating loaded packages
+#> 
+#>   There is a binary version available but the source version is
+#>   later:
+#>          binary source needs_compilation
+#> devtools 1.13.6  2.0.1             FALSE
 devtools::install_github("ropensci/natserv")
 ```
 
@@ -110,10 +117,10 @@ Here's how to use a species' binomial name to find its UID, using the gray wolf 
 gray.wolf.search <- ns_search(x="Canis lupus")
 gray.wolf.search
 #> # A tibble: 1 x 5
-#>   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-#>   <chr>             <chr>            <chr>      <chr>                     
-#> 1 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic s…
-#> # ... with 1 more variable: natureServeExplorerURI <chr>
+#>   globalSpeciesUid jurisdictionSci… commonName taxonomicCommen…
+#>   <chr>            <chr>            <chr>      <chr>           
+#> 1 ELEMENT_GLOBAL.… Canis lupus      Gray Wolf  Based on recent…
+#> # … with 1 more variable: natureServeExplorerURI <chr>
 ```
 After a moment of searching, `ns_search` returns a tibble containing the UID, common name, scientific name, taxonomic comments, and the URI for the entry in the NatureServe database.
 
@@ -141,23 +148,23 @@ This returns a tibble with 14 rows, one for each entry in *Canis*:
 
 ```
 #> # A tibble: 14 x 5
-#>    globalSpeciesUid  jurisdictionSci… commonName taxonomicComments        
-#>    <chr>             <chr>            <chr>      <chr>                    
-#>  1 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
-#>  2 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic …
-#>  3 ELEMENT_GLOBAL.2… Canis latrans    Coyote     Recent genetic studies d…
-#>  4 ELEMENT_GLOBAL.2… Canis lupus bai… Mexican W… <NA>                     
-#>  5 ELEMENT_GLOBAL.2… Canis lupus occ… Northern … <NA>                     
-#>  6 ELEMENT_GLOBAL.2… Canis lupus nub… Southern … <NA>                     
-#>  7 ELEMENT_GLOBAL.2… Canis lupus lyc… Eastern W… See taxonomy comments fo…
-#>  8 ELEMENT_GLOBAL.2… Canis lupus arc… Arctic Gr… <NA>                     
-#>  9 ELEMENT_GLOBAL.2… Canis lupus lig… Alexander… Molecular studies based …
-#> 10 ELEMENT_GLOBAL.2… Canis sp. cf. l… Eastern W… New genetic analyses ind…
-#> 11 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
-#> 12 ELEMENT_GLOBAL.2… Canis lupus bai… Mexican W… <NA>                     
-#> 13 ELEMENT_GLOBAL.2… Canis rufus      Red Wolf   Based on recent genetic …
-#> 14 ELEMENT_GLOBAL.2… Canis lupus lyc… Eastern W… See taxonomy comments fo…
-#> # ... with 1 more variable: natureServeExplorerURI <chr>
+#>    globalSpeciesUid jurisdictionSci… commonName taxonomicCommen…
+#>    <chr>            <chr>            <chr>      <chr>           
+#>  1 ELEMENT_GLOBAL.… Canis rufus      Red Wolf   Based on recent…
+#>  2 ELEMENT_GLOBAL.… Canis lupus      Gray Wolf  Based on recent…
+#>  3 ELEMENT_GLOBAL.… Canis latrans    Coyote     Recent genetic …
+#>  4 ELEMENT_GLOBAL.… Canis lupus bai… Mexican W… <NA>            
+#>  5 ELEMENT_GLOBAL.… Canis lupus occ… Northern … <NA>            
+#>  6 ELEMENT_GLOBAL.… Canis lupus nub… Southern … <NA>            
+#>  7 ELEMENT_GLOBAL.… Canis lupus lyc… Eastern W… See taxonomy co…
+#>  8 ELEMENT_GLOBAL.… Canis lupus arc… Arctic Gr… <NA>            
+#>  9 ELEMENT_GLOBAL.… Canis lupus lig… Alexander… Molecular studi…
+#> 10 ELEMENT_GLOBAL.… Canis sp. cf. l… Eastern W… New genetic ana…
+#> 11 ELEMENT_GLOBAL.… Canis rufus      Red Wolf   Based on recent…
+#> 12 ELEMENT_GLOBAL.… Canis lupus bai… Mexican W… <NA>            
+#> 13 ELEMENT_GLOBAL.… Canis rufus      Red Wolf   Based on recent…
+#> 14 ELEMENT_GLOBAL.… Canis lupus lyc… Eastern W… See taxonomy co…
+#> # … with 1 more variable: natureServeExplorerURI <chr>
 ```
 
 **Searching for multiple species if the wildcard won't do**
@@ -177,24 +184,24 @@ This returns a 3-element list, where each list item is the tribble returned by `
 ```
 #> [[1]]
 #> # A tibble: 1 x 5
-#>   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-#>   <chr>             <chr>            <chr>      <chr>                     
-#> 1 ELEMENT_GLOBAL.2… Canis lupus      Gray Wolf  Based on recent genetic s…
-#> # ... with 1 more variable: natureServeExplorerURI <chr>
+#>   globalSpeciesUid jurisdictionSci… commonName taxonomicCommen…
+#>   <chr>            <chr>            <chr>      <chr>           
+#> 1 ELEMENT_GLOBAL.… Canis lupus      Gray Wolf  Based on recent…
+#> # … with 1 more variable: natureServeExplorerURI <chr>
 #> 
 #> [[2]]
 #> # A tibble: 1 x 5
-#>   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-#>   <chr>             <chr>            <chr>      <chr>                     
-#> 1 ELEMENT_GLOBAL.2… Lynx rufus       Bobcat     Placed in genus <i>Felis …
-#> # ... with 1 more variable: natureServeExplorerURI <chr>
+#>   globalSpeciesUid jurisdictionSci… commonName taxonomicCommen…
+#>   <chr>            <chr>            <chr>      <chr>           
+#> 1 ELEMENT_GLOBAL.… Lynx rufus       Bobcat     Placed in genus…
+#> # … with 1 more variable: natureServeExplorerURI <chr>
 #> 
 #> [[3]]
 #> # A tibble: 1 x 5
-#>   globalSpeciesUid  jurisdictionSci… commonName taxonomicComments         
-#>   <chr>             <chr>            <chr>      <chr>                     
-#> 1 ELEMENT_GLOBAL.2… Puma concolor    Cougar     Formerly included in the …
-#> # ... with 1 more variable: natureServeExplorerURI <chr>
+#>   globalSpeciesUid jurisdictionSci… commonName taxonomicCommen…
+#>   <chr>            <chr>            <chr>      <chr>           
+#> 1 ELEMENT_GLOBAL.… Puma concolor    Cougar     Formerly includ…
+#> # … with 1 more variable: natureServeExplorerURI <chr>
 ```
 
 ### `ns_data` - searching for records with the UID

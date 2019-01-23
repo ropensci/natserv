@@ -36,6 +36,9 @@ Three NatureServe web services are available in this package:
 You'll need an API key to use this package. Get one by signing up at
 <https://services.natureserve.org/developer/index.jsp>
 
+See also the [taxize book](https://ropensci.github.io/taxize-book/) for 
+a manual on working with taxonomic data in R, including with NatureServe data.
+
 ## Installation
 
 Stable version from CRAN
