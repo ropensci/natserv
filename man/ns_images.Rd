@@ -4,9 +4,16 @@
 \alias{ns_images}
 \title{NatureServe image metadata}
 \usage{
-ns_images(uid = NULL, scientificName = NULL, commonName = NULL,
-  includeSynonyms = NULL, resolution = NULL, ITISNames = NULL,
-  key = NULL, ...)
+ns_images(
+  uid = NULL,
+  scientificName = NULL,
+  commonName = NULL,
+  includeSynonyms = NULL,
+  resolution = NULL,
+  ITISNames = NULL,
+  key = NULL,
+  ...
+)
 }
 \arguments{
 \item{uid}{(character) a species UID, e.g., ELEMENT_GLOBAL.2.100925}

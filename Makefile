@@ -1,12 +1,22 @@
-all: vign move rmd2md
+PACKAGE := $(shell grep '^Package:' DESCRIPTION | sed -E 's/^Package:[[:space:]]+//')
+RSCRIPT = Rscript --no-init-file
 
-vign:
-		cd inst/vign;\
-		Rscript -e 'library(knitr); knit("natserv_vignette.Rmd")'
+install: doc build
+	R CMD INSTALL . && rm *.tar.gz
 
-move:
-		cp inst/vign/natserv_vignette.md vignettes
+build:
+	R CMD build .
 
-rmd2md:
-		cd vignettes;\
-		mv natserv_vignette.md natserv_vignette.Rmd
+doc:
+	${RSCRIPT} -e "devtools::document()"
+
+eg:
+	${RSCRIPT} -e "devtools::run_examples()"
+
+test:
+	${RSCRIPT} -e "devtools::test()"
+
+check: build
+	_R_CHECK_CRAN_INCOMING_=FALSE R CMD CHECK --as-cran --no-manual `ls -1tr ${PACKAGE}*gz | tail -n1`
+	@rm -f `ls -1tr ${PACKAGE}*gz | tail -n1`
+	@rm -rf ${PACKAGE}.Rcheck
