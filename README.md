@@ -30,7 +30,7 @@ Three NatureServe web services are available in this package:
 You'll need an API key to use this package. Get one by signing up at
 <https://services.natureserve.org/developer/index.jsp>
 
-See also the [taxize book](https://ropensci.github.io/taxize-book/) for 
+See also the [taxize book](https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
 
 ## Installation
@@ -60,9 +60,9 @@ library('natserv')
 ```r
 ns_search(x = "Helianthus annuus")
 #> # A tibble: 1 x 4
-#>   globalSpeciesUid   jurisdictionScien… commonName natureServeExplorerURI  
-#>   <chr>              <chr>              <chr>      <chr>                   
-#> 1 ELEMENT_GLOBAL.2.… Helianthus annuus  Common Su… http://explorer.natures…
+#>   globalSpeciesUid   jurisdictionScien… commonName  natureServeExplorerURI      
+#>   <chr>              <chr>              <chr>       <chr>                       
+#> 1 ELEMENT_GLOBAL.2.… Helianthus annuus  Common Sun… http://explorer.natureserve…
 ```
 
 ## data
@@ -71,12 +71,10 @@ ns_search(x = "Helianthus annuus")
 ```r
 res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
 names(res$ELEMENT_GLOBAL.2.100925)
-#>  [1] "uid"                   "speciesCode"          
-#>  [3] "natureserve_uri"       "classification"       
-#>  [5] "economicAttributes"    "ecologyAndLifeHistory"
-#>  [7] "license"               "references"           
-#>  [9] "conservationStatus"    "managementSummary"    
-#> [11] "distribution"
+#>  [1] "uid"                   "speciesCode"           "natureserve_uri"      
+#>  [4] "classification"        "economicAttributes"    "ecologyAndLifeHistory"
+#>  [7] "license"               "references"            "conservationStatus"   
+#> [10] "managementSummary"     "distribution"
 ```
 
 dig into distribution in various watersheds
@@ -84,7 +82,7 @@ dig into distribution in various watersheds
 
 ```r
 res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
-#> # A tibble: 527 x 4
+#> # A tibble: 599 x 4
 #>    type  watershedName    watershedCode speciesOccurrenceCount
 #>    <chr> <chr>            <chr>         <chr>                 
 #>  1 HUC-8 Housatonic       01100005      1                     
@@ -97,7 +95,7 @@ res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
 #>  8 HUC-8 Black            03170007      1                     
 #>  9 HUC-8 Escatawpa        03170008      1                     
 #> 10 HUC-8 Black            04150101      1                     
-#> # … with 517 more rows
+#> # … with 589 more rows
 ```
 
 ## image metadata
@@ -127,6 +125,8 @@ res$images[[1]][1:5]
 * Please [report any issues or bugs](https://github.com/ropensci/natserv/issues).
 * License: MIT
 * Get citation information for `natserv` in R doing `citation(package = 'natserv')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 [![ropensci](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+
+[coc]: https://github.com/ropensci/natserv/blob/master/CODE_OF_CONDUCT.md

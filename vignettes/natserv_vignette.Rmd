@@ -10,7 +10,7 @@
 
 `natserv` is an R package that interacts with the API services of the non-profit organization [NatureServe](https://services.natureserve.org/). If you want to read the full API documentation, you can find it on [NatureServe's web services webpage](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp).
 
-See also the [taxize book](https://ropensci.github.io/taxize-book/) for 
+See also the [taxize book](https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
 
 This tutorial will walk you through installing `natserv` and using its handy functions. To help show you what `natserv` can do, this will also teach you how to:

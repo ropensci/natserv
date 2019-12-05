@@ -37,7 +37,7 @@ Three NatureServe web services are available in this package:
 You'll need an API key to use this package. Get one by signing up at
 <https://services.natureserve.org/developer/index.jsp>
 
-See also the [taxize book](https://ropensci.github.io/taxize-book/) for 
+See also the [taxize book](https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
 
 ## Installation
@@ -89,6 +89,8 @@ res$images[[1]][1:5]
 * Please [report any issues or bugs](https://github.com/ropensci/natserv/issues).
 * License: MIT
 * Get citation information for `natserv` in R doing `citation(package = 'natserv')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 [![ropensci](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+
+[coc]: https://github.com/ropensci/natserv/blob/master/CODE_OF_CONDUCT.md
