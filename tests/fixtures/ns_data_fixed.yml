@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/3.3 crul/0.7.0.9100
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.1.9992
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -16,12 +16,13 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 23 Jan 2019 01:00:59 GMT
+      date: Tue, 03 Mar 2020 18:23:21 GMT
       server: Apache-Coyote/1.1
       content-type: text/xml
       transfer-encoding: chunked
     body:
       encoding: UTF-8
+      file: no
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\r\n<globalSpeciesList\r\n
         \   xsi:schemaLocation=\"http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1
         http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1/\"\r\n
@@ -62,6 +63,9 @@ http_interactions:
         \                     <rank><code>N5</code></rank>\r\n                                <roundedRank><code>N5</code></roundedRank>\r\n
         \                               <statusLastReviewed>1996-09-05</statusLastReviewed>\r\n
         \                               <subnationalStatuses>\r\n                          <subnationalStatus\r\n
+        \               subnationName=\"Georgia\"\r\n                subnationCode=\"GA\">\r\n
+        \                             <rank><code>SNR</code></rank>\r\n                                            <roundedRank><code>SNR</code></roundedRank>\r\n
+        \                           </subnationalStatus>\r\n                          <subnationalStatus\r\n
         \               subnationName=\"Louisiana\"\r\n                subnationCode=\"LA\">\r\n
         \                             <rank><code>S4</code></rank>\r\n                                            <roundedRank><code>S4</code></roundedRank>\r\n
         \                           </subnationalStatus>\r\n                          <subnationalStatus\r\n
@@ -72,21 +76,33 @@ http_interactions:
         \                             <rank><code>SNR</code></rank>\r\n                                            <roundedRank><code>SNR</code></roundedRank>\r\n
         \                           </subnationalStatus>\r\n                        </subnationalStatuses>\r\n
         \                   </nationalStatus>\r\n                </nationalStatuses>\r\n
-        \           </globalStatus>\r\n    </natureServeStatus>\r\n          </conservationStatus>\r\n\r\n
-        \     <distribution USAndCanadianDistributionComplete=\"false\">\r\n    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-        \       <conservationStatusMap>http://explorer.natureserve.org/servlet/GetMapGif?US.LA=S4&amp;US.NY=__&amp;US.RI=SNR</conservationStatusMap>\r\n
+        \           </globalStatus>\r\n    </natureServeStatus>\r\n          <otherStatuses>\r\n
+        \                         <status name=\"IUCN Conservation Status\">\r\n                                <statusDescription>VU
+        - Vulnerable</statusDescription>\r\n                                                </status>\r\n
+        \                             </otherStatuses>\r\n          </conservationStatus>\r\n\r\n
+        \     <distribution USAndCanadianDistributionComplete=\"false\">\r\n    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+        \       <conservationStatusMap>http://explorer.natureserve.org/servlet/GetMapGif?US.GA=SNR&amp;US.LA=S4&amp;US.NY=__&amp;US.RI=SNR</conservationStatusMap>\r\n
         \       <globalRange>\r\n                      <comments>This species ranges
         in the western North Atlantic from Nova Scotia and Bermuda to Argentina (including
         the Gulf of Mexico), but it is rare between southern Florida and northern
         South America (Shepherd and Packer 2006). It also occurs in other warm seas
         worldwide but not in the eastern Pacific Ocean.</comments>\r\n        </globalRange>\r\n
-        \           <nations>\r\n                            <nation nationName=\"United
+        \         <endemism>\r\n          <code>M</code>\r\n              <description>occurs
+        (regularly, as a native taxon) in multiple nations</description>\r\n        </endemism>\r\n
+        \       <nations>\r\n                            <nation nationName=\"United
         States\"\r\n                nationCode=\"US\">\r\n                    <nationalDistributions>\r\n
         \                                            <nationalDistribution>\r\n            <origin>Native</origin>
         \           <regularity>Regularly occurring</regularity>            <currentPresenceAbsence>Present</currentPresenceAbsence>
         \           <distributionConfidence>Confident</distributionConfidence>            <population>Year-round</population>
         \                       </nationalDistribution>\r\n                                </nationalDistributions>\r\n
         \                             <subnations>\r\n                          <subnation\r\n
+        \                   subnationName=\"Georgia\"\r\n                    subnationCode=\"GA\"
+        \r\n                              >\r\n                    <subnationalDistributions>\r\n
+        \                                      <subnationalDistribution>\r\n            <origin>Native</origin>
+        \           <regularity>Regularly occurring</regularity>            <currentPresenceAbsence>Present</currentPresenceAbsence>
+        \           <distributionConfidence>Confident</distributionConfidence>            <population>Year-round</population>
+        \                       </subnationalDistribution>\r\n                                   </subnationalDistributions>\r\n
+        \              </subnation>\r\n                                       <subnation\r\n
         \                   subnationName=\"Louisiana\"\r\n                    subnationCode=\"LA\"
         \r\n                              >\r\n                    <subnationalDistributions>\r\n
         \                                      <subnationalDistribution>\r\n            <origin>Native</origin>
@@ -162,5 +178,5 @@ http_interactions:
         \       All usage of this data must abide by NatureServes data usage license
         which can be found at: http://services.natureserve.org/about/license.jsp.\r\n
         \   </license>\r\n  </globalSpecies>\r\n</globalSpeciesList>\r\n"
-  recorded_at: 2019-01-23 01:01:00 GMT
-  recorded_with: vcr/0.2.2, webmockr/0.3.0
+  recorded_at: 2020-03-03 18:23:22 GMT
+  recorded_with: vcr/0.5.0, webmockr/0.6.0

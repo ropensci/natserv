@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/3.3 crul/0.7.0.9100
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.1.9992
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -16,12 +16,13 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 23 Jan 2019 01:01:05 GMT
+      date: Tue, 03 Mar 2020 18:23:24 GMT
       server: Apache-Coyote/1.1
       content-type: text/xml
       transfer-encoding: chunked
     body:
       encoding: UTF-8
+      file: no
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\r\n<speciesSearchReport
         \r\n    xsi:schemaLocation=\"http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1
         http://services.natureserve.org/docs/schemas/biodiversityDataFlow/1/\" \r\n
@@ -33,5 +34,5 @@ http_interactions:
         \  \t   <jurisdictionScientificName>Helianthus annuus</jurisdictionScientificName>\r\n\t
         \  <commonName language=\"en\">Common Sunflower</commonName>\t   \t   \t</speciesSearchResult>\r\n
         \ </speciesSearchResultList>\r\n</speciesSearchReport>"
-  recorded_at: 2019-01-23 01:01:05 GMT
-  recorded_with: vcr/0.2.2, webmockr/0.3.0
+  recorded_at: 2020-03-03 18:23:25 GMT
+  recorded_with: vcr/0.5.0, webmockr/0.6.0
