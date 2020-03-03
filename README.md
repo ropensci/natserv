@@ -7,16 +7,16 @@ natserv
 [![Build Status](https://travis-ci.org/ropensci/natserv.svg?branch=master)](https://travis-ci.org/ropensci/natserv)
 [![Build status](https://ci.appveyor.com/api/projects/status/mvmi4h4jn5ixf3hs?svg=true)](https://ci.appveyor.com/project/sckott/natserv)
 [![codecov](https://codecov.io/gh/ropensci/natserv/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/natserv)
-[![cran version](http://www.r-pkg.org/badges/version/natserv)](https://cran.r-project.org/package=natserv)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/natserv)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/natserv)](https://cran.r-project.org/package=natserv)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/natserv)](https://github.com/metacran/cranlogs.app)
 
 
 `natserv` NatureServe R client
 
 NatureServe is a non-profit organization that provides wildlife conservation related data to various groups including the public.
 
-* [NatureServe site](https://services.natureserve.org)
-* [NatureServe API docs](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp)
+* NatureServe site: https://services.natureserve.org
+* NatureServe API docs: https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp
 
 All functions in this package are prefixed with `ns_` to prevent
 collision with other pkgs.
@@ -28,9 +28,9 @@ Three NatureServe web services are available in this package:
 * Fetch data (`ns_data`) on over 70,000 of the plant and animal species of the United States and Canada.
 
 You'll need an API key to use this package. Get one by signing up at
-<https://services.natureserve.org/developer/index.jsp>
+https://services.natureserve.org/developer/index.jsp
 
-See also the [taxize book](https://taxize.dev/) for 
+See also the taxize book (https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
 
 ## Installation
