@@ -110,7 +110,7 @@ parse_dist <- function(x) {
     },
     watersheds = {
       ch <- xml2::xml_children(which_name(tmp, "watersheds"))
-      tibble::as_data_frame(data.table::rbindlist(lapply(xml2::xml_children(ch), function(w) {
+      tibble::as_tibble(data.table::rbindlist(lapply(xml2::xml_children(ch), function(w) {
         list(
           type = xml2::xml_attr(w, "type"),
           watershedName = xml2::xml_text(xml2::xml_find_first(w, "d1:watershedName")),

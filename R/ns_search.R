@@ -38,5 +38,5 @@ ns_search <- function(x, key = NULL, ...) {
   })
   df <- data.table::setDF(data.table::rbindlist(dat, use.names = TRUE, fill = TRUE))
   df <- move_col2(df, "natureServeExplorerURI")
-  tibble::as_data_frame(df)
+  tibble::as_tibble(df)
 }
