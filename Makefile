@@ -26,3 +26,8 @@ checkwindows:
 
 readme:
 	${RSCRIPT} -e "knitr::knit('README.Rmd')"
+
+vign:
+		cd vignettes;\
+		${RSCRIPT} -e "Sys.setenv(NOT_CRAN='true'); knitr::knit('natserv.Rmd.og', output = 'natserv.Rmd')";\
+		cd ..

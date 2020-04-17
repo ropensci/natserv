@@ -11,14 +11,14 @@ r_binary_packages:
 
 jobs:
   include:
-    - os: linux
-      r: oldrel
+    # - os: linux
+    #   r: oldrel
     - os: linux
       r: release
       env: R_CODECOV=true
-    - os: linux
-      r: devel
-      env: _R_CHECK_LENGTH_1_LOGIC2_=verbose
+    # - os: linux
+    #   r: devel
+    #   env: _R_CHECK_LENGTH_1_LOGIC2_=verbose
 
 after_success:
   - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
