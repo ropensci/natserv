@@ -1,3 +1,11 @@
+natserv 0.4.0
+=============
+
+### MINOR IMPROVEMENTS
+
+* update vignette to use rmarkdown style, make sure vignette has a title (#20)
+
+
 natserv 0.3.0
 =============
 
