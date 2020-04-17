@@ -3,14 +3,17 @@ Title: 'NatureServe' Interface
 Description: Interface to 'NatureServe' (<https://www.natureserve.org>).
     Includes methods to get data, image metadata, search taxonomic names,
     and make maps.
-Version: 0.3.1.93
+Version: 0.3.9.91
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/natserv, https://github.com/ropensci/natserv
 BugReports: https://github.com/ropensci/natserv/issues
-Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus@gmail.com",
-    comment = c(ORCID="0000-0003-1444-9135")
-    )
+Authors@R: c(
+    person("Scott", "Chamberlain", role = c("aut", "cre"),
+        email = "myrmecocystus@gmail.com",
+        comment = c(ORCID="0000-0003-1444-9135")),
+    person(given = "rOpenSci",
+        role = "fnd",
+        comment = "https://ropensci.org/"))
 LazyData: true
 VignetteBuilder: knitr
 Language: en-US
@@ -20,9 +23,9 @@ Depends:
     R(>= 3.2.1)
 Imports:
     crul (>= 0.7.0),
-    xml2 (>= 1.2.0),
-    tibble (>= 2.0.1),
-    data.table (>= 1.12.0)
+    xml2,
+    tibble,
+    data.table
 Suggests:
     testthat,
     knitr,
