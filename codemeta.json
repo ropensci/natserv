@@ -5,19 +5,19 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "natserv",
-  "description": "Interface to 'NatureServe' (<http://www.natureserve.org>).\n    Includes methods to get data, image metadata, search taxonomic names,\n    and make maps.",
+  "description": "Interface to 'NatureServe' (<https://www.natureserve.org>).\n    Includes methods to get data, image metadata, search taxonomic names,\n    and make maps.",
   "name": "natserv: 'NatureServe' Interface",
   "codeRepository": "https://github.com/ropensci/natserv",
   "issueTracker": "https://github.com/ropensci/natserv/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.2",
+    "version": "3.6.3",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.2 Patched (2018-12-31 r75943)",
+  "runtimePlatform": "R version 3.6.3 Patched (2020-03-11 r78210)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -140,7 +140,6 @@
       "@type": "SoftwareApplication",
       "identifier": "xml2",
       "name": "xml2",
-      "version": ">= 1.2.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -153,7 +152,6 @@
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
-      "version": ">= 2.0.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -166,7 +164,6 @@
       "@type": "SoftwareApplication",
       "identifier": "data.table",
       "name": "data.table",
-      "version": ">= 1.12.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -179,8 +176,17 @@
   "contIntegration": "https://travis-ci.org/ropensci/natserv",
   "releaseNotes": "https://github.com/ropensci/natserv/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/natserv/blob/master/README.md",
-  "fileSize": "92.162KB",
+  "fileSize": "170.106KB",
   "applicationCategory": "Taxonomy",
   "isPartOf": "https://ropensci.org",
-  "keywords": ["taxonomy", "species", "API", "web-services", "NatureServe", "metadata", "maps", "r", "rstats", "r-package", "taxize"]
+  "keywords": ["taxonomy", "species", "API", "web-services", "NatureServe", "metadata", "maps", "r", "rstats", "r-package", "taxize"],
+  "relatedLink": "https://docs.ropensci.org/natserv",
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": [
+    {
+      "@type": "Organization",
+      "name": "rOpenSci"
+    }
+  ]
 }
