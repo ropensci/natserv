@@ -10,30 +10,30 @@
 #' @param includeSynonyms (character)	An optional parameter, relevant to
 #' scientific or common name queries, that indicates whether to include
 #' synonymous names in the query, as follows:
-#' \itemize{
-#'  \item Y (or y) - search the Primary and all synonymous Scientific and
+#'
+#' - Y (or y) - search the Primary and all synonymous Scientific and
 #'  Common Names
-#'  \item Any other value, or omitted - search only the Primary Scientific
+#' - Any other value, or omitted - search only the Primary Scientific
 #'  and Common Name fields
-#' }
+#'
 #' @param resolution (character)	An optional parameter that restricts output
 #' to images at a certain resolution. The value can be of one of the following.
-#' \itemize{
-#'  \item lowest - return only the lowest resolution version of images
-#'  \item highest - return only the highest resolution version of images
-#'  \item thumbnail - return only the version NatureServe deems the
+#'
+#' - lowest - return only the lowest resolution version of images
+#' - highest - return only the highest resolution version of images
+#' - thumbnail - return only the version NatureServe deems the
 #'  'thumbnail image'
-#'  \item web - return only the version NatureServe deems the 'web image'
-#' }
+#' - web - return only the version NatureServe deems the 'web image'
+#'
 #' The omission of this parameter leads to the return of metadata for images at
 #' all available resolutions.
 #' @param ITISNames (character)	An optional parameter, relevant to scientific
 #' or common name queries, that will indicate whether to restrict queries to
 #' ITIS names, as follows.
-#' \itemize{
-#'  \item Y (or y) - query using ITIS names
-#'  \item Any other value, or omitted - query using NatureServe names
-#' }
+#'
+#' - Y (or y) - query using ITIS names
+#' - Any other value, or omitted - query using NatureServe names
+#'
 #' NOTE: This parameter is a placeholder only and will not affect processing.
 #' At present, searching by ITIS names is not possible.
 #'

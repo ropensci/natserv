@@ -1,5 +1,5 @@
-#' natserv
-#'
+#' @title natserv
+#' @description Interface to NatureServe https://www.natureserve.org/
 #' @name natserv-package
 #' @aliases natserv
 #' @docType package
@@ -9,10 +9,8 @@ NULL
 
 #' A data.frame with 49 rows and 2 columns
 #'
-#' \itemize{
-#'   \item state (character) state 2 letter abbreviation
-#'   \item state_name (character) state full name
-#' }
+#' - state (character) state 2 letter abbreviation
+#' - state_name (character) state full name
 #'
 #' @name nat_states
 #' @docType data

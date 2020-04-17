@@ -1,9 +1,9 @@
 Package: natserv
 Title: 'NatureServe' Interface
-Description: Interface to 'NatureServe' (<http://www.natureserve.org>).
+Description: Interface to 'NatureServe' (<https://www.natureserve.org>).
     Includes methods to get data, image metadata, search taxonomic names,
     and make maps.
-Version: 0.3.0.93
+Version: 0.3.1.93
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/natserv, https://github.com/ropensci/natserv
 BugReports: https://github.com/ropensci/natserv/issues
@@ -15,6 +15,7 @@ LazyData: true
 VignetteBuilder: knitr
 Language: en-US
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
 Depends:
     R(>= 3.2.1)
 Imports:
@@ -29,7 +30,7 @@ Suggests:
     maps,
     mapproj,
     vcr
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Taxonomy
 X-schema.org-keywords: taxonomy, species, API, web-services, NatureServe, metadata, maps
 X-schema.org-isPartOf: https://ropensci.org

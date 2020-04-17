@@ -6,8 +6,8 @@
 \title{A data.frame with 49 rows and 2 columns}
 \description{
 \itemize{
-  \item state (character) state 2 letter abbreviation
-  \item state_name (character) state full name
+\item state (character) state 2 letter abbreviation
+\item state_name (character) state full name
 }
 }
 \keyword{data}

@@ -6,7 +6,7 @@
 \alias{natserv}
 \title{natserv}
 \description{
-natserv
+Interface to NatureServe https://www.natureserve.org/
 }
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}

@@ -1,20 +1,18 @@
 #' NatureServe taxonomic name search
 #'
 #' @export
-#' @param x (character) A name to search for. An asterisk (*) wildcarded species
-#' name, e.g., 'Aquila chry*'. Name matching is case-insensitive and all of
-#' the primary and synonymous scientific names, along with all common names,
-#' are matched. Required.
+#' @param x (character) A name to search for. An asterisk (*) wildcarded
+#' species name, e.g., 'Aquila chry*'. Name matching is case-insensitive
+#' and all of the primary and synonymous scientific names, along with
+#' all common names, are matched. required.
 #' @template ns
-#'
 #' @return A tibble (data.frame), with columns:
-#' \itemize{
-#'  \item jurisdictionScientificName - Scientfic name
-#'  \item commonName - Common name
-#'  \item globalSpeciesUid - UID - the taxonomic identifier NatureServe uses
-#'  \item natureServeExplorerURI - URL to get to info online for the taxon
-#'  \item taxonomicComments - comments about the taxon, if any
-#' }
+#'
+#' - jurisdictionScientificName - Scientfic name
+#' - commonName - Common name
+#' - globalSpeciesUid - UID - the taxonomic identifier NatureServe uses
+#' - natureServeExplorerURI - URL to get to info online for the taxon
+#' - taxonomicComments - comments about the taxon, if any
 #'
 #' @examples \dontrun{
 #' ns_search(x = "Ruby*")

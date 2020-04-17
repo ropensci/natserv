@@ -18,31 +18,32 @@ ns_images(
 \arguments{
 \item{uid}{(character) a species UID, e.g., ELEMENT_GLOBAL.2.100925}
 
-\item{scientificName}{(character) An asterisk (*) wildcarded species
-scientific name, e.g., 'Aquila chry*'. Name matching is case-insensitive.}
+\item{scientificName}{(character) An asterisk (\emph{) wildcarded species
+scientific name, e.g., 'Aquila chry}'. Name matching is case-insensitive.}
 
-\item{commonName}{(character) An asterisk (*) wildcarded species common
-name, e.g., 'g*EAGLE'. Name matching is case-insensitive.}
+\item{commonName}{(character) An asterisk (\emph{) wildcarded species common
+name, e.g., 'g}EAGLE'. Name matching is case-insensitive.}
 
 \item{includeSynonyms}{(character)    An optional parameter, relevant to
 scientific or common name queries, that indicates whether to include
 synonymous names in the query, as follows:
 \itemize{
- \item Y (or y) - search the Primary and all synonymous Scientific and
- Common Names
- \item Any other value, or omitted - search only the Primary Scientific
- and Common Name fields
+\item Y (or y) - search the Primary and all synonymous Scientific and
+Common Names
+\item Any other value, or omitted - search only the Primary Scientific
+and Common Name fields
 }}
 
 \item{resolution}{(character)    An optional parameter that restricts output
 to images at a certain resolution. The value can be of one of the following.
 \itemize{
- \item lowest - return only the lowest resolution version of images
- \item highest - return only the highest resolution version of images
- \item thumbnail - return only the version NatureServe deems the
- 'thumbnail image'
- \item web - return only the version NatureServe deems the 'web image'
+\item lowest - return only the lowest resolution version of images
+\item highest - return only the highest resolution version of images
+\item thumbnail - return only the version NatureServe deems the
+'thumbnail image'
+\item web - return only the version NatureServe deems the 'web image'
 }
+
 The omission of this parameter leads to the return of metadata for images at
 all available resolutions.}
 
@@ -50,9 +51,10 @@ all available resolutions.}
 or common name queries, that will indicate whether to restrict queries to
 ITIS names, as follows.
 \itemize{
- \item Y (or y) - query using ITIS names
- \item Any other value, or omitted - query using NatureServe names
+\item Y (or y) - query using ITIS names
+\item Any other value, or omitted - query using NatureServe names
 }
+
 NOTE: This parameter is a placeholder only and will not affect processing.
 At present, searching by ITIS names is not possible.}
 
@@ -79,10 +81,10 @@ Get an API key from NatureServe at
 You can pass your token in as an argument or store it one of two places:
 
 \itemize{
-  \item your .Rprofile file with an entry like
-  \code{options(NatureServeKey = "your-natureserve-key")}
-  \item your .Renviron file with an entry like
-  \code{NATURE_SERVE_KEY=your-natureserve-key}
+\item your .Rprofile file with an entry like
+\code{options(NatureServeKey = "your-natureserve-key")}
+\item your .Renviron file with an entry like
+\code{NATURE_SERVE_KEY=your-natureserve-key}
 }
 
 See \code{\link{Startup}} for information on how to create/find your

@@ -14,7 +14,7 @@ ns_map_cons(x, ...)
 ns_map_stpr(x, ...)
 }
 \arguments{
-\item{x}{the result of a call to \code{\link{ns_data}}}
+\item{x}{the result of a call to \code{\link[=ns_data]{ns_data()}}}
 
 \item{...}{ignored}
 }

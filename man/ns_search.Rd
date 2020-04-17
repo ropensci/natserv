@@ -7,10 +7,10 @@
 ns_search(x, key = NULL, ...)
 }
 \arguments{
-\item{x}{(character) A name to search for. An asterisk (*) wildcarded species
-name, e.g., 'Aquila chry*'. Name matching is case-insensitive and all of
-the primary and synonymous scientific names, along with all common names,
-are matched. Required.}
+\item{x}{(character) A name to search for. An asterisk (\emph{) wildcarded
+species name, e.g., 'Aquila chry}'. Name matching is case-insensitive
+and all of the primary and synonymous scientific names, along with
+all common names, are matched. required.}
 
 \item{key}{(character) API key. Required. See \strong{Authentication} below
 for more.}
@@ -20,11 +20,11 @@ for more.}
 \value{
 A tibble (data.frame), with columns:
 \itemize{
- \item jurisdictionScientificName - Scientfic name
- \item commonName - Common name
- \item globalSpeciesUid - UID - the taxonomic identifier NatureServe uses
- \item natureServeExplorerURI - URL to get to info online for the taxon
- \item taxonomicComments - comments about the taxon, if any
+\item jurisdictionScientificName - Scientfic name
+\item commonName - Common name
+\item globalSpeciesUid - UID - the taxonomic identifier NatureServe uses
+\item natureServeExplorerURI - URL to get to info online for the taxon
+\item taxonomicComments - comments about the taxon, if any
 }
 }
 \description{
@@ -37,10 +37,10 @@ Get an API key from NatureServe at
 You can pass your token in as an argument or store it one of two places:
 
 \itemize{
-  \item your .Rprofile file with an entry like
-  \code{options(NatureServeKey = "your-natureserve-key")}
-  \item your .Renviron file with an entry like
-  \code{NATURE_SERVE_KEY=your-natureserve-key}
+\item your .Rprofile file with an entry like
+\code{options(NatureServeKey = "your-natureserve-key")}
+\item your .Renviron file with an entry like
+\code{NATURE_SERVE_KEY=your-natureserve-key}
 }
 
 See \code{\link{Startup}} for information on how to create/find your

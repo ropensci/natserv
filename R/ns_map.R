@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @name ns_map
-#' @param x the result of a call to \code{\link{ns_data}}
+#' @param x the result of a call to [ns_data()]
 #' @param ... ignored
 #' @examples \dontrun{
 #' # Aquila chrysaetos

@@ -6,17 +6,16 @@
 #' @template status
 #'
 #' @return a named list, with possible slots:
-#' \itemize{
-#'  \item natureserve_uri
-#'  \item classification
-#'  \item economicAttributes
-#'  \item license
-#'  \item references
-#'  \item conservationStatus
-#'  \item managementSummary
-#'  \item distribution
-#'  \item ecologyAndLifeHistory
-#' }
+#'
+#' - natureserve_uri
+#' - classification
+#' - economicAttributes
+#' - license
+#' - references
+#' - conservationStatus
+#' - managementSummary
+#' - distribution
+#' - ecologyAndLifeHistory
 #'
 #' @examples \dontrun{
 #' ## single id
