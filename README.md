@@ -16,7 +16,7 @@ natserv
 NatureServe is a non-profit organization that provides wildlife conservation related data to various groups including the public.
 
 * NatureServe site: https://services.natureserve.org
-* NatureServe API docs: https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp
+* NatureServe API docs: https://explorer.natureserve.org/api-docs/
 
 All functions in this package are prefixed with `ns_` to prevent
 collision with other pkgs.

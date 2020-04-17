@@ -11,7 +11,7 @@ vignette: >
 
 
 
-`natserv` is an R package that interacts with the API services of the non-profit organization NatureServe (https://services.natureserve.org/). If you want to read the full API documentation, you can find it on NatureServe's web services webpage (https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp).
+`natserv` is an R package that interacts with the API services of the non-profit organization NatureServe (https://services.natureserve.org/). If you want to read the full API documentation, you can find it at https://explorer.natureserve.org/api-docs/
 
 See also the taxize book (https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
@@ -29,8 +29,7 @@ This tutorial will walk you through installing `natserv` and using its handy fun
 
 NatureServe is a non-profit organization that provides biodiversity data freely online. 
 They maintain a database comprised of data from natural heritage programs and conservation data centers - this database includes information about the conservation status, taxonomy, geographic distribution, and life history information for over 70,000 species of plants, animals, and fungi in Canada and the United States.
-You can find information about their data coverage (http://explorer.natureserve.org/summary.htm), [data types](http://explorer.natureserve.org/methods.htm), and data sources (http://explorer.natureserve.org/sources.htm) on their website.
-NatureServe also hosts data on ecological communities/systems and their conservation status.  
+You can find information about their data coverage (https://explorer.natureserve.org/AboutTheData/DataCoverage), and data sources (https://explorer.natureserve.org/AboutTheData/Sources) on their website. NatureServe also hosts data on ecological communities/systems and their conservation status.  
 
 While small amounts of data can be easily collected using their online NatureServe explorer site (http://explorer.natureserve.org/), downloading species data this way would be incredibly slow. 
 Thus `natserv` was born. 
@@ -65,7 +64,7 @@ Before starting to use the NatureServe API, you need to have an API key.
 NatureServe uses this key to track and prevent any malicious usage and the `natserv` package needs it in order to access their database.
 
 Fortunately, API keys are available for free to users who register with NatureServe as Developers.
-To register and obtain an API key, go to this link: [https://services.natureserve.org/developer/index.jsp](https://services.natureserve.org/developer/index.jsp).
+To register and obtain an API key: https://explorer.natureserve.org/api-docs/
 
 After registering, NatureServe will send you an email at the registered address that contains an Access Key ID.
 
@@ -399,7 +398,7 @@ head(wolf.conservation.df)
 #> 6   Colorado           CO           SX                    SX
 ```
 
-NatureServe defines conservation status at the sub-national level (indicated with an `S` prefix - `N` indicates national-level status). Sub-national status is defined below (from the [NatureServe website](http://explorer.natureserve.org/nsranks.htm)):
+NatureServe defines conservation status at the sub-national level (indicated with an `S` prefix - `N` indicates national-level status). Sub-national status is defined below (from the NatureServe website (https://explorer.natureserve.org/AboutTheData/Statuses)):
 
 
 
