@@ -1,6 +1,7 @@
 #' @title natserv
 #' @description Interface to NatureServe https://www.natureserve.org/
 #' @name natserv-package
+#' @importFrom jsonlite fromJSON
 #' @aliases natserv
 #' @docType package
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}

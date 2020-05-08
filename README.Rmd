@@ -28,14 +28,7 @@ NatureServe is a non-profit organization that provides wildlife conservation rel
 All functions in this package are prefixed with `ns_` to prevent
 collision with other pkgs.
 
-Three NatureServe web services are available in this package:
-
-* Name lookup (`ns_search`) lookup species Unique IDs (UID) by name. These UIDs are required for access to the more detailed services.
-* Image lookup (`ns_images`) search for metadata for NatureServe images, including the URL's for the image files themselves.
-* Fetch data (`ns_data`) on over 70,000 of the plant and animal species of the United States and Canada.
-
-You'll need an API key to use this package. Get one by signing up at
-https://services.natureserve.org/developer/index.jsp
+You no longer need an API key.
 
 See also the taxize book (https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
@@ -58,31 +51,13 @@ remotes::install_github("ropensci/natserv")
 library('natserv')
 ```
 
-## search
+## Search
 
 ```{r}
-ns_search(x = "Helianthus annuus")
+ns_search_comb(text = "robin", page = 0, per_page = 5)
 ```
 
-## data
-
-```{r}
-res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
-names(res$ELEMENT_GLOBAL.2.100925)
-```
-
-dig into distribution in various watersheds
-
-```{r}
-res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
-```
-
-## image metadata
-
-```{r}
-res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
-res$images[[1]][1:5]
-```
+See the vignette (https://docs.ropensci.org/natserv/articles/natserv.html) for more examples.
 
 ## Meta
 

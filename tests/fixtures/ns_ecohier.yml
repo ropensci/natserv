@@ -1,0 +1,35 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://explorer.natureserve.org/api/data/ecosystemHierarchy/ELEMENT_GLOBAL.2.683060
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.64.1 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 200
+      date: Fri, 08 May 2020 16:39:01 GMT
+      server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
+      content-disposition: inline;filename=f.txt
+      content-type: application/json;charset=UTF-8
+      transfer-encoding: chunked
+    body:
+      encoding: UTF-8
+      file: no
+      string: '[{"uniqueId":"ELEMENT_GLOBAL.2.860217","name":"Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.860217/Mesomorphic_Tree_Vegetation_Class","ecosystemType":"CLASS","classificationCode":"1"},{"uniqueId":"ELEMENT_GLOBAL.2.860227","name":"Temperate
+        & Boreal Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.860227/Temperate_Boreal_Forest_Woodland_Subclass","ecosystemType":"SUBCLASS","classificationCode":"1.B"},{"uniqueId":"ELEMENT_GLOBAL.2.860241","name":"Cool
+        Temperate Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.860241/Cool_Temperate_Forest_Woodland_Formation","ecosystemType":"FORMATION","classificationCode":"1.B.2"},{"uniqueId":"ELEMENT_GLOBAL.2.860284","name":"Eastern
+        North American Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.860284/Acer_saccharum_-_Fagus_grandifolia_-_Quercus_rubra_Forest_Woodland_Division","ecosystemType":"DIVISION","classificationCode":"1.B.2.Na"},{"uniqueId":"ELEMENT_GLOBAL.2.838501","name":"Southern
+        & South-Central Oak - Pine Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.838501/Quercus_alba_-_Quercus_falcata_-_Pinus_echinata_Forest_Woodland_Macrogroup","ecosystemType":"MACROGROUP","classificationCode":"M016"},{"uniqueId":"ELEMENT_GLOBAL.2.833279","name":"Shortleaf
+        Pine - Oak Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.833279/Pinus_echinata_-_Quercus_falcata_-_Quercus_stellata_Forest_Woodland_Group","ecosystemType":"GROUP","classificationCode":"G012"},{"uniqueId":"ELEMENT_GLOBAL.2.899395","name":"Ozark-Ouachita
+        Shortleaf Pine - Oak Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.899395/Pinus_echinata_-_Quercus_stellata_-_Quercus_velutina_Ozark-Ouachita_Woodland_Alliance","ecosystemType":"ALLIANCE","classificationCode":"A3271"}]'
+  recorded_at: 2020-05-08 16:39:04 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

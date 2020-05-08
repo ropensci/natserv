@@ -1,0 +1,847 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://explorer.natureserve.org/api/data/taxonSearch?id=154701
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.64.1 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 200
+      date: Fri, 08 May 2020 16:22:32 GMT
+      server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
+      content-type: application/json;charset=UTF-8
+      transfer-encoding: chunked
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"elementGlobalId":154701,"circumscripConfidence":null,"classificationLevel":{"id":17,"classificationLevelNameEn":"Species","classificationLevelNameEs":null,"classificationLevelNameFr":"Espèce"},"classificationStatus":{"id":1,"classificationStatusDescEn":"Standard","classificationStatusDescEs":null,"classificationStatusDescFr":"Standard"},"iucn":{"id":5,"iucnDescEn":"Vulnerable","iucnDescEs":null,"iucnDescFr":"Vulnérable","iucnCode":"VU"},"nameCategory":{"id":4,"nameCategoryDescEn":"Vascular
+        Plant","nameCategoryDescEs":null,"nameCategoryDescFr":"Plante vasculaire","nameTypeCd":"P","nameTypeDesc":"Botanical"},"rankMethodUsed":{"id":1,"rankMethodUsedDescEn":"Rank
+        calculator v.3.1x - 2011-2015 rank factors","rankMethodUsedDescEs":null,"rankMethodUsedDescFr":"Calculateur
+        de rang v.3.1x — Facteurs de rang 2011-2015"},"formattedScientificName":"<i>Hydrastis
+        canadensis</i>","scientificName":"Hydrastis canadensis","scientificNameAuthor":"L.","primaryCommonName":"Goldenseal","relatedItisNames":"<i>Hydrastis
+        canadensis</i> L. (TSN 18781)","uniqueId":"ELEMENT_GLOBAL.2.154701","elcode":"PDRAN0F010","conceptRefFullCitation":"Kartesz,
+        J.T. 1994. A synonymized checklist of the vascular flora of the United States,
+        Canada, and Greenland. 2nd edition. 2 vols. Timber Press, Portland, OR.","conceptName":"<i>Hydrastis
+        canadensis</i>","taxonomicComments":"<i>Hydrastis canadensis</i> occurs in
+        eastern North America and is a monotypic genus. In the most current taxonomic
+        revision <i>Hydrastis </i>is placed in Hydrastidaceae, with one other monotypic
+        genus, <i>Glaucidium,</i> which is restricted to Japan (Tobe 2003).","roundedGRank":"G3","conservationStatusFactorsEditionDate":"2013-04-29","conservationStatusFactorsEditionAuthors":"Oliver,
+        L.","primaryCommonNameLanguage":"EN","recordType":"SPECIES","elementNationals":[{"elementNationalId":211679,"classifConfidence":null,"nation":{"id":225,"nameEn":"United
+        States","nameEs":null,"nameFr":"États-Unis","isoCode":"US"},"roundedNRank":"N3","elementSubnationals":[{"elementSubnationalId":534839,"subnation":{"id":22,"nameEn":"Kentucky","nameEs":null,"nameFr":"Kentucky","subnationCode":"KY","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":534839,"hybrid":false,"exotic":false}},{"elementSubnationalId":474264,"subnation":{"id":58,"nameEn":"West
+        Virginia","nameEs":null,"nameFr":"Virginie-Occidentale","subnationCode":"WV","dnationId":225},"roundedSRank":"S3","srank":"S3S4","speciesSubnational":{"elementSubnationalId":474264,"hybrid":false,"exotic":false}},{"elementSubnationalId":597053,"subnation":{"id":28,"nameEn":"Michigan","nameEs":null,"nameFr":"Michigan","subnationCode":"MI","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":597053,"hybrid":false,"exotic":false}},{"elementSubnationalId":295434,"subnation":{"id":41,"nameEn":"New
+        York","nameEs":null,"nameFr":"New York","subnationCode":"NY","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":295434,"hybrid":false,"exotic":false}},{"elementSubnationalId":380016,"subnation":{"id":25,"nameEn":"Maryland","nameEs":null,"nameFr":"Maryland","subnationCode":"MD","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":380016,"hybrid":false,"exotic":false}},{"elementSubnationalId":446299,"subnation":{"id":14,"nameEn":"Georgia","nameEs":null,"nameFr":"Géorgie","subnationCode":"GA","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":446299,"hybrid":false,"exotic":false}},{"elementSubnationalId":512452,"subnation":{"id":21,"nameEn":"Kansas","nameEs":null,"nameFr":"Kansas","subnationCode":"KS","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":512452,"hybrid":false,"exotic":false}},{"elementSubnationalId":279630,"subnation":{"id":4,"nameEn":"Arkansas","nameEs":null,"nameFr":"Arkansas","subnationCode":"AR","dnationId":225},"roundedSRank":"S4","srank":"S4S5","speciesSubnational":{"elementSubnationalId":279630,"hybrid":false,"exotic":false}},{"elementSubnationalId":545661,"subnation":{"id":32,"nameEn":"Mississippi","nameEs":null,"nameFr":"Mississippi","subnationCode":"MS","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":545661,"hybrid":false,"exotic":false}},{"elementSubnationalId":430764,"subnation":{"id":53,"nameEn":"Virginia","nameEs":null,"nameFr":"Virginie","subnationCode":"VA","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":430764,"hybrid":false,"exotic":false}},{"elementSubnationalId":473919,"subnation":{"id":17,"nameEn":"Iowa","nameEs":null,"nameFr":"Iowa","subnationCode":"IA","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":473919,"hybrid":false,"exotic":false}},{"elementSubnationalId":621497,"subnation":{"id":29,"nameEn":"Minnesota","nameEs":null,"nameFr":"Minnesota","subnationCode":"MN","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":621497,"hybrid":false,"exotic":false}},{"elementSubnationalId":557103,"subnation":{"id":55,"nameEn":"Vermont","nameEs":null,"nameFr":"Vermont","subnationCode":"VT","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":557103,"hybrid":false,"exotic":true}},{"elementSubnationalId":533891,"subnation":{"id":50,"nameEn":"Tennessee","nameEs":null,"nameFr":"Tennessee","subnationCode":"TN","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":533891,"hybrid":false,"exotic":false}},{"elementSubnationalId":557226,"subnation":{"id":11,"nameEn":"Delaware","nameEs":null,"nameFr":"Delaware","subnationCode":"DE","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":557226,"hybrid":false,"exotic":false}},{"elementSubnationalId":294228,"subnation":{"id":34,"nameEn":"North
+        Carolina","nameEs":null,"nameFr":"Caroline du Nord","subnationCode":"NC","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":294228,"hybrid":false,"exotic":false}},{"elementSubnationalId":512451,"subnation":{"id":24,"nameEn":"Massachusetts","nameEs":null,"nameFr":"Massachusetts","subnationCode":"MA","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":512451,"hybrid":false,"exotic":false}},{"elementSubnationalId":531013,"subnation":{"id":20,"nameEn":"Indiana","nameEs":null,"nameFr":"Indiana","subnationCode":"IN","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":531013,"hybrid":false,"exotic":false}},{"elementSubnationalId":545671,"subnation":{"id":38,"nameEn":"New
+        Jersey","nameEs":null,"nameFr":"New Jersey","subnationCode":"NJ","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":545671,"hybrid":false,"exotic":false}},{"elementSubnationalId":514056,"subnation":{"id":9,"nameEn":"Connecticut","nameEs":null,"nameFr":"Connecticut","subnationCode":"CT","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":514056,"hybrid":false,"exotic":false}},{"elementSubnationalId":586445,"subnation":{"id":30,"nameEn":"Missouri","nameEs":null,"nameFr":"Missouri","subnationCode":"MO","dnationId":225},"roundedSRank":"S5","srank":"S5","speciesSubnational":{"elementSubnationalId":586445,"hybrid":false,"exotic":false}},{"elementSubnationalId":600537,"subnation":{"id":42,"nameEn":"Ohio","nameEs":null,"nameFr":"Ohio","subnationCode":"OH","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":600537,"hybrid":false,"exotic":false}},{"elementSubnationalId":468061,"subnation":{"id":2,"nameEn":"Alabama","nameEs":null,"nameFr":"Alabama","subnationCode":"AL","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":468061,"hybrid":false,"exotic":false}},{"elementSubnationalId":388827,"subnation":{"id":57,"nameEn":"Wisconsin","nameEs":null,"nameFr":"Wisconsin","subnationCode":"WI","dnationId":225},"roundedSRank":"S2","srank":"S2S3","speciesSubnational":{"elementSubnationalId":388827,"hybrid":false,"exotic":false}},{"elementSubnationalId":477257,"subnation":{"id":45,"nameEn":"Pennsylvania","nameEs":null,"nameFr":"Pennsylvanie","subnationCode":"PA","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":477257,"hybrid":false,"exotic":false}},{"elementSubnationalId":489818,"subnation":{"id":19,"nameEn":"Illinois","nameEs":null,"nameFr":"Illinois","subnationCode":"IL","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":489818,"hybrid":false,"exotic":false}}],"nrank":"N3N4","nrankReviewYear":2012},{"elementNationalId":241912,"classifConfidence":null,"nation":{"id":38,"nameEn":"Canada","nameEs":null,"nameFr":"Canada","isoCode":"CA"},"roundedNRank":"N2","elementSubnationals":[{"elementSubnationalId":288768,"subnation":{"id":67,"nameEn":"Ontario","nameEs":null,"nameFr":"Ontario","subnationCode":"ON","dnationId":38},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":288768,"hybrid":false,"exotic":false}}],"nrank":"N2","nrankReviewYear":2017}],"lastModified":"2020-04-30T04:39:36.00295Z","lastPublished":"2020-04-30T02:03:44.602526Z","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.154701/Hydrastis_canadensis","grank":"G3G4","grankReviewDate":"2012-11-30","grankChangeDate":"2012-11-30","grankReasons":"Goldenseal,
+        <i>Hydrastis canadensis, </i>an herbaceous understory species of the eastern
+        deciduous forest, with the core of its range in Indiana, Kentucky, Ohio and
+        West Virginia (Sinclair and Catling 2000a).  It extends north into Ontario,
+        Canada and as far south in the United States to Alabama, east to North Carolina
+        and north to Vermont.<br /><br />Goldenseal may be best known for its use
+        as an herbal supplement for a variety of health purposes, including as an
+        immune booster and anti-inflammatory agent.  Its earliest known use was by
+        indigenous people in the eastern North America and by the 1700s it was used
+        as a digestion aid and treatment for skin imflammation (Barton 1798).   Its
+        use is well documented from the 1800s to the present, with increasing demand
+        through time as markets expanded beyond local usage.  The species has been
+        primarily wild-harvested, and over-collection of the plant is a predominate
+        threat.<br /><br />Concern due to over-collection is expressed at the national
+        levels both in the United States and Canada. Since 1997, goldenseal has been
+        listed in Appendix II of the Convention for International Trade on Endangered
+        Species of Wild Fauna and Flora (CITES), to regulate international trade to
+        ensure there is no detriment to the survival of the species in the wild.  The
+        CITES Appendix II listing requires that exporters obtain CITES permits or
+        certificates for international export of whole, parts and powdered roots and
+        rhizomes of goldenseal. In Canada, goldenseal is listed as Threatened on Schedule
+        I of the federal Species at Risk Act. <br /><br />Long-term decline since
+        the beginning of its harvest history is evident, and short term trends are
+        more localized, from declining to stable.  State conservation statuses range
+        from vulnerable to critically imperiled in the periphery of the range, to
+        uncommon and secure in the core of its range.  As of 2013, the species is
+        state-listed as endangered, vulnerable or threatened in at least ten states.  Seven
+        of the states within goldenseal''s range do not have State plant endangered
+        species lists or protection laws.  <br /><br />Goldenseal, from a rangewide
+        perspective and in a classical perspective of distribution and abundance is
+        currently uncommon to secure, however, from a more holistic conservation perspective
+        the extent of threats, long-term trends and short-term trends demand continuous
+        and close monitoring in both the United States and Canada.","rankInfo":{"elementGlobalId":154701,"aooPercentGood":null,"enviromentalSpecificity":{"id":8,"enviromentalSpecificityDescEn":"Moderate.  Generalist
+        or community with some key requirements scarce.","enviromentalSpecificityDescEs":null,"enviromentalSpecificityDescFr":"Modéré.
+        Généralistes ou communautés répondant à certains critères clés sont rares."},"intrinsicVulnerability":{"id":4,"intrinsicVulnerabilityDescEn":"Moderately
+        vulnerable","intrinsicVulnerabilityDescEs":null,"intrinsicVulnerabilityDescFr":"Moyennement
+        vulnérable"},"longTermTrend":{"id":32,"longTermTrendDescEn":"Decline of 10-50%","longTermTrendDescEs":null,"longTermTrendDescFr":"Diminution
+        de 10 à 50 %"},"numberEos":{"id":15,"numberEosDescEn":"> 300","numberEosDescEs":null,"numberEosDescFr":">
+        300"},"numberGoodEos":{"id":22,"numberGoodEosDescEn":"Unknown","numberGoodEosDescEs":null,"numberGoodEosDescFr":"Inconnu"},"numberProtEos":{"id":7,"numberProtEosDescEn":"Few
+        to several (1-12) occurrences appropriately protected and managed","numberProtEosDescEs":null,"numberProtEosDescFr":"De
+        peu à quelques occurrences (de 1 à 12) protégées et contrôlées convenablement"},"popSize":{"id":33,"popSizeDescEn":"10,000
+        to >1,000,000 individuals","popSizeDescEs":null,"popSizeDescFr":"De 10 000
+        à >1 000 000 individus"},"rangeExtent":{"id":33,"rangeExtentDescEn":"200,000-2,500,000
+        square km (about 80,000-1,000,000 square miles)","rangeExtentDescEs":null,"rangeExtentDescFr":"De
+        200 000 à 2 500 000 km carrés (de 80 000 à 1 000 000 miles carrés approximativement)"},"shortTermTrend":{"id":37,"shortTermTrendDescEn":"Decline
+        of <30% to relatively stable","shortTermTrendDescEs":null,"shortTermTrendDescFr":"Diminution
+        de <30 % à relativement stable"},"threatImpactAssigned":{"id":2,"threatImpactAssignedDescEn":"Very
+        high - high","threatImpactAssignedDescEs":null,"threatImpactAssignedDescFr":"Très
+        élevé — élevé"},"rangeExtentComments":"Range extent was calculated based on
+        a map in Sinclair and Catling (2000a). Range extent is closer to 1,250,000
+        sq km. <br /><br />Eastern United States, northward into Ontario: southern
+        Vermont to Ontario, west to Minnesota and south to Georgia, Alabama, and Arkansas.
+        Common in Arkansas, Indiana, Illinois, Kentucky, Missouri, Ohio, and West
+        Virginia; uncommon around the range perimeter. The central portion of its
+        range is and was where goldenseal was the most abundant, including Indiana,
+        Kentucky, Ohio, and West Virginia (Sinclair and Catling 2000a). Christensen
+        and Gorchov (2010) describe the core part of the historical range as the Ohio
+        River Valley.","areaOfOccupancyComments":"A lower end for area of occupancy
+        was estimated based on the number of occurrences in NatureServe''s database.
+        As of 2012, there were approximately 700 occurrences in the United States
+        and Canada documented in NatureServe''s data, and an upper limit of 12,500
+        4-km grid cells.","numberEosComments":"USA: 1000+ extant occurrences globally.
+        Alabama: 14; Arkansas: 100s; Connecticut: 6, Delaware: 26;Georgia: 15; Kansas
+        (no occurrences delineated), Kentucky: &gt;100; Illinois: 100s; Indiana: 59;
+        Iowa: 21; Massachusetts: 4, Maryland: 19; Michigan: 91; Minnesota: 14; Mississippi:
+        5; Missouri: 100s; New York: 22; North Carolina: 31; New Jersey: 2; Ohio:
+        many; Pennsylvania: 17; Vermont: 5; Tennessee: 154; West Virginia: many; Wisconsin:
+        &gt;100 CANADA: Ontario (22) (NatureServe Element Occurrence data 2012). Element
+        occurrence data not available for Virginia. Since many states do not actively
+        track this species, and because it is clonal, population numbers are not well
+        known. Arkansas, Kentucky, Illinois, Indiana, Missouri, Ohio, and West Virginia
+        likely have the highest number of plants.","popSizeComments":"Populations
+        are typically between several stems to several hundred ramets (i.e. vegetative
+        stems emerging from one parental plant) (Sanders and McGraw 2005, Sinclair
+        and Catling 2000, Mulligan and Gorchov 2004).  In Ohio, it is estimated that
+        62% of populations contain fewer than 200 ramets, 10% had between 200 and
+        1,000 ramets and 28% had more than 1,000 ramets (Mulligan and Gorchov 2004).  The
+        majority of populations in Ohio are small.  <br />Research in West Virginia,
+        one of the core range states, on larger-scale habitat requirements, or mesotopographic
+        distribution patterns, found patches of goldenseal to be very diffuse across
+        the landscape (McGraw et al. 2005).","viabilityComments":null,"threatImpactComments":"<i>Hydrastis
+        canadensis, </i>Goldenseal, a medicinal herb, is threatened primarily by removal
+        of habitat, decline in habitat quality, wild-collection and deer browsing.<br
+        /><br />Habitat destruction is a primary threat throughout its range, as reported
+        by Sinclair and Catling (2000a) only 5% of forested habitat that supports
+        goldenseal in Canada remains, in many personal communications with Natural
+        Heritage Botanists in 2012 and throughout New England (Tait 2006). It is surmised
+        that local extinctions in Ohio were the result of urban sprawl (Mulligan and
+        Gorchov 2004). The interaction and compounding intensification of over-collection
+        and habitat loss, should not be overlooked. Albrecht and McCarthy (2006) suggest
+        that observations by botanists of population disappearance in the early 19th
+        century documented this co-occurrence of threats. It is also suggested that
+        the combination of these two threats may reduce or reverse positive efforts
+        of stewardship, or ''managed'' populations (Albrecht and McCarthy 2006). It
+        should also be recognized that the combined interaction of these threats may
+        be increasing the rate of decline in areas of its range where these two threats
+        are actively occurring.<br /><br /><br />Goldenseal has been cultivated for
+        100+ years throughout its range and historically most of the trade domestically
+        and internationally comes from wild harvested plants (Christensen and Gorchov
+        2010). In recent years there has been an apparent shift. The CITES Trade Database
+        (200-2013) indicates that much of the material in international trade, and
+        all in 2003, which is legal is from cultivated plants. The market for goldenseal
+        is expected to grow at a rate of 5% to 10% annually, and the market for high
+        quality cultivated material is expected to grow 10 to 15% annually (Greenfield
+        and David 2012).<br /><br />Cultivated goldenseal makes p a large portion
+        of domestic trade according to the American Herbal Products Association (AHPA),
+        however, the amount of wild-harvested rhizome that is collected and traded
+        in the United States is unknown. In Indiana, collection pressure has intensified
+        dramatically over the last 10 years, based on the number of inquiries by herbal
+        diggers in the state (pers. comm. Indiana Department of Natural Resources).
+        Along with the increased demand for goldenseal in Indiana, according to State
+        officials, it is evident that herbal diggers that are harvesting wild goldenseal
+        in July and August are also harvesting American ginseng (<i>Panax quinquefolius)</i>
+        outside the legal harvest season that has not yet had a chance to reproduce
+        (pers. comm. Indiana Department of Natural Resources). Law enforcement officials
+        in Indiana are concerned for the species due to the amount being shipped from
+        the state, and while there are no quantitative data on population declines
+        in Indiana (pers. comm. Indiana Department of Natural Resources), declines
+        seem likely. Collection pressure in parts of the species'' range where unemployment
+        is high is incentivized by prices paid for wild-collected roots/rhizomes in
+        the herbal market (McGraw et al. 2003). Studies suggest that if as little
+        as 10% of the plants from a population are removed by collected annually,
+        that the population will go extinct over time (Mulligan and Gorchov 2004).<br
+        /><br />Invasive species is also a threat, including pressure from both non-native
+        plants. White-tailed deer browse is also a threat in Ohio (Mulligan and Gorchov
+        2004) and in other parts of the range.<br /><br />Further threats as noted
+        by state Natural Heritage Botanists:<br />Alabama: Incompatible forestry practices
+        appear to be the foremost concern, with invasive species of secondary importance
+        (Al Schotz, pers. comm., 2012).<br />Arkansas: Unknown (Theo Witsell, pers.
+        comm., 2012).<br />Connecticut: Invasive species and canopy closure. Severity
+        of the threats is unknown (Nelson DeBarros &amp; Nancy Murray, pers. comm.,
+        2012).<br />Delaware: Invasive species and deer browse (William A. McAvoy,
+        pers. comm., 2012).<br />Indiana: Not known, but collecting and habitat destruction
+        likely (Michael Homoya, pers. comm., 2012).<br />Kansas: Unknown (Craig C.
+        Freeman, pers. comm., 2012).<br />Kentucky: The current threats are land conversion/development,
+        collection, and high deer populations (Deborah White, pers. comm., 2012).<br
+        />Massachusetts: This plant has never been common in Massachusetts, populations
+        are very small and threatened by herbivory (Bryan Connolly, pers. comm., 2012)<br
+        />Michigan: Collecting and habitat destruction (M.R. Penskar et al. 2001).<br
+        />Minnesota: Invasive species (such as garlic mustard and buckthorn) continue
+        to be discovered in the greater area of goldenseal''s range in Minnesota.
+        This will likely be a rising threat to populations in the long-term (Derek
+        Anderson, Welby Smith, &amp; Nancy Sather, pers. comm., 2012).<br />Missouri:
+        Current threats are over harvesting, particularly on public land. (Malissa
+        Underwood, pers. comm., 2012).<br />Mississippi: In the Loess Bluff Physiographic
+        Province, rapid subdivision development is encroaching into the habitat of
+        goldenseal. One population has already probably been extirpated by a \"Loess
+        Bluff Restoration Project\" associated with a housing development. In the
+        Pontotoc Ridge Physiographic Province, the private land owner is considering
+        developing the land as a new subdivision(Heather Sullivan, pers. comm., 2012).<br
+        />New York: It is collected for medicinal purposes but so far there is no
+        evidence that it is being over-collected in New York. There is a moderate
+        threat from habitat destruction, especially in the Lower Hudson area. Exotic
+        species like garlic mustard and bush honeysuckle threaten its understory habitat
+        (Steve Young, pers. comm., 2012).<br />North Carolina: Poaching and effects
+        of climate change (drought, increased temperatures, wind damage, invasive
+        species) (Laura Gadd, pers. comm., 2012).<br />New York: It is collected for
+        medicinal purposes but so far there is no evidence that it is being over-collected
+        in New York. There is a moderate threat from habitat destruction, especially
+        in the Lower Hudson area. Exotic species like garlic mustard and bush honeysuckle
+        threaten its understory habitat (Steve Young, pers. comm. 2012).<br />Ohio:
+        Some threats include development, recreation, roads and associated maintenance,
+        resource extraction and processing (timber, oil, renewable energy), agriculture,
+        and non-native species (Rick Gardner, pers. comm., 2012).<br />Ontario: Possibly
+        lack of disturbance at some sites (Sinclair &amp; Catling 1998) (Michael J.
+        Oldham, pers. comm., 2012).<br />Pennsylvania: Invasive species, succession
+        (more coming in later report), and gas development (Chris Firestone, pers.
+        comm., 2012.)<br />Tennessee: Timber operations and ATV trails are the main
+        threats (Todd Crabtree, pers. comm., 2012).<br />Virginia: Mostly unknown,
+        but harvest and development are likely threats (John Townsend, pers. comm.,
+        2012).<br />Vermont: Invasives, development, and climate change. (Bob Popp
+        &amp; Aaron Marcus, pers. comm., 2012).<br />Wisconsin: Forest conversion
+        is likely the largest historical threat. Forest fragmentation and development
+        is likely the largest current threat with invasive plants and earthworm likely
+        causing significant impacts, especially for spread by seed. Leaf herbivory
+        is unknown, but deer populations are high in the known region. Fruit herbivory
+        and seed destruction is also unknown, but turkeys and rodents may be causing
+        destruction of seed or placement in inappropriate habitat. Possible threats
+        by logging, although the level of logging in the southern part of the state
+        where it is found is relatively low, especially in the southeast. Impacts
+        of harvest are unknown. We do not receive any harvest data and reports of
+        sales to ginseng dealers is erratic. It would be fairly simple to survey ginseng
+        dealers and ask them about amounts and trends in goldenseal harvest. Dealers
+        may also have a sense if it is generally being harvested sustainably. (Kevin
+        Doyle, Assistant Botanist &amp; Ryan O''Connor, Assistant Ecologist, Kelly
+        Kearns, pers. comm., 2012).<br /><br />West Virginia: Wild harvest (P.J. Harmon,
+        pers. comm., 2012).","shortTermTrendComments":"It is known that the rhizome
+        of <i>Hydrastis canadensis </i>is wild-collected for medicinal uses.  Short
+        term trend information is available from a few sources. There is decline in
+        some populations due to wild-collection and habitat loss. Wild-collection
+        in Canada is prohibited.  Overall population decline is evidenced through
+        fewer populations present, fewer patches per population, and fewer ramets
+        per patch (Sanders and McGraw 2005). Rangewide, or state-by-state, abundance
+        information for goldenseal is unknown, which is typical of most wild-harvested
+        plant species (McGraw et al. 2003).  Abundance and short-term trends in the
+        core range states, in terms of both population size (numbers) and patches,
+        is not available because it is not state-protected, and hence not monitored
+        closely.  There are studies and observations for a few jurisdictions.<br /><br
+        />Canada:<br />Population studies in Ontario, Canada detected no declines
+        between 1991 and 1998.  Some patches may have been increasing while others
+        were decreasing (Sinclair and Catling 2000a).  The rate of expansion over
+        several decades in Ontario is considered slight and slow, and possibly because
+        of lack of disturbance given that populations in areas with some disturbance
+        (greater light and nutrient resources) had highly variable growth rates (Sinclair
+        and Catling 2002).<br /><br />United States:<br />In West Virginia, evidence
+        of poaching was documented near Morgantown, West Virginia (Sanders and McGraw
+        2005), however, it is widely known that the rhizome is collected for trade
+        in the medicinal market.  <br /><br />In Ohio, a core range state, recent
+        short-term declines of approximately 30% were detected in goldenseal (Mulligan
+        and Gorchov 2004, pers. comm. Gorchov 2012). Of 42 sites documented in Ohio
+        from 1977-1998, 14 of these were extirpated as of 2002, if the rate of decline
+        is constant, approximately 1.6% of populations are expected to be extirpated
+        each year, and approximately a 30% decline over 20 years (Mulligan and Gorchov
+        2004, pers. comm. Gorchov 2012). <br /><br />In New York, recent studies have
+        shown on-going extirpations as the distribution was reduced from 14 counties
+        to 12 counties, due to habitat loss (Tait 2006).<br /><br />In Indiana, another
+        core-range state, a dramatic increase in the amount of goldenseal harvested
+        over the past 10 years has occurred, and law enforcement officials have expressed
+        concern for the species due to the tonnage being shipped from the state (pers.
+        comm. Indiana Department of Natural Resources).  Even though quantitative
+        information about trends in Indiana do not exist, sharp increases in collection
+        over 10 years suggest that a decline is very likely in this slow growing perennial.  A
+        study described the growth rate of goldenseal as ''slight'' (Sinclair and
+        Catling 2000a).<br /><br />Some information about short-term trends is available
+        from state Natural Heritage botanists.  Alabama (pers. comm. A. Schotz 2012)
+        and Ohio (pers. comm. R. Gardner 2012) have had short term declines and West
+        Virginia (pers. comm. P. Harmon) may also have short term declines. Botanists
+        from the following states; AR, DE, KY, MO, MS, NC, NY, PA, TN, and VT say
+        that the species is stable to slightly declining in their state.","longTermTrendComments":"Since
+        the mid 1800s, populations throughout goldenseal''s range have dramatically
+        declined due to collection for medicinal uses and habitat destruction (Mulligan
+        and Gorchov 2004).  There is anecdotal evidence that during the 19th century
+        as botanists noticed the decline and loss of goldenseal populations because
+        of market demand and loss of habitat, greater pressure on managed or previously
+        unharvested populations intensified (Albrecht and McCarthy 2006).  Once-abundant
+        populations were decimated, and the distribution of this widespread species
+        was reduced to isolated, scattered patches (Mulligan and Gorchov 2004, CITES
+        1991, Lloyd and Lloyd 1884-1885 in Foster 1991, Henkel and Klugh 1904).<br
+        /><br />Loss of habitat is another primary threat both in United States (Tait
+        2006) and Canada (Sinclair and Catling 2000a).  There are only remnants of
+        the woodlands remaining where this species occurs in Canada: less than 5%
+        of these forests remain from presettlement times (Sinclair and Catling 2000a).  Similarly,
+        in New England during the 1800s, forest conversion, from forested lands to
+        agriculture and settlement, reached its height and approximately 80% of the
+        originally forested land was lost (Tait 2006).  In addition, many Ohio populations
+        have gone extinct (Christensen and Gorchov 2010).  A study by Mulligan and
+        Gorchov (2004) assessed the status of 71 historical locations of goldenseal
+        in Ohio and concluded that nearly half of the populations had been extirpated
+        (13% of the extinctions were due to habitat destruction).  They note that
+        this number may be somewhat mitigated by the rate of colonization, however,
+        that is unknown.<br /><br />Finally, according to the proposal to list goldenseal
+        in Appendix II of CITES (1997),  \"the decline to rarity of this species has
+        been reiterated by numerous authors including Millspaugh 1887, Henkel and
+        Klugh 1904, Lloyd and Lloyd 1908, Grieve 1931, Deam 1940, Fernald 1950, Hill
+        1952, Gleason 1968, Schery 1972, Wofford 1989, Catling and Small 1994, Elliott
+        1995, Foster 1991, and Foster 1995.\"","inventoryNeeds":"Need further population
+        data from states, especially those with ''uncommon'' and ''secure'' SRANKs
+        (state conservation ranks). All states need to monitor population trends to
+        determine effects that legal and illegal collection, as well as threats from
+        habitat loss, are having on the populations. States that actively track this
+        species should search areas of potential habitat. Populations should be monitored
+        for the presence of the leaf blight which is threatening the population in
+        the Great Smoky Mountains.","numberProtEosComments":"Many sites throughout
+        the range are on federal, state, local, or private organizations (including
+        some populations within Nature Conservancy preserves). Plants on public and
+        protected lands need greater protection from illegal collecting and existing
+        regulations protecting plants on public and protected lands need greater enforcement.
+        <br /><br />Removal from state protected list occurred in North Carolina,
+        in December 2010. The North Carolina Department of Agriculture and Consumer
+        Services Plant Conservation Board removed goldenseal from the protected plant
+        list (Greenfield and Davis 2012).  There are no state restrictions on harvesting
+        or cultivating in the state.  Within the state, however, permits to collect
+        the plants on federal forests will not be granted (Greenfield and Davis 2012).","protectionNeeds":"Plants
+        on public and protected lands need greater protection from legal and illegal
+        collecting, and existing regulations protecting plants on public and protected
+        lands need greater enforcement.  Also, it is common practice for some harvesters
+        to collect in late-summer and fall as the plant is going dormant. This may
+        maximize harvesting returns and minimize collection and threats to the plant
+        because a) rhizomes are bigger inthe fall than in the early part of the growing
+        season and b) more rhizomes moisture content is lower in the fall so fewer
+        rhizomes need to be collected to equal the fresh:dry weight ration of rhizomes
+        collected in the spring (Albrecht and McCarthy 2006).  These observations
+        could be used to guide permitting by state governments.","otherConsiderations":"Random
+        amplified polymorphic DNA (RAPD) analysis, using samples from both wild and
+        cultivated populations in North Carolina (cultivated), Ohio (cultivated),
+        Pennsylvania (wild) and West Virginia (wild), showed that most genetic variation
+        was found within groups and among samples within populations, but not between
+        the wild and cultivated groups (Kelley 2009).  Moderate to high levels of
+        genetic variation were found within both the wild and cultivated groups (F-statistic
+        = 0.738, within populations) (Kelley 2009).  What is important to note, however,
+        is that Kelley (2009) found that some populations had very low genetic diversity
+        suggesting that these wild populations were not frequently reproducing sexually,
+        and expanding vegetatively.  This is not surprising since it is widely known
+        that it is clonal.  Another genetic study in 2012 examining genetic diversity
+        of 6 population in western North Carolina found that most genetic variation
+        was within populations, but that overall all genetic and allelic diversity
+        was low among populations suggesting that outbreeding depression would be
+        an unlikely effect from replanting declining populations in North Carolina
+        (Torgerson 2012).","intrinsicVulnerabilityComments":"Primarily a clonal species
+        with low seed to ramet production, but with some or few seedlings advancing
+        to higher life stages allowing for at least infrequent infusion of genetic
+        diversity into populations via sexual reproduction by seed.  It takes between
+        four and five years for a plant to reach sexual maturity, i.e. the point at
+        which it produces flowers.  Seedlings successfully moving forward to the next
+        life-stages may be dependent on geographic location within its range, since
+        in Ontario seedlings were rarely observed while in Ohio seedlings were still
+        low in number but not rare (Sinclair and Catling 2000, Christensen and Gorchov
+        2010).<br /><br />Sexual reproduction contributes less to population growth
+        due to low survival of seedlings: only 36% of seedlings made it to yr 2 and
+        only 54% of these made it to yr 3, but new ramets had a 73% survival rate
+        to the second year (Christensen and Gorchov 2010).  Further inbreeding is
+        not expected in goldenseal since it produces ramets and flowers, and is self-compatible
+        (Sinclair et al. 2000, Sanders and McGraw 2003, Christensen and Gorchov 2010,
+        Mulligan and Gorchov 2004).<br /><br />In terms of population growth rate,
+        Sinclair and Catling (2002) describe goldenseal''s growth rate in non-harvested
+        populations, at the northern limit of its range as slight and slow.  Studies
+        in West Virginia examining its recovery from harvest, show an initial surge
+        in growth (increased stem number), but that few plants progressed from one
+        life history stage to the next in following years (Van der Voort et al. 2003).  This
+        is exemplified by results in Sanders and McGraw (2005), who examined growth
+        response to harvest.  Sanders and McGraw (2005) found that ramet leaf area
+        recovered only 34% of the orginal pre-harvested leaf-area after 2 years [leaf
+        area in the sampling plots from year 1 to year 2 was a measure of growth and
+        recovery].","enviromentalSpecificityComments":null,"dareaOfOccupancyId":null},"animalCharacteristics":null,"occurrenceDelineations":[{"eoSpecsDetailId":123469,"locationUseClass":{"id":1,"locationUseClassDescEn":"Not
+        applicable","locationUseClassDescEs":null,"locationUseClassDescFr":"Sans objet"},"eoSpecGroupName":null,"subtypes":null,"inferredExtentDistance":null,"inferredExtentNotes":null,"minimumEoCriteria":"Any
+        naturally occurring discrete population defines an occurrence.","mappingGuidance":null,"separationBarriers":null,"separationDistanceUnsuitableHabitatat":0.5,"separationDistanceSuitableHabitatat":1.5,"altSeparationProcedure":null,"separationJustification":"There
+        are no data to suggest minimum distances between occurrences but we suggest
+        at least 0.5 kilometers of unsuitable habitat or 1.5 kilometers of suitable
+        but unoccupied habitat as separation distances between individual occurrences.
+        Individual stems are generally found in clumps or clusters, with clumps ranging
+        from a handful of stems to over a thousand stems. The typical clump range
+        appears to be between 70 and 500 stems. Distinct clumps with continuous suitable
+        habitat should be considered sub-populations of one large single occurrence,
+        assuming there is no more than 1.5 kilometers between clumps.","versionDate":"2000-01-14","versionAuthor":"Weldy,
+        T., and S. Young","versionNotes":"NYHP","lastModified":"2020-02-25T16:59:35.410088Z"}],"plantCharacteristics":{"elementGlobalId":154701,"genusEconomicValue":true,"economicComments":"Goldenseal
+        roots, plants, leaves, seeds, fruits and whole plants are sold in many forms:
+        powdered, dried or fresh (Egert 2007). Two parts of the goldenseal plant are
+        used for medicinal purposes: the rhizomes and leaves (or aerial parts). Rhizomes
+        seem to be the preferred target for harvest because goldenseal rhizomes have
+        the highest concentration of medicinally-active alkaloids, berberine, hydrastine
+        and canadine. Leaves and stems contain lower levels of these alkaloids (Douglas
+        et al. 2010).<br /><br />Studies have found that goldenseal performs well
+        as a yeast inhibitor, antimicrobial, antiparasitic, bile stimulant, and immune
+        system stimulant (Bradley 1992, Benigni et al. 1962, Liu 1991, Kaneda 1991,
+        Murray 1995, Sun 1988, Sack 1982). These properties help cure mouth and gum
+        disorders, eye afflictions, infected wounds, bacterial or fungal infections,
+        diarrhea, vaginitis, food poisoning, giardia, cholera, and dermatitis (e.g.
+        Mills 1991, Murray 1995, Amalaradjou &amp; Venkitanarayanan 2011). In a survey
+        of AIDS/HIV patients, goldenseal was one of the products most purchased, and
+        most recommended by health-store employees (Medical Sciences Bulletin 1995).<br
+        /><br />Studies in medical journals focused on the interaction of goldenseal
+        with other drugs (Guo et al. 2011, Chatuphonprasert 2012, Shi &amp; Klotz
+        2012, Gurley et al. 2012, Zadoyan &amp; Fuhr 2012, and Yamaura et al. 2012)
+        and its chemical makeup (Le et al. 2012). There is evidence of the effectiveness
+        of it treating mycoplasmosis (Arjoon 2012), H1N1 influenza A virus (Cecil
+        et al. 2011), cancer (Karmakar et al. 2010 and Kim et al. 2010), and growth
+        inhibition of MRSA (methicillin-resistant <i>Staphylococcus aureus</i>)(Cech
+        et al. 2012).<br /><br />The American Herbal Products Association (AHPA) is
+        a trade association with over 200 herbal companies as members. AHPA surveys
+        their members annually and goldenseal tonnage reports are based on these surveys
+        (from up to 10 companies). Between 21 and 63 tons of dried rhizome and 0.1-10
+        tons of fresh wild rhizome were harvested each year from 2000-2010. In 1998,
+        the AHPA recorded only 2% from cultivated sources, and this percentage increased
+        to17-41% between 2000 - 2010. AHPA members increased procurement of cultivated
+        goldenseal by 2-17% from 1998-2010 (Dentali &amp; Zimmerman 2012). AHPA (2012)
+        reported in that timeframe that 21,500 kg of the total 255,000 kg harvested
+        were exported internationally. Since, 2003 all US exports (including roots,
+        powder, and derivatives) are from cultivated sources according to the CITES
+        trade database (2013).<br /><br />As with other medicinal plants, the \"problem\"
+        with cultivating goldenseal is that you have to wait several years to get
+        a product. There are two methods for cultivating goldenseal: woods-cultivated
+        and wild-simulated. Woods/forest cultivated methods require less investment,
+        but profit earnings are unpredictable. Burkhart and Jacobson (2009) indicated
+        that cultivating goldenseal in a forest was not profitable at a historics
+        price of $20/pound because of the annual production cost over the multiple
+        years required before harvest. However, if has been suggested that organic
+        certification may be a viable option to increase profitability of cultivated
+        goldenseal (Burkhart and Jacobson 2009).<br /><br />The price for rhizomes
+        increased from the $5/lb in the 1970s to $40/lb in the late 1990s and early
+        2000s, with a downturn in 2005 when growers and wild harvesters earned about
+        $15/lb. The price per pound for leaves consistently averages half that of
+        the rhizomes (PA DCNR 2012). In 2010, organic goldenseal farmers were earning
+        $40/lb for rhizomes (Baker 2010). Recent information indicates that cultivated
+        goldenseal may be garnering a higher price than wild goldenseal, with cultivated
+        root selling for $30-35/dried pound and wild material selling for $20-25/pound
+        (David and Greenfield 2012).","plantProductionMethods":[{"plantCagProdMethodId":100090,"productionMethod":{"id":1,"productionMethodDescEn":"Wild-harvested","productionMethodDescEs":null,"productionMethodDescFr":"Récolté
+        dans la nature"}},{"plantCagProdMethodId":100091,"productionMethod":{"id":2,"productionMethodDescEn":"Cultivated","productionMethodDescEs":null,"productionMethodDescFr":"Cultivé"}}],"plantDurations":[{"plantCagDurationId":101910,"duration":{"id":3,"durationDescEn":"PERENNIAL","durationDescEs":null,"durationDescFr":"VIVACE"}},{"plantCagDurationId":101911,"duration":{"id":5,"durationDescEn":"Long-lived","durationDescEs":null,"durationDescFr":"Longue
+        durée de vie"}}],"plantEconomicUses":[{"plantCagEconomicUseId":101289,"economicUse":{"id":18,"economicUseDescEn":"Folk
+        medicine","economicUseDescEs":null,"economicUseDescFr":"Médecine folklorique"}},{"plantCagEconomicUseId":101288,"economicUse":{"id":17,"economicUseDescEn":"Pharmaceutical","economicUseDescEs":null,"economicUseDescFr":"Produits
+        pharmaceutiques"}},{"plantCagEconomicUseId":100513,"economicUse":{"id":16,"economicUseDescEn":"MEDICINE/DRUG","economicUseDescEs":null,"economicUseDescFr":"MÉDICATION/MÉDICAMENTS"}}],"plantCommercialImportances":[{"plantCagCommImportId":100079,"commercialImportance":{"id":3,"commercialImportanceDescEn":"Indigenous
+        crop","commercialImportanceDescEs":null,"commercialImportanceDescFr":"Culture
+        autochtone"}},{"plantCagCommImportId":100078,"commercialImportance":{"id":2,"commercialImportanceDescEn":"Minor
+        cash crop","commercialImportanceDescEs":null,"commercialImportanceDescFr":"Culture
+        commerciale de petite ampleur"}}]},"elementManagement":{"elementGlobalId":154701,"eoManagementGroupName":null,"stewardshipOverview":"Populations
+        should be monitored for impacts related to harvest, and wild-collection is
+        a primary threat to this species.  Most populations of goldenseal are made-up
+        of 1000 and fewer stems, and while populations may be small protecting even
+        the smallest should be considered.  Goldenseal maintains a mixed-breeding
+        system and is able to self-pollinate to produce fruit, as well as produce
+        sterile stems (non-flowering) that are genetically identical to other stems
+        in the same patch (Christensen and Gorchov 2010, Sanders 2004).  Since goldenseal
+        is capable of self-pollination to set fruit, even small populations can be
+        long-lived, and can act as sources of genetic variability for other nearby
+        populations (Sanders 2004).  Further, populations in small areas should be
+        considered for conservation based on research that showed that goldenseal
+        responds favorably to light and soil disturbance, and larger populations were
+        associated with small habitat area (Sinclair and Catling 200b).  A genetic
+        study in North Carolina showed that while higher levels of genetic diversity
+        were measured within populations, that genetic and allelic diversity was low
+        across populations suggesting that reintroductions into populations would
+        not likely cause outbreeding depression (Torgerson 2012). <br><br>Studies
+        show that the best measure of past collection is the number of fertile (Sinclair
+        and Catling 2000, Christensen and Gorchov 2010) and large sterile plants (Christensen
+        and Gorchov 2010) from year to year, as these two life classes are responsible
+        for maintaining or proliferating population size.<br><br>Data collection on
+        environmental conditions such as temperature, precipitation and soil nutrients
+        should be maintained over the life of any monitoring program.  Buds for next
+        year''s stems are formed in summer or fall (Sinclair and Catling 2000) and
+        spring growth is likely linked with the size of the flower bud and a determiner
+        of whether plants will reproduce vegetatively or sexually in a given year
+        (Christensen and Gorchov 2010). Growth is dependent on precipitation and temperature,
+        and in one study high levels of soil nutrients (especially phosphorus) promoted
+        growth of young stems (Sinclair and Catling 2000).<br><br>Other data related
+        to the habitat should also be collected, such as percent canopy cover and
+        soil displacement by animals and uprooted trees since goldenseal positively
+        responds to mild disturbance, particularly light gaps and some soil disturbance
+        (McGraw et al. 2003).  Management and monitoring of patches should be done
+        based on changes in leaf-area from year to year, and not stem count.  Results
+        from illicitly harvested patches in West Virginia show that leaf-area was
+        immediately and negatively affected compared to pre-harvest leaf-area, and
+        that stem-counts do not clearly relate to pre-harvest numbers (Sanders and
+        McGraw 2005).  Finally, if populations are harvested, the time of year this
+        takes place should be noted.  Albrecht and McCarthy (2006) found that fall-harvested
+        populations may recover faster than those harvested in the mid-summer.<br><br>Success
+        in monitoring and managing population dynamics is dependent on the knowledge
+        of the data collectors and program managers, since understanding the reproductive
+        life history of this plant is critical (i.e. it is known that large sterile
+        (non-flowerig) plants transition back and forth from fertile plants) for accurate
+        tracking of population health and viability.  Further, managers should know
+        the local phenology pattern of the plant from emergence to senescence.  Detailed
+        information about the life history of goldenseal is available in Christensen
+        and Gorchov (2010), general biology and complexities associated with management
+        are provided in Sinclair and Catling (2000), and diagram of the root (used
+        in medicinal compounds) available in Van der Voort et al. (2003).","impacts":null,"restorationPotential":null,"siteConservationPlansConsidered":null,"managementMethods":null,"monitoringMethods":null,"managementProgramContacts":null,"monitoringProgramContacts":null,"managementResearchPrograms":null,"managementResearchNeeds":null,"biologicalResearchNeeds":"Few
+        studies have been conducted on the genetic diversity of the species.  Random
+        amplified polymorphic DNA (RAPD) analysis showed that moderate to high genetic
+        diversity was found in wild populations sampled in Pennsylvania and West Virginia,
+        but that some populations had very low genetic diversity suggesting they are
+        reproducing vegetatively (Kelley 2009). One other study examined 6 goldenseal
+        locations in North Carolina and found that most genetic variation was found
+        within populations, however, genetic diversity across populations was found
+        to be low (Torgerson 2012).  Torgerson (2012) notes that because genetic and
+        allelic diversity was low across all of the goldenseal populations researched
+        in North Carolina, that reintroductions into declining populations should
+        not cause genetic loss through oubreeding depression.  Similar studies in
+        other states in the core range states would further help inform stewardship
+        practices such as reintroductions in harvested populations.  Genetic studies
+        are also needed to examine the consequences of climate change if low genetic
+        levels are detected along the leading or trailing edges of its range.   Genetic
+        diversity should also be considered when developing stewardship programs focused
+        on responsible harvesting.<br /><br />Patterns of rhizome collection need
+        to be documented to better understand the proportion of size classes that
+        harvesters remove, and how goldenseal responds to these different patterns
+        (pers. comm. Gorchov 2012).  In other words, the frequency, intensity and
+        technique of harvesting patterns needs monitoring, in addition to its re-growth
+        response (Albrecht and McCarthy 2006).<br /><br />Modeling is also a need.  Models
+        that project the impact of harvesting based on the different proportions of
+        life history classes collected and at different time intervals are needed
+        (pers. comm. Gorchov 2012).  Models that use real-life harvesting practices
+        could be intrumental in documenting and predicting the decline of goldenseal,
+        and decline is a vital component to assessing extinction risk for this clonal
+        species.<br /><br />The extent of impact of deer browse on patches throughout
+        goldenseal''s range is needed (pers. comm. Gorchov 2012).  Many states record
+        that white-tailed deer herbivory is a threat, however, the extent of the threat
+        is not well understood.<br /><br />Lastly, there are a number of questions
+        relating to the economic trade that need research.  It is not clear what percentage
+        of wild harvested goldenseal is used domestically.  It is not clear what the
+        harvest or cultivation practices are of herbal companies that do not belong
+        to AHPA (American Herbal Products Association). It is also not clear if this
+        is offsetting collection pressure from wild populations of goldenseal, given
+        that some states continue to report declines, and to what extent poaching
+        is impacting wild populations.  More research is required to determine whether
+        current goldenseal demands can be satisfied by increased cultivation and whether
+        market prices might stabilize if there are potentially stable supplies of
+        goldenseal.","additionalTopics":null},"occurrenceViability":{"elementGlobalId":154701,"eoSpecGroupName":null,"excellentViability":null,"goodViability":null,"fairViability":null,"poorViability":null,"viabilityJustification":null,"versionDate":null,"versionAuthor":null,"versionNotes":null},"references":[{"id":154873,"citation":"McAvoy,
+        Bill. Personal communication. Botanist, Delaware Natural Heritage Program.","shortCitationAuthor":"McAvoy","shortCitationYear":null,"referenceCode":"PNDMCA01HQUS","lastModified":"2020-02-25T16:11:28.13231Z"},{"id":715920,"citation":"Firestone,
+        Chris. Personal communication. Botanist. Pennsylvania Natural Heritage Program.","shortCitationAuthor":"Firestone","shortCitationYear":null,"referenceCode":"PNDFIR01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":119570,"citation":"Planet
+        Herbs. 1999. Planet Herbs: Natural botanicals wholesale. Online. Available:
+        http://www.planetherbs.net. Accessed 2000-Jan.","shortCitationAuthor":"Planet
+        Herbs","shortCitationYear":1999,"referenceCode":"N99PLA01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719341,"citation":"Christensen,
+        D. L. and D. L. Gorchov. 2010. Population dynamics of goldenseal (<i>Hydrastis
+        canadensis</i>) in the core of its historical range. Plant Ecology 210: 195-211.","shortCitationAuthor":"Christensen
+        and Gorchov","shortCitationYear":2010,"referenceCode":"A10CHR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":103353,"citation":"Foster,
+        S. 1991. Goldenseal, Hydrastis canadensis. American Botanical Council, Botanical
+        Series No. 309. 8 pp.","shortCitationAuthor":"Foster","shortCitationYear":1991,"referenceCode":"A91FOS01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719350,"citation":"Sinclair,
+        A. and P. M. Catling. 2000b. Ontario Goldenseal, <i>Hydrastis canadensis</i>,
+        populations in relation to habitat size, paths and woodland edges. Canadian
+        Field-Naturalist 11(4): 652-655.","shortCitationAuthor":"Sinclair and Catling","shortCitationYear":2000,"referenceCode":"A00SIN04HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719403,"citation":"Kelley,
+        K. J. 2009a. Genetic variability in <i>Hydrastis canadensis</i> L. using RAPD
+        analysis. A thesis presented to the Graduate School of the University of Massachusetts
+        Amherst, Department of Plant &amp; Soil Science. 27 pp.","shortCitationAuthor":"Kelley","shortCitationYear":2009,"referenceCode":"U09KEL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":114379,"citation":"Freeman,
+        Craig. Personal communication. Botanist, Kansas Natural Features Inventory.
+        Kansas Biological Survey, Lawrence, KS.","shortCitationAuthor":"Freeman","shortCitationYear":null,"referenceCode":"PNDFRE03HQUS","lastModified":"2020-02-25T15:56:31.759461Z"},{"id":115767,"citation":"Murray,
+        M. 1995. The Healing Power of Herbs. Prima, Rocklin, Calif. Pp. 162-172.","shortCitationAuthor":"Murray","shortCitationYear":1995,"referenceCode":"B95MUR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":127559,"citation":"Medical
+        Sciences Bulletin. 1996 (Oct.). Treatment Options for HIV: The Health Food
+        Store Connection. Online: PharmInfoNet Home Page.","shortCitationAuthor":"Medical
+        Sciences Bulletin","shortCitationYear":1996,"referenceCode":"U96MED01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715924,"citation":"Doyle,
+        Kevin. Personal communication. Acting Botanist, Natural Heritage Inventory,
+        Bureau of Endangered Resources, Wisconsin Department of Natural Resources.","shortCitationAuthor":"Doyle","shortCitationYear":null,"referenceCode":"PNDDOY01HQUS","lastModified":"2020-02-25T15:59:56.997231Z"},{"id":719365,"citation":"Indiana
+        Department of Natural Resources, Division of Nature Preserves. Indianapolis,
+        IN","shortCitationAuthor":"Indiana Department of Natural Resources","shortCitationYear":null,"referenceCode":"PNDFLO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719389,"citation":"Gadd,
+        Laura. Botanist North Carolina Plant Conservation Program. Personal Communication.","shortCitationAuthor":"Gadd","shortCitationYear":null,"referenceCode":"PNDGAD02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":118648,"citation":"Schery,
+        R.W. 1972. Plants for Man, 2nd edition. Prentice-Hall, Englewood Cliffs, New
+        Jersey. 657 pp.","shortCitationAuthor":"Schery","shortCitationYear":1972,"referenceCode":"B72SCH01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":149748,"citation":"Young,
+        Steve. Personal communication. Botanist, New York Natural Heritage Program.","shortCitationAuthor":"Young","shortCitationYear":null,"referenceCode":"PNDYOU01HQUS","lastModified":"2020-02-25T16:12:44.055285Z"},{"id":715914,"citation":"Sather,
+        Nancy. Personal communication. Botanist/Ecologist. Minnesota Natural Heritage
+        & Nongame Research.","shortCitationAuthor":"Sather","shortCitationYear":null,"referenceCode":"PNDSAT01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":121876,"citation":"Smith,
+        W. R. Personal communication. Botanist, Minnesota Natural Heritage Program,
+        Minnesota Dept. Natural Resources, St. Paul, MN. ","shortCitationAuthor":"Smith","shortCitationYear":null,"referenceCode":"PNDSMI03HQUS","lastModified":"2020-02-25T16:28:03.475314Z"},{"id":721600,"citation":"Torgerson,
+        J. M. 2012a. Genetic variation in <i>Hydrastis canadensis </i>populations
+        in western North Carolina. M.S. thesis, Western Carolina University. 61 pp.","shortCitationAuthor":"Torgerson","shortCitationYear":2012,"referenceCode":"U12TOR01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":135172,"citation":"Gleason,
+        H.A. 1968. The New Britton and Brown Illustrated Flora of the Northeastern
+        United States and Adjacent Canada. Vol. 3. The Sympetalous Dicotyledoneae.
+        Hafner Publishing Co., Inc., New York.","shortCitationAuthor":"Gleason","shortCitationYear":1968,"referenceCode":"B68GLE01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719361,"citation":"National
+        Center for Complementary and Alternative Medicine (NCCAM). 2012. Available
+        online: http://nccam.nih.gov/health/goldenseal#science. Accessed 2012.","shortCitationAuthor":"NCCAM","shortCitationYear":2012,"referenceCode":"W12NCC01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":151157,"citation":"Benigni,
+        R., et al. 1962. Piante Medicinali-Chimica, Farmacologia e Terapia, Vol. 1.
+        Inverni & Della Beffa, Milan.","shortCitationAuthor":"Benigni et al.","shortCitationYear":1962,"referenceCode":"B62BEN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":114048,"citation":"McGuffin,
+        Michael. Personal communication. American Herbal Products Association, Silver
+        Spring MD","shortCitationAuthor":"McGuffin","shortCitationYear":null,"referenceCode":"PNDMCG03HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":715917,"citation":"Underwood,
+        Malissa. Personal communication. Botanist. Missouri Natural Heritage Program.","shortCitationAuthor":"Underwood","shortCitationYear":null,"referenceCode":"PNDUND01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715923,"citation":"O''Connor,
+        Ryan. Personal communication. Ecologist/Inventory Coordinator, Natural Heritage
+        Inventory, Bureau of Endangered Resources, Wisconsin Department of Natural
+        Resources.","shortCitationAuthor":"O''Conner","shortCitationYear":null,"referenceCode":"PNDOCO01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":129446,"citation":"Bannerman,
+        J. 1997. The goldenseal dilemma: Saving the plant that heals. The Institute
+        of Conservation & Culture, New Orleans, Louisiana. Manuscript in preparation.","shortCitationAuthor":"Bannerman","shortCitationYear":1997,"referenceCode":"U97BAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":645418,"citation":"Gardner,
+        Rick. Personal communication. Heritage Botanist, Ohio Natural Heritage Program,
+        Division of Natural Areas & Preserves, Ohio Department of Natural Resources,
+        Columbus, OH.","shortCitationAuthor":"Gardner","shortCitationYear":null,"referenceCode":"PNDGAR03HQUS","lastModified":"2020-02-25T16:25:50.317718Z"},{"id":107918,"citation":"Lloyd,
+        J.U. and C.G. Lloyd. 1884-1885. Drugs and Medicines of North America, Vol.
+        1, Ranunculaceae. Clarke, Cincinnati, Ohio. 304 pp.","shortCitationAuthor":"Lloyd
+        and Lloyd","shortCitationYear":1884,"referenceCode":"B84LLO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715922,"citation":"Kearns,
+        Kelly. Personal communication. Conservation Biologist. Natural Heritage Inventory,
+        Bureau of Endangered Resources, Wisconsin Department of Natural Resources.","shortCitationAuthor":"Kearns","shortCitationYear":null,"referenceCode":"PNDKEA01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":134277,"citation":"Morse,
+        Larry E., North American Botanist, NatureServe, Arlington, Va. Formerly Chief
+        Botanist, The Nature Conservancy, Arlington, Va.","shortCitationAuthor":"Morse","shortCitationYear":null,"referenceCode":"PNDMOR01HQUS","lastModified":"2020-02-25T15:39:33.2912Z"},{"id":630151,"citation":"Crabtree,
+        Todd. Personal communication. Botanist, Tennessee Division of Natural Areas,
+        Tennessee Department of Environmental Conservation, Nashville, TN.","shortCitationAuthor":"Crabtree","shortCitationYear":null,"referenceCode":"PNDCRA02HQUS","lastModified":"2020-02-25T15:46:22.437866Z"},{"id":151439,"citation":"Bradley,
+        P., ed. 1992. British Herbal Compendium, Vol. 1. British Herbal Medical Association,
+        Dorset, U.K.","shortCitationAuthor":"Bradley","shortCitationYear":1992,"referenceCode":"B92BRA01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":154324,"citation":"Henkel,
+        A., and G.F. Klugh. 1904. Golden seal. U.S. Dept. Agric., Bureau of Plant
+        Industry, Bull. No. 51, Part 6. 16 pp.","shortCitationAuthor":"Henkel and
+        Klugh","shortCitationYear":1904,"referenceCode":"A04HEN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":714731,"citation":"Sinclair,
+        A., P. M. Catling, and L. Dumouchel. 2000. Notes on the pollination and dispersal
+        of Goldenseal, <i>Hydrastis canadensis </i>L., in southwestern Ontario. Canadian
+        Field Naturalist 114(3): 499-501.","shortCitationAuthor":"Sinclair et al.","shortCitationYear":2000,"referenceCode":"A00SIN02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":119031,"citation":"Oldham,
+        Michael. Personal communication. Botanist, Ontario Natural Heritage Information
+        Centre.","shortCitationAuthor":"Oldham","shortCitationYear":null,"referenceCode":"PNDOLD01HQUS","lastModified":"2020-02-25T15:55:09.977012Z"},{"id":714730,"citation":"Sinclair,
+        A. and P. M. Catling. 2000a. Status of Goldenseal, <i>Hydrastis canadensis</i>
+        (Ranunculaceae), in Canada. The Canadian Field Naturalist 114(1): 111-120.","shortCitationAuthor":"Sinclair
+        and Catling","shortCitationYear":2000,"referenceCode":"A00SIN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719366,"citation":"Gorchov,
+        David L. Professor, Miami University: Department of Botany, Oxford, OH,","shortCitationAuthor":"Gorchov","shortCitationYear":null,"referenceCode":"PNDGOR03HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719374,"citation":"Frontier
+        Natural Products Co-op. 2012. Website available online: www.frontiercoop.com/wellearth/explorebyproduct/goldenseal.php.
+        Accessed 17 Dec 2012.","shortCitationAuthor":"Frontier Natural Products Co-op","shortCitationYear":2012,"referenceCode":"W12FNP01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":111204,"citation":"Foster,
+        S. 1995. Forest Pharmacy: Medicinal Plants in American Forests. Forest History
+        Society, Durham, North Carolina.","shortCitationAuthor":"Foster","shortCitationYear":1995,"referenceCode":"B95FOS01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":117836,"citation":"Homoya,
+        Mike. Personal communication. Botanist/Plant Ecologist. Indiana Department
+        of Natural Resources, Division of Nature Preserves. Indianapolis, IN.","shortCitationAuthor":"Homoya","shortCitationYear":null,"referenceCode":"PNDHOM01HQUS","lastModified":"2020-02-25T15:56:31.74386Z"},{"id":147749,"citation":"Murray,
+        Nancy. Personal communication. Coordinator, Connecticut Natural Diversity
+        Database.","shortCitationAuthor":"Murray","shortCitationYear":null,"referenceCode":"PNDMUR02HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":719343,"citation":"Greenfield,
+        J. and J. Davis. 2012. Goldenseal (<i>Hydrastis canadensis </i>L.). NC State
+        University. A revision of a manuscript published in 2004 for the NC Consortium
+        on Natural Medicines, a GoldenLEAF Foundation funded project of the University
+        of North Carolina, Chapel Hill and NC State University. Available at: http://www.naturalmedicinesofnc.org.","shortCitationAuthor":"Greenfield
+        and Davis","shortCitationYear":2012,"referenceCode":"A12GRE02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":112145,"citation":"Crow,
+        G.E. 1982. New England''s rare, threatened, and endangered plants. USWFS Northeast
+        Region, Newton Corners, MA.","shortCitationAuthor":"Crow","shortCitationYear":1982,"referenceCode":"B82CRO01MHUS","lastModified":"2020-02-25T15:57:11.26005Z"},{"id":719369,"citation":"McGuffin,
+        M., on behalf of American Herbal Products Association (AHPA). 11 June 2012.
+        Comments of the American Herbal Products Association on the request for comments
+        and information on species proposals for consideration at the 16th Conference
+        of the Parties to CITES. Available online: www.ahpa.org/portals/0/pdfs/12_0611_AHPA_Comments_reCoP16.pdf.
+        Accessed December 2012.","shortCitationAuthor":"McGuffin","shortCitationYear":2012,"referenceCode":"N12MCG01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":115330,"citation":"Penskar,
+        Mike. Personal communication. Botanist, Michigan Natural Features Inventory.
+        Lansing, MI.","shortCitationAuthor":"Penskar","shortCitationYear":null,"referenceCode":"PNDPEN01HQUS","lastModified":"2020-02-25T15:58:59.683526Z"},{"id":509330,"citation":"Witsell,
+        Theo. Personal communication. Botanist. Arkansas Natural Heritage Commission.
+        Little Rock, AR.","shortCitationAuthor":"Witsell","shortCitationYear":null,"referenceCode":"PNDWIT01HQUS","lastModified":"2020-02-25T16:04:56.313902Z"},{"id":123720,"citation":"Lloyd,
+        J.U., and C.G. Lloyd. 1908. <i>Hydrastis canadensis</i>. Bull. Lloyd Library
+        of Botany, Pharmacy and Materia Medica 10. 184 pp.","shortCitationAuthor":"Lloyd
+        and Lloyd","shortCitationYear":1908,"referenceCode":"B08LLO01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":136442,"citation":"Deam,
+        C. C. 1940. Flora of Indiana. Division of Forestry, Dept. of Conservation,
+        Indianapolis, Indiana. 1236 pp.","shortCitationAuthor":"Deam","shortCitationYear":1940,"referenceCode":"B40DEA01HQUS","lastModified":"2020-02-25T15:55:09.586357Z"},{"id":719344,"citation":"McGraw,
+        J. B., S. M. Sanders, and M. Van der Voort. 2003. Distribution and abundance
+        of <i>Hydrastis canadensis</i> L. (Ranunculaceae) and <i>Panax quiquefolius</i>
+        L. (Araliaceae) in the central Appalachian region. Journal of the Torrey Botanical
+        Society 130(2): 62-69.","shortCitationAuthor":"McGraw et al.","shortCitationYear":2003,"referenceCode":"A03MCG01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":131158,"citation":"Catling,
+        P.M. and Small, E. 1994. Poorly known economic plants of Canada. 3. Hydrastis
+        canadensis L. CBA/ABC Bull. 27(3): 50-51.","shortCitationAuthor":"Catling
+        and Small","shortCitationYear":1994,"referenceCode":"A94CAT01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":152570,"citation":"Wofford,
+        B.E. 1989. Guide to vascular plants of the Blue Ridge. University of Georgia
+        Press. Athens, Georgia.","shortCitationAuthor":"Wofford","shortCitationYear":1989,"referenceCode":"B89WOF01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":140682,"citation":"Elliott,
+        D. 1995. Wild Roots: A Forager''s Guide to the Edible and Medicinal Roots,
+        Tubers, Corms, and Rhizomes of North America. Healing Arts Press, Rochester,
+        Vermont. Pp. 30-31.","shortCitationAuthor":"Elliott","shortCitationYear":1995,"referenceCode":"B95ELL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":143752,"citation":"Schotz,
+        A. Personal Communication. Community Ecologist/Botanist, Alabama Natural Heritage
+        Program.","shortCitationAuthor":"Schotz","shortCitationYear":null,"referenceCode":"PNDSCH02HQUS","lastModified":"2020-02-25T15:54:51.258111Z"},{"id":719335,"citation":"Burkhart,
+        E. and M. Jacobson. 2006a. Nontimber forest products(NTFPs) from Pennsylvania.
+        Goldenseal, <i>Hydrastis canadensis.</i> Penn State College of Agricultural
+        Sciences.Publications Distribution Center, The Pennsylvania State University,
+        112 Agricultural Administration Building, University Park, PA 16802. 16 pp.","shortCitationAuthor":"Burkhart
+        and Jacobson","shortCitationYear":2006,"referenceCode":"U06BUR01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":134178,"citation":"Sun,
+        D. 1988. Berberine sulfate blocks adherence of Streptococcus pyogenes to epithelial
+        cells, fibronectin, and hexadecane. Antimicrob. Agents Chemother. 32: 1370-1374.","shortCitationAuthor":"Sun","shortCitationYear":1988,"referenceCode":"A88SUN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":139081,"citation":"Kartesz,
+        J.T. 1999. A synonymized checklist and atlas with biological attributes for
+        the vascular flora of the United States, Canada, and Greenland. First edition.
+        In: Kartesz, J.T., and C.A. Meacham. Synthesis of the North American Flora,
+        Version 1.0. North Carolina Botanical Garden, Chapel Hill, N.C.","shortCitationAuthor":"Kartesz","shortCitationYear":1999,"referenceCode":"B99KAR01HQUS","lastModified":"2020-02-25T15:54:04.413827Z"},{"id":721586,"citation":"Tobe,
+        H. 2003a. Hydrastidaceae. In: Kubitzki, K. and C. Bayer. Flowering Plants
+        Dicotyledons Vol. 5. Springer, Frankfurt, Germany. 438 pp.","shortCitationAuthor":"Tobe","shortCitationYear":2003,"referenceCode":"B03TOB01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":147766,"citation":"Grieve,
+        M. 1971. A Modern Herbal, Vol. 1-2. Dover Publications Inc., New York, New
+        York. 888 p.","shortCitationAuthor":"Grieve","shortCitationYear":1971,"referenceCode":"B71GRI01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":153011,"citation":"White,
+        Deborah. Personal communication. Botanist, Kentucky Nature Preserves Commission,
+        Frankfort, KY.","shortCitationAuthor":"White","shortCitationYear":null,"referenceCode":"PNDWHI01HQUS","lastModified":"2020-02-25T15:44:31.998731Z"},{"id":721587,"citation":"Douglas,
+        J. A., J. M. Follett, G. A. Parmenter, C. E. Sansom, N. B. Perry, R. A. Littler.
+        2010a. Seasonal variation of biomass and bioactive alkaloid content of goldenseal,
+        <i>Hydrastis canadensis.</i> Fitoterapia (7): 925-928.","shortCitationAuthor":"Douglas
+        et al.","shortCitationYear":2010,"referenceCode":"A10DOG01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":128851,"citation":"Kaneda,
+        Y. 1991. In vitro effects of berberine sulfate on the growth of Entamoeba
+        histolytica, Giardia lamblia and Tricomonas vaginalis. Ann. Trop. Med. Parasitol.
+        85: 417-425.","shortCitationAuthor":"Kaneda","shortCitationYear":1991,"referenceCode":"A91KAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":102831,"citation":"Kauffman,
+        G. 1996. Biological White Paper on Hydrastis canadensis. North Carolina. Manuscript
+        in preparation.","shortCitationAuthor":"Kauffman","shortCitationYear":1996,"referenceCode":"U96KAU01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715913,"citation":"Anderson,
+        Derek. Personal communication. Botanist. Minnesota Natural Heritage & Nongame
+        Research.","shortCitationAuthor":"Anderson","shortCitationYear":null,"referenceCode":"PNDAND03HQUS","lastModified":"2020-02-25T16:56:23.047794Z"},{"id":128066,"citation":"Harmon,
+        P.J. Botanist, West Virginia Natural Heritage Program, Department of Natural
+        Resources Operations Center, Elkins, WV.","shortCitationAuthor":"Harmon","shortCitationYear":null,"referenceCode":"PNDHAR01HQUS","lastModified":"2020-02-25T16:06:02.127387Z"},{"id":719346,"citation":"Penskar,
+        M.R, E.G. Choberka, and P.J. Higman 2001. Special Plant Abstract for <i>Hydrastis
+        canadensis</i> (goldenseal). Michigan Natural Features Inventory. Lansing,
+        MI. 3 pp.","shortCitationAuthor":"Penskar et al.","shortCitationYear":2001,"referenceCode":"N01PEN02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719351,"citation":"Sinclair,
+        A. and P. M. Catling. 2002. Recent trends in stem number in Goldenseal, <i>Hydrastis
+        canadensis</i>, populations at the northern limit of its range. Canadian Field-Naturalist
+        116(1): 112-115.","shortCitationAuthor":"Sinclair and Catling","shortCitationYear":2002,"referenceCode":"A02SIN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":627730,"citation":"Popp,
+        Robert. Personal communication. Botanist, Vermont Nongame and Natural Heritage
+        Program, Vermont Fish and Wildlife Department, Barre, VT.","shortCitationAuthor":"Popp","shortCitationYear":null,"referenceCode":"PNDPOP02HQUS","lastModified":"2020-02-25T16:49:03.791207Z"},{"id":721590,"citation":"Tait,
+        C. R. 2006a. Spatial distribution and habitat preference of Goldenseal, (<i>Hydrastis
+        canadensis) </i>in New York state. M.S. Thesis - State University of New York,
+        College of Environmental Science and Forestry, Syracuse, N.Y.","shortCitationAuthor":"Tait","shortCitationYear":2006,"referenceCode":"U06TAI01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":715911,"citation":"DeBarros,
+        Nelson. Personal communication. Plant Ecologist, Wildlife Division, Bureau
+        of Natural Resources, Connecticut Department of Energy and Environmental Protection,
+        Hartford, CT.","shortCitationAuthor":"DeBarros","shortCitationYear":null,"referenceCode":"PNDDEB01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719364,"citation":"Baker,
+        D. 2010. Goldenseal pays off for La Center''s Sego''s Herb Farm. Oregonian,
+        September 17. Available online: http://www.oregonlive.com/clark-county/index.ssf/2010/09/goldenseal_pays_off_for_la_centers_segos_herb_farm_farm.html.
+        Available December 2012","shortCitationAuthor":"Baker","shortCitationYear":2010,"referenceCode":"A10BAK02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":620394,"citation":"Sullivan,
+        Heather.  Personal communication.  Botanist, Mississippi Natural Heritage
+        Program, Mississippi Museum of Natural Science, Jackson, MS.","shortCitationAuthor":"Sullivan","shortCitationYear":null,"referenceCode":"PNDSUL01HQUS","lastModified":"2020-02-25T16:06:33.753103Z"},{"id":719339,"citation":"Albrecht,
+        M. A. and B. C. McCarthy. 2006. Comparative analysis of Goldenseal (<i>Hydrastis
+        canadensis</i> L.) population re-growth following human harvest: implications
+        for conservation. The American Midland Naturalist 156(2): 229-236.","shortCitationAuthor":"Albrecht
+        and McCarthy","shortCitationYear":2006,"referenceCode":"A06ALB01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719347,"citation":"Sanders,
+        S. 2004. Does breeding system contribute to rarity of Goldenseal (<i>Hydrastis
+        canadensis</i>)? American Midland Naturalist 152: 37-42.","shortCitationAuthor":"Sanders","shortCitationYear":2004,"referenceCode":"A04SAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":114494,"citation":"Smith,
+        Tim. Personal communication. Botanist, Missouri Department of Conservation.
+        Missouri Department of Conservation, Jefferson City, MO","shortCitationAuthor":"Smith","shortCitationYear":null,"referenceCode":"PNDSMI01HQUS","lastModified":"2020-02-25T15:56:31.759461Z"},{"id":715921,"citation":"Marcus,
+        Aaron. Personal communication. Botanist, Vermont Nongame & Natural Heritage
+        Program.","shortCitationAuthor":"Marcus","shortCitationYear":null,"referenceCode":"PNDMAR07HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":127679,"citation":"CITES.
+        1997. Amendments to Appendices I and II of the Convention on Internation Trade
+        in Endangered Species and Wild Fauna and Flora. Online. http://international.fws.gov/cop10/gseal97.html.
+        14 January 2000.","shortCitationAuthor":"CITES","shortCitationYear":1997,"referenceCode":"U97CIT01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":721603,"citation":"Egert,
+        J. L. (Jan. 2007). \"<i>Hydrastis canadensis</i>.\" Plant Conservation Alliance-Medicinal
+        Plant Working Group. Arlington, Virginia. http://www.plantconservationwiki.org/wiki/Hydrastis_canadensis
+        [April 26, 2013]","shortCitationAuthor":"Egert","shortCitationYear":2007,"referenceCode":"W07EGE01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":139826,"citation":"Brevoort,
+        P. 1996. The U.S. botanical market: An overview. HerbalGram No. 36: 49-57.","shortCitationAuthor":"Brevoort","shortCitationYear":1996,"referenceCode":"ANDBRE01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":140004,"citation":"Fernald,
+        M. L. 1950. Gray''s manual of botany. 8th edition. Corrected printing (1970).
+        D. Van Nostrand Company, New York. 1632 pp.","shortCitationAuthor":"Fernald","shortCitationYear":1950,"referenceCode":"B50FER01HQUS","lastModified":"2020-02-25T15:54:26.182048Z"},{"id":662071,"citation":"Townsend,
+        J. Personal communication. Staff Botanist. Virginia Division of Natural Heritage.
+        Department of Conservation and Recreation. Richmond, VA.","shortCitationAuthor":"Townsend","shortCitationYear":null,"referenceCode":"PNDTOW01HQUS","lastModified":"2020-02-25T16:24:05.503122Z"},{"id":719358,"citation":"Bailey,
+        B. 1999. Social and economic impacts of wild harvested products. Ph.D. Dissertation,
+        West Virginia University, Morgantown, West Virginia.","shortCitationAuthor":"Bailey","shortCitationYear":1999,"referenceCode":"N99BAI01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":125088,"citation":"Sack,
+        R.B. and Froehlich, J.L. 1982. Berberine inhibits intestinal secretory response
+        of Vibrio cholerae toxins and E. coli enterotoxins. Infect. Immun. 35: 471-475.","shortCitationAuthor":"Sack
+        and Froehlich","shortCitationYear":1982,"referenceCode":"A82SAC01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":134609,"citation":"Mills,
+        S.Y. 1991. Out of the Earth: The Essential Book of Herbal Medicine. Viking,
+        London. Pp. 439-441. Millspaugh, C.F. 1887 [1974]. American Medicinal Plants.
+        Dover Publications, New York, p. 9-2.","shortCitationAuthor":"Mills","shortCitationYear":1991,"referenceCode":"B91MIL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719370,"citation":"Mahady,
+        G. B., and L. R. Chadwick. 2001. Goldenseal (<i>Hydrastis canadensis</i>):
+        Is There Enough Scientific Evidence to Support Safety and Efficacy? Nutrition
+        in Clinical Care 4(5):243-249.","shortCitationAuthor":"Mahady and Chadwick","shortCitationYear":2001,"referenceCode":"A01MAH01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":116107,"citation":"Liu,
+        C.X. 1991. Studies on plant resources, pharmacology and clinical treatment
+        with berberine. Phytother. Res. 5: 228-230.","shortCitationAuthor":"Liu","shortCitationYear":1991,"referenceCode":"A91LIU01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":721589,"citation":"Barton,
+        B.S. 1798 &amp; 1804. Collections for An Essay Towards A Materia Medica of
+        the United States. Reprint ed. 1900. Bulletin of the Lloyd Library, No. 1,
+        Reproduction Series, No. 1.","shortCitationAuthor":"Barton","shortCitationYear":1798,"referenceCode":"A98BAR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719353,"citation":"Van
+        der Voort, M. E., B. Bailey, D. E. Samuel, and J. B. McGraw. 2003. Recovery
+        of populations of Goldenseal (<i>Hydrastis canadensis</i> L.) and American
+        Ginseng (<i>Panax quinquefolius</i> L.) following harvest. The American Midland
+        Naturalist 149(2): 282-292.","shortCitationAuthor":"Van der Voort et al.","shortCitationYear":2003,"referenceCode":"A03VAN01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":154408,"citation":"Kartesz,
+        J.T. 1994. A synonymized checklist of the vascular flora of the United States,
+        Canada, and Greenland. 2nd edition. 2 vols. Timber Press, Portland, OR.","shortCitationAuthor":"Kartesz","shortCitationYear":1994,"referenceCode":"B94KAR01HQUS","lastModified":"2020-02-25T15:54:02.397953Z"},{"id":719342,"citation":"Geyer,
+        W. A., R. Janke, C. J. Barden, and E. Carey. 2008. Ginseng (<i>Panax quinqufolius
+        </i>L.) and goldenseal (<i>Hydrastis canadensis</i> L.) trials in eastern
+        Kansas. Transactions of the Kansas Academy of Science 111(1/2): 147-152.","shortCitationAuthor":"Geyer
+        et al.","shortCitationYear":2008,"referenceCode":"A08GEY01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719345,"citation":"Mulligan,
+        M. R. and G. L. Gorchov. 2004. Populations loss of goldenseal, <i>Hydrastis
+        canadensis</i> L. (Ranunculaceae), in Ohio. Journal of the Torrey Botanical
+        Society 13(24): 305-310.","shortCitationAuthor":"Mulligan and Gorchov","shortCitationYear":2004,"referenceCode":"A04MUL01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":719348,"citation":"Sanders,
+        S. and J. B. McGraw. 2005. Harvest recovery of Goldenseal, <i>Hydrastis canadensis</i>
+        L. The American Midland Naturalist 153(1): 87-94.","shortCitationAuthor":"Sanders
+        and McGraw","shortCitationYear":2005,"referenceCode":"A05SAN02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":995975,"citation":"Inoue,
+        M, K. J. Kelley, A. Frary, and L.E. Craker. 2013. A measure of genetic diversity
+        of Goldenseal (<i>Hydrastis canadensis</i> L.) by RAPD analysis. Genetic Resources
+        and Crop Evolution.60(3): 1201-1207.","shortCitationAuthor":"Inoue et al.","shortCitationYear":2013,"referenceCode":"A13INO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":108569,"citation":"Hill,
+        A.F. 1952. Economic Botany, 2nd edition. McGraw-Hill Book Co., New York. 560
+        pp.","shortCitationAuthor":"Hill","shortCitationYear":1952,"referenceCode":"B52HIL01HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":719368,"citation":"Pennsylvania
+        Department of Conservation and Natural Resources (PA DCNR). 2012. <i>About
+        goldenseal</i>. Available online: www.dcnr.state.pa.us/forestry/wildplant/aboutgoldenseal.aspx.
+        Accessed December 2012.","shortCitationAuthor":"PA DCNR","shortCitationYear":2012,"referenceCode":"W12PAD01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":751601,"citation":"Eichenberger,
+        M. D. and G. R. Parker. 1976. Goldenseal (<i>Hydrastis canadensis</i> L.)
+        distribution, phenology and biomass in an oak-history forest. Ohio Journal
+        of Science 76(5): 204-210.","shortCitationAuthor":"Eichenberger and Parker","shortCitationYear":1976,"referenceCode":"A76EIC01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":106273,"citation":"Veninga,
+        L. and B. Zaricor. 1976. Goldenseal/Etc: A Pharmacognosy of Wild Herbs. Ruka
+        Publications, Santa Cruz.","shortCitationAuthor":"Veninga and Zaricor","shortCitationYear":1976,"referenceCode":"B76VEN01HQUS","lastModified":"2020-02-25T16:31:19.806823Z"},{"id":719340,"citation":"Burkhart,
+        E. P. and M. G. Jacobson. 2009. Transitioning from wild collection to forest
+        cultivation of indigenous medicinal forest plants in eastern North America
+        is constrained by lack of profitability. Agroforest Syst. 76: 437-453.","shortCitationAuthor":"Burkhart
+        and Jacobson","shortCitationYear":2009,"referenceCode":"A09BUR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719388,"citation":"Connolly,
+        Bryan. Personal communication. State Botanist, Massachusetts Natural Heritage
+        and Endangered Species Program.","shortCitationAuthor":"Connolly","shortCitationYear":null,"referenceCode":"PNDCON02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"}],"otherCommonNames":[{"id":138984,"name":"Sceau
+        d''or","language":"FR"},{"id":140461,"name":"Orangeroot","language":"EN"},{"id":140462,"name":"Yellow-puccoon","language":"EN"},{"id":138983,"name":"Hydraste
+        du Canada","language":"FR"},{"id":140573,"name":"Yellow Root","language":"EN"},{"id":127007,"name":"goldenseal","language":"EN"}],"speciesGlobal":{"elementGlobalId":154701,"cites":{"id":2,"citesDescEn":"Appendix
+        II","citesDescEs":null,"citesDescFr":"Annexe II"},"cosewic":{"id":5,"cosewicDescEn":"Special
+        Concern","cosewicDescEs":null,"cosewicDescFr":"Espèce préoccupante","cosewicCode":"SC"},"fwsRegion":null,"genusSize":null,"jurisEndem":{"id":5,"jurisEndemDescEn":"occurs
+        (regularly, as a native taxon) in multiple nations","jurisEndemDescEs":null,"jurisEndemDescFr":"Se
+        trouve dans plusieurs nations (de façon régulière, tel un taxon indigène)"},"nomenclaturallyEst":null,"usesa":null,"informalTaxonomy":{"informalTaxonomyId":108,"level1":"Plants","level2":"Vascular
+        Plants - Flowering Plants","level3":"Dicots","level":3,"hasChildren":false,"parentId":106,"distributionStatus":"complete","displayOrder":108},"parentSpecies":null,"infraspecies":false,"kingdom":"Plantae","phylum":"Anthophyta","taxclass":"Dicotyledoneae","taxorder":"Ranunculales","family":"Ranunculaceae","genus":"Hydrastis","americanFisheriesStatus":null,"americanFisheriesStatusDate":null,"saraStatus":"Threatened/Menacée","saraStatusDate":"2003-06-05","cosewicDate":"2019-05-01","interpretedCosewic":null,"cosewicComments":"Reason
+        for designation: Increased survey effort has resulted in the discovery of
+        new subpopulations of this species since the last assessment. Although the
+        number of mature individuals of this long-lived plant appears to be stable
+        in recent decades, the remaining subpopulations remain subject to threats
+        from deforestation, harvesting, and invasive species.<br /><br />Status history:
+        Designated Threatened in April 1991. Status re-examined and confirmed in May
+        2000. Status re-examined and designated Special Concern in May 2019.","usesaDate":null,"interpretedUsesa":null,"usesaComments":null,"completeDistribution":true,"synonyms":[]},"speciesCharacteristics":{"elementGlobalId":154701,"reproductionComments":"Goldenseal
+        reproduces both clonally and sexually, with clonal division more frequent
+        than asexual reproduction. It takes between 4 and 5 years for a plant to reach
+        sexual maturity, i.e. the point at which it produces flowers. Plants in the
+        first stage, when the seed erupts and cotyledons emerge, can remain in this
+        state one or more years. The second vegetative stage occurs during years two
+        and three (and sometimes longer) and is characterized by the development of
+        a single leaf and absence of a well developed stem. Finally, the third stage
+        is reproductive, at which point flowering and fruiting occurs. This last stage
+        takes between 4 and 5 years to develop (Burkhart and Jacobson 2006).<br /><br
+        />Flowers in April through May, and fruits from June through July (Eichenberger
+        and Parker 1976, Sinclair et al. 2000). Fruit and seed set is not dependent
+        on cross-pollination because Goldenseal has a mixed-mating system and flowers
+        show similar fruit set whether or not pollinators were excluded (Sanders 2004,
+        Christensen and Gorchov 2010).<br />In the northern reaches of goldenseal''s
+        range, in southwest Ontario, seedlings are rare (Sinclair and Catling 2000a).
+        A study in the core portion of the range, in Ohio, found that while seedlings
+        were far fewer than ramets, a ''substantial'' number of the seedling-minority
+        made it to the next life history stage, and ultimately represents an infusion
+        of genetic diversity into the otherwise highly clonal population (Christensen
+        and Gorchov 2010).<br />Christensen and Gorchov (2010) noted the following
+        that seedling rarity is not due to: a) infrequent flowering, low fruit or
+        seed set, and low seed viability.<br /><br />Christensen and Gorchov (2010)
+        provide a good, clear diagram of the life-history of this plant, including
+        diagrams of the possible transitions, places of regression to an earlier life
+        stage, between life stages.","ecologyComments":null,"habitatComments":"In
+        the United States goldenseal is found in rich, densely shaded, deciduous forests
+        with good air flow and water drainage (Greenfield and Davis 2012). Light gaps
+        and soil disturbance stimulate local proliferation (McGraw et al. 2003).<br
+        /><br />Canada: In Southwest Ontario goldenseal is limited to deciduous woodlands
+        near floodplains and periodic spring-flooded plateaus. There only remnants
+        of this woodland remains, less than 5%of these forests remain from pre-settlement
+        times (Sinclair and Catling 2000).<br /><br />Goldenseal grows best in rich,
+        mesic hardwood forest, especially those underlain by limestone or alkaline
+        soils, butis also known from slightly acidic soils too. These forests are
+        often second growth forests with the following associates (listed alphabetically
+        by strata): <i>Acer rubrum</i>, <i>Acer saccharum</i>, <i>Betula lenta</i>,
+        <i>Carpinus caroliniana</i>, <i>Carya </i>spp., <i>Fagus grandifolia</i>,
+        <i>Fraxinus americana</i>,<i> Liriodendron tulipifera</i>, <i>Ostrya virginiana</i>,
+        <i>Quercus</i> spp., <i>Thuja occidentalis</i>, <i>Tilia americana</i>, <i>Ulmus
+        rubra</i>, <i>Cornus alternifolia</i>, <i>Corylus americana</i>, <i>Lindera
+        benzoin</i>, <i>Lonicera </i>spp., <i>Parthenocissus quinquefolia</i>,<i>
+        Toxicodendron radicans</i>, <i>Adiantum pedatum</i>, <i>Anemone quinquefolia</i>,
+        <i>Aralia nudicaulis</i>, <i>Arisaema triphyllum</i>, <i>Asarum canadense</i>,
+        <i>Asplenium platyneuron</i>, <i>Asplenium rhizophyllum</i>, <i>Carex platyphylla</i>,
+        <i>Carex</i> spp., <i>Caulophyllum thalictroides</i>, <i>Cimicifuga racemosa</i>,
+        <i>Dicentra</i> spp., <i>Dryopteris</i> spp., <i>Geranium maculatum</i>, <i>Hepatica</i>
+        spp., <i>Hydrophyllum</i> spp., <i>Maianthemum </i>spp., <i>Mitella diphylla</i>,
+        <i>Osmorhiza</i> spp., <i>Panax quinquefolius</i>, <i>Podophyllum peltatum</i>,
+        <i>Polystichum acrostichoides</i>, <i>Sanguinaria canadensis</i>, <i>Trillium
+        </i>spp., <i>Uvularia</i> spp., <i>Viola</i> spp. Species composition will
+        vary considerable from region to region, but some of the above associates
+        are likely to be found. Areas with <i>Hydrastis</i> also tend to have a nice
+        collection of spring wildflowers and fern diversity is also likely higher
+        than surrounding areas.","generalDescription":"Goldenseal is a perennial plant
+        that grows from stems one to two feet high. Plants with single leaves produce
+        no flowers and plants with two leaves produce flowers (Van der Voort et al.
+        2003). The flowers are greenish-white, made up of three sepals and many stamens
+        and carpels which emerge in April or May. Fruits ripen between July and August.
+        Goldeneal produces a rhizome with many adventitious roots emerging from it.
+        The rhizome is yellowish, growing horizontally, is knotty and grows between
+        4-7cm long and between 0.5-2cm in width (Sinclair and Catling 2000a).","diagnosticCharacteristics":null,"speciesMarineHabitats":[],"speciesTerrestrialHabitats":[{"cagTerrHabId":109257,"terrestrialHabitat":{"id":1,"terrestrialHabitatDescEn":"Forest
+        - Hardwood","terrestrialHabitatDescEs":null,"terrestrialHabitatDescFr":"Forêt
+        — Feuillu"}}],"speciesRiverineHabitats":[],"speciesPalustrineHabitats":[],"speciesLacustrineHabitats":[],"speciesSubterraneanHabitats":[],"speciesEstuarineHabitats":[]}}'
+  recorded_at: 2020-05-08 16:22:36 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

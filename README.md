@@ -21,14 +21,7 @@ NatureServe is a non-profit organization that provides wildlife conservation rel
 All functions in this package are prefixed with `ns_` to prevent
 collision with other pkgs.
 
-Three NatureServe web services are available in this package:
-
-* Name lookup (`ns_search`) lookup species Unique IDs (UID) by name. These UIDs are required for access to the more detailed services.
-* Image lookup (`ns_images`) search for metadata for NatureServe images, including the URL's for the image files themselves.
-* Fetch data (`ns_data`) on over 70,000 of the plant and animal species of the United States and Canada.
-
-You'll need an API key to use this package. Get one by signing up at
-https://services.natureserve.org/developer/index.jsp
+You no longer need an API key.
 
 See also the taxize book (https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
@@ -54,71 +47,49 @@ remotes::install_github("ropensci/natserv")
 library('natserv')
 ```
 
-## search
+## Search
 
 
 ```r
-ns_search(x = "Helianthus annuus")
-#> # A tibble: 1 x 4
-#>   globalSpeciesUid   jurisdictionScien… commonName  natureServeExplorerURI      
-#>   <chr>              <chr>              <chr>       <chr>                       
-#> 1 ELEMENT_GLOBAL.2.… Helianthus annuus  Common Sun… http://explorer.natureserve…
+ns_search_comb(text = "robin", page = 0, per_page = 5)
+#> $results
+#> # A tibble: 5 x 14
+#>   recordType elementGlobalId uniqueId nsxUrl elcode scientificName
+#>   <chr>                <int> <chr>    <chr>  <chr>  <chr>         
+#> 1 SPECIES             100637 ELEMENT… /Taxo… ABPBJ… Copsychus sau…
+#> 2 SPECIES             102323 ELEMENT… /Taxo… ABPBJ… Turdus grayi  
+#> 3 SPECIES             102179 ELEMENT… /Taxo… ABPBJ… Turdus migrat…
+#> 4 SPECIES             105536 ELEMENT… /Taxo… ABPBJ… Turdus migrat…
+#> 5 SPECIES             105850 ELEMENT… /Taxo… ABPBJ… Turdus rufopa…
+#> # … with 22 more variables: formattedScientificName <chr>,
+#> #   primaryCommonName <chr>, primaryCommonNameLanguage <chr>,
+#> #   roundedGRank <chr>, nations <list>, lastModified <chr>,
+#> #   speciesGlobal$usesaCode <lgl>, $cosewicCode <lgl>, $saraCode <lgl>,
+#> #   $synonyms <list>, $otherCommonNames <list>, $kingdom <chr>, $phylum <chr>,
+#> #   $taxclass <chr>, $taxorder <chr>, $family <chr>, $genus <chr>,
+#> #   $taxonomicComments <chr>, $informalTaxonomy <chr>, $infraspecies <lgl>,
+#> #   $completeDistribution <lgl>, gRank <chr>
+#> 
+#> $resultsSummary
+#>                            name value
+#> 1                          page     0
+#> 2                recordsPerPage     5
+#> 3                    totalPages    26
+#> 4                  totalResults   126
+#> 5                 species_total   103
+#> 6                         total    23
+#> 7                       classes     0
+#> 8                    subclasses     0
+#> 9                    formations     0
+#> 10                    divisions     0
+#> 11                  macrogroups     1
+#> 12                       groups     1
+#> 13                    alliances     3
+#> 14                 associations    18
+#> 15 terrestrialEcologicalSystems     0
 ```
 
-## data
-
-
-```r
-res <- ns_data(uid = 'ELEMENT_GLOBAL.2.100925')
-names(res$ELEMENT_GLOBAL.2.100925)
-#>  [1] "uid"                   "speciesCode"           "natureserve_uri"      
-#>  [4] "classification"        "economicAttributes"    "ecologyAndLifeHistory"
-#>  [7] "license"               "references"            "conservationStatus"   
-#> [10] "managementSummary"     "distribution"
-```
-
-dig into distribution in various watersheds
-
-
-```r
-res$ELEMENT_GLOBAL.2.100925$distribution$watersheds
-#> # A tibble: 599 x 4
-#>    type  watershedName    watershedCode speciesOccurrenceCount
-#>    <chr> <chr>            <chr>         <chr>                 
-#>  1 HUC-8 Housatonic       01100005      1                     
-#>  2 HUC-8 Upper Hudson     02020001      3                     
-#>  3 HUC-8 Middle Hudson    02020006      1                     
-#>  4 HUC-8 Hudson-Wappinger 02020008      2                     
-#>  5 HUC-8 Noxubee          03160108      1                     
-#>  6 HUC-8 Lower Leaf       03170005      1                     
-#>  7 HUC-8 Pascagoula       03170006      2                     
-#>  8 HUC-8 Black            03170007      1                     
-#>  9 HUC-8 Escatawpa        03170008      1                     
-#> 10 HUC-8 Black            04150101      1                     
-#> # … with 589 more rows
-```
-
-## image metadata
-
-
-```r
-res <- ns_images(commonName = "*eagle", resolution = 'thumbnail')
-res$images[[1]][1:5]
-#> $id
-#> [1] "15512"
-#> 
-#> $scientificName
-#> [1] "Haliaeetus leucocephalus"
-#> 
-#> $commonName
-#> [1] "Bald Eagle"
-#> 
-#> $otherCommonName
-#> [1] "bald eagle"
-#> 
-#> $otherCommonName
-#> [1] "pygargue à tête blanche"
-```
+See the vignette (https://docs.ropensci.org/natserv/articles/natserv.html) for more examples.
 
 ## Meta
 
