@@ -4,9 +4,6 @@ cache: packages
 dist: trusty
 
 r_binary_packages:
-  - mapproj
-  - ggplot2
-  - maps
   - covr
 
 jobs:
