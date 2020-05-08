@@ -1,5 +1,4 @@
 .gitignore
-^Makefile$
 .travis.yml
 man-roxygen
 ^.*\.Rproj$
@@ -11,9 +10,6 @@ README.Rmd
 ^revdep$
 ^codemeta\.json$
 ^Makefile$
-vignettes/figure
-inst/vign/figure/
-inst/vign/natserv_vignette.md
 .github
 appveyor.yml
-^revdep$
+vignettes/old_vignette_content.txt
