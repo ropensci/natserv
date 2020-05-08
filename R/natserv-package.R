@@ -2,6 +2,8 @@
 #' @description Interface to NatureServe https://www.natureserve.org/
 #' @name natserv-package
 #' @importFrom jsonlite fromJSON
+#' @importFrom crul HttpClient
+#' @importFrom tibble as_tibble enframe
 #' @aliases natserv
 #' @docType package
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
