@@ -16,7 +16,8 @@
 #' @family search
 #' @examples \dontrun{
 #' ns_search_eco(text = "robin")
-#' ns_search_eco(text_adv = list(searchToken = "bird", matchAgainst = "allNames", operator="similarTo"))
+#' ns_search_eco(text_adv = list(searchToken = "bird",
+#'   matchAgainst = "allNames", operator="similarTo"))
 #' ns_search_eco(status = "G1")
 #' ns_search_eco(location = list(nation = "US"))
 #' ns_search_eco(location = list(nation = "US", subnation = "VA"))

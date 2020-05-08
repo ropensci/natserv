@@ -18,7 +18,8 @@
 #' @family search
 #' @examples \dontrun{
 #' ns_search_comb(text = "robin")
-#' ns_search_comb(text_adv = list(searchToken = "bird", matchAgainst = "allNames", operator="similarTo"))
+#' ns_search_comb(text_adv = list(searchToken = "bird",
+#'   matchAgainst = "allNames", operator="similarTo"))
 #' ns_search_comb(status = "G1")
 #' ns_search_comb(location = list(nation = "US"))
 #' ns_search_comb(location = list(nation = "US", subnation = "VA"))

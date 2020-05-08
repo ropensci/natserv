@@ -46,7 +46,8 @@ Species search
 \examples{
 \dontrun{
 ns_search_spp(text = "robin")
-ns_search_spp(text_adv = list(searchToken = "bird", matchAgainst = "allNames", operator="similarTo"))
+ns_search_spp(text_adv = list(searchToken = "bird", 
+  matchAgainst = "allNames", operator="similarTo"))
 ns_search_spp(status = "G1")
 ns_search_spp(location = list(nation = "US"))
 ns_search_spp(location = list(nation = "US", subnation = "VA"))
