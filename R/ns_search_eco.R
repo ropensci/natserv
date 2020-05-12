@@ -1,17 +1,11 @@
 #' Ecosystem search
 #'
 #' @export
-#' @param text (character) xxxx
-#' @param text_adv (list) xxxx
-#' @param status (character) conservation status
-#' @param location (list) location, country and sub-country
-#' @param ecosystem_taxonomy (character) ecosystem taxonomy
-#' @param record_subtype (character) limit results by record sub-type
-#' @param modified_since (character) search for records modified since a
-#' given time. value must be a date and time with a UTC offset in ISO 8601
-#' format. optional
-#' @param page (integer) Zero-indexed page number; default: 0. optional
-#' @param per_page (integer) Records per page; default: 20. optional
+#' @inheritParams ns_search_comb
+#' @param ecosystem_taxonomy (character) the classification code of the
+#' higher level (ancestor) ecosystem. E.g.'s: "1" (Class code),
+#' "1.B" (Subclass code), "1.B.2" (Formation code), "1.B.2.Nd" (Division code),
+#' "M886" (Macrogroup key), "G206" (Group key), "A3328" (Alliance Key)
 #' @template ns
 #' @family search
 #' @examples \dontrun{
@@ -36,6 +30,7 @@ ns_search_eco <- function(text = NULL, text_adv = NULL, status = NULL,
   location <- handle_location(location)
   ecosystem_taxonomy <- handle_ecotax(ecosystem_taxonomy)
   record_subtype <- handle_subtype(record_subtype)
+  assert(modified_since, "character")
   res <- ns_POST(
     url = file.path(ns_base(), 'api/data/ecosystemsSearch'),
     body = list(criteriaType = "ecosystems",
@@ -49,5 +44,5 @@ ns_search_eco <- function(text = NULL, text_adv = NULL, status = NULL,
     ),
     ...
   )
-  jsonlite::fromJSON(res)
+  parse_search(res)
 }

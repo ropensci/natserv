@@ -15,7 +15,7 @@ Central Biotics}
 
 \item{el_code}{The Biotics Element Code (ELCODE_BCD) of the record}
 
-\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed on to \code{\link[crul]{verb-GET}}}
 }
 \value{
 A list with lots of elements

@@ -71,15 +71,45 @@ handle_subtype <- function(record_subtype) {
   return(record_subtype)
 }
 handle_sptax <- function(st) {
+  assert(st, "list")
   if (!is.null(st)) {
-    pt <- if ("informalTaxonomy" %in% names(st)) "informalTaxonomy" else "scientificTaxonomy"
+    if (
+      !all(names(st) %in% 
+        c("level", "scientificTaxonomy", "informalTaxonomy"))
+    ) {
+      stop("`species_taxonomy` must be a list w/ 'informalTaxonomy' ",
+        "or 'level' and 'scientificTaxonomy'",
+        call. = FALSE)
+    }
+    pt <- if ("informalTaxonomy" %in% names(st)) 
+      "informalTaxonomy" 
+    else
+      "scientificTaxonomy"
     st <- c(paramType=pt, st)
   }
   return(st)
 }
 handle_ecotax <- function(x) {
+  assert(x, "character")
   if (!is.null(x)) {
     return(list(paramType="ecosystemHierarchyAncestor", classificationCode=x))
   }
   return(x)
+}
+
+parse_search <- function(x) {
+  tt <- jsonlite::fromJSON(x)
+  tt$results <- tibble::as_tibble(tt$results)
+  tt$resultsSummary <- ns_sum(tt$resultsSummary)
+  attr(tt$resultsSummary, "search_criteria") <- tt$searchCriteria
+  tt$searchCriteria <- NULL
+  return(tt)
+}
+
+ns_sum <- function(x) {
+  x$species_total <- x$speciesResults$total
+  x$speciesResults <- NULL
+  eco <- x$ecosystemResults
+  x$ecosystemResults <- NULL
+  data.frame(tibble::enframe(c(x, eco)))
 }

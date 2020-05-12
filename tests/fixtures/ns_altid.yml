@@ -16,7 +16,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 200
-      date: Fri, 08 May 2020 16:22:32 GMT
+      date: Tue, 12 May 2020 23:11:42 GMT
       server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
       content-type: application/json;charset=UTF-8
       transfer-encoding: chunked
@@ -36,11 +36,11 @@ http_interactions:
         revision <i>Hydrastis </i>is placed in Hydrastidaceae, with one other monotypic
         genus, <i>Glaucidium,</i> which is restricted to Japan (Tobe 2003).","roundedGRank":"G3","conservationStatusFactorsEditionDate":"2013-04-29","conservationStatusFactorsEditionAuthors":"Oliver,
         L.","primaryCommonNameLanguage":"EN","recordType":"SPECIES","elementNationals":[{"elementNationalId":211679,"classifConfidence":null,"nation":{"id":225,"nameEn":"United
-        States","nameEs":null,"nameFr":"États-Unis","isoCode":"US"},"roundedNRank":"N3","elementSubnationals":[{"elementSubnationalId":534839,"subnation":{"id":22,"nameEn":"Kentucky","nameEs":null,"nameFr":"Kentucky","subnationCode":"KY","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":534839,"hybrid":false,"exotic":false}},{"elementSubnationalId":474264,"subnation":{"id":58,"nameEn":"West
-        Virginia","nameEs":null,"nameFr":"Virginie-Occidentale","subnationCode":"WV","dnationId":225},"roundedSRank":"S3","srank":"S3S4","speciesSubnational":{"elementSubnationalId":474264,"hybrid":false,"exotic":false}},{"elementSubnationalId":597053,"subnation":{"id":28,"nameEn":"Michigan","nameEs":null,"nameFr":"Michigan","subnationCode":"MI","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":597053,"hybrid":false,"exotic":false}},{"elementSubnationalId":295434,"subnation":{"id":41,"nameEn":"New
-        York","nameEs":null,"nameFr":"New York","subnationCode":"NY","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":295434,"hybrid":false,"exotic":false}},{"elementSubnationalId":380016,"subnation":{"id":25,"nameEn":"Maryland","nameEs":null,"nameFr":"Maryland","subnationCode":"MD","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":380016,"hybrid":false,"exotic":false}},{"elementSubnationalId":446299,"subnation":{"id":14,"nameEn":"Georgia","nameEs":null,"nameFr":"Géorgie","subnationCode":"GA","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":446299,"hybrid":false,"exotic":false}},{"elementSubnationalId":512452,"subnation":{"id":21,"nameEn":"Kansas","nameEs":null,"nameFr":"Kansas","subnationCode":"KS","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":512452,"hybrid":false,"exotic":false}},{"elementSubnationalId":279630,"subnation":{"id":4,"nameEn":"Arkansas","nameEs":null,"nameFr":"Arkansas","subnationCode":"AR","dnationId":225},"roundedSRank":"S4","srank":"S4S5","speciesSubnational":{"elementSubnationalId":279630,"hybrid":false,"exotic":false}},{"elementSubnationalId":545661,"subnation":{"id":32,"nameEn":"Mississippi","nameEs":null,"nameFr":"Mississippi","subnationCode":"MS","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":545661,"hybrid":false,"exotic":false}},{"elementSubnationalId":430764,"subnation":{"id":53,"nameEn":"Virginia","nameEs":null,"nameFr":"Virginie","subnationCode":"VA","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":430764,"hybrid":false,"exotic":false}},{"elementSubnationalId":473919,"subnation":{"id":17,"nameEn":"Iowa","nameEs":null,"nameFr":"Iowa","subnationCode":"IA","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":473919,"hybrid":false,"exotic":false}},{"elementSubnationalId":621497,"subnation":{"id":29,"nameEn":"Minnesota","nameEs":null,"nameFr":"Minnesota","subnationCode":"MN","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":621497,"hybrid":false,"exotic":false}},{"elementSubnationalId":557103,"subnation":{"id":55,"nameEn":"Vermont","nameEs":null,"nameFr":"Vermont","subnationCode":"VT","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":557103,"hybrid":false,"exotic":true}},{"elementSubnationalId":533891,"subnation":{"id":50,"nameEn":"Tennessee","nameEs":null,"nameFr":"Tennessee","subnationCode":"TN","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":533891,"hybrid":false,"exotic":false}},{"elementSubnationalId":557226,"subnation":{"id":11,"nameEn":"Delaware","nameEs":null,"nameFr":"Delaware","subnationCode":"DE","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":557226,"hybrid":false,"exotic":false}},{"elementSubnationalId":294228,"subnation":{"id":34,"nameEn":"North
-        Carolina","nameEs":null,"nameFr":"Caroline du Nord","subnationCode":"NC","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":294228,"hybrid":false,"exotic":false}},{"elementSubnationalId":512451,"subnation":{"id":24,"nameEn":"Massachusetts","nameEs":null,"nameFr":"Massachusetts","subnationCode":"MA","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":512451,"hybrid":false,"exotic":false}},{"elementSubnationalId":531013,"subnation":{"id":20,"nameEn":"Indiana","nameEs":null,"nameFr":"Indiana","subnationCode":"IN","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":531013,"hybrid":false,"exotic":false}},{"elementSubnationalId":545671,"subnation":{"id":38,"nameEn":"New
-        Jersey","nameEs":null,"nameFr":"New Jersey","subnationCode":"NJ","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":545671,"hybrid":false,"exotic":false}},{"elementSubnationalId":514056,"subnation":{"id":9,"nameEn":"Connecticut","nameEs":null,"nameFr":"Connecticut","subnationCode":"CT","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":514056,"hybrid":false,"exotic":false}},{"elementSubnationalId":586445,"subnation":{"id":30,"nameEn":"Missouri","nameEs":null,"nameFr":"Missouri","subnationCode":"MO","dnationId":225},"roundedSRank":"S5","srank":"S5","speciesSubnational":{"elementSubnationalId":586445,"hybrid":false,"exotic":false}},{"elementSubnationalId":600537,"subnation":{"id":42,"nameEn":"Ohio","nameEs":null,"nameFr":"Ohio","subnationCode":"OH","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":600537,"hybrid":false,"exotic":false}},{"elementSubnationalId":468061,"subnation":{"id":2,"nameEn":"Alabama","nameEs":null,"nameFr":"Alabama","subnationCode":"AL","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":468061,"hybrid":false,"exotic":false}},{"elementSubnationalId":388827,"subnation":{"id":57,"nameEn":"Wisconsin","nameEs":null,"nameFr":"Wisconsin","subnationCode":"WI","dnationId":225},"roundedSRank":"S2","srank":"S2S3","speciesSubnational":{"elementSubnationalId":388827,"hybrid":false,"exotic":false}},{"elementSubnationalId":477257,"subnation":{"id":45,"nameEn":"Pennsylvania","nameEs":null,"nameFr":"Pennsylvanie","subnationCode":"PA","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":477257,"hybrid":false,"exotic":false}},{"elementSubnationalId":489818,"subnation":{"id":19,"nameEn":"Illinois","nameEs":null,"nameFr":"Illinois","subnationCode":"IL","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":489818,"hybrid":false,"exotic":false}}],"nrank":"N3N4","nrankReviewYear":2012},{"elementNationalId":241912,"classifConfidence":null,"nation":{"id":38,"nameEn":"Canada","nameEs":null,"nameFr":"Canada","isoCode":"CA"},"roundedNRank":"N2","elementSubnationals":[{"elementSubnationalId":288768,"subnation":{"id":67,"nameEn":"Ontario","nameEs":null,"nameFr":"Ontario","subnationCode":"ON","dnationId":38},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":288768,"hybrid":false,"exotic":false}}],"nrank":"N2","nrankReviewYear":2017}],"lastModified":"2020-04-30T04:39:36.00295Z","lastPublished":"2020-04-30T02:03:44.602526Z","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.154701/Hydrastis_canadensis","grank":"G3G4","grankReviewDate":"2012-11-30","grankChangeDate":"2012-11-30","grankReasons":"Goldenseal,
+        States","nameEs":null,"nameFr":"États-Unis","isoCode":"US"},"roundedNRank":"N3","elementSubnationals":[{"elementSubnationalId":557226,"subnation":{"id":11,"nameEn":"Delaware","nameEs":null,"nameFr":"Delaware","subnationCode":"DE","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":557226,"hybrid":false,"exotic":false}},{"elementSubnationalId":295434,"subnation":{"id":41,"nameEn":"New
+        York","nameEs":null,"nameFr":"New York","subnationCode":"NY","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":295434,"hybrid":false,"exotic":false}},{"elementSubnationalId":430764,"subnation":{"id":53,"nameEn":"Virginia","nameEs":null,"nameFr":"Virginie","subnationCode":"VA","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":430764,"hybrid":false,"exotic":false}},{"elementSubnationalId":545661,"subnation":{"id":32,"nameEn":"Mississippi","nameEs":null,"nameFr":"Mississippi","subnationCode":"MS","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":545661,"hybrid":false,"exotic":false}},{"elementSubnationalId":586445,"subnation":{"id":30,"nameEn":"Missouri","nameEs":null,"nameFr":"Missouri","subnationCode":"MO","dnationId":225},"roundedSRank":"S5","srank":"S5","speciesSubnational":{"elementSubnationalId":586445,"hybrid":false,"exotic":false}},{"elementSubnationalId":512452,"subnation":{"id":21,"nameEn":"Kansas","nameEs":null,"nameFr":"Kansas","subnationCode":"KS","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":512452,"hybrid":false,"exotic":false}},{"elementSubnationalId":600537,"subnation":{"id":42,"nameEn":"Ohio","nameEs":null,"nameFr":"Ohio","subnationCode":"OH","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":600537,"hybrid":false,"exotic":false}},{"elementSubnationalId":512451,"subnation":{"id":24,"nameEn":"Massachusetts","nameEs":null,"nameFr":"Massachusetts","subnationCode":"MA","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":512451,"hybrid":false,"exotic":false}},{"elementSubnationalId":557103,"subnation":{"id":55,"nameEn":"Vermont","nameEs":null,"nameFr":"Vermont","subnationCode":"VT","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":557103,"hybrid":false,"exotic":true}},{"elementSubnationalId":545671,"subnation":{"id":38,"nameEn":"New
+        Jersey","nameEs":null,"nameFr":"New Jersey","subnationCode":"NJ","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":545671,"hybrid":false,"exotic":false}},{"elementSubnationalId":533891,"subnation":{"id":50,"nameEn":"Tennessee","nameEs":null,"nameFr":"Tennessee","subnationCode":"TN","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":533891,"hybrid":false,"exotic":false}},{"elementSubnationalId":468061,"subnation":{"id":2,"nameEn":"Alabama","nameEs":null,"nameFr":"Alabama","subnationCode":"AL","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":468061,"hybrid":false,"exotic":false}},{"elementSubnationalId":621497,"subnation":{"id":29,"nameEn":"Minnesota","nameEs":null,"nameFr":"Minnesota","subnationCode":"MN","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":621497,"hybrid":false,"exotic":false}},{"elementSubnationalId":388827,"subnation":{"id":57,"nameEn":"Wisconsin","nameEs":null,"nameFr":"Wisconsin","subnationCode":"WI","dnationId":225},"roundedSRank":"S2","srank":"S2S3","speciesSubnational":{"elementSubnationalId":388827,"hybrid":false,"exotic":false}},{"elementSubnationalId":514056,"subnation":{"id":9,"nameEn":"Connecticut","nameEs":null,"nameFr":"Connecticut","subnationCode":"CT","dnationId":225},"roundedSRank":"S1","srank":"S1","speciesSubnational":{"elementSubnationalId":514056,"hybrid":false,"exotic":false}},{"elementSubnationalId":489818,"subnation":{"id":19,"nameEn":"Illinois","nameEs":null,"nameFr":"Illinois","subnationCode":"IL","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":489818,"hybrid":false,"exotic":false}},{"elementSubnationalId":597053,"subnation":{"id":28,"nameEn":"Michigan","nameEs":null,"nameFr":"Michigan","subnationCode":"MI","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":597053,"hybrid":false,"exotic":false}},{"elementSubnationalId":380016,"subnation":{"id":25,"nameEn":"Maryland","nameEs":null,"nameFr":"Maryland","subnationCode":"MD","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":380016,"hybrid":false,"exotic":false}},{"elementSubnationalId":473919,"subnation":{"id":17,"nameEn":"Iowa","nameEs":null,"nameFr":"Iowa","subnationCode":"IA","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":473919,"hybrid":false,"exotic":false}},{"elementSubnationalId":446299,"subnation":{"id":14,"nameEn":"Georgia","nameEs":null,"nameFr":"Géorgie","subnationCode":"GA","dnationId":225},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":446299,"hybrid":false,"exotic":false}},{"elementSubnationalId":477257,"subnation":{"id":45,"nameEn":"Pennsylvania","nameEs":null,"nameFr":"Pennsylvanie","subnationCode":"PA","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":477257,"hybrid":false,"exotic":false}},{"elementSubnationalId":531013,"subnation":{"id":20,"nameEn":"Indiana","nameEs":null,"nameFr":"Indiana","subnationCode":"IN","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":531013,"hybrid":false,"exotic":false}},{"elementSubnationalId":474264,"subnation":{"id":58,"nameEn":"West
+        Virginia","nameEs":null,"nameFr":"Virginie-Occidentale","subnationCode":"WV","dnationId":225},"roundedSRank":"S3","srank":"S3S4","speciesSubnational":{"elementSubnationalId":474264,"hybrid":false,"exotic":false}},{"elementSubnationalId":294228,"subnation":{"id":34,"nameEn":"North
+        Carolina","nameEs":null,"nameFr":"Caroline du Nord","subnationCode":"NC","dnationId":225},"roundedSRank":"S3","srank":"S3","speciesSubnational":{"elementSubnationalId":294228,"hybrid":false,"exotic":false}},{"elementSubnationalId":279630,"subnation":{"id":4,"nameEn":"Arkansas","nameEs":null,"nameFr":"Arkansas","subnationCode":"AR","dnationId":225},"roundedSRank":"S4","srank":"S4S5","speciesSubnational":{"elementSubnationalId":279630,"hybrid":false,"exotic":false}},{"elementSubnationalId":534839,"subnation":{"id":22,"nameEn":"Kentucky","nameEs":null,"nameFr":"Kentucky","subnationCode":"KY","dnationId":225},"roundedSRank":"S4","srank":"S4","speciesSubnational":{"elementSubnationalId":534839,"hybrid":false,"exotic":false}}],"nrank":"N3N4","nrankReviewYear":2012},{"elementNationalId":241912,"classifConfidence":null,"nation":{"id":38,"nameEn":"Canada","nameEs":null,"nameFr":"Canada","isoCode":"CA"},"roundedNRank":"N2","elementSubnationals":[{"elementSubnationalId":288768,"subnation":{"id":67,"nameEn":"Ontario","nameEs":null,"nameFr":"Ontario","subnationCode":"ON","dnationId":38},"roundedSRank":"S2","srank":"S2","speciesSubnational":{"elementSubnationalId":288768,"hybrid":false,"exotic":false}}],"nrank":"N2","nrankReviewYear":2017}],"lastModified":"2020-04-30T04:39:36.00295Z","lastPublished":"2020-04-30T02:03:44.602526Z","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.154701/Hydrastis_canadensis","grank":"G3G4","grankReviewDate":"2012-11-30","grankChangeDate":"2012-11-30","grankReasons":"Goldenseal,
         <i>Hydrastis canadensis, </i>an herbaceous understory species of the eastern
         deciduous forest, with the core of its range in Indiana, Kentucky, Ohio and
         West Virginia (Sinclair and Catling 2000a).  It extends north into Ontario,
@@ -425,11 +425,11 @@ http_interactions:
         $40/lb for rhizomes (Baker 2010). Recent information indicates that cultivated
         goldenseal may be garnering a higher price than wild goldenseal, with cultivated
         root selling for $30-35/dried pound and wild material selling for $20-25/pound
-        (David and Greenfield 2012).","plantProductionMethods":[{"plantCagProdMethodId":100090,"productionMethod":{"id":1,"productionMethodDescEn":"Wild-harvested","productionMethodDescEs":null,"productionMethodDescFr":"Récolté
-        dans la nature"}},{"plantCagProdMethodId":100091,"productionMethod":{"id":2,"productionMethodDescEn":"Cultivated","productionMethodDescEs":null,"productionMethodDescFr":"Cultivé"}}],"plantDurations":[{"plantCagDurationId":101910,"duration":{"id":3,"durationDescEn":"PERENNIAL","durationDescEs":null,"durationDescFr":"VIVACE"}},{"plantCagDurationId":101911,"duration":{"id":5,"durationDescEn":"Long-lived","durationDescEs":null,"durationDescFr":"Longue
-        durée de vie"}}],"plantEconomicUses":[{"plantCagEconomicUseId":101289,"economicUse":{"id":18,"economicUseDescEn":"Folk
-        medicine","economicUseDescEs":null,"economicUseDescFr":"Médecine folklorique"}},{"plantCagEconomicUseId":101288,"economicUse":{"id":17,"economicUseDescEn":"Pharmaceutical","economicUseDescEs":null,"economicUseDescFr":"Produits
-        pharmaceutiques"}},{"plantCagEconomicUseId":100513,"economicUse":{"id":16,"economicUseDescEn":"MEDICINE/DRUG","economicUseDescEs":null,"economicUseDescFr":"MÉDICATION/MÉDICAMENTS"}}],"plantCommercialImportances":[{"plantCagCommImportId":100079,"commercialImportance":{"id":3,"commercialImportanceDescEn":"Indigenous
+        (David and Greenfield 2012).","plantProductionMethods":[{"plantCagProdMethodId":100091,"productionMethod":{"id":2,"productionMethodDescEn":"Cultivated","productionMethodDescEs":null,"productionMethodDescFr":"Cultivé"}},{"plantCagProdMethodId":100090,"productionMethod":{"id":1,"productionMethodDescEn":"Wild-harvested","productionMethodDescEs":null,"productionMethodDescFr":"Récolté
+        dans la nature"}}],"plantDurations":[{"plantCagDurationId":101910,"duration":{"id":3,"durationDescEn":"PERENNIAL","durationDescEs":null,"durationDescFr":"VIVACE"}},{"plantCagDurationId":101911,"duration":{"id":5,"durationDescEn":"Long-lived","durationDescEs":null,"durationDescFr":"Longue
+        durée de vie"}}],"plantEconomicUses":[{"plantCagEconomicUseId":101288,"economicUse":{"id":17,"economicUseDescEn":"Pharmaceutical","economicUseDescEs":null,"economicUseDescFr":"Produits
+        pharmaceutiques"}},{"plantCagEconomicUseId":101289,"economicUse":{"id":18,"economicUseDescEn":"Folk
+        medicine","economicUseDescEs":null,"economicUseDescFr":"Médecine folklorique"}},{"plantCagEconomicUseId":100513,"economicUse":{"id":16,"economicUseDescEn":"MEDICINE/DRUG","economicUseDescEs":null,"economicUseDescFr":"MÉDICATION/MÉDICAMENTS"}}],"plantCommercialImportances":[{"plantCagCommImportId":100079,"commercialImportance":{"id":3,"commercialImportanceDescEn":"Indigenous
         crop","commercialImportanceDescEs":null,"commercialImportanceDescFr":"Culture
         autochtone"}},{"plantCagCommImportId":100078,"commercialImportance":{"id":2,"commercialImportanceDescEn":"Minor
         cash crop","commercialImportanceDescEs":null,"commercialImportanceDescFr":"Culture
@@ -524,250 +524,250 @@ http_interactions:
         is impacting wild populations.  More research is required to determine whether
         current goldenseal demands can be satisfied by increased cultivation and whether
         market prices might stabilize if there are potentially stable supplies of
-        goldenseal.","additionalTopics":null},"occurrenceViability":{"elementGlobalId":154701,"eoSpecGroupName":null,"excellentViability":null,"goodViability":null,"fairViability":null,"poorViability":null,"viabilityJustification":null,"versionDate":null,"versionAuthor":null,"versionNotes":null},"references":[{"id":154873,"citation":"McAvoy,
-        Bill. Personal communication. Botanist, Delaware Natural Heritage Program.","shortCitationAuthor":"McAvoy","shortCitationYear":null,"referenceCode":"PNDMCA01HQUS","lastModified":"2020-02-25T16:11:28.13231Z"},{"id":715920,"citation":"Firestone,
-        Chris. Personal communication. Botanist. Pennsylvania Natural Heritage Program.","shortCitationAuthor":"Firestone","shortCitationYear":null,"referenceCode":"PNDFIR01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":119570,"citation":"Planet
-        Herbs. 1999. Planet Herbs: Natural botanicals wholesale. Online. Available:
-        http://www.planetherbs.net. Accessed 2000-Jan.","shortCitationAuthor":"Planet
-        Herbs","shortCitationYear":1999,"referenceCode":"N99PLA01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719341,"citation":"Christensen,
+        goldenseal.","additionalTopics":null},"occurrenceViability":{"elementGlobalId":154701,"eoSpecGroupName":null,"excellentViability":null,"goodViability":null,"fairViability":null,"poorViability":null,"viabilityJustification":null,"versionDate":null,"versionAuthor":null,"versionNotes":null},"references":[{"id":715921,"citation":"Marcus,
+        Aaron. Personal communication. Botanist, Vermont Nongame & Natural Heritage
+        Program.","shortCitationAuthor":"Marcus","shortCitationYear":null,"referenceCode":"PNDMAR07HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":719347,"citation":"Sanders,
+        S. 2004. Does breeding system contribute to rarity of Goldenseal (<i>Hydrastis
+        canadensis</i>)? American Midland Naturalist 152: 37-42.","shortCitationAuthor":"Sanders","shortCitationYear":2004,"referenceCode":"A04SAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":715917,"citation":"Underwood,
+        Malissa. Personal communication. Botanist. Missouri Natural Heritage Program.","shortCitationAuthor":"Underwood","shortCitationYear":null,"referenceCode":"PNDUND01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":154873,"citation":"McAvoy,
+        Bill. Personal communication. Botanist, Delaware Natural Heritage Program.","shortCitationAuthor":"McAvoy","shortCitationYear":null,"referenceCode":"PNDMCA01HQUS","lastModified":"2020-02-25T16:11:28.13231Z"},{"id":719341,"citation":"Christensen,
         D. L. and D. L. Gorchov. 2010. Population dynamics of goldenseal (<i>Hydrastis
         canadensis</i>) in the core of its historical range. Plant Ecology 210: 195-211.","shortCitationAuthor":"Christensen
-        and Gorchov","shortCitationYear":2010,"referenceCode":"A10CHR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":103353,"citation":"Foster,
-        S. 1991. Goldenseal, Hydrastis canadensis. American Botanical Council, Botanical
-        Series No. 309. 8 pp.","shortCitationAuthor":"Foster","shortCitationYear":1991,"referenceCode":"A91FOS01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719350,"citation":"Sinclair,
-        A. and P. M. Catling. 2000b. Ontario Goldenseal, <i>Hydrastis canadensis</i>,
-        populations in relation to habitat size, paths and woodland edges. Canadian
-        Field-Naturalist 11(4): 652-655.","shortCitationAuthor":"Sinclair and Catling","shortCitationYear":2000,"referenceCode":"A00SIN04HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719403,"citation":"Kelley,
-        K. J. 2009a. Genetic variability in <i>Hydrastis canadensis</i> L. using RAPD
-        analysis. A thesis presented to the Graduate School of the University of Massachusetts
-        Amherst, Department of Plant &amp; Soil Science. 27 pp.","shortCitationAuthor":"Kelley","shortCitationYear":2009,"referenceCode":"U09KEL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":114379,"citation":"Freeman,
-        Craig. Personal communication. Botanist, Kansas Natural Features Inventory.
-        Kansas Biological Survey, Lawrence, KS.","shortCitationAuthor":"Freeman","shortCitationYear":null,"referenceCode":"PNDFRE03HQUS","lastModified":"2020-02-25T15:56:31.759461Z"},{"id":115767,"citation":"Murray,
-        M. 1995. The Healing Power of Herbs. Prima, Rocklin, Calif. Pp. 162-172.","shortCitationAuthor":"Murray","shortCitationYear":1995,"referenceCode":"B95MUR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":127559,"citation":"Medical
-        Sciences Bulletin. 1996 (Oct.). Treatment Options for HIV: The Health Food
-        Store Connection. Online: PharmInfoNet Home Page.","shortCitationAuthor":"Medical
-        Sciences Bulletin","shortCitationYear":1996,"referenceCode":"U96MED01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715924,"citation":"Doyle,
-        Kevin. Personal communication. Acting Botanist, Natural Heritage Inventory,
-        Bureau of Endangered Resources, Wisconsin Department of Natural Resources.","shortCitationAuthor":"Doyle","shortCitationYear":null,"referenceCode":"PNDDOY01HQUS","lastModified":"2020-02-25T15:59:56.997231Z"},{"id":719365,"citation":"Indiana
-        Department of Natural Resources, Division of Nature Preserves. Indianapolis,
-        IN","shortCitationAuthor":"Indiana Department of Natural Resources","shortCitationYear":null,"referenceCode":"PNDFLO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719389,"citation":"Gadd,
-        Laura. Botanist North Carolina Plant Conservation Program. Personal Communication.","shortCitationAuthor":"Gadd","shortCitationYear":null,"referenceCode":"PNDGAD02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":118648,"citation":"Schery,
-        R.W. 1972. Plants for Man, 2nd edition. Prentice-Hall, Englewood Cliffs, New
-        Jersey. 657 pp.","shortCitationAuthor":"Schery","shortCitationYear":1972,"referenceCode":"B72SCH01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":149748,"citation":"Young,
-        Steve. Personal communication. Botanist, New York Natural Heritage Program.","shortCitationAuthor":"Young","shortCitationYear":null,"referenceCode":"PNDYOU01HQUS","lastModified":"2020-02-25T16:12:44.055285Z"},{"id":715914,"citation":"Sather,
-        Nancy. Personal communication. Botanist/Ecologist. Minnesota Natural Heritage
-        & Nongame Research.","shortCitationAuthor":"Sather","shortCitationYear":null,"referenceCode":"PNDSAT01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":121876,"citation":"Smith,
-        W. R. Personal communication. Botanist, Minnesota Natural Heritage Program,
-        Minnesota Dept. Natural Resources, St. Paul, MN. ","shortCitationAuthor":"Smith","shortCitationYear":null,"referenceCode":"PNDSMI03HQUS","lastModified":"2020-02-25T16:28:03.475314Z"},{"id":721600,"citation":"Torgerson,
-        J. M. 2012a. Genetic variation in <i>Hydrastis canadensis </i>populations
-        in western North Carolina. M.S. thesis, Western Carolina University. 61 pp.","shortCitationAuthor":"Torgerson","shortCitationYear":2012,"referenceCode":"U12TOR01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":135172,"citation":"Gleason,
-        H.A. 1968. The New Britton and Brown Illustrated Flora of the Northeastern
-        United States and Adjacent Canada. Vol. 3. The Sympetalous Dicotyledoneae.
-        Hafner Publishing Co., Inc., New York.","shortCitationAuthor":"Gleason","shortCitationYear":1968,"referenceCode":"B68GLE01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719361,"citation":"National
-        Center for Complementary and Alternative Medicine (NCCAM). 2012. Available
-        online: http://nccam.nih.gov/health/goldenseal#science. Accessed 2012.","shortCitationAuthor":"NCCAM","shortCitationYear":2012,"referenceCode":"W12NCC01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":151157,"citation":"Benigni,
-        R., et al. 1962. Piante Medicinali-Chimica, Farmacologia e Terapia, Vol. 1.
-        Inverni & Della Beffa, Milan.","shortCitationAuthor":"Benigni et al.","shortCitationYear":1962,"referenceCode":"B62BEN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":114048,"citation":"McGuffin,
-        Michael. Personal communication. American Herbal Products Association, Silver
-        Spring MD","shortCitationAuthor":"McGuffin","shortCitationYear":null,"referenceCode":"PNDMCG03HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":715917,"citation":"Underwood,
-        Malissa. Personal communication. Botanist. Missouri Natural Heritage Program.","shortCitationAuthor":"Underwood","shortCitationYear":null,"referenceCode":"PNDUND01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715923,"citation":"O''Connor,
-        Ryan. Personal communication. Ecologist/Inventory Coordinator, Natural Heritage
-        Inventory, Bureau of Endangered Resources, Wisconsin Department of Natural
-        Resources.","shortCitationAuthor":"O''Conner","shortCitationYear":null,"referenceCode":"PNDOCO01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":129446,"citation":"Bannerman,
-        J. 1997. The goldenseal dilemma: Saving the plant that heals. The Institute
-        of Conservation & Culture, New Orleans, Louisiana. Manuscript in preparation.","shortCitationAuthor":"Bannerman","shortCitationYear":1997,"referenceCode":"U97BAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":645418,"citation":"Gardner,
-        Rick. Personal communication. Heritage Botanist, Ohio Natural Heritage Program,
-        Division of Natural Areas & Preserves, Ohio Department of Natural Resources,
-        Columbus, OH.","shortCitationAuthor":"Gardner","shortCitationYear":null,"referenceCode":"PNDGAR03HQUS","lastModified":"2020-02-25T16:25:50.317718Z"},{"id":107918,"citation":"Lloyd,
-        J.U. and C.G. Lloyd. 1884-1885. Drugs and Medicines of North America, Vol.
-        1, Ranunculaceae. Clarke, Cincinnati, Ohio. 304 pp.","shortCitationAuthor":"Lloyd
-        and Lloyd","shortCitationYear":1884,"referenceCode":"B84LLO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715922,"citation":"Kearns,
-        Kelly. Personal communication. Conservation Biologist. Natural Heritage Inventory,
-        Bureau of Endangered Resources, Wisconsin Department of Natural Resources.","shortCitationAuthor":"Kearns","shortCitationYear":null,"referenceCode":"PNDKEA01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":134277,"citation":"Morse,
-        Larry E., North American Botanist, NatureServe, Arlington, Va. Formerly Chief
-        Botanist, The Nature Conservancy, Arlington, Va.","shortCitationAuthor":"Morse","shortCitationYear":null,"referenceCode":"PNDMOR01HQUS","lastModified":"2020-02-25T15:39:33.2912Z"},{"id":630151,"citation":"Crabtree,
-        Todd. Personal communication. Botanist, Tennessee Division of Natural Areas,
-        Tennessee Department of Environmental Conservation, Nashville, TN.","shortCitationAuthor":"Crabtree","shortCitationYear":null,"referenceCode":"PNDCRA02HQUS","lastModified":"2020-02-25T15:46:22.437866Z"},{"id":151439,"citation":"Bradley,
-        P., ed. 1992. British Herbal Compendium, Vol. 1. British Herbal Medical Association,
-        Dorset, U.K.","shortCitationAuthor":"Bradley","shortCitationYear":1992,"referenceCode":"B92BRA01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":154324,"citation":"Henkel,
-        A., and G.F. Klugh. 1904. Golden seal. U.S. Dept. Agric., Bureau of Plant
-        Industry, Bull. No. 51, Part 6. 16 pp.","shortCitationAuthor":"Henkel and
-        Klugh","shortCitationYear":1904,"referenceCode":"A04HEN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":714731,"citation":"Sinclair,
+        and Gorchov","shortCitationYear":2010,"referenceCode":"A10CHR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":108569,"citation":"Hill,
+        A.F. 1952. Economic Botany, 2nd edition. McGraw-Hill Book Co., New York. 560
+        pp.","shortCitationAuthor":"Hill","shortCitationYear":1952,"referenceCode":"B52HIL01HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":140682,"citation":"Elliott,
+        D. 1995. Wild Roots: A Forager''s Guide to the Edible and Medicinal Roots,
+        Tubers, Corms, and Rhizomes of North America. Healing Arts Press, Rochester,
+        Vermont. Pp. 30-31.","shortCitationAuthor":"Elliott","shortCitationYear":1995,"referenceCode":"B95ELL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":714731,"citation":"Sinclair,
         A., P. M. Catling, and L. Dumouchel. 2000. Notes on the pollination and dispersal
         of Goldenseal, <i>Hydrastis canadensis </i>L., in southwestern Ontario. Canadian
-        Field Naturalist 114(3): 499-501.","shortCitationAuthor":"Sinclair et al.","shortCitationYear":2000,"referenceCode":"A00SIN02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":119031,"citation":"Oldham,
-        Michael. Personal communication. Botanist, Ontario Natural Heritage Information
-        Centre.","shortCitationAuthor":"Oldham","shortCitationYear":null,"referenceCode":"PNDOLD01HQUS","lastModified":"2020-02-25T15:55:09.977012Z"},{"id":714730,"citation":"Sinclair,
-        A. and P. M. Catling. 2000a. Status of Goldenseal, <i>Hydrastis canadensis</i>
-        (Ranunculaceae), in Canada. The Canadian Field Naturalist 114(1): 111-120.","shortCitationAuthor":"Sinclair
-        and Catling","shortCitationYear":2000,"referenceCode":"A00SIN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719366,"citation":"Gorchov,
-        David L. Professor, Miami University: Department of Botany, Oxford, OH,","shortCitationAuthor":"Gorchov","shortCitationYear":null,"referenceCode":"PNDGOR03HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719374,"citation":"Frontier
-        Natural Products Co-op. 2012. Website available online: www.frontiercoop.com/wellearth/explorebyproduct/goldenseal.php.
-        Accessed 17 Dec 2012.","shortCitationAuthor":"Frontier Natural Products Co-op","shortCitationYear":2012,"referenceCode":"W12FNP01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":111204,"citation":"Foster,
-        S. 1995. Forest Pharmacy: Medicinal Plants in American Forests. Forest History
-        Society, Durham, North Carolina.","shortCitationAuthor":"Foster","shortCitationYear":1995,"referenceCode":"B95FOS01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":117836,"citation":"Homoya,
+        Field Naturalist 114(3): 499-501.","shortCitationAuthor":"Sinclair et al.","shortCitationYear":2000,"referenceCode":"A00SIN02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":715920,"citation":"Firestone,
+        Chris. Personal communication. Botanist. Pennsylvania Natural Heritage Program.","shortCitationAuthor":"Firestone","shortCitationYear":null,"referenceCode":"PNDFIR01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":152570,"citation":"Wofford,
+        B.E. 1989. Guide to vascular plants of the Blue Ridge. University of Georgia
+        Press. Athens, Georgia.","shortCitationAuthor":"Wofford","shortCitationYear":1989,"referenceCode":"B89WOF01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719364,"citation":"Baker,
+        D. 2010. Goldenseal pays off for La Center''s Sego''s Herb Farm. Oregonian,
+        September 17. Available online: http://www.oregonlive.com/clark-county/index.ssf/2010/09/goldenseal_pays_off_for_la_centers_segos_herb_farm_farm.html.
+        Available December 2012","shortCitationAuthor":"Baker","shortCitationYear":2010,"referenceCode":"A10BAK02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719350,"citation":"Sinclair,
+        A. and P. M. Catling. 2000b. Ontario Goldenseal, <i>Hydrastis canadensis</i>,
+        populations in relation to habitat size, paths and woodland edges. Canadian
+        Field-Naturalist 11(4): 652-655.","shortCitationAuthor":"Sinclair and Catling","shortCitationYear":2000,"referenceCode":"A00SIN04HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":115767,"citation":"Murray,
+        M. 1995. The Healing Power of Herbs. Prima, Rocklin, Calif. Pp. 162-172.","shortCitationAuthor":"Murray","shortCitationYear":1995,"referenceCode":"B95MUR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":147766,"citation":"Grieve,
+        M. 1971. A Modern Herbal, Vol. 1-2. Dover Publications Inc., New York, New
+        York. 888 p.","shortCitationAuthor":"Grieve","shortCitationYear":1971,"referenceCode":"B71GRI01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715923,"citation":"O''Connor,
+        Ryan. Personal communication. Ecologist/Inventory Coordinator, Natural Heritage
+        Inventory, Bureau of Endangered Resources, Wisconsin Department of Natural
+        Resources.","shortCitationAuthor":"O''Conner","shortCitationYear":null,"referenceCode":"PNDOCO01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":140004,"citation":"Fernald,
+        M. L. 1950. Gray''s manual of botany. 8th edition. Corrected printing (1970).
+        D. Van Nostrand Company, New York. 1632 pp.","shortCitationAuthor":"Fernald","shortCitationYear":1950,"referenceCode":"B50FER01HQUS","lastModified":"2020-02-25T15:54:26.182048Z"},{"id":719353,"citation":"Van
+        der Voort, M. E., B. Bailey, D. E. Samuel, and J. B. McGraw. 2003. Recovery
+        of populations of Goldenseal (<i>Hydrastis canadensis</i> L.) and American
+        Ginseng (<i>Panax quinquefolius</i> L.) following harvest. The American Midland
+        Naturalist 149(2): 282-292.","shortCitationAuthor":"Van der Voort et al.","shortCitationYear":2003,"referenceCode":"A03VAN01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":719361,"citation":"National
+        Center for Complementary and Alternative Medicine (NCCAM). 2012. Available
+        online: http://nccam.nih.gov/health/goldenseal#science. Accessed 2012.","shortCitationAuthor":"NCCAM","shortCitationYear":2012,"referenceCode":"W12NCC01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715924,"citation":"Doyle,
+        Kevin. Personal communication. Acting Botanist, Natural Heritage Inventory,
+        Bureau of Endangered Resources, Wisconsin Department of Natural Resources.","shortCitationAuthor":"Doyle","shortCitationYear":null,"referenceCode":"PNDDOY01HQUS","lastModified":"2020-02-25T15:59:56.997231Z"},{"id":117836,"citation":"Homoya,
         Mike. Personal communication. Botanist/Plant Ecologist. Indiana Department
-        of Natural Resources, Division of Nature Preserves. Indianapolis, IN.","shortCitationAuthor":"Homoya","shortCitationYear":null,"referenceCode":"PNDHOM01HQUS","lastModified":"2020-02-25T15:56:31.74386Z"},{"id":147749,"citation":"Murray,
-        Nancy. Personal communication. Coordinator, Connecticut Natural Diversity
-        Database.","shortCitationAuthor":"Murray","shortCitationYear":null,"referenceCode":"PNDMUR02HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":719343,"citation":"Greenfield,
-        J. and J. Davis. 2012. Goldenseal (<i>Hydrastis canadensis </i>L.). NC State
-        University. A revision of a manuscript published in 2004 for the NC Consortium
-        on Natural Medicines, a GoldenLEAF Foundation funded project of the University
-        of North Carolina, Chapel Hill and NC State University. Available at: http://www.naturalmedicinesofnc.org.","shortCitationAuthor":"Greenfield
-        and Davis","shortCitationYear":2012,"referenceCode":"A12GRE02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":112145,"citation":"Crow,
-        G.E. 1982. New England''s rare, threatened, and endangered plants. USWFS Northeast
-        Region, Newton Corners, MA.","shortCitationAuthor":"Crow","shortCitationYear":1982,"referenceCode":"B82CRO01MHUS","lastModified":"2020-02-25T15:57:11.26005Z"},{"id":719369,"citation":"McGuffin,
+        of Natural Resources, Division of Nature Preserves. Indianapolis, IN.","shortCitationAuthor":"Homoya","shortCitationYear":null,"referenceCode":"PNDHOM01HQUS","lastModified":"2020-02-25T15:56:31.74386Z"},{"id":721586,"citation":"Tobe,
+        H. 2003a. Hydrastidaceae. In: Kubitzki, K. and C. Bayer. Flowering Plants
+        Dicotyledons Vol. 5. Springer, Frankfurt, Germany. 438 pp.","shortCitationAuthor":"Tobe","shortCitationYear":2003,"referenceCode":"B03TOB01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":125088,"citation":"Sack,
+        R.B. and Froehlich, J.L. 1982. Berberine inhibits intestinal secretory response
+        of Vibrio cholerae toxins and E. coli enterotoxins. Infect. Immun. 35: 471-475.","shortCitationAuthor":"Sack
+        and Froehlich","shortCitationYear":1982,"referenceCode":"A82SAC01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719388,"citation":"Connolly,
+        Bryan. Personal communication. State Botanist, Massachusetts Natural Heritage
+        and Endangered Species Program.","shortCitationAuthor":"Connolly","shortCitationYear":null,"referenceCode":"PNDCON02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":154408,"citation":"Kartesz,
+        J.T. 1994. A synonymized checklist of the vascular flora of the United States,
+        Canada, and Greenland. 2nd edition. 2 vols. Timber Press, Portland, OR.","shortCitationAuthor":"Kartesz","shortCitationYear":1994,"referenceCode":"B94KAR01HQUS","lastModified":"2020-02-25T15:54:02.397953Z"},{"id":715914,"citation":"Sather,
+        Nancy. Personal communication. Botanist/Ecologist. Minnesota Natural Heritage
+        & Nongame Research.","shortCitationAuthor":"Sather","shortCitationYear":null,"referenceCode":"PNDSAT01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719358,"citation":"Bailey,
+        B. 1999. Social and economic impacts of wild harvested products. Ph.D. Dissertation,
+        West Virginia University, Morgantown, West Virginia.","shortCitationAuthor":"Bailey","shortCitationYear":1999,"referenceCode":"N99BAI01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719369,"citation":"McGuffin,
         M., on behalf of American Herbal Products Association (AHPA). 11 June 2012.
         Comments of the American Herbal Products Association on the request for comments
         and information on species proposals for consideration at the 16th Conference
         of the Parties to CITES. Available online: www.ahpa.org/portals/0/pdfs/12_0611_AHPA_Comments_reCoP16.pdf.
-        Accessed December 2012.","shortCitationAuthor":"McGuffin","shortCitationYear":2012,"referenceCode":"N12MCG01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":115330,"citation":"Penskar,
-        Mike. Personal communication. Botanist, Michigan Natural Features Inventory.
-        Lansing, MI.","shortCitationAuthor":"Penskar","shortCitationYear":null,"referenceCode":"PNDPEN01HQUS","lastModified":"2020-02-25T15:58:59.683526Z"},{"id":509330,"citation":"Witsell,
-        Theo. Personal communication. Botanist. Arkansas Natural Heritage Commission.
-        Little Rock, AR.","shortCitationAuthor":"Witsell","shortCitationYear":null,"referenceCode":"PNDWIT01HQUS","lastModified":"2020-02-25T16:04:56.313902Z"},{"id":123720,"citation":"Lloyd,
-        J.U., and C.G. Lloyd. 1908. <i>Hydrastis canadensis</i>. Bull. Lloyd Library
-        of Botany, Pharmacy and Materia Medica 10. 184 pp.","shortCitationAuthor":"Lloyd
-        and Lloyd","shortCitationYear":1908,"referenceCode":"B08LLO01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":136442,"citation":"Deam,
-        C. C. 1940. Flora of Indiana. Division of Forestry, Dept. of Conservation,
-        Indianapolis, Indiana. 1236 pp.","shortCitationAuthor":"Deam","shortCitationYear":1940,"referenceCode":"B40DEA01HQUS","lastModified":"2020-02-25T15:55:09.586357Z"},{"id":719344,"citation":"McGraw,
-        J. B., S. M. Sanders, and M. Van der Voort. 2003. Distribution and abundance
-        of <i>Hydrastis canadensis</i> L. (Ranunculaceae) and <i>Panax quiquefolius</i>
-        L. (Araliaceae) in the central Appalachian region. Journal of the Torrey Botanical
-        Society 130(2): 62-69.","shortCitationAuthor":"McGraw et al.","shortCitationYear":2003,"referenceCode":"A03MCG01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":131158,"citation":"Catling,
-        P.M. and Small, E. 1994. Poorly known economic plants of Canada. 3. Hydrastis
-        canadensis L. CBA/ABC Bull. 27(3): 50-51.","shortCitationAuthor":"Catling
-        and Small","shortCitationYear":1994,"referenceCode":"A94CAT01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":152570,"citation":"Wofford,
-        B.E. 1989. Guide to vascular plants of the Blue Ridge. University of Georgia
-        Press. Athens, Georgia.","shortCitationAuthor":"Wofford","shortCitationYear":1989,"referenceCode":"B89WOF01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":140682,"citation":"Elliott,
-        D. 1995. Wild Roots: A Forager''s Guide to the Edible and Medicinal Roots,
-        Tubers, Corms, and Rhizomes of North America. Healing Arts Press, Rochester,
-        Vermont. Pp. 30-31.","shortCitationAuthor":"Elliott","shortCitationYear":1995,"referenceCode":"B95ELL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":143752,"citation":"Schotz,
-        A. Personal Communication. Community Ecologist/Botanist, Alabama Natural Heritage
-        Program.","shortCitationAuthor":"Schotz","shortCitationYear":null,"referenceCode":"PNDSCH02HQUS","lastModified":"2020-02-25T15:54:51.258111Z"},{"id":719335,"citation":"Burkhart,
+        Accessed December 2012.","shortCitationAuthor":"McGuffin","shortCitationYear":2012,"referenceCode":"N12MCG01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719335,"citation":"Burkhart,
         E. and M. Jacobson. 2006a. Nontimber forest products(NTFPs) from Pennsylvania.
         Goldenseal, <i>Hydrastis canadensis.</i> Penn State College of Agricultural
         Sciences.Publications Distribution Center, The Pennsylvania State University,
         112 Agricultural Administration Building, University Park, PA 16802. 16 pp.","shortCitationAuthor":"Burkhart
         and Jacobson","shortCitationYear":2006,"referenceCode":"U06BUR01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":134178,"citation":"Sun,
         D. 1988. Berberine sulfate blocks adherence of Streptococcus pyogenes to epithelial
-        cells, fibronectin, and hexadecane. Antimicrob. Agents Chemother. 32: 1370-1374.","shortCitationAuthor":"Sun","shortCitationYear":1988,"referenceCode":"A88SUN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":139081,"citation":"Kartesz,
+        cells, fibronectin, and hexadecane. Antimicrob. Agents Chemother. 32: 1370-1374.","shortCitationAuthor":"Sun","shortCitationYear":1988,"referenceCode":"A88SUN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":751601,"citation":"Eichenberger,
+        M. D. and G. R. Parker. 1976. Goldenseal (<i>Hydrastis canadensis</i> L.)
+        distribution, phenology and biomass in an oak-history forest. Ohio Journal
+        of Science 76(5): 204-210.","shortCitationAuthor":"Eichenberger and Parker","shortCitationYear":1976,"referenceCode":"A76EIC01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":128066,"citation":"Harmon,
+        P.J. Botanist, West Virginia Natural Heritage Program, Department of Natural
+        Resources Operations Center, Elkins, WV.","shortCitationAuthor":"Harmon","shortCitationYear":null,"referenceCode":"PNDHAR01HQUS","lastModified":"2020-02-25T16:06:02.127387Z"},{"id":147749,"citation":"Murray,
+        Nancy. Personal communication. Coordinator, Connecticut Natural Diversity
+        Database.","shortCitationAuthor":"Murray","shortCitationYear":null,"referenceCode":"PNDMUR02HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":118648,"citation":"Schery,
+        R.W. 1972. Plants for Man, 2nd edition. Prentice-Hall, Englewood Cliffs, New
+        Jersey. 657 pp.","shortCitationAuthor":"Schery","shortCitationYear":1972,"referenceCode":"B72SCH01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":139826,"citation":"Brevoort,
+        P. 1996. The U.S. botanical market: An overview. HerbalGram No. 36: 49-57.","shortCitationAuthor":"Brevoort","shortCitationYear":1996,"referenceCode":"ANDBRE01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719343,"citation":"Greenfield,
+        J. and J. Davis. 2012. Goldenseal (<i>Hydrastis canadensis </i>L.). NC State
+        University. A revision of a manuscript published in 2004 for the NC Consortium
+        on Natural Medicines, a GoldenLEAF Foundation funded project of the University
+        of North Carolina, Chapel Hill and NC State University. Available at: http://www.naturalmedicinesofnc.org.","shortCitationAuthor":"Greenfield
+        and Davis","shortCitationYear":2012,"referenceCode":"A12GRE02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":721603,"citation":"Egert,
+        J. L. (Jan. 2007). \"<i>Hydrastis canadensis</i>.\" Plant Conservation Alliance-Medicinal
+        Plant Working Group. Arlington, Virginia. http://www.plantconservationwiki.org/wiki/Hydrastis_canadensis
+        [April 26, 2013]","shortCitationAuthor":"Egert","shortCitationYear":2007,"referenceCode":"W07EGE01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719345,"citation":"Mulligan,
+        M. R. and G. L. Gorchov. 2004. Populations loss of goldenseal, <i>Hydrastis
+        canadensis</i> L. (Ranunculaceae), in Ohio. Journal of the Torrey Botanical
+        Society 13(24): 305-310.","shortCitationAuthor":"Mulligan and Gorchov","shortCitationYear":2004,"referenceCode":"A04MUL01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":114494,"citation":"Smith,
+        Tim. Personal communication. Botanist, Missouri Department of Conservation.
+        Missouri Department of Conservation, Jefferson City, MO","shortCitationAuthor":"Smith","shortCitationYear":null,"referenceCode":"PNDSMI01HQUS","lastModified":"2020-02-25T15:56:31.759461Z"},{"id":995975,"citation":"Inoue,
+        M, K. J. Kelley, A. Frary, and L.E. Craker. 2013. A measure of genetic diversity
+        of Goldenseal (<i>Hydrastis canadensis</i> L.) by RAPD analysis. Genetic Resources
+        and Crop Evolution.60(3): 1201-1207.","shortCitationAuthor":"Inoue et al.","shortCitationYear":2013,"referenceCode":"A13INO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719366,"citation":"Gorchov,
+        David L. Professor, Miami University: Department of Botany, Oxford, OH,","shortCitationAuthor":"Gorchov","shortCitationYear":null,"referenceCode":"PNDGOR03HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715911,"citation":"DeBarros,
+        Nelson. Personal communication. Plant Ecologist, Wildlife Division, Bureau
+        of Natural Resources, Connecticut Department of Energy and Environmental Protection,
+        Hartford, CT.","shortCitationAuthor":"DeBarros","shortCitationYear":null,"referenceCode":"PNDDEB01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":139081,"citation":"Kartesz,
         J.T. 1999. A synonymized checklist and atlas with biological attributes for
         the vascular flora of the United States, Canada, and Greenland. First edition.
         In: Kartesz, J.T., and C.A. Meacham. Synthesis of the North American Flora,
-        Version 1.0. North Carolina Botanical Garden, Chapel Hill, N.C.","shortCitationAuthor":"Kartesz","shortCitationYear":1999,"referenceCode":"B99KAR01HQUS","lastModified":"2020-02-25T15:54:04.413827Z"},{"id":721586,"citation":"Tobe,
-        H. 2003a. Hydrastidaceae. In: Kubitzki, K. and C. Bayer. Flowering Plants
-        Dicotyledons Vol. 5. Springer, Frankfurt, Germany. 438 pp.","shortCitationAuthor":"Tobe","shortCitationYear":2003,"referenceCode":"B03TOB01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":147766,"citation":"Grieve,
-        M. 1971. A Modern Herbal, Vol. 1-2. Dover Publications Inc., New York, New
-        York. 888 p.","shortCitationAuthor":"Grieve","shortCitationYear":1971,"referenceCode":"B71GRI01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":153011,"citation":"White,
-        Deborah. Personal communication. Botanist, Kentucky Nature Preserves Commission,
-        Frankfort, KY.","shortCitationAuthor":"White","shortCitationYear":null,"referenceCode":"PNDWHI01HQUS","lastModified":"2020-02-25T15:44:31.998731Z"},{"id":721587,"citation":"Douglas,
-        J. A., J. M. Follett, G. A. Parmenter, C. E. Sansom, N. B. Perry, R. A. Littler.
-        2010a. Seasonal variation of biomass and bioactive alkaloid content of goldenseal,
-        <i>Hydrastis canadensis.</i> Fitoterapia (7): 925-928.","shortCitationAuthor":"Douglas
-        et al.","shortCitationYear":2010,"referenceCode":"A10DOG01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":128851,"citation":"Kaneda,
-        Y. 1991. In vitro effects of berberine sulfate on the growth of Entamoeba
-        histolytica, Giardia lamblia and Tricomonas vaginalis. Ann. Trop. Med. Parasitol.
-        85: 417-425.","shortCitationAuthor":"Kaneda","shortCitationYear":1991,"referenceCode":"A91KAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":102831,"citation":"Kauffman,
-        G. 1996. Biological White Paper on Hydrastis canadensis. North Carolina. Manuscript
-        in preparation.","shortCitationAuthor":"Kauffman","shortCitationYear":1996,"referenceCode":"U96KAU01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715913,"citation":"Anderson,
-        Derek. Personal communication. Botanist. Minnesota Natural Heritage & Nongame
-        Research.","shortCitationAuthor":"Anderson","shortCitationYear":null,"referenceCode":"PNDAND03HQUS","lastModified":"2020-02-25T16:56:23.047794Z"},{"id":128066,"citation":"Harmon,
-        P.J. Botanist, West Virginia Natural Heritage Program, Department of Natural
-        Resources Operations Center, Elkins, WV.","shortCitationAuthor":"Harmon","shortCitationYear":null,"referenceCode":"PNDHAR01HQUS","lastModified":"2020-02-25T16:06:02.127387Z"},{"id":719346,"citation":"Penskar,
-        M.R, E.G. Choberka, and P.J. Higman 2001. Special Plant Abstract for <i>Hydrastis
-        canadensis</i> (goldenseal). Michigan Natural Features Inventory. Lansing,
-        MI. 3 pp.","shortCitationAuthor":"Penskar et al.","shortCitationYear":2001,"referenceCode":"N01PEN02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719351,"citation":"Sinclair,
-        A. and P. M. Catling. 2002. Recent trends in stem number in Goldenseal, <i>Hydrastis
-        canadensis</i>, populations at the northern limit of its range. Canadian Field-Naturalist
-        116(1): 112-115.","shortCitationAuthor":"Sinclair and Catling","shortCitationYear":2002,"referenceCode":"A02SIN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":627730,"citation":"Popp,
-        Robert. Personal communication. Botanist, Vermont Nongame and Natural Heritage
-        Program, Vermont Fish and Wildlife Department, Barre, VT.","shortCitationAuthor":"Popp","shortCitationYear":null,"referenceCode":"PNDPOP02HQUS","lastModified":"2020-02-25T16:49:03.791207Z"},{"id":721590,"citation":"Tait,
-        C. R. 2006a. Spatial distribution and habitat preference of Goldenseal, (<i>Hydrastis
-        canadensis) </i>in New York state. M.S. Thesis - State University of New York,
-        College of Environmental Science and Forestry, Syracuse, N.Y.","shortCitationAuthor":"Tait","shortCitationYear":2006,"referenceCode":"U06TAI01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":715911,"citation":"DeBarros,
-        Nelson. Personal communication. Plant Ecologist, Wildlife Division, Bureau
-        of Natural Resources, Connecticut Department of Energy and Environmental Protection,
-        Hartford, CT.","shortCitationAuthor":"DeBarros","shortCitationYear":null,"referenceCode":"PNDDEB01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719364,"citation":"Baker,
-        D. 2010. Goldenseal pays off for La Center''s Sego''s Herb Farm. Oregonian,
-        September 17. Available online: http://www.oregonlive.com/clark-county/index.ssf/2010/09/goldenseal_pays_off_for_la_centers_segos_herb_farm_farm.html.
-        Available December 2012","shortCitationAuthor":"Baker","shortCitationYear":2010,"referenceCode":"A10BAK02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":620394,"citation":"Sullivan,
-        Heather.  Personal communication.  Botanist, Mississippi Natural Heritage
-        Program, Mississippi Museum of Natural Science, Jackson, MS.","shortCitationAuthor":"Sullivan","shortCitationYear":null,"referenceCode":"PNDSUL01HQUS","lastModified":"2020-02-25T16:06:33.753103Z"},{"id":719339,"citation":"Albrecht,
+        Version 1.0. North Carolina Botanical Garden, Chapel Hill, N.C.","shortCitationAuthor":"Kartesz","shortCitationYear":1999,"referenceCode":"B99KAR01HQUS","lastModified":"2020-02-25T15:54:04.413827Z"},{"id":645418,"citation":"Gardner,
+        Rick. Personal communication. Heritage Botanist, Ohio Natural Heritage Program,
+        Division of Natural Areas & Preserves, Ohio Department of Natural Resources,
+        Columbus, OH.","shortCitationAuthor":"Gardner","shortCitationYear":null,"referenceCode":"PNDGAR03HQUS","lastModified":"2020-02-25T16:25:50.317718Z"},{"id":719344,"citation":"McGraw,
+        J. B., S. M. Sanders, and M. Van der Voort. 2003. Distribution and abundance
+        of <i>Hydrastis canadensis</i> L. (Ranunculaceae) and <i>Panax quiquefolius</i>
+        L. (Araliaceae) in the central Appalachian region. Journal of the Torrey Botanical
+        Society 130(2): 62-69.","shortCitationAuthor":"McGraw et al.","shortCitationYear":2003,"referenceCode":"A03MCG01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719365,"citation":"Indiana
+        Department of Natural Resources, Division of Nature Preserves. Indianapolis,
+        IN","shortCitationAuthor":"Indiana Department of Natural Resources","shortCitationYear":null,"referenceCode":"PNDFLO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":715922,"citation":"Kearns,
+        Kelly. Personal communication. Conservation Biologist. Natural Heritage Inventory,
+        Bureau of Endangered Resources, Wisconsin Department of Natural Resources.","shortCitationAuthor":"Kearns","shortCitationYear":null,"referenceCode":"PNDKEA01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":151157,"citation":"Benigni,
+        R., et al. 1962. Piante Medicinali-Chimica, Farmacologia e Terapia, Vol. 1.
+        Inverni & Della Beffa, Milan.","shortCitationAuthor":"Benigni et al.","shortCitationYear":1962,"referenceCode":"B62BEN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":106273,"citation":"Veninga,
+        L. and B. Zaricor. 1976. Goldenseal/Etc: A Pharmacognosy of Wild Herbs. Ruka
+        Publications, Santa Cruz.","shortCitationAuthor":"Veninga and Zaricor","shortCitationYear":1976,"referenceCode":"B76VEN01HQUS","lastModified":"2020-02-25T16:31:19.806823Z"},{"id":112145,"citation":"Crow,
+        G.E. 1982. New England''s rare, threatened, and endangered plants. USWFS Northeast
+        Region, Newton Corners, MA.","shortCitationAuthor":"Crow","shortCitationYear":1982,"referenceCode":"B82CRO01MHUS","lastModified":"2020-02-25T15:57:11.26005Z"},{"id":719339,"citation":"Albrecht,
         M. A. and B. C. McCarthy. 2006. Comparative analysis of Goldenseal (<i>Hydrastis
         canadensis</i> L.) population re-growth following human harvest: implications
         for conservation. The American Midland Naturalist 156(2): 229-236.","shortCitationAuthor":"Albrecht
-        and McCarthy","shortCitationYear":2006,"referenceCode":"A06ALB01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719347,"citation":"Sanders,
-        S. 2004. Does breeding system contribute to rarity of Goldenseal (<i>Hydrastis
-        canadensis</i>)? American Midland Naturalist 152: 37-42.","shortCitationAuthor":"Sanders","shortCitationYear":2004,"referenceCode":"A04SAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":114494,"citation":"Smith,
-        Tim. Personal communication. Botanist, Missouri Department of Conservation.
-        Missouri Department of Conservation, Jefferson City, MO","shortCitationAuthor":"Smith","shortCitationYear":null,"referenceCode":"PNDSMI01HQUS","lastModified":"2020-02-25T15:56:31.759461Z"},{"id":715921,"citation":"Marcus,
-        Aaron. Personal communication. Botanist, Vermont Nongame & Natural Heritage
-        Program.","shortCitationAuthor":"Marcus","shortCitationYear":null,"referenceCode":"PNDMAR07HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":127679,"citation":"CITES.
+        and McCarthy","shortCitationYear":2006,"referenceCode":"A06ALB01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":121876,"citation":"Smith,
+        W. R. Personal communication. Botanist, Minnesota Natural Heritage Program,
+        Minnesota Dept. Natural Resources, St. Paul, MN. ","shortCitationAuthor":"Smith","shortCitationYear":null,"referenceCode":"PNDSMI03HQUS","lastModified":"2020-02-25T16:28:03.475314Z"},{"id":135172,"citation":"Gleason,
+        H.A. 1968. The New Britton and Brown Illustrated Flora of the Northeastern
+        United States and Adjacent Canada. Vol. 3. The Sympetalous Dicotyledoneae.
+        Hafner Publishing Co., Inc., New York.","shortCitationAuthor":"Gleason","shortCitationYear":1968,"referenceCode":"B68GLE01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":721600,"citation":"Torgerson,
+        J. M. 2012a. Genetic variation in <i>Hydrastis canadensis </i>populations
+        in western North Carolina. M.S. thesis, Western Carolina University. 61 pp.","shortCitationAuthor":"Torgerson","shortCitationYear":2012,"referenceCode":"U12TOR01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":102831,"citation":"Kauffman,
+        G. 1996. Biological White Paper on Hydrastis canadensis. North Carolina. Manuscript
+        in preparation.","shortCitationAuthor":"Kauffman","shortCitationYear":1996,"referenceCode":"U96KAU01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":119570,"citation":"Planet
+        Herbs. 1999. Planet Herbs: Natural botanicals wholesale. Online. Available:
+        http://www.planetherbs.net. Accessed 2000-Jan.","shortCitationAuthor":"Planet
+        Herbs","shortCitationYear":1999,"referenceCode":"N99PLA01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":154324,"citation":"Henkel,
+        A., and G.F. Klugh. 1904. Golden seal. U.S. Dept. Agric., Bureau of Plant
+        Industry, Bull. No. 51, Part 6. 16 pp.","shortCitationAuthor":"Henkel and
+        Klugh","shortCitationYear":1904,"referenceCode":"A04HEN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":721587,"citation":"Douglas,
+        J. A., J. M. Follett, G. A. Parmenter, C. E. Sansom, N. B. Perry, R. A. Littler.
+        2010a. Seasonal variation of biomass and bioactive alkaloid content of goldenseal,
+        <i>Hydrastis canadensis.</i> Fitoterapia (7): 925-928.","shortCitationAuthor":"Douglas
+        et al.","shortCitationYear":2010,"referenceCode":"A10DOG01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719374,"citation":"Frontier
+        Natural Products Co-op. 2012. Website available online: www.frontiercoop.com/wellearth/explorebyproduct/goldenseal.php.
+        Accessed 17 Dec 2012.","shortCitationAuthor":"Frontier Natural Products Co-op","shortCitationYear":2012,"referenceCode":"W12FNP01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":153011,"citation":"White,
+        Deborah. Personal communication. Botanist, Kentucky Nature Preserves Commission,
+        Frankfort, KY.","shortCitationAuthor":"White","shortCitationYear":null,"referenceCode":"PNDWHI01HQUS","lastModified":"2020-02-25T15:44:31.998731Z"},{"id":714730,"citation":"Sinclair,
+        A. and P. M. Catling. 2000a. Status of Goldenseal, <i>Hydrastis canadensis</i>
+        (Ranunculaceae), in Canada. The Canadian Field Naturalist 114(1): 111-120.","shortCitationAuthor":"Sinclair
+        and Catling","shortCitationYear":2000,"referenceCode":"A00SIN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":719403,"citation":"Kelley,
+        K. J. 2009a. Genetic variability in <i>Hydrastis canadensis</i> L. using RAPD
+        analysis. A thesis presented to the Graduate School of the University of Massachusetts
+        Amherst, Department of Plant &amp; Soil Science. 27 pp.","shortCitationAuthor":"Kelley","shortCitationYear":2009,"referenceCode":"U09KEL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":143752,"citation":"Schotz,
+        A. Personal Communication. Community Ecologist/Botanist, Alabama Natural Heritage
+        Program.","shortCitationAuthor":"Schotz","shortCitationYear":null,"referenceCode":"PNDSCH02HQUS","lastModified":"2020-02-25T15:54:51.258111Z"},{"id":719351,"citation":"Sinclair,
+        A. and P. M. Catling. 2002. Recent trends in stem number in Goldenseal, <i>Hydrastis
+        canadensis</i>, populations at the northern limit of its range. Canadian Field-Naturalist
+        116(1): 112-115.","shortCitationAuthor":"Sinclair and Catling","shortCitationYear":2002,"referenceCode":"A02SIN01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":116107,"citation":"Liu,
+        C.X. 1991. Studies on plant resources, pharmacology and clinical treatment
+        with berberine. Phytother. Res. 5: 228-230.","shortCitationAuthor":"Liu","shortCitationYear":1991,"referenceCode":"A91LIU01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":127679,"citation":"CITES.
         1997. Amendments to Appendices I and II of the Convention on Internation Trade
         in Endangered Species and Wild Fauna and Flora. Online. http://international.fws.gov/cop10/gseal97.html.
-        14 January 2000.","shortCitationAuthor":"CITES","shortCitationYear":1997,"referenceCode":"U97CIT01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":721603,"citation":"Egert,
-        J. L. (Jan. 2007). \"<i>Hydrastis canadensis</i>.\" Plant Conservation Alliance-Medicinal
-        Plant Working Group. Arlington, Virginia. http://www.plantconservationwiki.org/wiki/Hydrastis_canadensis
-        [April 26, 2013]","shortCitationAuthor":"Egert","shortCitationYear":2007,"referenceCode":"W07EGE01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":139826,"citation":"Brevoort,
-        P. 1996. The U.S. botanical market: An overview. HerbalGram No. 36: 49-57.","shortCitationAuthor":"Brevoort","shortCitationYear":1996,"referenceCode":"ANDBRE01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":140004,"citation":"Fernald,
-        M. L. 1950. Gray''s manual of botany. 8th edition. Corrected printing (1970).
-        D. Van Nostrand Company, New York. 1632 pp.","shortCitationAuthor":"Fernald","shortCitationYear":1950,"referenceCode":"B50FER01HQUS","lastModified":"2020-02-25T15:54:26.182048Z"},{"id":662071,"citation":"Townsend,
+        14 January 2000.","shortCitationAuthor":"CITES","shortCitationYear":1997,"referenceCode":"U97CIT01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":123720,"citation":"Lloyd,
+        J.U., and C.G. Lloyd. 1908. <i>Hydrastis canadensis</i>. Bull. Lloyd Library
+        of Botany, Pharmacy and Materia Medica 10. 184 pp.","shortCitationAuthor":"Lloyd
+        and Lloyd","shortCitationYear":1908,"referenceCode":"B08LLO01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":662071,"citation":"Townsend,
         J. Personal communication. Staff Botanist. Virginia Division of Natural Heritage.
-        Department of Conservation and Recreation. Richmond, VA.","shortCitationAuthor":"Townsend","shortCitationYear":null,"referenceCode":"PNDTOW01HQUS","lastModified":"2020-02-25T16:24:05.503122Z"},{"id":719358,"citation":"Bailey,
-        B. 1999. Social and economic impacts of wild harvested products. Ph.D. Dissertation,
-        West Virginia University, Morgantown, West Virginia.","shortCitationAuthor":"Bailey","shortCitationYear":1999,"referenceCode":"N99BAI01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":125088,"citation":"Sack,
-        R.B. and Froehlich, J.L. 1982. Berberine inhibits intestinal secretory response
-        of Vibrio cholerae toxins and E. coli enterotoxins. Infect. Immun. 35: 471-475.","shortCitationAuthor":"Sack
-        and Froehlich","shortCitationYear":1982,"referenceCode":"A82SAC01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":134609,"citation":"Mills,
-        S.Y. 1991. Out of the Earth: The Essential Book of Herbal Medicine. Viking,
-        London. Pp. 439-441. Millspaugh, C.F. 1887 [1974]. American Medicinal Plants.
-        Dover Publications, New York, p. 9-2.","shortCitationAuthor":"Mills","shortCitationYear":1991,"referenceCode":"B91MIL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719370,"citation":"Mahady,
-        G. B., and L. R. Chadwick. 2001. Goldenseal (<i>Hydrastis canadensis</i>):
-        Is There Enough Scientific Evidence to Support Safety and Efficacy? Nutrition
-        in Clinical Care 4(5):243-249.","shortCitationAuthor":"Mahady and Chadwick","shortCitationYear":2001,"referenceCode":"A01MAH01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":116107,"citation":"Liu,
-        C.X. 1991. Studies on plant resources, pharmacology and clinical treatment
-        with berberine. Phytother. Res. 5: 228-230.","shortCitationAuthor":"Liu","shortCitationYear":1991,"referenceCode":"A91LIU01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":721589,"citation":"Barton,
+        Department of Conservation and Recreation. Richmond, VA.","shortCitationAuthor":"Townsend","shortCitationYear":null,"referenceCode":"PNDTOW01HQUS","lastModified":"2020-02-25T16:24:05.503122Z"},{"id":114048,"citation":"McGuffin,
+        Michael. Personal communication. American Herbal Products Association, Silver
+        Spring MD","shortCitationAuthor":"McGuffin","shortCitationYear":null,"referenceCode":"PNDMCG03HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":509330,"citation":"Witsell,
+        Theo. Personal communication. Botanist. Arkansas Natural Heritage Commission.
+        Little Rock, AR.","shortCitationAuthor":"Witsell","shortCitationYear":null,"referenceCode":"PNDWIT01HQUS","lastModified":"2020-02-25T16:04:56.313902Z"},{"id":114379,"citation":"Freeman,
+        Craig. Personal communication. Botanist, Kansas Natural Features Inventory.
+        Kansas Biological Survey, Lawrence, KS.","shortCitationAuthor":"Freeman","shortCitationYear":null,"referenceCode":"PNDFRE03HQUS","lastModified":"2020-02-25T15:56:31.759461Z"},{"id":721589,"citation":"Barton,
         B.S. 1798 &amp; 1804. Collections for An Essay Towards A Materia Medica of
         the United States. Reprint ed. 1900. Bulletin of the Lloyd Library, No. 1,
-        Reproduction Series, No. 1.","shortCitationAuthor":"Barton","shortCitationYear":1798,"referenceCode":"A98BAR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719353,"citation":"Van
-        der Voort, M. E., B. Bailey, D. E. Samuel, and J. B. McGraw. 2003. Recovery
-        of populations of Goldenseal (<i>Hydrastis canadensis</i> L.) and American
-        Ginseng (<i>Panax quinquefolius</i> L.) following harvest. The American Midland
-        Naturalist 149(2): 282-292.","shortCitationAuthor":"Van der Voort et al.","shortCitationYear":2003,"referenceCode":"A03VAN01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":154408,"citation":"Kartesz,
-        J.T. 1994. A synonymized checklist of the vascular flora of the United States,
-        Canada, and Greenland. 2nd edition. 2 vols. Timber Press, Portland, OR.","shortCitationAuthor":"Kartesz","shortCitationYear":1994,"referenceCode":"B94KAR01HQUS","lastModified":"2020-02-25T15:54:02.397953Z"},{"id":719342,"citation":"Geyer,
-        W. A., R. Janke, C. J. Barden, and E. Carey. 2008. Ginseng (<i>Panax quinqufolius
-        </i>L.) and goldenseal (<i>Hydrastis canadensis</i> L.) trials in eastern
-        Kansas. Transactions of the Kansas Academy of Science 111(1/2): 147-152.","shortCitationAuthor":"Geyer
-        et al.","shortCitationYear":2008,"referenceCode":"A08GEY01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719345,"citation":"Mulligan,
-        M. R. and G. L. Gorchov. 2004. Populations loss of goldenseal, <i>Hydrastis
-        canadensis</i> L. (Ranunculaceae), in Ohio. Journal of the Torrey Botanical
-        Society 13(24): 305-310.","shortCitationAuthor":"Mulligan and Gorchov","shortCitationYear":2004,"referenceCode":"A04MUL01HQUS","lastModified":"2020-02-25T16:59:35.410088Z"},{"id":719348,"citation":"Sanders,
-        S. and J. B. McGraw. 2005. Harvest recovery of Goldenseal, <i>Hydrastis canadensis</i>
-        L. The American Midland Naturalist 153(1): 87-94.","shortCitationAuthor":"Sanders
-        and McGraw","shortCitationYear":2005,"referenceCode":"A05SAN02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":995975,"citation":"Inoue,
-        M, K. J. Kelley, A. Frary, and L.E. Craker. 2013. A measure of genetic diversity
-        of Goldenseal (<i>Hydrastis canadensis</i> L.) by RAPD analysis. Genetic Resources
-        and Crop Evolution.60(3): 1201-1207.","shortCitationAuthor":"Inoue et al.","shortCitationYear":2013,"referenceCode":"A13INO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":108569,"citation":"Hill,
-        A.F. 1952. Economic Botany, 2nd edition. McGraw-Hill Book Co., New York. 560
-        pp.","shortCitationAuthor":"Hill","shortCitationYear":1952,"referenceCode":"B52HIL01HQUS","lastModified":"2020-02-25T15:56:00.009313Z"},{"id":719368,"citation":"Pennsylvania
-        Department of Conservation and Natural Resources (PA DCNR). 2012. <i>About
-        goldenseal</i>. Available online: www.dcnr.state.pa.us/forestry/wildplant/aboutgoldenseal.aspx.
-        Accessed December 2012.","shortCitationAuthor":"PA DCNR","shortCitationYear":2012,"referenceCode":"W12PAD01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":751601,"citation":"Eichenberger,
-        M. D. and G. R. Parker. 1976. Goldenseal (<i>Hydrastis canadensis</i> L.)
-        distribution, phenology and biomass in an oak-history forest. Ohio Journal
-        of Science 76(5): 204-210.","shortCitationAuthor":"Eichenberger and Parker","shortCitationYear":1976,"referenceCode":"A76EIC01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":106273,"citation":"Veninga,
-        L. and B. Zaricor. 1976. Goldenseal/Etc: A Pharmacognosy of Wild Herbs. Ruka
-        Publications, Santa Cruz.","shortCitationAuthor":"Veninga and Zaricor","shortCitationYear":1976,"referenceCode":"B76VEN01HQUS","lastModified":"2020-02-25T16:31:19.806823Z"},{"id":719340,"citation":"Burkhart,
+        Reproduction Series, No. 1.","shortCitationAuthor":"Barton","shortCitationYear":1798,"referenceCode":"A98BAR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":131158,"citation":"Catling,
+        P.M. and Small, E. 1994. Poorly known economic plants of Canada. 3. Hydrastis
+        canadensis L. CBA/ABC Bull. 27(3): 50-51.","shortCitationAuthor":"Catling
+        and Small","shortCitationYear":1994,"referenceCode":"A94CAT01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719389,"citation":"Gadd,
+        Laura. Botanist North Carolina Plant Conservation Program. Personal Communication.","shortCitationAuthor":"Gadd","shortCitationYear":null,"referenceCode":"PNDGAD02HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719340,"citation":"Burkhart,
         E. P. and M. G. Jacobson. 2009. Transitioning from wild collection to forest
         cultivation of indigenous medicinal forest plants in eastern North America
         is constrained by lack of profitability. Agroforest Syst. 76: 437-453.","shortCitationAuthor":"Burkhart
-        and Jacobson","shortCitationYear":2009,"referenceCode":"A09BUR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719388,"citation":"Connolly,
-        Bryan. Personal communication. State Botanist, Massachusetts Natural Heritage
-        and Endangered Species Program.","shortCitationAuthor":"Connolly","shortCitationYear":null,"referenceCode":"PNDCON02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"}],"otherCommonNames":[{"id":138984,"name":"Sceau
-        d''or","language":"FR"},{"id":140461,"name":"Orangeroot","language":"EN"},{"id":140462,"name":"Yellow-puccoon","language":"EN"},{"id":138983,"name":"Hydraste
-        du Canada","language":"FR"},{"id":140573,"name":"Yellow Root","language":"EN"},{"id":127007,"name":"goldenseal","language":"EN"}],"speciesGlobal":{"elementGlobalId":154701,"cites":{"id":2,"citesDescEn":"Appendix
+        and Jacobson","shortCitationYear":2009,"referenceCode":"A09BUR01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":715913,"citation":"Anderson,
+        Derek. Personal communication. Botanist. Minnesota Natural Heritage & Nongame
+        Research.","shortCitationAuthor":"Anderson","shortCitationYear":null,"referenceCode":"PNDAND03HQUS","lastModified":"2020-02-25T16:56:23.047794Z"},{"id":134277,"citation":"Morse,
+        Larry E., North American Botanist, NatureServe, Arlington, Va. Formerly Chief
+        Botanist, The Nature Conservancy, Arlington, Va.","shortCitationAuthor":"Morse","shortCitationYear":null,"referenceCode":"PNDMOR01HQUS","lastModified":"2020-02-25T15:39:33.2912Z"},{"id":620394,"citation":"Sullivan,
+        Heather.  Personal communication.  Botanist, Mississippi Natural Heritage
+        Program, Mississippi Museum of Natural Science, Jackson, MS.","shortCitationAuthor":"Sullivan","shortCitationYear":null,"referenceCode":"PNDSUL01HQUS","lastModified":"2020-02-25T16:06:33.753103Z"},{"id":115330,"citation":"Penskar,
+        Mike. Personal communication. Botanist, Michigan Natural Features Inventory.
+        Lansing, MI.","shortCitationAuthor":"Penskar","shortCitationYear":null,"referenceCode":"PNDPEN01HQUS","lastModified":"2020-02-25T15:58:59.683526Z"},{"id":719348,"citation":"Sanders,
+        S. and J. B. McGraw. 2005. Harvest recovery of Goldenseal, <i>Hydrastis canadensis</i>
+        L. The American Midland Naturalist 153(1): 87-94.","shortCitationAuthor":"Sanders
+        and McGraw","shortCitationYear":2005,"referenceCode":"A05SAN02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":149748,"citation":"Young,
+        Steve. Personal communication. Botanist, New York Natural Heritage Program.","shortCitationAuthor":"Young","shortCitationYear":null,"referenceCode":"PNDYOU01HQUS","lastModified":"2020-02-25T16:12:44.055285Z"},{"id":630151,"citation":"Crabtree,
+        Todd. Personal communication. Botanist, Tennessee Division of Natural Areas,
+        Tennessee Department of Environmental Conservation, Nashville, TN.","shortCitationAuthor":"Crabtree","shortCitationYear":null,"referenceCode":"PNDCRA02HQUS","lastModified":"2020-02-25T15:46:22.437866Z"},{"id":127559,"citation":"Medical
+        Sciences Bulletin. 1996 (Oct.). Treatment Options for HIV: The Health Food
+        Store Connection. Online: PharmInfoNet Home Page.","shortCitationAuthor":"Medical
+        Sciences Bulletin","shortCitationYear":1996,"referenceCode":"U96MED01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":129446,"citation":"Bannerman,
+        J. 1997. The goldenseal dilemma: Saving the plant that heals. The Institute
+        of Conservation & Culture, New Orleans, Louisiana. Manuscript in preparation.","shortCitationAuthor":"Bannerman","shortCitationYear":1997,"referenceCode":"U97BAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":119031,"citation":"Oldham,
+        Michael. Personal communication. Botanist, Ontario Natural Heritage Information
+        Centre.","shortCitationAuthor":"Oldham","shortCitationYear":null,"referenceCode":"PNDOLD01HQUS","lastModified":"2020-02-25T15:55:09.977012Z"},{"id":719346,"citation":"Penskar,
+        M.R, E.G. Choberka, and P.J. Higman 2001. Special Plant Abstract for <i>Hydrastis
+        canadensis</i> (goldenseal). Michigan Natural Features Inventory. Lansing,
+        MI. 3 pp.","shortCitationAuthor":"Penskar et al.","shortCitationYear":2001,"referenceCode":"N01PEN02HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":151439,"citation":"Bradley,
+        P., ed. 1992. British Herbal Compendium, Vol. 1. British Herbal Medical Association,
+        Dorset, U.K.","shortCitationAuthor":"Bradley","shortCitationYear":1992,"referenceCode":"B92BRA01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":128851,"citation":"Kaneda,
+        Y. 1991. In vitro effects of berberine sulfate on the growth of Entamoeba
+        histolytica, Giardia lamblia and Tricomonas vaginalis. Ann. Trop. Med. Parasitol.
+        85: 417-425.","shortCitationAuthor":"Kaneda","shortCitationYear":1991,"referenceCode":"A91KAN01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":103353,"citation":"Foster,
+        S. 1991. Goldenseal, Hydrastis canadensis. American Botanical Council, Botanical
+        Series No. 309. 8 pp.","shortCitationAuthor":"Foster","shortCitationYear":1991,"referenceCode":"A91FOS01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":721590,"citation":"Tait,
+        C. R. 2006a. Spatial distribution and habitat preference of Goldenseal, (<i>Hydrastis
+        canadensis) </i>in New York state. M.S. Thesis - State University of New York,
+        College of Environmental Science and Forestry, Syracuse, N.Y.","shortCitationAuthor":"Tait","shortCitationYear":2006,"referenceCode":"U06TAI01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719370,"citation":"Mahady,
+        G. B., and L. R. Chadwick. 2001. Goldenseal (<i>Hydrastis canadensis</i>):
+        Is There Enough Scientific Evidence to Support Safety and Efficacy? Nutrition
+        in Clinical Care 4(5):243-249.","shortCitationAuthor":"Mahady and Chadwick","shortCitationYear":2001,"referenceCode":"A01MAH01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":134609,"citation":"Mills,
+        S.Y. 1991. Out of the Earth: The Essential Book of Herbal Medicine. Viking,
+        London. Pp. 439-441. Millspaugh, C.F. 1887 [1974]. American Medicinal Plants.
+        Dover Publications, New York, p. 9-2.","shortCitationAuthor":"Mills","shortCitationYear":1991,"referenceCode":"B91MIL01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":136442,"citation":"Deam,
+        C. C. 1940. Flora of Indiana. Division of Forestry, Dept. of Conservation,
+        Indianapolis, Indiana. 1236 pp.","shortCitationAuthor":"Deam","shortCitationYear":1940,"referenceCode":"B40DEA01HQUS","lastModified":"2020-02-25T15:55:09.586357Z"},{"id":111204,"citation":"Foster,
+        S. 1995. Forest Pharmacy: Medicinal Plants in American Forests. Forest History
+        Society, Durham, North Carolina.","shortCitationAuthor":"Foster","shortCitationYear":1995,"referenceCode":"B95FOS01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":107918,"citation":"Lloyd,
+        J.U. and C.G. Lloyd. 1884-1885. Drugs and Medicines of North America, Vol.
+        1, Ranunculaceae. Clarke, Cincinnati, Ohio. 304 pp.","shortCitationAuthor":"Lloyd
+        and Lloyd","shortCitationYear":1884,"referenceCode":"B84LLO01HQUS","lastModified":"2020-02-25T16:59:35.441324Z"},{"id":627730,"citation":"Popp,
+        Robert. Personal communication. Botanist, Vermont Nongame and Natural Heritage
+        Program, Vermont Fish and Wildlife Department, Barre, VT.","shortCitationAuthor":"Popp","shortCitationYear":null,"referenceCode":"PNDPOP02HQUS","lastModified":"2020-02-25T16:49:03.791207Z"},{"id":719342,"citation":"Geyer,
+        W. A., R. Janke, C. J. Barden, and E. Carey. 2008. Ginseng (<i>Panax quinqufolius
+        </i>L.) and goldenseal (<i>Hydrastis canadensis</i> L.) trials in eastern
+        Kansas. Transactions of the Kansas Academy of Science 111(1/2): 147-152.","shortCitationAuthor":"Geyer
+        et al.","shortCitationYear":2008,"referenceCode":"A08GEY01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"},{"id":719368,"citation":"Pennsylvania
+        Department of Conservation and Natural Resources (PA DCNR). 2012. <i>About
+        goldenseal</i>. Available online: www.dcnr.state.pa.us/forestry/wildplant/aboutgoldenseal.aspx.
+        Accessed December 2012.","shortCitationAuthor":"PA DCNR","shortCitationYear":2012,"referenceCode":"W12PAD01HQUS","lastModified":"2020-02-25T16:59:35.425691Z"}],"otherCommonNames":[{"id":138983,"name":"Hydraste
+        du Canada","language":"FR"},{"id":140461,"name":"Orangeroot","language":"EN"},{"id":127007,"name":"goldenseal","language":"EN"},{"id":140462,"name":"Yellow-puccoon","language":"EN"},{"id":140573,"name":"Yellow
+        Root","language":"EN"},{"id":138984,"name":"Sceau d''or","language":"FR"}],"speciesGlobal":{"elementGlobalId":154701,"cites":{"id":2,"citesDescEn":"Appendix
         II","citesDescEs":null,"citesDescFr":"Annexe II"},"cosewic":{"id":5,"cosewicDescEn":"Special
         Concern","cosewicDescEs":null,"cosewicDescFr":"Espèce préoccupante","cosewicCode":"SC"},"fwsRegion":null,"genusSize":null,"jurisEndem":{"id":5,"jurisEndemDescEn":"occurs
         (regularly, as a native taxon) in multiple nations","jurisEndemDescEs":null,"jurisEndemDescFr":"Se
@@ -843,5 +843,5 @@ http_interactions:
         4-7cm long and between 0.5-2cm in width (Sinclair and Catling 2000a).","diagnosticCharacteristics":null,"speciesMarineHabitats":[],"speciesTerrestrialHabitats":[{"cagTerrHabId":109257,"terrestrialHabitat":{"id":1,"terrestrialHabitatDescEn":"Forest
         - Hardwood","terrestrialHabitatDescEs":null,"terrestrialHabitatDescFr":"Forêt
         — Feuillu"}}],"speciesRiverineHabitats":[],"speciesPalustrineHabitats":[],"speciesLacustrineHabitats":[],"speciesSubterraneanHabitats":[],"speciesEstuarineHabitats":[]}}'
-  recorded_at: 2020-05-08 16:22:36 GMT
+  recorded_at: 2020-05-12 23:11:42 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2

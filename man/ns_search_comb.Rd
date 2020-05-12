@@ -18,19 +18,25 @@ ns_search_comb(
 )
 }
 \arguments{
-\item{text}{(character) xxxx}
+\item{text}{(character) basic text search, equiavalent to \code{text_adv}
+with \code{matchAgainst="allNames"} and \code{operator="similarTo"}}
 
-\item{text_adv}{(list) xxxx}
+\item{text_adv}{(list) advanced search, must specify the following three
+elements: \code{searchToken}, \code{matchAgainst}, and \code{operator}. see
+https://explorer.natureserve.org/api-docs/#_advanced_text_search_parameter}
 
 \item{status}{(character) conservation status, one of G1, G2, G3, G4,
 G5, GH, GX, GNR, GNA, GU. case insensitive}
 
-\item{location}{(list) location, country and sub-country}
+\item{location}{(list) location, country and sub-country. specify either
+\code{nation} OR \code{nation} and \code{subnation}. each expects a two-letter ISO code}
 
 \item{record_type}{(character) limit results by record type, one of
-species or ecosystem}
+"species" or "ecosystem"}
 
-\item{record_subtype}{(character) limit results by record sub-type}
+\item{record_subtype}{(character) limit results by record sub-type, one of:
+"class", "subclass", "formation", "division", "macrogroup", "group",
+"alliance", "association", "terrestrial_ecological_system"}
 
 \item{modified_since}{(character) search for records modified since a
 given time. value must be a date and time with a UTC offset in ISO 8601
@@ -40,7 +46,7 @@ format. optional}
 
 \item{per_page}{(integer) Records per page; default: 20. optional}
 
-\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
 Combined search
@@ -48,8 +54,8 @@ Combined search
 \examples{
 \dontrun{
 ns_search_comb(text = "robin")
-ns_search_comb(text_adv = list(searchToken = "bird",
-  matchAgainst = "allNames", operator="similarTo"))
+ns_search_comb(text_adv = list(searchToken = "western",
+  matchAgainst="allScientificNames", operator="startsWith"))
 ns_search_comb(status = "G1")
 ns_search_comb(location = list(nation = "US"))
 ns_search_comb(location = list(nation = "US", subnation = "VA"))

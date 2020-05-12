@@ -1,17 +1,11 @@
 #' Species search
 #'
 #' @export
-#' @param text (character) xxxx
-#' @param text_adv (list) xxxx
-#' @param status (character) conservation status
-#' @param location (list) location, country and sub-country
-#' @param species_taxonomy (character) species taxonomy
-#' @param record_subtype (character) limit results by record sub-type
-#' @param modified_since (character) search for records modified since a
-#' given time. value must be a date and time with a UTC offset in ISO 8601
-#' format. optional
-#' @param page (integer) Zero-indexed page number; default: 0. optional
-#' @param per_page (integer) Records per page; default: 20. optional
+#' @inheritParams ns_search_comb
+#' @param species_taxonomy (list) species taxonomy. either a list with
+#' `level` and `scientificTaxonomy` (a scientific name), or with just
+#' `informalTaxonomy` (a vernacular name). possible `level` values:
+#' "kingdom", "phylum", "class", "order", "family", "genus" 
 #' @template ns
 #' @family search
 #' @examples \dontrun{
@@ -21,7 +15,7 @@
 #' ns_search_spp(status = "G1")
 #' ns_search_spp(location = list(nation = "US"))
 #' ns_search_spp(location = list(nation = "US", subnation = "VA"))
-#' ns_search_spp(species_taxonomy = list(speciesTaxonomy = "Animalia", level = "kingdom"))
+#' ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia", level = "kingdom"))
 #' ns_search_spp(species_taxonomy = list(informalTaxonomy = "birds"))
 #' ns_search_spp(record_subtype = "macrogroup")
 #' ns_search_spp(modified_since = "2020-04-30T00:00:00+0000")
@@ -37,6 +31,7 @@ ns_search_spp <- function(text = NULL, text_adv = NULL, status = NULL,
   location <- handle_location(location)
   species_taxonomy <- handle_sptax(species_taxonomy)
   record_subtype <- handle_subtype(record_subtype)
+  assert(modified_since, "character")
   res <- ns_POST(
     url = file.path(ns_base(), 'api/data/speciesSearch'),
     body = list(criteriaType = "species",
@@ -50,6 +45,5 @@ ns_search_spp <- function(text = NULL, text_adv = NULL, status = NULL,
     ),
     ...
   )
-  jsonlite::fromJSON(res)
+  parse_search(res)
 }
-

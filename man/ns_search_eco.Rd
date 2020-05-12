@@ -18,17 +18,27 @@ ns_search_eco(
 )
 }
 \arguments{
-\item{text}{(character) xxxx}
+\item{text}{(character) basic text search, equiavalent to \code{text_adv}
+with \code{matchAgainst="allNames"} and \code{operator="similarTo"}}
 
-\item{text_adv}{(list) xxxx}
+\item{text_adv}{(list) advanced search, must specify the following three
+elements: \code{searchToken}, \code{matchAgainst}, and \code{operator}. see
+https://explorer.natureserve.org/api-docs/#_advanced_text_search_parameter}
 
-\item{status}{(character) conservation status}
+\item{status}{(character) conservation status, one of G1, G2, G3, G4,
+G5, GH, GX, GNR, GNA, GU. case insensitive}
 
-\item{location}{(list) location, country and sub-country}
+\item{location}{(list) location, country and sub-country. specify either
+\code{nation} OR \code{nation} and \code{subnation}. each expects a two-letter ISO code}
 
-\item{ecosystem_taxonomy}{(character) ecosystem taxonomy}
+\item{ecosystem_taxonomy}{(character) the classification code of the
+higher level (ancestor) ecosystem. E.g.'s: "1" (Class code),
+"1.B" (Subclass code), "1.B.2" (Formation code), "1.B.2.Nd" (Division code),
+"M886" (Macrogroup key), "G206" (Group key), "A3328" (Alliance Key)}
 
-\item{record_subtype}{(character) limit results by record sub-type}
+\item{record_subtype}{(character) limit results by record sub-type, one of:
+"class", "subclass", "formation", "division", "macrogroup", "group",
+"alliance", "association", "terrestrial_ecological_system"}
 
 \item{modified_since}{(character) search for records modified since a
 given time. value must be a date and time with a UTC offset in ISO 8601
@@ -38,7 +48,7 @@ format. optional}
 
 \item{per_page}{(integer) Records per page; default: 20. optional}
 
-\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
 Ecosystem search

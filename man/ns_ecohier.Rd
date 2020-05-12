@@ -10,7 +10,7 @@ ns_ecohier(uid, ...)
 \item{uid}{(character) A NatureServe taxon id (The taxon’s Element Global
 UID)}
 
-\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed on to \code{\link[crul]{verb-GET}}}
 }
 \value{
 A list with lots of elements

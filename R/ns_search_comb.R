@@ -1,14 +1,20 @@
 #' Combined search
 #'
 #' @export
-#' @param text (character) xxxx
-#' @param text_adv (list) xxxx
+#' @param text (character) basic text search, equiavalent to `text_adv`
+#' with `matchAgainst="allNames"` and `operator="similarTo"`
+#' @param text_adv (list) advanced search, must specify the following three
+#' elements: `searchToken`, `matchAgainst`, and `operator`. see 
+#' https://explorer.natureserve.org/api-docs/#_advanced_text_search_parameter
 #' @param status (character) conservation status, one of G1, G2, G3, G4,
 #' G5, GH, GX, GNR, GNA, GU. case insensitive
-#' @param location (list) location, country and sub-country
+#' @param location (list) location, country and sub-country. specify either
+#' `nation` OR `nation` and `subnation`. each expects a two-letter ISO code
 #' @param record_type (character) limit results by record type, one of
-#' species or ecosystem
-#' @param record_subtype (character) limit results by record sub-type
+#' "species" or "ecosystem"
+#' @param record_subtype (character) limit results by record sub-type, one of:
+#' "class", "subclass", "formation", "division", "macrogroup", "group",
+#' "alliance", "association", "terrestrial_ecological_system"
 #' @param modified_since (character) search for records modified since a
 #' given time. value must be a date and time with a UTC offset in ISO 8601
 #' format. optional
@@ -18,8 +24,8 @@
 #' @family search
 #' @examples \dontrun{
 #' ns_search_comb(text = "robin")
-#' ns_search_comb(text_adv = list(searchToken = "bird",
-#'   matchAgainst = "allNames", operator="similarTo"))
+#' ns_search_comb(text_adv = list(searchToken = "western",
+#'   matchAgainst="allScientificNames", operator="startsWith"))
 #' ns_search_comb(status = "G1")
 #' ns_search_comb(location = list(nation = "US"))
 #' ns_search_comb(location = list(nation = "US", subnation = "VA"))
@@ -52,18 +58,5 @@ ns_search_comb <- function(text = NULL, text_adv = NULL, status = NULL,
     ),
     ...
   )
-  tt <- jsonlite::fromJSON(res)
-  tt$results <- tibble::as_tibble(tt$results)
-  tt$resultsSummary <- ns_sum(tt$resultsSummary)
-  attr(tt$resultsSummary, "search_criteria") <- tt$searchCriteria
-  tt$searchCriteria <- NULL
-  return(tt)
-}
-
-ns_sum <- function(x) {
-  x$species_total <- x$speciesResults$total
-  x$speciesResults <- NULL
-  eco <- x$ecosystemResults
-  x$ecosystemResults <- NULL
-  data.frame(tibble::enframe(c(x, eco)))
+  parse_search(res)
 }

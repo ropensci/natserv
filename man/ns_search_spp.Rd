@@ -18,17 +18,27 @@ ns_search_spp(
 )
 }
 \arguments{
-\item{text}{(character) xxxx}
+\item{text}{(character) basic text search, equiavalent to \code{text_adv}
+with \code{matchAgainst="allNames"} and \code{operator="similarTo"}}
 
-\item{text_adv}{(list) xxxx}
+\item{text_adv}{(list) advanced search, must specify the following three
+elements: \code{searchToken}, \code{matchAgainst}, and \code{operator}. see
+https://explorer.natureserve.org/api-docs/#_advanced_text_search_parameter}
 
-\item{status}{(character) conservation status}
+\item{status}{(character) conservation status, one of G1, G2, G3, G4,
+G5, GH, GX, GNR, GNA, GU. case insensitive}
 
-\item{location}{(list) location, country and sub-country}
+\item{location}{(list) location, country and sub-country. specify either
+\code{nation} OR \code{nation} and \code{subnation}. each expects a two-letter ISO code}
 
-\item{species_taxonomy}{(character) species taxonomy}
+\item{species_taxonomy}{(list) species taxonomy. either a list with
+\code{level} and \code{scientificTaxonomy} (a scientific name), or with just
+\code{informalTaxonomy} (a vernacular name). possible \code{level} values:
+"kingdom", "phylum", "class", "order", "family", "genus"}
 
-\item{record_subtype}{(character) limit results by record sub-type}
+\item{record_subtype}{(character) limit results by record sub-type, one of:
+"class", "subclass", "formation", "division", "macrogroup", "group",
+"alliance", "association", "terrestrial_ecological_system"}
 
 \item{modified_since}{(character) search for records modified since a
 given time. value must be a date and time with a UTC offset in ISO 8601
@@ -38,7 +48,7 @@ format. optional}
 
 \item{per_page}{(integer) Records per page; default: 20. optional}
 
-\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
 Species search
@@ -51,7 +61,7 @@ ns_search_spp(text_adv = list(searchToken = "bird",
 ns_search_spp(status = "G1")
 ns_search_spp(location = list(nation = "US"))
 ns_search_spp(location = list(nation = "US", subnation = "VA"))
-ns_search_spp(species_taxonomy = list(speciesTaxonomy = "Animalia", level = "kingdom"))
+ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia", level = "kingdom"))
 ns_search_spp(species_taxonomy = list(informalTaxonomy = "birds"))
 ns_search_spp(record_subtype = "macrogroup")
 ns_search_spp(modified_since = "2020-04-30T00:00:00+0000")

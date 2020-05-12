@@ -1,10 +1,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://explorer.natureserve.org/api/data/search
+    uri: https://explorer.natureserve.org/api/data/speciesSearch
     body:
       encoding: ''
-      string: '{"criteriaType":"combined","textCriteria":[{"paramType":"quickSearch","searchToken":"robin"}]}'
+      string: '{"criteriaType":"species","textCriteria":[{"paramType":"quickSearch","searchToken":"robin"}]}'
     headers:
       User-Agent: libcurl/7.64.1 r-curl/4.3 crul/0.9.0
       Content-Type: application/json
@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 200
-      date: Tue, 12 May 2020 23:11:43 GMT
+      date: Tue, 12 May 2020 23:11:44 GMT
       server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
       content-type: application/json;charset=UTF-8
       transfer-encoding: chunked
@@ -100,6 +100,6 @@ http_interactions:
         robinsonii","formattedScientificName":"<i>Catocala robinsonii</i>","primaryCommonName":"Robinson''s
         Underwing","primaryCommonNameLanguage":"EN","roundedGRank":"G4","nations":[{"nationCode":"US","roundedNRank":"NNR","subnations":[{"subnationCode":"OK","roundedSRank":"SNR","exotic":false},{"subnationCode":"KS","roundedSRank":"SNR","exotic":false},{"subnationCode":"VA","roundedSRank":"S3","exotic":false},{"subnationCode":"NY","roundedSRank":"SNR","exotic":false},{"subnationCode":"MA","roundedSRank":"SNR","exotic":false},{"subnationCode":"NJ","roundedSRank":"SNR","exotic":false},{"subnationCode":"MS","roundedSRank":"SNR","exotic":false},{"subnationCode":"NE","roundedSRank":"S1","exotic":false},{"subnationCode":"MO","roundedSRank":"SNR","exotic":false},{"subnationCode":"RI","roundedSRank":"SNR","exotic":false},{"subnationCode":"IL","roundedSRank":"SNR","exotic":false},{"subnationCode":"IA","roundedSRank":"SNR","exotic":false},{"subnationCode":"MI","roundedSRank":"SH","exotic":false},{"subnationCode":"WV","roundedSRank":"SNR","exotic":false},{"subnationCode":"TN","roundedSRank":"S4","exotic":false},{"subnationCode":"LA","roundedSRank":"SNR","exotic":false},{"subnationCode":"CT","roundedSRank":"SH","exotic":false},{"subnationCode":"AR","roundedSRank":"SNR","exotic":false},{"subnationCode":"AL","roundedSRank":"SNR","exotic":false},{"subnationCode":"OH","roundedSRank":"SNR","exotic":false},{"subnationCode":"KY","roundedSRank":"S4","exotic":false},{"subnationCode":"GA","roundedSRank":"SNR","exotic":false},{"subnationCode":"SC","roundedSRank":"SNR","exotic":false},{"subnationCode":"IN","roundedSRank":"SNR","exotic":false},{"subnationCode":"NH","roundedSRank":"SNR","exotic":false},{"subnationCode":"PA","roundedSRank":"SH","exotic":false},{"subnationCode":"NC","roundedSRank":"SNR","exotic":false},{"subnationCode":"SD","roundedSRank":"SNR","exotic":false}],"exotic":false},{"nationCode":"CA","roundedNRank":"NNR","subnations":[],"exotic":false}],"lastModified":"2020-04-30T02:33:05.061425Z","speciesGlobal":{"usesaCode":null,"cosewicCode":null,"saraCode":null,"synonyms":["Catocala
         robinsoni"],"otherCommonNames":[],"kingdom":"Animalia","phylum":"Mandibulata","taxclass":"Insecta","taxorder":"Lepidoptera","family":"Erebidae","genus":"Catocala","taxonomicComments":null,"informalTaxonomy":"Animals
-        - Insects - Butterflies and Moths - Underwing Moths","infraspecies":false,"completeDistribution":true},"gRank":"G4"}],"resultsSummary":{"page":0,"recordsPerPage":20,"totalPages":7,"totalResults":126,"speciesResults":{"total":103},"ecosystemResults":{"total":23,"classes":0,"subclasses":0,"formations":0,"divisions":0,"macrogroups":1,"groups":1,"alliances":3,"associations":18,"terrestrialEcologicalSystems":0}},"searchCriteria":{"criteriaType":"combined","textCriteria":[{"paramType":"quickSearch","searchToken":"robin"}],"statusCriteria":null,"locationCriteria":null,"pagingOptions":{"page":0,"recordsPerPage":20},"recordSubtypeCriteria":null,"modifiedSince":null,"recordTypeCriteria":null}}'
-  recorded_at: 2020-05-12 23:11:43 GMT
+        - Insects - Butterflies and Moths - Underwing Moths","infraspecies":false,"completeDistribution":true},"gRank":"G4"}],"resultsSummary":{"page":0,"recordsPerPage":20,"totalPages":6,"totalResults":103,"speciesResults":{"total":103}},"searchCriteria":{"criteriaType":"species","textCriteria":[{"paramType":"quickSearch","searchToken":"robin"}],"statusCriteria":null,"locationCriteria":null,"pagingOptions":{"page":0,"recordsPerPage":20},"recordSubtypeCriteria":null,"modifiedSince":null,"speciesTaxonomyCriteria":null}}'
+  recorded_at: 2020-05-12 23:11:44 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2

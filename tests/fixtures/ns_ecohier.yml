@@ -16,7 +16,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 200
-      date: Fri, 08 May 2020 16:39:01 GMT
+      date: Tue, 12 May 2020 23:11:43 GMT
       server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
       content-disposition: inline;filename=f.txt
       content-type: application/json;charset=UTF-8
@@ -31,5 +31,5 @@ http_interactions:
         & South-Central Oak - Pine Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.838501/Quercus_alba_-_Quercus_falcata_-_Pinus_echinata_Forest_Woodland_Macrogroup","ecosystemType":"MACROGROUP","classificationCode":"M016"},{"uniqueId":"ELEMENT_GLOBAL.2.833279","name":"Shortleaf
         Pine - Oak Forest & Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.833279/Pinus_echinata_-_Quercus_falcata_-_Quercus_stellata_Forest_Woodland_Group","ecosystemType":"GROUP","classificationCode":"G012"},{"uniqueId":"ELEMENT_GLOBAL.2.899395","name":"Ozark-Ouachita
         Shortleaf Pine - Oak Woodland","nsxUrl":"/Taxon/ELEMENT_GLOBAL.2.899395/Pinus_echinata_-_Quercus_stellata_-_Quercus_velutina_Ozark-Ouachita_Woodland_Alliance","ecosystemType":"ALLIANCE","classificationCode":"A3271"}]'
-  recorded_at: 2020-05-08 16:39:04 GMT
+  recorded_at: 2020-05-12 23:11:42 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2
