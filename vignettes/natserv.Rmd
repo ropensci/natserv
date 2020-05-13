@@ -1,7 +1,7 @@
 ---
 title: "natserv introduction"
 author: "Scott Chamberlain"
-date: "2020-05-08"
+date: "2020-05-12"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{natserv introduction}
@@ -68,6 +68,8 @@ All of `natserv`'s functions are prefixed with `ns_` to avoid confusion with oth
 cat(paste(" -", paste(sprintf("`%s`", sort(getNamespaceExports("natserv"))), collapse = "\n - ")))
 #>  - `ns_altid`
 #>  - `ns_ecohier`
+#>  - `ns_export`
+#>  - `ns_export_status`
 #>  - `ns_id`
 #>  - `ns_search_comb`
 #>  - `ns_search_eco`
