@@ -1,0 +1,29 @@
+http_interactions:
+- request:
+    method: post
+    uri: https://explorer.natureserve.org/api/export/taxonSearch
+    body:
+      encoding: ''
+      string: '{"criteria":{"criteriaType":"combined","textCriteria":[{"paramType":"quickSearch","searchToken":"tanager"}],"statusCriteria":[],"locationCriteria":[],"recordTypeCriteria":[],"recordSubtypeCriteria":[]},"exportFormat":"summary_json","exportLanguage":"en"}'
+    headers:
+      User-Agent: libcurl/7.64.1 r-curl/4.3 crul/0.9.0
+      Content-Type: application/json
+      Accept-Encoding: gzip, deflate
+      Accept: application/json
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 200
+      date: Tue, 12 May 2020 23:58:56 GMT
+      server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
+      content-type: application/json;charset=UTF-8
+      transfer-encoding: chunked
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"jobId":"1d8ba017-9a2e-4816-a73e-1a6ad481c0a2"}'
+  recorded_at: 2020-05-12 23:58:55 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

@@ -1,0 +1,28 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://explorer.natureserve.org/api/job/1d8ba017-9a2e-4816-a73e-1a6ad481c0a2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.64.1 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 200
+      date: Wed, 13 May 2020 00:00:53 GMT
+      server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c
+      content-type: application/json;charset=UTF-8
+      transfer-encoding: chunked
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"state":"Finished","data":{"success":true,"errorMessage":null,"data":{},"url":"https://explorer-downloads.natureserve.org/shortTerm/explorer/taxaSearchExports/2020-05-12/1d8ba017-9a2e-4816-a73e-1a6ad481c0a2.json"},"percentComplete":100.0,"successful":true,"error":null,"group":"QuartzJobs","timeScheduled":"2020-05-12T23:58:56.0521413Z","timeStarted":"2020-05-12T23:58:56.0521413Z","timeFinished":"2020-05-12T23:58:56.364652Z","timeLastChecked":"2020-05-13T00:00:53.5851864Z"}'
+  recorded_at: 2020-05-13 00:00:53 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

@@ -2,6 +2,8 @@
 
 export(ns_altid)
 export(ns_ecohier)
+export(ns_export)
+export(ns_export_status)
 export(ns_id)
 export(ns_search_comb)
 export(ns_search_eco)
