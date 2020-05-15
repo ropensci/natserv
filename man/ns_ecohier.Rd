@@ -2,7 +2,7 @@
 % Please edit documentation in R/ns_ecohier.R
 \name{ns_ecohier}
 \alias{ns_ecohier}
-\title{Get taxon by id}
+\title{Get a summary of the upper level hierarchy for an Ecosystem record}
 \usage{
 ns_ecohier(uid, ...)
 }
@@ -16,7 +16,7 @@ UID)}
 A list with lots of elements
 }
 \description{
-Get taxon by id
+Get a summary of the upper level hierarchy for an Ecosystem record
 }
 \details{
 see https://explorer.natureserve.org/api-docs/#_taxon_data_model

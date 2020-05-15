@@ -1,7 +1,7 @@
 ---
 title: "natserv introduction"
 author: "Scott Chamberlain"
-date: "2020-05-12"
+date: "2020-05-15"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{natserv introduction}
@@ -16,14 +16,7 @@ vignette: >
 See also the taxize book (https://taxize.dev/) for 
 a manual on working with taxonomic data in R, including with NatureServe data.
 
-This tutorial will walk you through installing `natserv` and using its handy functions. To help show you what `natserv` can do, this will also teach you how to:
-
-* Find a species' unique identifier used by NatureServe 
-* Use that identifier to pull data from NatureServe's API
-* Search NatureServe for multiple species
-* Create a dataframe of the conservation status of an example species, the gray wolf (*Canis lupus*)
-* And, just for fun, we're going to make a map of the gray wolf's status in each state of the US with `ggplot`
-
+This tutorial will walk you through installing `natserv` and using its functions. 
 
 ## A quick introduction to NatureServe
 
@@ -60,7 +53,6 @@ library(natserv)
 
 ## `natserv` functions
 
-Now that R knows our NatureServe API key, we can use `natserv` to access their database.
 All of `natserv`'s functions are prefixed with `ns_` to avoid confusion with other packages - here are the functions provided by `natserv`:
 
 
@@ -74,5 +66,355 @@ cat(paste(" -", paste(sprintf("`%s`", sort(getNamespaceExports("natserv"))), col
 #>  - `ns_search_comb`
 #>  - `ns_search_eco`
 #>  - `ns_search_spp`
+```
+
+## Search
+
+There's three functions for search:
+
+- combined: supports searching for both species and ecosystems using search criteria which are applicable to both types of records
+- species: supports searching for only species; extends the search criteria available through the Combined Search to include support for additional criteria which are only applicable to species records
+- ecosystem: supports searching for only ecosystems; extends the search criteria available through the Combined Search to include support for additional criteria which are only applicable to ecosystems records
+
+Combined search
+
+
+```r
+ns_search_comb(text = "robin", page = 0, per_page = 5)
+#> $results
+#> # A tibble: 5 x 14
+#>   recordType elementGlobalId uniqueId nsxUrl elcode scientificName
+#>   <chr>                <int> <chr>    <chr>  <chr>  <chr>         
+#> 1 SPECIES             100637 ELEMENT… /Taxo… ABPBJ… Copsychus sau…
+#> 2 SPECIES             102323 ELEMENT… /Taxo… ABPBJ… Turdus grayi  
+#> 3 SPECIES             102179 ELEMENT… /Taxo… ABPBJ… Turdus migrat…
+#> 4 SPECIES             105536 ELEMENT… /Taxo… ABPBJ… Turdus migrat…
+#> 5 SPECIES             105850 ELEMENT… /Taxo… ABPBJ… Turdus rufopa…
+#> # … with 22 more variables: formattedScientificName <chr>,
+#> #   primaryCommonName <chr>, primaryCommonNameLanguage <chr>,
+#> #   roundedGRank <chr>, nations <list>, lastModified <chr>,
+#> #   speciesGlobal$usesaCode <lgl>, $cosewicCode <lgl>, $saraCode <lgl>,
+#> #   $synonyms <list>, $otherCommonNames <list>, $kingdom <chr>, $phylum <chr>,
+#> #   $taxclass <chr>, $taxorder <chr>, $family <chr>, $genus <chr>,
+#> #   $taxonomicComments <chr>, $informalTaxonomy <chr>, $infraspecies <lgl>,
+#> #   $completeDistribution <lgl>, gRank <chr>
+#> 
+#> $resultsSummary
+#>                            name value
+#> 1                          page     0
+#> 2                recordsPerPage     5
+#> 3                    totalPages    26
+#> 4                  totalResults   126
+#> 5                 species_total   103
+#> 6                         total    23
+#> 7                       classes     0
+#> 8                    subclasses     0
+#> 9                    formations     0
+#> 10                    divisions     0
+#> 11                  macrogroups     1
+#> 12                       groups     1
+#> 13                    alliances     3
+#> 14                 associations    18
+#> 15 terrestrialEcologicalSystems     0
+```
+
+Species search
+
+
+```r
+ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia", level = "kingdom"))
+#> $results
+#> # A tibble: 20 x 14
+#>    recordType elementGlobalId uniqueId nsxUrl elcode scientificName
+#>    <chr>                <int> <chr>    <chr>  <chr>  <chr>         
+#>  1 SPECIES             828458 ELEMENT… /Taxo… AAABC… Acris blancha…
+#>  2 SPECIES             828419 ELEMENT… /Taxo… AAABC… Acris crepita…
+#>  3 SPECIES             103292 ELEMENT… /Taxo… AAABC… Acris gryllus 
+#>  4 SPECIES             104324 ELEMENT… /Taxo… AAAAA… Ambystoma ann…
+#>  5 SPECIES             100100 ELEMENT… /Taxo… AAAAA… Ambystoma bar…
+#>  6 SPECIES             802300 ELEMENT… /Taxo… AAAAA… Ambystoma bis…
+#>  7 SPECIES             104488 ELEMENT… /Taxo… AAAAA… Ambystoma cal…
+#>  8 SPECIES             802301 ELEMENT… /Taxo… AAAAA… Ambystoma cin…
+#>  9 SPECIES             103251 ELEMENT… /Taxo… AAAAA… Ambystoma gra…
+#> 10 SPECIES             100401 ELEMENT… /Taxo… AAAAA… Ambystoma jef…
+#> 11 SPECIES             102149 ELEMENT… /Taxo… AAAAA… Ambystoma lat…
+#> 12 SPECIES            1143335 ELEMENT… /Taxo… AAAAA… Ambystoma lat…
+#> 13 SPECIES            1143337 ELEMENT… /Taxo… AAAAA… Ambystoma lat…
+#> 14 SPECIES             101261 ELEMENT… /Taxo… AAAAA… Ambystoma mab…
+#> 15 SPECIES             106403 ELEMENT… /Taxo… AAAAA… Ambystoma mac…
+#> 16 SPECIES             101632 ELEMENT… /Taxo… AAAAA… Ambystoma mac…
+#> 17 SPECIES             103392 ELEMENT… /Taxo… AAAAA… Ambystoma mac…
+#> 18 SPECIES             104239 ELEMENT… /Taxo… AAAAA… Ambystoma mac…
+#> 19 SPECIES             100115 ELEMENT… /Taxo… AAAAA… Ambystoma mac…
+#> 20 SPECIES             103039 ELEMENT… /Taxo… AAAAA… Ambystoma mac…
+#> # … with 22 more variables: formattedScientificName <chr>,
+#> #   primaryCommonName <chr>, primaryCommonNameLanguage <chr>,
+#> #   roundedGRank <chr>, nations <list>, lastModified <chr>,
+#> #   speciesGlobal$usesaCode <chr>, $cosewicCode <chr>, $saraCode <chr>,
+#> #   $synonyms <list>, $otherCommonNames <list>, $kingdom <chr>, $phylum <chr>,
+#> #   $taxclass <chr>, $taxorder <chr>, $family <chr>, $genus <chr>,
+#> #   $taxonomicComments <chr>, $informalTaxonomy <chr>, $infraspecies <lgl>,
+#> #   $completeDistribution <lgl>, gRank <chr>
+#> 
+#> $resultsSummary
+#>             name value
+#> 1           page     0
+#> 2 recordsPerPage    20
+#> 3     totalPages  2586
+#> 4   totalResults 51705
+#> 5  species_total 51705
+```
+
+Ecosystem search
+
+
+```r
+ns_search_eco(ecosystem_taxonomy = "M067")
+#> $results
+#> # A tibble: 20 x 14
+#>    recordType elementGlobalId uniqueId nsxUrl elcode scientificName
+#>    <chr>                <int> <chr>    <chr>  <chr>  <chr>         
+#>  1 ECOSYSTEM           899525 ELEMENT… /Taxo… A3401  Eleocharis el…
+#>  2 ECOSYSTEM           899121 ELEMENT… /Taxo… A1372  Fimbristylis …
+#>  3 ECOSYSTEM           899126 ELEMENT… /Taxo… A1389  Spartina bake…
+#>  4 ECOSYSTEM           899744 ELEMENT… /Taxo… A3692  Spartina pate…
+#>  5 ECOSYSTEM           899523 ELEMENT… /Taxo… A3399  Typha dominge…
+#>  6 ECOSYSTEM           899526 ELEMENT… /Taxo… A3402  Andropogon ca…
+#>  7 ECOSYSTEM           899517 ELEMENT… /Taxo… A3393  Aristida palu…
+#>  8 ECOSYSTEM           899132 ELEMENT… /Taxo… A1429  Eleocharis sp…
+#>  9 ECOSYSTEM           899512 ELEMENT… /Taxo… A3388  Hypericum cha…
+#> 10 ECOSYSTEM           899133 ELEMENT… /Taxo… A1430  Juncus milita…
+#> 11 ECOSYSTEM           899122 ELEMENT… /Taxo… A1379  Panicum hemit…
+#> 12 ECOSYSTEM           899124 ELEMENT… /Taxo… A1383  Rhynchospora …
+#> 13 ECOSYSTEM           899518 ELEMENT… /Taxo… A3394  Rhynchospora …
+#> 14 ECOSYSTEM          1146914 ELEMENT… /Taxo… A4404  Rhynchospora …
+#> 15 ECOSYSTEM           899521 ELEMENT… /Taxo… A3397  Rhynchospora …
+#> 16 ECOSYSTEM           899125 ELEMENT… /Taxo… A1384  Rhynchospora …
+#> 17 ECOSYSTEM           899530 ELEMENT… /Taxo… A3406  Cladium maris…
+#> 18 ECOSYSTEM           899120 ELEMENT… /Taxo… A1369  Cladium maris…
+#> 19 ECOSYSTEM           899720 ELEMENT… /Taxo… A3668  Hottonia infl…
+#> 20 ECOSYSTEM           900115 ELEMENT… /Taxo… A4065  Orontium aqua…
+#> # … with 18 more variables: formattedScientificName <chr>,
+#> #   primaryCommonName <chr>, primaryCommonNameLanguage <chr>,
+#> #   roundedGRank <chr>, nations <list>, lastModified <chr>,
+#> #   ecosystemGlobal$translatedScientificName <chr>, $taxclassCode <chr>,
+#> #   $taxsubclassCode <chr>, $formationCode <chr>, $divisionCode <chr>,
+#> #   $macrogroupKey <chr>, $taxgroupKey <chr>, $allianceKey <lgl>,
+#> #   $ecosystemType <chr>, $classificationCode <chr>, $parentName <chr>,
+#> #   gRank <chr>
+#> 
+#> $resultsSummary
+#>                            name value
+#> 1                          page     0
+#> 2                recordsPerPage    20
+#> 3                    totalPages    11
+#> 4                  totalResults   210
+#> 5                         total   210
+#> 6                       classes     0
+#> 7                    subclasses     0
+#> 8                    formations     0
+#> 9                     divisions     0
+#> 10                  macrogroups     1
+#> 11                       groups     6
+#> 12                    alliances    33
+#> 13                 associations   154
+#> 14 terrestrialEcologicalSystems    16
+```
+
+## Get taxon by id
+
+By UID
+
+
+```r
+w <- ns_id("ELEMENT_GLOBAL.2.154701")
+str(w, max.level = 1)
+#> List of 40
+#>  $ elementGlobalId                        : int 154701
+#>  $ circumscripConfidence                  : NULL
+#>  $ classificationLevel                    :List of 4
+#>  $ classificationStatus                   :List of 4
+#>  $ iucn                                   :List of 5
+#>  $ nameCategory                           :List of 6
+#>  $ rankMethodUsed                         :List of 4
+#>  $ formattedScientificName                : chr "<i>Hydrastis canadensis</i>"
+#>  $ scientificName                         : chr "Hydrastis canadensis"
+#>  $ scientificNameAuthor                   : chr "L."
+#>  $ primaryCommonName                      : chr "Goldenseal"
+#>  $ relatedItisNames                       : chr "<i>Hydrastis canadensis</i> L. (TSN 18781)"
+#>  $ uniqueId                               : chr "ELEMENT_GLOBAL.2.154701"
+#>  $ elcode                                 : chr "PDRAN0F010"
+#>  $ conceptRefFullCitation                 : chr "Kartesz, J.T. 1994. A synonymized checklist of the vascular flora of the United States, Canada, and Greenland. "| __truncated__
+#>  $ conceptName                            : chr "<i>Hydrastis canadensis</i>"
+#>  $ taxonomicComments                      : chr "<i>Hydrastis canadensis</i> occurs in eastern North America and is a monotypic genus. In the most current taxon"| __truncated__
+#>  $ roundedGRank                           : chr "G3"
+#>  $ conservationStatusFactorsEditionDate   : chr "2013-04-29"
+#>  $ conservationStatusFactorsEditionAuthors: chr "Oliver, L."
+#>  $ primaryCommonNameLanguage              : chr "EN"
+#>  $ recordType                             : chr "SPECIES"
+#>  $ elementNationals                       :'data.frame':	2 obs. of  7 variables:
+#>  $ lastModified                           : chr "2020-05-14T04:31:58.480462Z"
+#>  $ lastPublished                          : chr "2020-05-14T02:14:14.569584Z"
+#>  $ nsxUrl                                 : chr "/Taxon/ELEMENT_GLOBAL.2.154701/Hydrastis_canadensis"
+#>  $ grank                                  : chr "G3G4"
+#>  $ grankReviewDate                        : chr "2012-11-30"
+#>  $ grankChangeDate                        : chr "2012-11-30"
+#>  $ grankReasons                           : chr "Goldenseal, <i>Hydrastis canadensis, </i>an herbaceous understory species of the eastern deciduous forest, with"| __truncated__
+#>  $ rankInfo                               :List of 27
+#>  $ animalCharacteristics                  : NULL
+#>  $ occurrenceDelineations                 :'data.frame':	1 obs. of  17 variables:
+#>  $ plantCharacteristics                   :List of 7
+#>  $ elementManagement                      :List of 14
+#>  $ occurrenceViabilities                  :'data.frame':	1 obs. of  12 variables:
+#>  $ references                             :'data.frame':	97 obs. of  6 variables:
+#>  $ otherCommonNames                       :'data.frame':	6 obs. of  3 variables:
+#>  $ speciesGlobal                          :List of 29
+#>  $ speciesCharacteristics                 :List of 13
+```
+
+By alternate id
+
+
+```r
+x <- ns_altid(uid = "ELEMENT_GLOBAL.2.154701")
+str(x, max.level = 1)
+#> List of 40
+#>  $ elementGlobalId                        : int 154701
+#>  $ circumscripConfidence                  : NULL
+#>  $ classificationLevel                    :List of 4
+#>  $ classificationStatus                   :List of 4
+#>  $ iucn                                   :List of 5
+#>  $ nameCategory                           :List of 6
+#>  $ rankMethodUsed                         :List of 4
+#>  $ formattedScientificName                : chr "<i>Hydrastis canadensis</i>"
+#>  $ scientificName                         : chr "Hydrastis canadensis"
+#>  $ scientificNameAuthor                   : chr "L."
+#>  $ primaryCommonName                      : chr "Goldenseal"
+#>  $ relatedItisNames                       : chr "<i>Hydrastis canadensis</i> L. (TSN 18781)"
+#>  $ uniqueId                               : chr "ELEMENT_GLOBAL.2.154701"
+#>  $ elcode                                 : chr "PDRAN0F010"
+#>  $ conceptRefFullCitation                 : chr "Kartesz, J.T. 1994. A synonymized checklist of the vascular flora of the United States, Canada, and Greenland. "| __truncated__
+#>  $ conceptName                            : chr "<i>Hydrastis canadensis</i>"
+#>  $ taxonomicComments                      : chr "<i>Hydrastis canadensis</i> occurs in eastern North America and is a monotypic genus. In the most current taxon"| __truncated__
+#>  $ roundedGRank                           : chr "G3"
+#>  $ conservationStatusFactorsEditionDate   : chr "2013-04-29"
+#>  $ conservationStatusFactorsEditionAuthors: chr "Oliver, L."
+#>  $ primaryCommonNameLanguage              : chr "EN"
+#>  $ recordType                             : chr "SPECIES"
+#>  $ elementNationals                       :'data.frame':	2 obs. of  7 variables:
+#>  $ lastModified                           : chr "2020-05-14T04:31:58.480462Z"
+#>  $ lastPublished                          : chr "2020-05-14T02:14:14.569584Z"
+#>  $ nsxUrl                                 : chr "/Taxon/ELEMENT_GLOBAL.2.154701/Hydrastis_canadensis"
+#>  $ grank                                  : chr "G3G4"
+#>  $ grankReviewDate                        : chr "2012-11-30"
+#>  $ grankChangeDate                        : chr "2012-11-30"
+#>  $ grankReasons                           : chr "Goldenseal, <i>Hydrastis canadensis, </i>an herbaceous understory species of the eastern deciduous forest, with"| __truncated__
+#>  $ rankInfo                               :List of 27
+#>  $ animalCharacteristics                  : NULL
+#>  $ occurrenceDelineations                 :'data.frame':	1 obs. of  17 variables:
+#>  $ plantCharacteristics                   :List of 7
+#>  $ elementManagement                      :List of 14
+#>  $ occurrenceViabilities                  :'data.frame':	1 obs. of  12 variables:
+#>  $ references                             :'data.frame':	97 obs. of  6 variables:
+#>  $ otherCommonNames                       :'data.frame':	6 obs. of  3 variables:
+#>  $ speciesGlobal                          :List of 29
+#>  $ speciesCharacteristics                 :List of 13
+```
+
+## Get a summary of the upper level hierarchy for an Ecosystem record
+
+
+```r
+ns_ecohier("ELEMENT_GLOBAL.2.683060")
+#>                  uniqueId
+#> 1 ELEMENT_GLOBAL.2.860217
+#> 2 ELEMENT_GLOBAL.2.860227
+#> 3 ELEMENT_GLOBAL.2.860241
+#> 4 ELEMENT_GLOBAL.2.860284
+#> 5 ELEMENT_GLOBAL.2.838501
+#> 6 ELEMENT_GLOBAL.2.833279
+#> 7 ELEMENT_GLOBAL.2.899395
+#>                                                            name
+#> 1                                             Forest & Woodland
+#> 2                          Temperate & Boreal Forest & Woodland
+#> 3                              Cool Temperate Forest & Woodland
+#> 4                      Eastern North American Forest & Woodland
+#> 5         Southern & South-Central Oak - Pine Forest & Woodland
+#> 6 South-Central Interior Shortleaf Pine - Oak Forest & Woodland
+#> 7                  Ozark-Ouachita Shortleaf Pine - Oak Woodland
+#>                                                                                                                 nsxUrl
+#> 1                                                     /Taxon/ELEMENT_GLOBAL.2.860217/Mesomorphic_Tree_Vegetation_Class
+#> 2                                             /Taxon/ELEMENT_GLOBAL.2.860227/Temperate_Boreal_Forest_Woodland_Subclass
+#> 3                                              /Taxon/ELEMENT_GLOBAL.2.860241/Cool_Temperate_Forest_Woodland_Formation
+#> 4           /Taxon/ELEMENT_GLOBAL.2.860284/Acer_saccharum_-_Fagus_grandifolia_-_Quercus_rubra_Forest_Woodland_Division
+#> 5            /Taxon/ELEMENT_GLOBAL.2.838501/Quercus_alba_-_Quercus_falcata_-_Pinus_echinata_Forest_Woodland_Macrogroup
+#> 6             /Taxon/ELEMENT_GLOBAL.2.833279/Pinus_echinata_-_Quercus_falcata_-_Quercus_stellata_Forest_Woodland_Group
+#> 7 /Taxon/ELEMENT_GLOBAL.2.899395/Pinus_echinata_-_Quercus_stellata_-_Quercus_velutina_Ozark-Ouachita_Woodland_Alliance
+#>   ecosystemType classificationCode
+#> 1         CLASS                  1
+#> 2      SUBCLASS                1.B
+#> 3     FORMATION              1.B.2
+#> 4      DIVISION           1.B.2.Na
+#> 5    MACROGROUP               M016
+#> 6         GROUP               G012
+#> 7      ALLIANCE              A3271
+```
+
+## Search exports
+
+`ns_export()` uses the same search interface as the `ns_search*` functions, but instead of downloading data immediately, `ns_export()` creates a "download job", which eventually provides a compressed JSON file that you can download.
+
+
+```r
+x <- ns_export(text = "robin")
+x
+#> [1] "7a107bea-b98d-4b5a-87b3-456ea2194f07"
+```
+
+You can pass the output of `ns_export()` to `ns_export_status()` to get the status of the job
+
+
+```r
+res <- ns_export_status(x)
+#> $state
+#> [1] "Finished"
+#> 
+#> $data
+#> $data$success
+#> [1] TRUE
+#> $percentComplete
+#> [1] 100
+#> $successful
+#> [1] TRUE
+#> $error
+#> ...
+```
+
+When state equals "Finished", you can read the data into R, e.g, with `jsonlite`:
+
+
+```r
+res$data$url
+#> [1] "https://explorer-downloads.natureserve.org/shortTerm/explorer/taxaSearchExports/2020-05-15/7a107bea-b98d-4b5a-87b3-456ea2194f07.json"
+tibble::as_tibble(jsonlite::fromJSON(res$data$url))
+#> # A tibble: 126 x 14
+#>    elementGlobalId uniqueId nsxUrl elcode scientificName formattedScient… primaryCommonNa… primaryCommonNa… roundedGRank
+#>              <int> <chr>    <chr>  <chr>  <chr>          <chr>            <chr>            <chr>            <chr>
+#>  1          100637 ELEMENT… /Taxo… ABPBJ… Copsychus sau… <i>Copsychus sa… Oriental Magpie… EN               G5
+#>  2          102323 ELEMENT… /Taxo… ABPBJ… Turdus grayi   <i>Turdus grayi… Clay-colored Th… EN               G5
+#>  3          102179 ELEMENT… /Taxo… ABPBJ… Turdus migrat… <i>Turdus migra… American Robin   EN               G5
+#>  4          105536 ELEMENT… /Taxo… ABPBJ… Turdus migrat… <i>Turdus migra… Western America… EN               TU
+#>  5          105850 ELEMENT… /Taxo… ABPBJ… Turdus rufopa… <i>Turdus rufop… Rufous-backed R… EN               G5
+#>  6          100589 ELEMENT… /Taxo… AFC4B… Peristedion g… <i>Peristedion … Slender Searobin EN               GNR
+#>  7          105826 ELEMENT… /Taxo… AFC4B… Prionotus ala… <i>Prionotus al… Spiny Searobin   EN               GNR
+#>  8          101394 ELEMENT… /Taxo… AFC4B… Prionotus car… <i>Prionotus ca… Northern Searob… EN               G5
+#>  9          100276 ELEMENT… /Taxo… AFC4B… Prionotus evo… <i>Prionotus ev… Striped Searobin EN               G5
+#> 10          103595 ELEMENT… /Taxo… AFC4B… Prionotus lon… <i>Prionotus lo… Bigeye Searobin  EN               G5
+#> # … with 116 more rows, and 29 more variables: nations <list>, lastModified <chr>, speciesGlobal$usesaCode <chr>,
+#> #   $cosewicCode <chr>, $saraCode <chr>, $synonyms <list>, $otherCommonNames <list>, $kingdom <chr>, $phylum <chr>,
+#> #   $taxclass <chr>, $taxorder <chr>, $family <chr>, $genus <chr>, $taxonomicComments <chr>, $informalTaxonomy <chr>,
+#> #   $infraspecies <lgl>, $completeDistribution <lgl>, gRank <chr>, ecosystemGlobal$translatedScientificName <chr>,
+#> #   $taxclassCode <chr>, $taxsubclassCode <chr>, $formationCode <chr>, $divisionCode <chr>, $macrogroupKey <chr>,
+#> #   $taxgroupKey <chr>, $allianceKey <chr>, $ecosystemType <chr>, $classificationCode <chr>, $parentName <chr>
 ```
 

@@ -1,4 +1,4 @@
-#' Get taxon by id
+#' Get a summary of the upper level hierarchy for an Ecosystem record
 #'
 #' @export
 #' @param uid (character) A NatureServe taxon id (The taxon’s Element Global
