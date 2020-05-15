@@ -1,3 +1,11 @@
+natserv 1.0.0
+=============
+
+### BREAKING CHANGES
+
+* All old functions are gone and have been replaced by new functions. NatureServe has released a new API and is ending support for the old one on 15 June 2020, so there's no reason to support the old API. See the docs (https://docs.ropensci.org/natserv/) for example usage (#21)
+
+
 natserv 0.4.0
 =============
 
