@@ -63,7 +63,7 @@ Search exports
 }
 \examples{
 \dontrun{
-x <- ns_export(text = "robin", verbose = TRUE)
+x <- ns_export(text = "robin")
 res <- ns_export_status(x)
 str(res)
 res$state

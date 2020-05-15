@@ -3,7 +3,7 @@ Title: 'NatureServe' Interface
 Description: Interface to 'NatureServe' (<https://www.natureserve.org>).
     Includes methods to get data, image metadata, search taxonomic names,
     and make maps.
-Version: 0.4.1.91
+Version: 0.4.9.91
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/natserv, https://github.com/ropensci/natserv
 BugReports: https://github.com/ropensci/natserv/issues
