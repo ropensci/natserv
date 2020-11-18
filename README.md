@@ -4,8 +4,7 @@ natserv
 
 
 [![cran checks](https://cranchecks.info/badges/worst/natserv)](https://cranchecks.info/pkgs/natserv)
-[![Build Status](https://travis-ci.org/ropensci/natserv.svg?branch=master)](https://travis-ci.org/ropensci/natserv)
-[![Build status](https://ci.appveyor.com/api/projects/status/mvmi4h4jn5ixf3hs?svg=true)](https://ci.appveyor.com/project/sckott/natserv)
+[![R-check](https://github.com/ropensci/natserv/workflows/R-check/badge.svg)](https://github.com/ropensci/natserv/actions?query=workflow%3AR-check)
 [![codecov](https://codecov.io/gh/ropensci/natserv/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/natserv)
 [![cran version](https://www.r-pkg.org/badges/version/natserv)](https://cran.r-project.org/package=natserv)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/natserv)](https://github.com/metacran/cranlogs.app)
