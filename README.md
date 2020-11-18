@@ -53,7 +53,7 @@ library('natserv')
 ```r
 ns_search_comb(text = "robin", page = 0, per_page = 5)
 #> $results
-#> # A tibble: 5 x 14
+#> # A tibble: 5 x 15
 #>   recordType elementGlobalId uniqueId nsxUrl elcode scientificName
 #>   <chr>                <int> <chr>    <chr>  <chr>  <chr>         
 #> 1 SPECIES             100637 ELEMENT… /Taxo… ABPBJ… Copsychus sau…
@@ -61,14 +61,15 @@ ns_search_comb(text = "robin", page = 0, per_page = 5)
 #> 3 SPECIES             102179 ELEMENT… /Taxo… ABPBJ… Turdus migrat…
 #> 4 SPECIES             105536 ELEMENT… /Taxo… ABPBJ… Turdus migrat…
 #> 5 SPECIES             105850 ELEMENT… /Taxo… ABPBJ… Turdus rufopa…
-#> # … with 22 more variables: formattedScientificName <chr>,
+#> # … with 23 more variables: formattedScientificName <chr>,
 #> #   primaryCommonName <chr>, primaryCommonNameLanguage <chr>,
 #> #   roundedGRank <chr>, nations <list>, lastModified <chr>,
-#> #   speciesGlobal$usesaCode <lgl>, $cosewicCode <lgl>, $saraCode <lgl>,
-#> #   $synonyms <list>, $otherCommonNames <list>, $kingdom <chr>, $phylum <chr>,
-#> #   $taxclass <chr>, $taxorder <chr>, $family <chr>, $genus <chr>,
-#> #   $taxonomicComments <chr>, $informalTaxonomy <chr>, $infraspecies <lgl>,
-#> #   $completeDistribution <lgl>, gRank <chr>
+#> #   classificationStatus <chr>, speciesGlobal$usesaCode <lgl>,
+#> #   $cosewicCode <lgl>, $saraCode <lgl>, $synonyms <list>,
+#> #   $otherCommonNames <list>, $kingdom <chr>, $phylum <chr>, $taxclass <chr>,
+#> #   $taxorder <chr>, $family <chr>, $genus <chr>, $taxonomicComments <chr>,
+#> #   $informalTaxonomy <chr>, $infraspecies <lgl>, $completeDistribution <lgl>,
+#> #   gRank <chr>
 #> 
 #> $resultsSummary
 #>                            name value
@@ -96,8 +97,6 @@ See the vignette (https://docs.ropensci.org/natserv/articles/natserv.html) for m
 * Please [report any issues or bugs](https://github.com/ropensci/natserv/issues).
 * License: MIT
 * Get citation information for `natserv` in R doing `citation(package = 'natserv')`
-* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 [![ropensci](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
-
-[coc]: https://github.com/ropensci/natserv/blob/master/CODE_OF_CONDUCT.md

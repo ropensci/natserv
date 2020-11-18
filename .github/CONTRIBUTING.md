@@ -40,7 +40,3 @@ for further details.
 ### Discussion forum
 
 Check out our [discussion forum](https://discuss.ropensci.org) if you think your issue requires a longer form discussion.
-
-### Thanks for contributing!
-
-This contributing guide is adapted from the tidyverse contributing guide available at https://raw.githubusercontent.com/r-lib/usethis/master/inst/templates/tidy-contributing.md 
