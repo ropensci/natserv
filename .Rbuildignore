@@ -13,3 +13,4 @@ README.Rmd
 .github
 appveyor.yml
 vignettes/old_vignette_content.txt
+^LICENSE\.md$
