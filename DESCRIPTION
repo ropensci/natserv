@@ -5,7 +5,7 @@ Description: Interface to 'NatureServe' (<https://www.natureserve.org/>).
     and make maps.
 Version: 1.0.0.91
 License: MIT + file LICENSE
-URL: https://docs.ropensci.org/natserv, https://github.com/ropensci/natserv
+URL: https://docs.ropensci.org/natserv/, https://github.com/ropensci/natserv
 BugReports: https://github.com/ropensci/natserv/issues
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"),
