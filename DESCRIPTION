@@ -15,7 +15,6 @@ Authors@R: c(
         role = "fnd",
         comment = "https://ropensci.org/"))
 LazyData: true
-VignetteBuilder: knitr
 Language: en-US
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -27,9 +26,8 @@ Imports:
     tibble
 Suggests:
     testthat,
-    knitr,
     vcr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Taxonomy
 X-schema.org-keywords: taxonomy, species, API, web-services, NatureServe, metadata, maps
 X-schema.org-isPartOf: https://ropensci.org

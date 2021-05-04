@@ -12,5 +12,5 @@ README.Rmd
 ^Makefile$
 .github
 appveyor.yml
-vignettes/old_vignette_content.txt
+vignettes/
 ^LICENSE\.md$

@@ -1,3 +1,3 @@
 library("vcr")
-vcr_configure(dir = "../fixtures")
-check_cassette_names()
+vcr::vcr_configure(dir = "../fixtures")
+vcr::check_cassette_names()
