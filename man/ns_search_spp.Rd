@@ -31,10 +31,12 @@ G5, GH, GX, GNR, GNA, GU. case insensitive}
 \item{location}{(list) location, country and sub-country. specify either
 \code{nation} OR \code{nation} and \code{subnation}. each expects a two-letter ISO code}
 
-\item{species_taxonomy}{(list) species taxonomy. either a list with
-\code{level} and \code{scientificTaxonomy} (a scientific name), or with just
-\code{informalTaxonomy} (a vernacular name). possible \code{level} values:
-"kingdom", "phylum", "class", "order", "family", "genus"}
+\item{species_taxonomy}{(list) species taxonomy. either a list with \code{level},
+\code{scientificTaxonomy} (a scientific name), and optionally, \code{kingdom}, or
+with just \code{informalTaxonomy} (a vernacular name). If a \code{level!="kingdom"},
+\code{kingdom} must be supplied in list when using
+\code{scientificTaxonomy}. Possible \code{level} values:
+"kingdom", "phylum", "class", "order", "family", "genus".}
 
 \item{record_subtype}{(character) limit results by record sub-type, one of:
 "class", "subclass", "formation", "division", "macrogroup", "group",
@@ -62,6 +64,7 @@ ns_search_spp(status = "G1")
 ns_search_spp(location = list(nation = "US"))
 ns_search_spp(location = list(nation = "US", subnation = "VA"))
 ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia", level = "kingdom"))
+ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Lepidoptera", level = "order", kingdom = "Animalia")) 
 ns_search_spp(species_taxonomy = list(informalTaxonomy = "birds"))
 ns_search_spp(record_subtype = "macrogroup")
 ns_search_spp(modified_since = "2020-04-30T00:00:00+0000")
