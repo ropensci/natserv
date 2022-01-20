@@ -63,8 +63,10 @@ ns_search_spp(text_adv = list(searchToken = "bird",
 ns_search_spp(status = "G1")
 ns_search_spp(location = list(nation = "US"))
 ns_search_spp(location = list(nation = "US", subnation = "VA"))
-ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia", level = "kingdom"))
-ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Lepidoptera", level = "order", kingdom = "Animalia")) 
+ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia"
+     , level = "kingdom"))
+ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Lepidoptera"
+     , level = "order", kingdom = "Animalia")) 
 ns_search_spp(species_taxonomy = list(informalTaxonomy = "birds"))
 ns_search_spp(record_subtype = "macrogroup")
 ns_search_spp(modified_since = "2020-04-30T00:00:00+0000")
