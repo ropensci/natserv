@@ -2,10 +2,12 @@
 #'
 #' @export
 #' @inheritParams ns_search_comb
-#' @param species_taxonomy (list) species taxonomy. either a list with
-#' `level` and `scientificTaxonomy` (a scientific name), or with just
-#' `informalTaxonomy` (a vernacular name). possible `level` values:
-#' "kingdom", "phylum", "class", "order", "family", "genus" 
+#' @param species_taxonomy (list) species taxonomy. either a list with `level`,
+#'   `scientificTaxonomy` (a scientific name), and optionally, `kingdom`, or
+#'   with just `informalTaxonomy` (a vernacular name). If a `level!="kingdom"`, 
+#'   `kingdom` must be supplied in list when using
+#'   `scientificTaxonomy`. Possible `level` values:
+#'   "kingdom", "phylum", "class", "order", "family", "genus".
 #' @template ns
 #' @family search
 #' @examples \dontrun{
@@ -16,6 +18,7 @@
 #' ns_search_spp(location = list(nation = "US"))
 #' ns_search_spp(location = list(nation = "US", subnation = "VA"))
 #' ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Animalia", level = "kingdom"))
+#' ns_search_spp(species_taxonomy = list(scientificTaxonomy = "Lepidoptera", level = "order", kingdom = "Animalia")) 
 #' ns_search_spp(species_taxonomy = list(informalTaxonomy = "birds"))
 #' ns_search_spp(record_subtype = "macrogroup")
 #' ns_search_spp(modified_since = "2020-04-30T00:00:00+0000")

@@ -75,10 +75,10 @@ handle_sptax <- function(st) {
   if (!is.null(st)) {
     if (
       !all(names(st) %in% 
-        c("level", "scientificTaxonomy", "informalTaxonomy"))
+        c("level", "scientificTaxonomy", "informalTaxonomy", "kingdom"))
     ) {
       stop("`species_taxonomy` must be a list w/ 'informalTaxonomy' ",
-        "or 'level' and 'scientificTaxonomy'",
+        "or 'level', and 'scientificTaxonomy'. if 'level' other than `kingdom` is used, supply 'kingdom' as well",
         call. = FALSE)
     }
     pt <- if ("informalTaxonomy" %in% names(st)) 
