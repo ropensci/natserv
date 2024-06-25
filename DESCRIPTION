@@ -8,9 +8,12 @@ License: MIT + file LICENSE
 URL: https://docs.ropensci.org/natserv/, https://github.com/ropensci/natserv
 BugReports: https://github.com/ropensci/natserv/issues
 Authors@R: c(
-    person("Scott", "Chamberlain", role = c("aut", "cre"),
+    person("Scott", "Chamberlain", role = c("aut"),
         email = "myrmecocystus@gmail.com",
         comment = c(ORCID="0000-0003-1444-9135")),
+    person("Christopher", "Tracey", role = c("aut", "cre"),
+        email = "christopher_tracey@natureserve.org",
+        comment = c(ORCID="0000-0002-3866-9020")),
     person(given = "rOpenSci",
         role = "fnd",
         comment = "https://ropensci.org/"))
