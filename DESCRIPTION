@@ -16,7 +16,7 @@ Authors@R: c(
         comment = c(ORCID="0000-0002-3866-9020")),
     person(given = "rOpenSci",
         role = "fnd",
-        comment = "https://ropensci.org/"))
+        comment = c(ROR = "019jywm96")))
 LazyData: true
 Language: en-US
 Encoding: UTF-8
