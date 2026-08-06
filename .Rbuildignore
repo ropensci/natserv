@@ -12,5 +12,4 @@ README.Rmd
 ^Makefile$
 .github
 appveyor.yml
-vignettes/
 ^LICENSE\.md$

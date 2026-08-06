@@ -18,6 +18,7 @@ Authors@R: c(
         role = "fnd",
         comment = c(ROR = "019jywm96")))
 LazyData: true
+VignetteBuilder: knitr
 Language: en-US
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -28,9 +29,11 @@ Imports:
     jsonlite,
     tibble
 Suggests:
+    knitr,
+    rmarkdown,
     testthat,
     vcr
-RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Taxonomy
 X-schema.org-keywords: taxonomy, species, API, web-services, NatureServe, metadata, maps
 X-schema.org-isPartOf: https://ropensci.org
+Config/roxygen2/version: 8.1.0
