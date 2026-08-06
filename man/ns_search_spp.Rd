@@ -72,8 +72,8 @@ ns_search_spp(page = 0, per_page = 2)
 https://explorer.natureserve.org/api-docs/
 }
 \seealso{
-Other search: 
-\code{\link{ns_search_comb}()},
-\code{\link{ns_search_eco}()}
+Other search:
+\code{\link[=ns_search_comb]{ns_search_comb()}},
+\code{\link[=ns_search_eco]{ns_search_eco()}}
 }
 \concept{search}

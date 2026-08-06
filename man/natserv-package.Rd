@@ -2,13 +2,34 @@
 % Please edit documentation in R/natserv-package.R
 \docType{package}
 \name{natserv-package}
-\alias{natserv-package}
 \alias{natserv}
-\title{natserv}
+\alias{natserv-package}
+\title{natserv: 'NatureServe' Interface}
 \description{
-Interface to NatureServe https://www.natureserve.org/
+Interface to 'NatureServe' (\url{https://www.natureserve.org/}). Includes methods to get data, image metadata, search taxonomic names, and make maps.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://docs.ropensci.org/natserv/}
+  \item \url{https://github.com/ropensci/natserv}
+  \item Report bugs at \url{https://github.com/ropensci/natserv/issues}
+}
+
 }
 \author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+\strong{Maintainer}: Christopher Tracey \email{christopher_tracey@natureserve.org} (\href{https://orcid.org/0000-0002-3866-9020}{ORCID})
+
+Authors:
+\itemize{
+  \item Christopher Tracey \email{christopher_tracey@natureserve.org} (\href{https://orcid.org/0000-0002-3866-9020}{ORCID})
+  \item Scott Chamberlain \email{myrmecocystus@gmail.com} (\href{https://orcid.org/0000-0003-1444-9135}{ORCID})
 }
-\keyword{package}
+
+Other contributors:
+\itemize{
+  \item rOpenSci (\href{https://ror.org/019jywm96}{ROR}) [funder]
+}
+
+}
+\keyword{internal}
